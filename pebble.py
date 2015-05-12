@@ -1,13 +1,14 @@
 #!/usr/bin/python
 from triso import TRISO
+import math
+import mocup
+import time
+import os
 
 
 class Pebble:
 
     def __init__(self):
-
-        import mocup
-
         self.TRISO = TRISO()
         self.dr_core = 0.577
         self.dr_shell = 0.1
@@ -87,12 +88,11 @@ class Pebble:
         self.volume()
 
     def generate(self, CHM, rho):
-
-        # This method generates a fuel design with minimum average delta T
-
-        # determine feasilibility of using a fuel design with 40% TRISO packing
-        # fraction
-
+        '''
+        This method generates a fuel design with minimum average delta T
+        determine feasilibility of using a fuel design with 40% TRISO packing
+        fraction
+        '''
         self.dr_core = 0
         self.TRISO.setPF(self.max_PF)
         min_CHM, max_rho = self.CHM()
@@ -107,7 +107,7 @@ class Pebble:
 
         if min_CHM < CHM and CHM < max_CHM and min_rho < rho and rho < max_rho:
             # use design sequence 1
-            #print("design sequence 1")
+            # print("design sequence 1")
             self.design_sequence1(CHM, rho)
 
         elif CHM < min_CHM or rho > max_rho:
@@ -120,10 +120,10 @@ class Pebble:
             self.design_sequence2(CHM, rho)
 
     def design_sequence1(self, CHM, rho):
-
-        # This method assumes a maximum TRISO Packing Fraction and iteratively
-        # perturbes dr_core and density of the core
-
+        '''
+        This method assumes a maximum TRISO Packing Fraction and iteratively
+        perturbes dr_core and density of the core
+        '''
         import math
 
         # solve for volume fraction of active region in pebble, f
@@ -195,10 +195,10 @@ class Pebble:
             self.design_sequence2(CHM, rho)
 
     def design_sequence2(self, CHM, rho):
-
-        # This method assumes a minimum annular thickness geometry and perturbs
-        # PF and density of the core to generate the fuel design
-
+        '''
+        This method assumes a minimum annular thickness geometry and perturbs
+        PF and density of the core to generate the fuel design
+        '''
         #print('design sequence 2')
 
         import math
@@ -456,8 +456,6 @@ class Pebble:
 
     def HT(self, T_bulk, Re, Power_Density):
 
-        import math
-
         # generate coolant thermal properties based on T_bulk (K)
 
         self.volume()
@@ -521,23 +519,21 @@ class Pebble:
         return self.T_kernel, self.max_T
 
     def inputMCNP5(self, T_bulk, Re, power_density):
-
-        import math
-        import mocup
-
-        # T_bulk        - bulk temperature of the coolant in Kelvin (K)
-        # Re            - Reynolds number of coolant in PB-AHTR, baseline value ~ 1200
-        # power_density - power density of the unit cell (MW/m3)
-    # power of unit cell / volume of unit cell (including pebble core, shell
-    # and coolant)
+        '''
+        T_bulk        - bulk temperature of the coolant in Kelvin (K)
+        Re            - Reynolds number of coolant in PB-AHTR, ~ 1200
+        power_density - power density of the unit cell (MW/m3)
+        power of unit cell / volume of unit cell (including pebble core, shell
+        and coolant)
+        '''
         self.TRISO.matrix()
         self.volume()
 
         self.HT(T_bulk, Re, power_density)
         with open('skeleton_core', 'r+') as skeletonFile:
             skeleton = skeletonFile.read()
-        # start generating tokens to sub out in skeleton file
 
+        # start generating tokens to sub out in skeleton file
         __kernel_molar_density__ = '%1.5E' % (
             self.TRISO.mat_kernel.moles()*.60221415)
         __kernel_volume__ = '%1.5E' % (
@@ -572,7 +568,6 @@ class Pebble:
             '73c': [((.1200+-2500-1200)*.5), 5778.],
             }
         for xs in list(XS.keys()):
-
             if self.T_kernel > XS[xs][0] and self.T_kernel < XS[xs][1]:
                 __XS_kernel__ = xs
             if self.max_T > XS[xs][0] and self.max_T < XS[xs][1]:
@@ -583,7 +578,6 @@ class Pebble:
                 __XS_coolant__ = xs
 
         # replace tokens with specific values
-
         skeleton = skeleton.replace(
             '__kernel_molar_density__',
             __kernel_molar_density__)
@@ -711,17 +705,11 @@ class Pebble:
             dBU1=200.,
             dBU2=1.e4,
             nBU1=5,
-            T_bulk=650 +
-            273.15,
+            T_bulk=650 + 273.15,
             Re=1200,
             power_density=20):
 
         # This method sets up a mocup calculation
-
-        import time
-        import os
-        import math
-
         if title == 'default':
             title = time.strftime("%a_%d_%b_%Y_%H:%M")
 
@@ -748,7 +736,16 @@ class Pebble:
                                          self.dv_active/(power_density*self.TRISO.V*self.V/self.Pebble_PF))
 
         skeleton = open('skeleton').read()
-        run_mocup = "#! /bin/sh\n#\n#$ -N mocup\n#$ -cwd\n#$ -pe ompi 8\n#$ -S /bin/bash\n#$ -q x.q\n#$ -V\n\nmpiexec -x LD_LIBRARY_PATH  mcnp5.mpi i=inp.1 o=outp.1 mc=mctal.1 runtpe=runtp1\nmv srctp source\nrm outp.1 mctal.1 runtp1\nsed s/'ksrc 0 0 0'/'c'/ inp.1 >> tmp\nmv tmp inp.1\npython gofiss.py\n"
+        run_mocup = '''#! /bin/sh\n#\n#$ -N mocup\n#$ -cwd\n
+        #$ -pe ompi 8\n#$ -S /bin/bash\n#$ -q x.q\n#$ -V\n
+        \nmpiexec -x LD_LIBRARY_PATH
+        mcnp5.mpi i=inp.1 o=outp.1 mc=mctal.1 runtpe=runtp1\n
+        mv srctp source\n
+        rm outp.1 mctal.1 runtp1\n
+        sed s/'ksrc 0 0 0'/'c'/ inp.1 >> tmp\n
+        mv tmp inp.1\n
+        python gofiss.py\n
+        '''
 
         skeleton = skeleton.replace('_title_', title)
         skeleton = skeleton.replace('_power_vector_', _power_vector_)
@@ -801,7 +798,8 @@ class Pebble:
 
         self.inputMCNP5(T_bulk, Re, power_density)
 
-        skeleton = "#!/usr/bin/env python\n\nimport BEAU\nimport mocup\n\n# -----------------------------------------------------------------------------\n# DEFINE EQUILIBRIUM DEPLETION ANALYSIS PROBLEM\n# -----------------------------------------------------------------------------\n\n# initialize Equilibrium Depletion\nEq_Cycle = BEAU.equilibrium_cycle()\n\n# DEFINE POWER OF SYSTEM IN MWth\nEq_Cycle.power = (__unit_cell_power__)\n        # 8 1/2 pebbles with a volume of 1.17810E+01 cc with a power desnity of 30 MW/m3\n\n# DEFINE LOADING PATTER\n        # 'Y':'X' EOEC material from X is advanced to cell Y\nEq_Cycle.loading_pattern = {\n                                                        '20':'10',\n                                                        '30':'20',\n                                                        '40':'30',\n                                                        '50':'40',\n                                                        '60':'50',\n                                                        '70':'60',\n                                                        '80':'70',\n                                                        }\n\n# DEFINE THE BURNUPS OF ALL FUEL PROGRESSIONS\nEq_Cycle.burnup = {'seed': 1.5E+5}\n\n# DEFINE THE MAKE UP MATERIAL FOR EACH PROGRESSION\n\n# initiate material object\nmat = mocup.material()\n# define its composition vector\nmat.comp['922350'] = __seed_u235_molar_mass__\nmat.comp['922380'] = __seed_u238_molar_mass__\n\n# link material object to the progression key\nEq_Cycle.makeup = {'seed':mat}\n\n# INITIATE A PROGRESSION\nprogression = Eq_Cycle.fuel_progression()\n\n# DEFINE THE ORDER IN WHICH FUEL IS ADVANCED\nprogression.cells = ['10','20','30','40','50','60','70','80']\n\n# DEFINE THE MAKEUP FUEL VECTOR FOR THE PROGRESSION\nprogression.feed = Eq_Cycle.makeup['seed']\n\n# DEFINE THE STANDARD ORIGEN LIBRARY TO BE USED\nprogression.library = 'pwru50'\n\n# LINK PROGRESSION OBJECTS TO KEYS\nEq_Cycle.progressions = {'seed':progression,}\n\n# -----------------------------------------------------------------------------\n# INITIATE EQUILIBRIUM DEPLETION ANALYSIS\n# -----------------------------------------------------------------------------\nEq_Cycle.dBU1 = 1000\nEq_Cycle.dBU2 = 10000\nEq_Cycle.nBU1 = 3\n\nEq_Cycle.search_keff(2.2E+05,2.8e+05, 1.000)"
+        with open('beau_skeleton', 'r+') as skeleton_file:
+            skeleton = skeleton_file.read()
         BOC_fuel = self.TRISO.mat_kernel * \
             (self.TRISO.dv_kernel/self.TRISO.V*self.dv_active*(1./2.))
 
@@ -832,11 +830,9 @@ class Pebble:
     def SERPENT(self):
 
         self.CHM()
-
         # This method makes a single pebble unit cell SERPENT input deck
-
-        skeleton = '% --- FHR TRISO Unit Cell ------------------------------------------------------\n\nset title "FHR TRISO Unit Cell"\n\n% --- surfaces -----------------------------------------------------------------\n\nsurf 1 sph  0 0 0 _r_kernel_       % fuel kernel\nsurf 2 sph  0 0 0 _r_buffer_       % buffer\nsurf 3 sph  0 0 0 _r_iPyC_         % iPyC\nsurf 4 sph  0 0 0 _r_SiC_          % SiC\nsurf 5 sph  0 0 0 _r_oPyC_         % oPyC\nsurf 6 cube 0 0 0 _r_TRISO_hpitch_ % unit cell boundaries\n\nsurf 10 sph       0 0 0 _r_core_\nsurf 11 sph       0 0 0 _r_active_\nsurf 12 sph       0 0 0 _r_shell_\nsurf 13 hexxprism 0 0 _pebble_hexpitch_ -_pebble_hexpitch_ _pebble_hexpitch_ \n\n% --- cells --------------------------------------------------------------------\n\nlat 1 6 0 0 _r_TRISO_pitch_ 2\n\n% triso unit cell\n\ncell 1 2 fuel   -1   % fuel kernel\ncell 2 2 buffer -2 1 % buffer\ncell 3 2 PyC    -3 2 % iPyC\ncell 4 2 SiC    -4 3 % SiC\ncell 5 2 PyC    -5 4 % oPyC\ncell 6 2 matrix    5 % matrix\n\n% pebble unit cell\n\ncell 10 0 low_density_graphite -10    % low density kernel\ncell 11 0 fill 1               -11 10 % active region\ncell 12 0 shell                -12 11 % pebble shell\ncell 13 0 coolant              -13 12 % coolant\ncell 99 0 outside                  13 % reflective boundary conditions\n\n% --- boundary conditions ------------------------------------------------------\n\nset bc 3 % reflective boundary conditions\n\n% --- materials ----------------------------------------------------------------\n\n_mat_fuel_\n\n_mat_buffer_\n\n_mat_PyC_\n\n_mat_SiC_\n\n_mat_matrix_\n\n_mat_pebble_core_\n\n_mat_shell_\n\n_mat_coolant_\n\nset ures 1 2 1e-09\n 92235.06c 92238.06c\n% --- thermal scattering data --------------------------------------------------\n\ntherm buffer               grj2.18t\ntherm PyC                  grj2.18t\ntherm matrix               grj2.18t\ntherm low_density_graphite grj2.18t\ntherm shell                grj2.18t\n\n% --- Cross Section Library file path ------------------------------------------\n\nset acelib "/usr/local/SERPENT/xsdata/endfb7/sss_endfb7u.xsdata"\n\n% --- tallies ------------------------------------------------------------------\n\ndet "kernel spectrum" de 238g dm fuel dv 6.54498E-05\nene 238g 1\n     1.0000E-11 1.0000E-10 5.0000E-10 7.5000E-10 1.0000E-09 1.2000E-09\n     1.5000E-09 2.0000E-09 2.5000E-09 3.0000E-09 4.0000E-09 5.0000E-09\n     7.5000E-09 1.0000E-08 2.5300E-08 3.0000E-08 4.0000E-08 5.0000E-08\n     6.0000E-08 7.0000E-08 8.0000E-08 9.0000E-08 1.0000E-07 1.2500E-07\n     1.5000E-07 1.7500E-07 2.0000E-07 2.2500E-07 2.5000E-07 2.7500E-07\n     3.0000E-07 3.2500E-07 3.5000E-07 3.7500E-07 4.0000E-07 4.5000E-07\n     5.0000E-07 5.5000E-07 6.0000E-07 6.2500E-07 6.5000E-07 7.0000E-07\n     7.5000E-07 8.0000E-07 8.5000E-07 9.0000E-07 9.2500E-07 9.5000E-07\n     9.7500E-07 1.0000E-06 1.0100E-06 1.0200E-06 1.0300E-06 1.0400E-06\n     1.0500E-06 1.0600E-06 1.0700E-06 1.0800E-06 1.0900E-06 1.1000E-06\n     1.1100E-06 1.1200E-06 1.1300E-06 1.1400E-06 1.1500E-06 1.1750E-06\n     1.2000E-06 1.2250E-06 1.2500E-06 1.3000E-06 1.3500E-06 1.4000E-06\n     1.4500E-06 1.5000E-06 1.5900E-06 1.6800E-06 1.7700E-06 1.8600E-06\n     1.9400E-06 2.0000E-06 2.1200E-06 2.2100E-06 2.3000E-06 2.3800E-06\n     2.4700E-06 2.5700E-06 2.6700E-06 2.7700E-06 2.8700E-06 2.9700E-06\n     3.0000E-06 3.0500E-06 3.1500E-06 3.5000E-06 3.7300E-06 4.0000E-06\n     4.7500E-06 5.0000E-06 5.4000E-06 6.0000E-06 6.2500E-06 6.5000E-06\n     6.7500E-06 7.0000E-06 7.1500E-06 8.1000E-06 9.1000E-06 1.0000E-05\n     1.1500E-05 1.1900E-05 1.2900E-05 1.3750E-05 1.4400E-05 1.5100E-05\n     1.6000E-05 1.7000E-05 1.8500E-05 1.9000E-05 2.0000E-05 2.1000E-05\n     2.2500E-05 2.5000E-05 2.7500E-05 3.0000E-05 3.1250E-05 3.1750E-05\n     3.3250E-05 3.3750E-05 3.4600E-05 3.5500E-05 3.7000E-05 3.8000E-05\n     3.9100E-05 3.9600E-05 4.1000E-05 4.2400E-05 4.4000E-05 4.5200E-05\n     4.7000E-05 4.8300E-05 4.9200E-05 5.0600E-05 5.2000E-05 5.3400E-05\n     5.9000E-05 6.1000E-05 6.5000E-05 6.7500E-05 7.2000E-05 7.6000E-05\n     8.0000E-05 8.2000E-05 9.0000E-05 1.0000E-04 1.0800E-04 1.1500E-04\n     1.1900E-04 1.2200E-04 1.8600E-04 1.9250E-04 2.0750E-04 2.1000E-04\n     2.4000E-04 2.8500E-04 3.0500E-04 5.5000E-04 6.7000E-04 6.8300E-04\n     9.5000E-04 1.1500E-03 1.5000E-03 1.5500E-03 1.8000E-03 2.2000E-03\n     2.2900E-03 2.5800E-03 3.0000E-03 3.7400E-03 3.9000E-03 6.0000E-03\n     8.0300E-03 9.5000E-03 1.3000E-02 1.7000E-02 2.5000E-02 3.0000E-02\n     4.5000E-02 5.0000E-02 5.2000E-02 6.0000E-02 7.3000E-02 7.5000E-02\n     8.2000E-02 8.5000E-02 1.0000E-01 1.2830E-01 1.5000E-01 2.0000E-01\n     2.7000E-01 3.3000E-01 4.0000E-01 4.2000E-01 4.4000E-01 4.7000E-01\n     4.9952E-01 5.5000E-01 5.7300E-01 6.0000E-01 6.7000E-01 6.7900E-01\n     7.5000E-01 8.2000E-01 8.6110E-01 8.7500E-01 9.0000E-01 9.2000E-01\n     1.0100E+00 1.1000E+00 1.2000E+00 1.2500E+00 1.3170E+00 1.3560E+00\n     1.4000E+00 1.5000E+00 1.8500E+00 2.3540E+00 2.4790E+00 3.0000E+00\n     4.3040E+00 4.8000E+00 6.4340E+00 8.1873E+00 1.0000E+01 1.2840E+01\n     1.3840E+01 1.4550E+01 1.5683E+01 1.7333E+01 2.0000E+01\n\n% --- Neutron Population data --------------------------------------------------\n\nset pop 10000 100 100 1.0\n\nplot 3 1000 1000 \n\n\n\n\n'
-
+        with open('skeleton_pb_SERPENT', 'r+') as skeleton_file:
+            skeleton = skeleton_file.read()
         _r_kernel_ = '%1.5E' % self.TRISO.r_kernel
         _r_buffer_ = '%1.5E' % self.TRISO.r_buffer
         _r_iPyC_ = '%1.5E' % self.TRISO.r_iPyC
@@ -852,7 +848,8 @@ class Pebble:
 
         if self.T_kernel == 0:
             print(
-                'you must run the HT method of the pebble object to get the temperature distribution in the pebble')
+                '''you must run the HT method of the pebble object to
+                get the temperature distribution in the pebble''')
 
         self.TRISO.mat_kernel.scf(
             'fuel',

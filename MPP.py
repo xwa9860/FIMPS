@@ -1,4 +1,4 @@
-import FIMPS
+import pbfhr45
 
 # for power_density in [23.3,28.3,33.3]:
 for power_density in [23]:
@@ -15,7 +15,7 @@ for power_density in [23]:
 
             dr_total = 70 + 20 + 40
 
-            PBFHR = FIMPS.PBFHR45()
+            PBFHR = pbfhr45.PBFHR45()
             PBFHR.power = 236.
             PBFHR.dr_active_fuel = active_thickness
             PBFHR.dr_active_pebble_reflector = pebble_reflector_thickness
@@ -26,11 +26,14 @@ for power_density in [23]:
             PBFHR.control_rods = 8
             PBFHR.control_blades = 8
             PBFHR.r_control_rods = 6.5
-            PBFHR.wall_PF = .57
-            PBFHR.bulk_PF = .61
+            PBFHR.wall_PF = 0.6  #  .57
+            PBFHR.bulk_PF = 0.6  # .61
             PBFHR.fuel_power_density = power_density
             PBFHR.tallies = ['economy', 'spectrum']
             PBFHR.generate()
             # PBFHR.BEAU(title=case_ID)
             PBFHR.MCNP5()
-#			print(PBFHR.decf)
+            input_script = PBFHR.decf
+            with open('mcnp_input_test', 'w+') as f:
+                f.write(input_script)
+            f.close()
