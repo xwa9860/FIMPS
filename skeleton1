@@ -1,0 +1,77 @@
+
+'unit cell depletion of PB-AHTR pebbles
+c ------------------------------------------------------------------------------
+c Cells
+c ------------------------------------------------------------------------------
+c
+c TRISO unit cell
+c
+1 1  __kernel_molar_density__ -1    tmp=__kernel_temperature__ imp:n=1 u=100 $ Fuel Kernel
+          vol=__kernel_volume__
+          4 3 -__matrix_density__  1    tmp=__matrix_temperature__ imp:n=1 u=100 $ Silicon Carbide Layer
+c
+10 0       10 -11 12 -13 14 -15 lat=1 imp:n=1 fill=100 u=10 $ infinite lattice of TRISO particles
+c
+c Pebble unit cell
+c
+100 2 __pebble_core_molar_density__  -100     tmp=9.38858e-08        imp:n=1      $ Low Density Graphite Pebble Core
+101 0              -101 100                fill=10 imp:n=1      $ Active Region of Pebble
+102 4  __pebble_shell_molar_density__ -102 101 tmp=8.27695-08         imp:n=1      $ Pebble Shell
+103 5  -__coolant_density__ 102 110 -111 112 -113 114 -115 116 -117     $ Flibe Coolant
+                     tmp=7.95552E-08         imp:n=1 
+                     c
+c Boundary Conditions
+c
+999 0               -110:111:-112:113:-114:115:-116:117 imp:n=1 $ Vacuum Boundary Conditions
+c neutrons should be reflected and these Vacuum Boundary Conditions will not be implemented
+
+c ------------------------------------------------------------------------------
+c Surfaces
+c ------------------------------------------------------------------------------
+c
+c Surfaces of TRISO layers
+c
+1 so __kernel_radius__  $ Outer Radius of Kernel
+c
+c Boundaries of TRISO unit cell
+c
+10 px -__TRISO_hpitch__
+11 px  __TRISO_hpitch__
+12 py -__TRISO_hpitch__
+13 py  __TRISO_hpitch__
+14 pz -__TRISO_hpitch__
+15 pz  __TRISO_hpitch__
+c
+c Radial Surfaces of Pebble 
+c
+100 so __Pebble_core_radius__ $ Outer Radius of Low Density Graphite Pebble Core
+101 so __Pebble_active_radius__       $ Outer Radius of Pebble Active Region
+102 so __Pebble_shell_radius__       $ Outer Radius of Pebble Shell
+c 
+c Boundaries of Pebble unit cell
+c
+*110 px                  -__Pebble_hpitch__
+*111 px                   __Pebble_hpitch__
+*112 p   1 1.732050808 0 -__Pebble_pitch__
+*113 p   1 1.732050808 0  __Pebble_pitch__
+*114 p  -1 1.732050808 0 -__Pebble_pitch__
+*115 p  -1 1.732050808 0  __Pebble_pitch__
+*116 pz                  -__Pebble_hpitch__
+*117 pz                   __Pebble_hpitch__
+
+c ------------------------------------------------------------------------------
+c Data
+c ------------------------------------------------------------------------------
+__kernel_fuel__
+m2         6000.72c 1 $ Graphite (1200K)
+mt2       grph.65t
+__matrix_mat__
+m4         6000.72c 1 $ Pebble Shell
+mt4       grph.64t
+__coolant_mat__
+__single_mat__
+__tallies__
+kcode 10000 1 10 110 
+ksrc 0 0 0
+
+

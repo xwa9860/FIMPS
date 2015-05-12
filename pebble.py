@@ -520,11 +520,11 @@ class Pebble:
 
     def inputMCNP5(self, T_bulk, Re, power_density):
         '''
-        T_bulk        - bulk temperature of the coolant in Kelvin (K)
-        Re            - Reynolds number of coolant in PB-AHTR, ~ 1200
-        power_density - power density of the unit cell (MW/m3)
-        power of unit cell / volume of unit cell (including pebble core, shell
-        and coolant)
+            T_bulk        - bulk temperature of the coolant in Kelvin (K)
+            Re            - Reynolds number of coolant in PB-AHTR, ~ 1200
+            power_density - power density of the unit cell (MW/m3)
+            power of unit cell / volume of unit cell (including pebble core,
+            shell and coolant)
         '''
         self.TRISO.matrix()
         self.volume()
@@ -623,8 +623,7 @@ class Pebble:
             'kcode  10000  1.0 10 110',
             'ksrc 0 0 0\nkcode 1000 1 10 110')
 
-        skeleton1 = 'unit cell depletion of PB-AHTR pebbles\nc ------------------------------------------------------------------------------\nc Cells\nc ------------------------------------------------------------------------------\nc\nc TRISO unit cell\nc\n1 1  __kernel_molar_density__ -1    tmp=__kernel_temperature__ imp:n=1 u=100 $ Fuel Kernel\n          vol=__kernel_volume__\n4 3 -__matrix_density__  1    tmp=__matrix_temperature__ imp:n=1 u=100 $ Silicon Carbide Layer\nc\n10 0       10 -11 12 -13 14 -15 lat=1 imp:n=1 fill=100 u=10 $ infinite lattice of TRISO particles\nc\nc Pebble unit cell\nc\n100 2 __pebble_core_molar_density__  -100     tmp=9.38858e-08        imp:n=1      $ Low Density Graphite Pebble Core\n101 0              -101 100                fill=10 imp:n=1      $ Active Region of Pebble\n102 4  __pebble_shell_molar_density__ -102 101 tmp=8.27695-08         imp:n=1      $ Pebble Shell\n103 5  -__coolant_density__ 102 110 -111 112 -113 114 -115 116 -117     $ Flibe Coolant\n                     tmp=7.95552E-08         imp:n=1 \nc\nc Boundary Conditions\nc\n999 0               -110:111:-112:113:-114:115:-116:117 imp:n=1 $ Vacuum Boundary Conditions\nc neutrons should be reflected and these Vacuum Boundary Conditions will not be implemented\n\nc ------------------------------------------------------------------------------\nc Surfaces\nc ------------------------------------------------------------------------------\nc\nc Surfaces of TRISO layers\nc\n1 so __kernel_radius__  $ Outer Radius of Kernel\nc\nc Boundaries of TRISO unit cell\nc\n10 px -__TRISO_hpitch__\n11 px  __TRISO_hpitch__\n12 py -__TRISO_hpitch__\n13 py  __TRISO_hpitch__\n14 pz -__TRISO_hpitch__\n15 pz  __TRISO_hpitch__\nc\nc Radial Surfaces of Pebble \nc\n100 so __Pebble_core_radius__ $ Outer Radius of Low Density Graphite Pebble Core\n101 so __Pebble_active_radius__       $ Outer Radius of Pebble Active Region\n102 so __Pebble_shell_radius__       $ Outer Radius of Pebble Shell\nc \nc Boundaries of Pebble unit cell\nc\n*110 px                  -__Pebble_hpitch__\n*111 px                   __Pebble_hpitch__\n*112 p   1 1.732050808 0 -__Pebble_pitch__\n*113 p   1 1.732050808 0  __Pebble_pitch__\n*114 p  -1 1.732050808 0 -__Pebble_pitch__\n*115 p  -1 1.732050808 0  __Pebble_pitch__\n*116 pz                  -__Pebble_hpitch__\n*117 pz                   __Pebble_hpitch__\n\nc ------------------------------------------------------------------------------\nc Data\nc ------------------------------------------------------------------------------\n__kernel_fuel__\nm2         6000.72c 1 $ Graphite (1200K)\nmt2       grph.65t\n__matrix_mat__\nm4         6000.72c 1 $ Pebble Shell\nmt4       grph.64t\n__coolant_mat__\n__single_mat__\n__tallies__\nkcode 10000 1 10 110 \nksrc 0 0 0\n\n'
-
+        skeleton1 = open('skeleton1', 'r+').read()
         mat = mocup.material()
         mat.addnux()
         self.TRISO.mat_kernel = self.TRISO.mat_kernel + mat
@@ -798,8 +797,7 @@ class Pebble:
 
         self.inputMCNP5(T_bulk, Re, power_density)
 
-        with open('beau_skeleton', 'r+') as skeleton_file:
-            skeleton = skeleton_file.read()
+        skeleton = open('beau_skeleton', 'r+').read()
         BOC_fuel = self.TRISO.mat_kernel * \
             (self.TRISO.dv_kernel/self.TRISO.V*self.dv_active*(1./2.))
 
@@ -911,5 +909,3 @@ class Pebble:
         skeleton = skeleton.replace('_mat_coolant_', _mat_coolant_)
 
         self.serpent = skeleton
-
-

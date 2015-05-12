@@ -1,11 +1,12 @@
 #!/usr/bin/python
 
 class mpo:
-    # This class holds all the information mocup can receive from an mcnp output file
-    # cell numbers of depletion zones
-    # flux tallies
-    # libraries of cross sections
-    # 
+    '''
+     This class holds all the information mocup can receive from an mcnp output file
+     cell numbers of depletion zones
+     flux tallies
+     libraries of cross sections
+    '''
 
     def __init__(self):
         self.cell = []
@@ -18,19 +19,19 @@ class mpo:
         import math
         from os import listdir
         import re
- 
+
         self.transport_module = 'mcnp'
-        
+
         self.timestep = timestep or ''
 
         a = Depletion()
         nct = a.nct
         dacay = a.decay
-        
+
         # import OUTP file
         outp_loc = 'outp%d' % timestep
         OUTP = open(outp_loc).read()
-        
+
         # search for cells
 
         OUTP1 = OUTP
@@ -42,13 +43,13 @@ class mpo:
             l = OUTP1[k:].find(token) + len(token)
 
             m = re.compile('\s[mMfFkKsSpP]').search(OUTP1[k+l:]).start()
-            
+
             tally = OUTP1[k+l:k+l+m]
 
             multipliers = re.compile('\s\(\s*1[.]?\d*\s*\d+\s+\(').findall(tally)
 
             for multiplier in multipliers:
-                self.mcnp_nuclides[multiplier.split()[-2]] = 0 
+                self.mcnp_nuclides[multiplier.split()[-2]] = 0
         else:
             print('There is no MOCUP tally in this input deck!')
             exit()
@@ -58,11 +59,11 @@ class mpo:
 
         # find depletion cells
         token = '1tally' + ' '*(4 - len(self.RR_tally_ID)) + self.RR_tally_ID
-    
-        # search for cells    
-        # slice out the cells defined in the reaction rates tally 
+
+        # search for cells
+        # slice out the cells defined in the reaction rates tally
         self.cell = []
-        k = OUTP1.find(token)    
+        k = OUTP1.find(token)
         l = OUTP1[k:].find('cell:')
         m = OUTP1[k+l:].find('cell ')
 
@@ -87,7 +88,7 @@ class mpo:
         table = OUTP[k+l+len('importance'):k+l+m]
         k = table.find('\n')
         for line in table.split('\n'):
-            if len(line.split()) > 3 and line[7:12].replace(' ','') in self.cell:  
+            if len(line.split()) > 3 and line[7:12].replace(' ','') in self.cell:
                 self.volume[line[7:12].replace(' ','')]  = float(line[43:54].replace(' ',''))
                 self.density[line[7:12].replace(' ','')] = float(line[31:42].replace(' ',''))
                 self.molar_density[line[7:12].replace(' ','')] = float(line[19:30].replace(' ',''))
@@ -111,7 +112,7 @@ class mpo:
         k = OUTP1.find('print table 40')
         k += OUTP1[k:].find('component nuclide, atom fraction') + len('component nuclide, atom fraction')
         l = OUTP1[k:].find('1material')
-        
+
         table40 = OUTP1[k:k+l]
 
         # split table 40 into individual material cards
@@ -122,7 +123,7 @@ class mpo:
         for i in range(len(tokens)-1):
             k = table40.find(tokens[i])+len(tokens[i])
             l = table40.find(tokens[i+1])
-            
+
             material_cards[tokens[i].split()[0]] = table40[k:l]
 
         material_cards[tokens[i+1].split()[0]]  = table40[l+len(tokens[i+1]):]
@@ -135,23 +136,23 @@ class mpo:
             OUTP1 = OUTP
 
             # grep material vector from material card in table 40
-                
+
             pairs = re.compile('\d+,\s\d+[.]\d+[eE+-]+\d+').findall(material_cards[self.mat_ID[cell]])
 
             for pair in pairs:
 
                 nuclide = pair.split(',')[0]
 
-                    
+
                 # generate nuclide ID
-                    
+
                 if nuclide == '6000':
                     nuclide = '6012'
                 Z = int(nuclide[:-3])
-                    
+
                 A = int(nuclide[-3:])
-                    
-                # check to see if this is 
+
+                # check to see if this is
                 if A > 300:
                     if A == '601':
                         print("please use endf7 formatted XS's!")
@@ -161,8 +162,8 @@ class mpo:
                     M = 1
                     print('%d' % (M + 10*A + 10000*Z))
                 else:
-                    M = 0 
-                
+                    M = 0
+
                 nucl = '%d' % (M + 10*A + 10000*Z)
 
                 # update concentration
@@ -172,11 +173,11 @@ class mpo:
                 else:
                     self.concentration[cell][nucl]  = self.molar_density[cell]*float(pair.split()[1])
 
-            # update the concentration vector if there is a ocf file 
+            # update the concentration vector if there is a ocf file
 
             ocf_loc = 'moi.%s.%d.pch' % (cell, (self.timestep - 1))
             if ocf_loc in moi_files:
-                # There is a ocf file for the material vector 
+                # There is a ocf file for the material vector
                 # populate the concentration vector based on this material
 
                 mat = material()
@@ -189,8 +190,8 @@ class mpo:
         # define the temperature distribution for depletion materials
         if 'print table 72' in OUTP:
             OUTP1 = OUTP
-            k = OUTP1.find('print table 72') + len('print table 72') 
-            l = OUTP1[k:].find('\n1')    
+            k = OUTP1.find('print table 72') + len('print table 72')
+            l = OUTP1[k:].find('\n1')
             table72 = OUTP1[k:k+l]
             pairs = re.compile('\d{1,5}\s+\d[.]\d{4,4}[eE+-]{2,2}\d{2,2}').findall(table72)
             for pair in pairs:
@@ -202,7 +203,7 @@ class mpo:
         OUTP1 = OUTP1[k:]
 
         self.flux_tally = {}
-        
+
         #isolate the flux tally
 
         token = '1tally'+' '*(4-len(self.RR_tally_ID))+self.RR_tally_ID
@@ -218,8 +219,8 @@ class mpo:
             try:
                 return numerator/denominator;
             except ZeroDivisionError:
-                return 0.    
-    
+                return 0.
+
         self.NG = {}
         self.NF = {}
         self.N2N = {}
@@ -273,11 +274,11 @@ class mpo:
         self.power = {}
         self.power_density = {}
         self.decay_heat = {}
-        sum_power = 0 
+        sum_power = 0
 
         for cell in self.cell:
-            power = 0 
-            power_density = 0 
+            power = 0
+            power_density = 0
             power_decay = 0
             for nuclide in list(self.concentration[cell].keys()):
                 if nuclide in list(self.NF[cell].keys()):
@@ -289,7 +290,7 @@ class mpo:
                 #if nuclide in self.decy.keys():
                 #    power_decay += self.concentration[cell][nuclide]*self.volume[cell]*1.e24*self.decay[nuclide]
 
-            # add power in cell to power distribution 
+            # add power in cell to power distribution
             self.power[cell] = power
             #self.decay_heat[cell] = power_decay
             self.power_density[cell] = power_density
@@ -298,7 +299,7 @@ class mpo:
         self.global_power_density = sum_power
 
         # normalize the power distribution
-        if sum_power != 0.: 
+        if sum_power != 0.:
             for cell in self.cell:
                 self.power[cell] = self.power[cell]/sum_power
         else:
@@ -309,7 +310,7 @@ class mpo:
             self.write_mpo()
 
     def populate_serpent(self, timestep=None, print_mpo=None, ):
-        
+
         #This method collects all the information required to perform the point depletion calculation with origen from SERPENT output files generated in externally coupled model
 
         import math
@@ -321,7 +322,7 @@ class mpo:
 
         outp_loc = 'inp%d_res.m' % self.timestep
         outp = open(outp_loc).read().split()
-        
+
         # find neutron fission source
         k = outp.index('TOT_GENRATE')
         source = float(outp[k+6])
@@ -363,7 +364,7 @@ class mpo:
 
 
         # this definition is inserted for the case that there is only one depletion cell
-        i = -1 
+        i = -1
 
         for i in range(len(tokens)-1):
             self.cell.append(tokens[i].split()[-1].replace("('",'').replace("')",''))
@@ -371,12 +372,12 @@ class mpo:
             k = burn_card.find(tokens[i])
             l = burn_card.find(tokens[i+1])
             self.burn_cards[self.cell[-1]] = burn_card[k:l]
-    
-        # the last burn card has different index definitions 
+
+        # the last burn card has different index definitions
         self.cell.append(tokens[i+1].split()[-1].replace("('",'').replace("')",''))
         self.mat_ID[self.cell[-1]] = self.cell[-1]
-        k = burn_card.find(tokens[i+1])    
-        self.burn_cards[self.cell[-1]] = burn_card[k:]    
+        k = burn_card.find(tokens[i+1])
+        self.burn_cards[self.cell[-1]] = burn_card[k:]
 
         ng_match  = re.compile('102 \d \d[.]\d{5,5}E[-+]\d{2,2} \d[.]\d{5,5}')
         n2n_match = re.compile('16 \d \d[.]\d{5,5}E[-+]\d{2,2} \d[.]\d{5,5}')
@@ -388,9 +389,9 @@ class mpo:
             # nuclides concentration density volume
 
             burn_card = self.burn_cards[cell]
-            
-            k = burn_card.split().index('VOL')    
-        
+
+            k = burn_card.split().index('VOL')
+
             self.volume[cell] = float(burn_card.split()[k+1])
 
             k = burn_card.split().index('ADENS')
@@ -398,11 +399,11 @@ class mpo:
             self.density[cell] = float(burn_card.split()[k+1])
 
             k = burn_card.split().index('FLUX')
-            
+
             self.flux_tally[cell] = float(burn_card.split()[k+1])/(source*self.volume[cell])
 
             k = burn_card.split().index('PDE')
-        
+
             self.power[cell] = float(burn_card.split()[k+1])*self.volume[cell]/power
 
             #1group cross sections
@@ -442,12 +443,12 @@ class mpo:
 
                 self.concentration[cell][nucl] = float(list[4])*self.density[cell]
 
-                self.NG[cell][nucl]    = 0.                
+                self.NG[cell][nucl]    = 0.
                 self.NG_sig[cell][nucl] = 0.
                 for string in ng_match.findall(nucl_card):
                     self.NG[cell][nucl] += float(string.split()[2])
                     self.NG_sig[cell][nucl] = float(string.split()[3])
-                
+
 
                 for string in nf_match.findall(nucl_card):
                     self.NF[cell][nucl] = float(string.split()[2])
@@ -473,36 +474,36 @@ class mpo:
             self.mcnp_nuclides[nucl_card.split()[0]] = nucl_card.split()[0]
 
         if print_mpo == 'yes':
-            self.write_mpo() 
-        
+            self.write_mpo()
+
     def write_mpo(self):
-        #this method returns mpo files just like the real mocup            
-        
+        #this method returns mpo files just like the real mocup
+
         a = Depletion()
         nct = a.nct
-    
+
         for cell in self.cell:
             output = ''
 
             # add timestep
             output += '.%d\n1' % self.timestep
-    
+
             #  add cell, material number, flux, atomic density, volume
             output += '\n %s  %s  %1.6E  %1.6E  %1.6E' % (cell, self.mat_ID[cell], (self.flux_tally[cell]), self.density[cell], self.volume[cell])
 
             # write number of nuclides
             output += '\n  %d' % len(list(self.concentration[cell].keys()))
-            
+
             # write nuclide information
-            
+
             for nuclide in list(self.mcnp_nuclides.values()):
-                
+
                 if nct[nuclide] in list(self.concentration[cell].keys()):
                     if nct[nuclide] in list(self.NF[cell].keys()) or nct[nuclide] in list(self.NG[cell].keys()) or nct[nuclide] in list(self.N2N[cell].keys()) or nct[nuclide] in list(self.N3N[cell].keys()):
                         # this nuclide is in the material composition for this depletion cell and has at least one cross section
                         # print nuclide information mcnp ID, origen ID and concentration
                         output += '\n  %s %s %1.6E' % (nuclide, nct[nuclide], self.concentration[cell][nct[nuclide]])
-                        
+
                         # determine the number of cross sections
                         XSn = 0
                         XS  = ''
@@ -531,10 +532,10 @@ class mpo:
 
         a = Depletion()
         nct = a.nct
-        
+
         self.power = {}
         self.power_density = {}
-        sum_power = 0 
+        sum_power = 0
 
         for cell in self.cell:
             # import fuel composition from OCF file
@@ -545,11 +546,11 @@ class mpo:
             for nucl in list(self.concentration[cell].keys()):
                 if nucl in list(mat.comp.keys()):
                     self.concentration[cell][nucl] = mat.comp[nucl]
-    
+
             # ensure all mcnp nuclides are in composition vector
             # calculate power in cell
-            power = 0 
-            power_density = 0 
+            power = 0
+            power_density = 0
 
             for nuclide in list(self.mcnp_nuclides.values()):
                 if nct[nuclide] in list(self.concentration[cell].keys()):
@@ -562,9 +563,9 @@ class mpo:
 
             self.power[cell] = power
             self.power_density[cell] = power_density
-            sum_power += power            
+            sum_power += power
 
-        if sum_power != 0.: 
+        if sum_power != 0.:
             for cell in self.cell:
                 self.power[cell] = self.power[cell]/sum_power
         else:
@@ -585,8 +586,8 @@ class mpo:
 
             # ensure all mcnp nuclides are in composition vector
             # calcuale power in cell
-            power = 0 
-            power_density = 0 
+            power = 0
+            power_density = 0
 
             for nuclide in list(self.mcnp_nuclides.values()):
                 if nct[nuclide] in list(self.concentration[cell].keys()):
@@ -597,15 +598,15 @@ class mpo:
                         power += Q*self.NF[cell][nct[nuclide]]*self.flux_tally[cell]*self.concentration[cell][nct[nuclide]]*self.volume[cell]
                         power_density += Q*self.NF[cell][nct[nuclide]]*self.flux_tally[cell]*self.concentration[cell][nct[nuclide]]
                 else:
-                    self.concentration[cell][nct[nuclide]] = 0 
+                    self.concentration[cell][nct[nuclide]] = 0
             self.power[cell] = power
             self.power_density[cell] = power_density
 
-        sum_power = 0 
+        sum_power = 0
         for power in list(self.power.values()):
             sum_power += power
 
-        if sum_power != 0.: 
+        if sum_power != 0.:
             for cell in self.cell:
                 self.power[cell] = self.power[cell]/sum_power
         else:
@@ -614,9 +615,9 @@ class mpo:
 
     def split(self):
 
-        #This method slits the mpo up into a list of mpos that only contain the depletion information for a single cell 
+        #This method slits the mpo up into a list of mpos that only contain the depletion information for a single cell
 
-        # generate several new mpos by copying original mpo 
+        # generate several new mpos by copying original mpo
         mpos = {}
         for cell in self.cell:
             mpo1 = mpo()
@@ -653,7 +654,7 @@ class mpo:
             if cell in list(self.temperature.keys()):
                 mpos[cell[:]].temperature[cell[:]] = self.temperature[cell]
 
-            # Note mcnp_nuclides list, timestep are left alone because they apply to all cells  
+            # Note mcnp_nuclides list, timestep are left alone because they apply to all cells
 
         return mpos
 
@@ -670,12 +671,12 @@ class mpo:
         mpo1.N3N              = self.N3N.copy()
         mpo1.NG               = self.NG.copy()
         mpo1.NF               = self.NF.copy()
-        
+
         mpo1.N2N_sig          = self.N2N_sig.copy()
         mpo1.N3N_sig          = self.N3N_sig.copy()
         mpo1.NG_sig           = self.NG_sig.copy()
         mpo1.NF_sig           = self.NF_sig.copy()
-        
+
         mpo1.power            = self.power.copy()
         mpo1.power_density    = self.power_density.copy()
         mpo1.flux_tally       = self.flux_tally.copy()
@@ -687,10 +688,10 @@ class mpo:
 
         return mpo1
 
-    def __add__(mpo1, mpo2):        
+    def __add__(mpo1, mpo2):
         # this method combines mpos in a single MPO
         mpo_new = mpo1.twin()
-        
+
         mpo_new.cell += mpo2.cell[:]
 
         for cell in mpo2.cell:
@@ -718,9 +719,9 @@ class mpo:
                 mpo_new.ORIGEN_fluxes[cell] = mpo2.ORIGEN_fluxes[cell]
             if cell in list(mpo2.temperature.keys()):
                 mpo_new.temperature[cell]   = mpo2.temperature[cell]
-        return mpo_new 
+        return mpo_new
 
-def gofiss(depletion):    
+def gofiss(depletion):
 
     import os
     mkdir = 'mkdir moi_files'
@@ -732,7 +733,7 @@ def gofiss(depletion):
         for iteration in range(len(depletion.time)):
             mocup(depletion, (iteration))
     elif depletion.method[0] == 'p' or depletion.method[0] == 'P':
-        
+
         # generate predictor timesteps, corrector timesteps and add additional flux or power timestep at BOC
 
         depletion.predictor_time = [depletion.time[0]/2.]
@@ -755,8 +756,8 @@ def gofiss(depletion):
 
         for iteration in range(len(depletion.predictor_time)):
 
-            print('starting %d iteration' % iteration) 
-            
+            print('starting %d iteration' % iteration)
+
             mocup(depletion, (iteration))
 
     # determine EOEC keffective
@@ -765,10 +766,10 @@ def gofiss(depletion):
     elif depletion.method[0] == 'p' or depletion.method[0] == 'P':
         iteration = len(depletion.predictor_time)
 
-    transportBRO(depletion,iteration)    
+    transportBRO(depletion,iteration)
 
     analysis(depletion)
-        
+
 def mocup(depletion, iteration):
     # This method runs MCNP and the modules of the MOCUP to produce the next MCNP input deck
     # it accepts all the depletion parameters and the iteration number
@@ -804,7 +805,7 @@ def mocup(depletion, iteration):
 def transportBRO(depletion,iteration):
 
     import os
-    
+
     # -------------------------------------------------------------------------
     # Run MCNP
     # -------------------------------------------------------------------------
@@ -849,7 +850,7 @@ def processingBRO(depletion, iteration):
     jteration = iteration + 1
 
     if depletion.runTRANS == 'yes' or len(depletion.mpos) <= iteration or len(depletion.mpos) == 0:
-        # generate new mpo object based on new mcnp output 
+        # generate new mpo object based on new mcnp output
         mpo1 = mpo()
         if depletion.transport_module[0] == 'm' or depletion.transport_module[0] == 'M':
             mpo1.populate(jteration,'yes')
@@ -869,16 +870,16 @@ def origenBRO(depletion, iteration):
     else:
         print('error depletion method must be either predictor corrector or beginning of timestep')
 
-    
+
 def origenB(depletion, iteration):
-    
+
     import math
     import os
 
     jteration = iteration + 1
     nct = depletion.nct
 
-    #import libraries 
+    #import libraries
     dir = depletion.dir
 
     # import cross section library
@@ -888,10 +889,10 @@ def origenB(depletion, iteration):
     NXS_lib = NXS_lib[k:]
 
     # Link TAPE files to be used by origen
-    
+
     # TAPE3 - blanket
     open('TAPE3.INP', 'w').write('')
-    
+
     # TAPE9 - Neutron Cross Sections
     TAPE9 = 'cat %sdecay.lib %s%s.lib > TAPE9.INP' % (dir, dir, depletion.library)
     print(TAPE9)
@@ -903,7 +904,7 @@ def origenB(depletion, iteration):
     os.system(TAPE10)
 
     nuclides2 = []
-    
+
     for nucl in list(depletion.mpos[iteration].mcnp_nuclides.values()):
         nuclides2.append(depletion.nct[nucl])
 
@@ -927,8 +928,8 @@ def origenB(depletion, iteration):
         for nucl in nuclides2:
             if nucl not in nuclides:
                 mpo.structural_nuclides.append(nucl)
-                
-            
+
+
         #update skeleton
 
         # initialize text for cross sections
@@ -950,13 +951,13 @@ def origenB(depletion, iteration):
             else:
                 _FISSIONPRODUCTS_ += '        %s\n' % nuclide
                 _FINVENTORY_ += '3 %s %1.6E 0 0.0\n' % (nuclide,moles)
-            
+
         # combine inventory from actinides and fission products
         _INVENTORY_ = _AINVENTORY_ + _FINVENTORY_
 
         for nuclide in nuclides:
             #determine if fuel or fission product and which library to append to and cross section format
-            k = NXS_lib.split().index(nuclide)    
+            k = NXS_lib.split().index(nuclide)
             lib_num = NXS_lib.split()[k-1]
 
             #determine metastable production ratio
@@ -964,15 +965,15 @@ def origenB(depletion, iteration):
 
             # initialize fraction of NG XS and N2N XS that end in ground state and metastable states
             fNG    = 1
-            fNGex  = 0 
+            fNGex  = 0
             fN2N   = 1
-            fN2Nex = 0 
+            fN2Nex = 0
 
             # intialize cross sections
-            NG = 0 
-            N2N = 0 
+            NG = 0
+            N2N = 0
             NGex = 0
-            N2Nex = 0 
+            N2Nex = 0
 
             # grab cross sections from XS library to allocate the NG  and N2N cross section to reactions that end in ground state and metastable states
             if NXS_lib[k+14:k+16] != '  ':
@@ -988,19 +989,19 @@ def origenB(depletion, iteration):
             if NG + NGex != 0:
                 fNG   = NG/(NG + NGex)
                 fNGex = NGex/(NG + NGex)
-            if N2N + N2Nex != 0: 
+            if N2N + N2Nex != 0:
                 fN2N   = N2N/(N2N+N2Nex)
                 fN2Nex = N2Nex/(N2N+N2Nex)
 
             # Initialize Cross Sections at 0
-            SN3N = 0 
+            SN3N = 0
             SN2N = 0
-            SNF  = 0 
+            SNF  = 0
             SNG  = 0
 
             # define cross sections
             if nuclide in list(mpo.N3N[cell].keys()):
-                SN3N = mpo.N3N[cell][nuclide] 
+                SN3N = mpo.N3N[cell][nuclide]
             if nuclide in list(mpo.N2N[cell].keys()):
                 SN2N = mpo.N2N[cell][nuclide]
             if nuclide in list(mpo.NF[cell].keys()):
@@ -1024,7 +1025,7 @@ def origenB(depletion, iteration):
                 _XS_ = NXS_lib[k:(k+l+m+2)]
                 # replace (N,G)
                 SNGs = '%1.3E' % (SNG*fNG)
-                _XS_ = _XS_[:12]+SNGs+_XS_[21:] 
+                _XS_ = _XS_[:12]+SNGs+_XS_[21:]
                 SNGs = '%1.3E' % (SN2N*fN2N)
                 _XS_ = _XS_[:22]+SNGs+_XS_[31:]
                 SNGs = '%1.3E' % (SNG*fNGex)
@@ -1045,7 +1046,7 @@ def origenB(depletion, iteration):
         skele += '\n BAS    BWR bundle'
         skele += '\n LIP    1 1 0 '
         skele += '\n LPU \n'
-        skele += _ACTINIDES_    
+        skele += _ACTINIDES_
         skele += '        -1'
         skele += '\n LPU \n' + _FISSIONPRODUCTS_ + '        -1'
         skele += '\n LIB    0   0 2 3    0 -%s -%s   9 50 0  4   0' % (actinide_num, fissionproduct_num)
@@ -1105,7 +1106,7 @@ def origenB(depletion, iteration):
             mat = material()
             mat.comp = mpo.concentration[cell]
             mat = mat*(mpo.volume[cell]/.602214078)
-            ocf_loc = 'moi_files/moi.%s.0.pch' % cell 
+            ocf_loc = 'moi_files/moi.%s.0.pch' % cell
             mat.make_ocf(ocf_loc)
         # copy discharge composition from i - 1 cycle to charge of i cycle
         copy = '\cp moi_files/moi.%s.%d.pch TAPE4.INP' % (cell, iteration)
@@ -1118,12 +1119,12 @@ def origenB(depletion, iteration):
         if depletion.library[0:3] in ['amo','emo','fft']:
             # origen uses a fast reactor set of cross sections, thus origen will be executed with o2_fast
             origen = 'o2_fast'
-        else: 
+        else:
             # origen uses a fast reactor set of cross sections, thus origen will be executed with o2_therm
             origen = 'o2_therm'
- 
-        print(origen)    
-        os.system(origen)        
+
+        print(origen)
+        os.system(origen)
 
         TAPE6 = open('TAPE6.OUT').read()
 
@@ -1132,8 +1133,8 @@ def origenB(depletion, iteration):
 
         k = TAPE6.find('SP POW,MW')
         powers = TAPE6[k:].split()[3:13]
-        depletion.mpos[iteration].ORIGEN_power[cell] = 0 
-        depletion.mpos[iteration].ORIGEN_fluxes[cell] = 0 
+        depletion.mpos[iteration].ORIGEN_power[cell] = 0
+        depletion.mpos[iteration].ORIGEN_fluxes[cell] = 0
 
         for i in range(len(powers)):
             depletion.mpos[iteration].ORIGEN_power[cell] += float(powers[i])/len(powers)
@@ -1154,7 +1155,7 @@ def origenB(depletion, iteration):
         move = '\mv TAPE7.OUT moi_files/moi.%s.%d.pch' % (cell, jteration)
         print(move)
         os.system(move)
-    
+
     # clean workspace
     remove = '\\rm TAPE*'
     print(remove)
@@ -1163,14 +1164,14 @@ def origenB(depletion, iteration):
 def origenPC(depletion, iteration):
 
     # This is the origen driver for mocup in predictor corrector mode
-    
+
     import math
     import os
 
     jteration = iteration + 1
     nct = depletion.nct
 
-    #import libraries 
+    #import libraries
     dir = depletion.dir
 
     # import cross section library
@@ -1180,10 +1181,10 @@ def origenPC(depletion, iteration):
     NXS_lib = NXS_lib[k:]
 
     # Link TAPE files to be used by origen
-    
+
     # TAPE3 - blanket
     open('TAPE3.INP', 'w').write('')
-    
+
     # TAPE9 - Neutron Cross Sections
     TAPE9 = 'cat %sdecay.lib %s%s.lib > TAPE9.INP' % (dir, dir, depletion.library)
     print(TAPE9)
@@ -1234,13 +1235,13 @@ def origenPC(depletion, iteration):
             else:
                 _FISSIONPRODUCTS_ += '        %s\n' % nuclide
                 _FINVENTORY_ += '3 %s %1.6E 0 0.0\n' % (nuclide,moles)
-            
+
         # combine inventory from actinides and fission products
         _INVENTORY_ = _AINVENTORY_ + _FINVENTORY_
 
         for nuclide in nuclides:
             #determine if fuel or fission product and which library to append to and cross section format
-            k = NXS_lib.split().index(nuclide)    
+            k = NXS_lib.split().index(nuclide)
             lib_num = NXS_lib.split()[k-1]
 
             #determine metastable production ratio
@@ -1248,15 +1249,15 @@ def origenPC(depletion, iteration):
 
             # initialize fraction of NG XS and N2N XS that end in ground state and metastable states
             fNG    = 1
-            fNGex  = 0 
+            fNGex  = 0
             fN2N   = 1
-            fN2Nex = 0 
+            fN2Nex = 0
 
             # intialize cross sections
-            NG = 0 
-            N2N = 0 
+            NG = 0
+            N2N = 0
             NGex = 0
-            N2Nex = 0 
+            N2Nex = 0
 
             # grab cross sections from XS library to allocate the NG  and N2N cross section to reactions that end in ground state and metastable states
             if NXS_lib[k+14:k+16] != '  ':
@@ -1272,19 +1273,19 @@ def origenPC(depletion, iteration):
             if NG + NGex != 0:
                 fNG   = NG/(NG + NGex)
                 fNGex = NGex/(NG + NGex)
-            if N2N + N2Nex != 0: 
+            if N2N + N2Nex != 0:
                 fN2N   = N2N/(N2N+N2Nex)
                 fN2Nex = N2Nex/(N2N+N2Nex)
 
             # Initialize Cross Sections at 0
-            SN3N = 0 
+            SN3N = 0
             SN2N = 0
-            SNF  = 0 
+            SNF  = 0
             SNG  = 0
 
             # define cross sections
             if nuclide in list(mpo.N3N[cell].keys()):
-                SN3N = mpo.N3N[cell][nuclide] 
+                SN3N = mpo.N3N[cell][nuclide]
             if nuclide in list(mpo.N2N[cell].keys()):
                 SN2N = mpo.N2N[cell][nuclide]
             if nuclide in list(mpo.NF[cell].keys()):
@@ -1308,7 +1309,7 @@ def origenPC(depletion, iteration):
                 _XS_ = NXS_lib[k:(k+l+m+2)]
                 # replace (N,G)
                 SNGs = '%1.3E' % (SNG*fNG)
-                _XS_ = _XS_[:12]+SNGs+_XS_[21:] 
+                _XS_ = _XS_[:12]+SNGs+_XS_[21:]
                 SNGs = '%1.3E' % (SN2N*fN2N)
                 _XS_ = _XS_[:22]+SNGs+_XS_[31:]
                 SNGs = '%1.3E' % (SNG*fNGex)
@@ -1329,7 +1330,7 @@ def origenPC(depletion, iteration):
         skele += '\n BAS    BWR bundle'
         skele += '\n LIP    1 1 0 '
         skele += '\n LPU \n'
-        skele += _ACTINIDES_    
+        skele += _ACTINIDES_
         skele += '        -1'
         skele += '\n LPU \n' + _FISSIONPRODUCTS_ + '        -1'
         skele += '\n LIB    0   0 2 3    0 -%s -%s   9 50 0  4   0' % (actinide_num, fissionproduct_num)
@@ -1427,12 +1428,12 @@ def origenPC(depletion, iteration):
         if depletion.library[0:3] in ['amo','emo','fft']:
             # origen uses a fast reactor set of cross sections, thus origen will be executed with o2_fast
             origen = 'o2_fast'
-        else: 
+        else:
             # origen uses a fast reactor set of cross sections, thus origen will be executed with o2_therm
             origen = 'o2_therm'
- 
-        print(origen)    
-        os.system(origen)        
+
+        print(origen)
+        os.system(origen)
 
         #move outputs in moi_files PREDICTOR
 
@@ -1449,48 +1450,48 @@ def origenPC(depletion, iteration):
         move = '\mv TAPE7.OUT moi_files/moi.%s.%d.pch' % (cell, jteration)
         print(move)
         os.system(move)
-    
+
 
         # execute origen for corrector step
         if depletion.corrector_time[iteration] != 0:
             open('TAPE5.INP','w').write(corrector)
-            
+
             print(origen)
             os.system(origen)
             TAPE6 = open('TAPE6.OUT').read()
-    
+
             k = TAPE6.find('NEUT. FLUX')
             fluxes = TAPE6[k:].split()[3:13]
-    
+
             k = TAPE6.find('SP POW,MW')
             powers = TAPE6[k:].split()[3:13]
             depletion.mpos[iteration].ORIGEN_power[cell] = 0
             depletion.mpos[iteration].ORIGEN_fluxes[cell] = 0
-    
+
             for i in range(len(powers)):
                 depletion.mpos[iteration].ORIGEN_power[cell] += float(powers[i])/len(powers)
                 depletion.mpos[iteration].ORIGEN_fluxes[cell] += float(fluxes[i])/len(fluxes)
-    
+
             #move outputs in moi_files
 
             # move outputs in moi_files CORRECTOR
             move = 'cat TAPE12.OUT TAPE6.OUT > moi_files/cor.%s.%d.out' % (cell, jteration)
             print(move)
             os.system(move)
-            
+
             # move origen input deck, TAPE5.INP
             move = '\mv TAPE5.INP moi_files/cor.%s.%d.inp' % (cell, jteration)
             print(move)
             os.system(move)
-            
+
             # move CORRECTOR discharge composition, TAPE7.OUT
             move = '\mv TAPE7.OUT moi_files/cor.%s.%d.pch' % (cell, jteration)
             print(move)
             os.system(move)
-    
+
         else:
             # This is the first step where the BOC composition is the charge
-        
+
             if depletion.start_ocf == 1  and jteration == 1:
                 # No initial timestep is expected, thus the concentration taken from the MCNP outp file is converted to moles and used as the charge for the next timestep
 
@@ -1503,7 +1504,7 @@ def origenPC(depletion, iteration):
                 powers = TAPE6[k:].split()[3:13]
                 depletion.mpos[iteration].ORIGEN_power[cell] = 0
                 depletion.mpos[iteration].ORIGEN_fluxes[cell] = 0
-        
+
                 for i in range(len(powers)):
                     depletion.mpos[iteration].ORIGEN_power[cell] += float(powers[i])/len(powers)
                     depletion.mpos[iteration].ORIGEN_fluxes[cell] += float(fluxes[i])/len(fluxes)
@@ -1520,7 +1521,7 @@ def origenPC(depletion, iteration):
                 copy = '\cp moi_files/cor.%s.%d.pch moi_files/cor.%s.%d.pch' % (cell,iteration,cell,jteration)
                 print(copy)
                 os.system(copy)
-    
+
     # clean workspace
     remove = '\\rm TAPE*'
     print(remove)
@@ -1545,7 +1546,7 @@ def compBRO(mpo,new_loc=''):
     os.system('\\rm tmp')
     os.system('ls >> tmp')
     main_files = open('tmp').read().split()
-    
+
     os.system('\\rm tmp')
     os.system('ls moi_files/ >> tmp')
     moi_files = open('tmp').read().split()
@@ -1575,7 +1576,7 @@ def compBRO(mpo,new_loc=''):
         library = list(mpo.mcnp_nuclides.values())[0].replace('.',' ').split()[1]
 
         if mpo.transport_module[0] == 'M' or mpo.transport_module[0] == 'm':
-            
+
             token = '\nm%s ' % mpo.mat_ID[cell]
             k = inp.find(token)
 
@@ -1607,7 +1608,7 @@ def compBRO(mpo,new_loc=''):
 
             inp = inp.replace(mat_card,new.mat_card)
 
-            # update the density 
+            # update the density
 
             token = '\n%s ' % cell
             k = inp.find(token)
@@ -1668,7 +1669,7 @@ def compBRO(mpo,new_loc=''):
     open(new_loc, 'w').write(inp)
 
 def analysis(depletion):
-    
+
     #This method prints the mocup depletion analysis output files
     #
     #formats are:
@@ -1724,7 +1725,7 @@ def analysis(depletion):
             # import serpent results file
             outp_loc = 'inp%d_res.m' % jteration
             OUTP = open(outp_loc).read().split()
-            
+
             # grad keffective from serpent output file
             k = OUTP.index('IMP_KEFF')
             k_vector.append(float(OUTP[k+6]))
@@ -1741,11 +1742,11 @@ def analysis(depletion):
 
     #write cell specific output files
     for cell in depletion.mpos[0].cell:
-        
+
         # initial flux and power output strings
         flux_matrix[cell] = {}
         power_matrix[cell] = {}
-        
+
         # initialized concentration evolution
         comp_evo = []
 
@@ -1753,9 +1754,9 @@ def analysis(depletion):
         # grab the flux and power from the ORIGEN output files
         for iteration in range(len(time2)):
             jteration = iteration + 1
-            
+
             #import discharge fuel vector timestep
-            
+
             if depletion.method[0] == 'b' or depletion.method[0] == 'B':
                 # beginning mode use beginning of timestep
                 ocf_loc = 'moi_files/moi.%s.%d.pch' % (cell, iteration)
@@ -1769,40 +1770,40 @@ def analysis(depletion):
             # import ORIGEN output file for timestep
             origen_loc = 'moi_files/moi.%s.%d.out' % (cell, jteration)
             ORIGEN = open(origen_loc).read()
-            
+
             # grab the neutron flux from the ORIGEN output file
             k = ORIGEN.find('NEUT. FLUX')
             flux_vector  = ORIGEN[k:].split()[3:13]
-            flux = 0 
+            flux = 0
             for f in flux_vector:
                 flux += float(f)
             flux_matrix[cell][jteration] = flux/len(flux_vector)
 
             # grab the power from the ORIGEN output file
             k = ORIGEN.find('SP POW,MW')
-            power_vector = ORIGEN[k:].split()[3:13]    
-            power = 0 
+            power_vector = ORIGEN[k:].split()[3:13]
+            power = 0
             for p in power_vector:
                 power += float(p)
             power_matrix[cell][jteration] = power/len(flux_vector)
-    
+
     # generation concentration matrix [time],[cell], [nuclide]
 
     if depletion.method[0] in ['b','B']:
-        I = 0 
+        I = 0
     elif depletion.method[0] in ['p','P']:
         I = 1
     concentration = {}
     for i in range(I,len(time_out_cum)-1):
         concentration[time_out_cum[i]]= depletion.mpos[i].concentration
-        
+
     depletion.output = output(depletion.mpos[0].cell, concentration,flux_matrix, k_vector, power_matrix, time_out_cum[I:-1], time_out_cum)
 
     if depletion.format[0] == 'p' or depletion.format[0] == 'P' or depletion.format[0] == 'a' or depletion.format[0] == 'A' :
         # This is formated as a python file
         out_loc = 'mocup_out.py'
-        
-        out =  "#!/usr/bin/env python" 
+
+        out =  "#!/usr/bin/env python"
 
         out += "\n# depletion cells"
         out += "\ncells = ["
@@ -1825,10 +1826,10 @@ def analysis(depletion):
         out += ']'
 
         out += '\n# cell dependent values'
-        
+
         if depletion.method[0] == 'b' or depletion.method[0] == 'B':
             _time_ = 'beginning'
-            I = 0 
+            I = 0
         elif depletion.method[0] == 'p' or depletion.method[0] == 'P':
             _time_ = 'middle'
             I = 1
@@ -1848,20 +1849,20 @@ def analysis(depletion):
             for nucl in list(depletion.mpos[0].concentration[cell].keys()):
                 out += "\nconcentration['%s']['%s'] = {" % (cell, nucl)
                 for j in range(I,len(time_out_cum)-1):
-                    # if I = 1, predictor corrector 
+                    # if I = 1, predictor corrector
                     i = j-I
                     out += '%1.5E:%1.5E,' % (time_out_cum[j],depletion.mpos[i].concentration[cell][nucl])
                 out += '}'
-        
+
         # print power
         out += '\n# power vector (MW)\npower = {}'
-        for cell in depletion.mpos[0].cell:    
+        for cell in depletion.mpos[0].cell:
             out += "\npower['%s'] = {" % cell
             for j in range(I,len(time_out_cum)-1):
                 out += '%1.5E:%1.5E,' % (time_out_cum[j],power_matrix[cell][j])
             out += '}'
 
-        # print flux 
+        # print flux
         out += '\n# flux vector (n/cm2s)\nflux = {}'
         for cell in depletion.mpos[0].cell:
             out += "\nflux['%s'] = {" % cell
@@ -1877,22 +1878,22 @@ def analysis(depletion):
         # This is formated as a csv
 
         out_loc = 'output.csv'
-        
+
         # print depletion cells
         out  = art.replace(',',".") + '\n\ndepletion cells:\n'
-        
+
         for cell in depletion.mpos[0].cell:
             out += '%s,' % cell
-        
+
         # print time vector for keff evolution
         out += '\n\ntime (effective full power days):\n'
         for t in time_out_cum:
             out += '%1.5E,' % t
-        
+
         # print keff evolution
         out += '\n\nkeff:\n'
         for k in k_vector:
-            out += '%1.5E,' % k 
+            out += '%1.5E,' % k
 
         if depletion.method[0] == 'b' or depletion.method[0] == 'B':
             _time_ = 'beginning'
@@ -1906,7 +1907,7 @@ def analysis(depletion):
             time_csv += '%1.5E,' % t
 
         out += '\n\n'+'-'*80 + '\ncell dependent parameters\n' + '-'*80 + '\n'
-        
+
         for cell in depletion.mpos[0].cell:
             out += '\ncell: %s' % cell
             out += '\nconcentration evolution at/bn-cm'
@@ -1932,13 +1933,13 @@ def analysis(depletion):
         # This is formated as a m-file
 
         out_loc = 'output.m'
-        
+
         # print time vector for keff evolution
         out  = '\n\n% time (effective full power days):\ntime_keff = ['
         for t in time_out_cum:
             out += '%1.5E ' % t
-        out += '];'    
-        
+        out += '];'
+
         # print keff evolution
         out += '\n\n% keff evolution:\nkeff = ['
         for k in k_vector:
@@ -1948,10 +1949,10 @@ def analysis(depletion):
         # print times for depletion parameters
         if depletion.method[0] == 'b' or depletion.method[0] == 'B':
             _time_ = 'beginning'
-            I = 0 
+            I = 0
         elif depletion.method[0] == 'p' or depletion.method[0] == 'P':
             _time_ = 'middle'
-            I = 1        
+            I = 1
 
         time_csv = '\n\n%% time (effective full power days) at %s of timestep\ntime_dep = [' % _time_
         for t in time_out_cum2:
@@ -1972,11 +1973,11 @@ def analysis(depletion):
         out += '\v]'
 
         out += id
-        
-        out += '\n\n% '+'-'*80 + '\n% cell dependent parameters\n%' + '-'*80 + '\n'    
+
+        out += '\n\n% '+'-'*80 + '\n% cell dependent parameters\n%' + '-'*80 + '\n'
 
         # print concentration matrix
-        
+
         for cell in depletion.mpos[0].cell:
             out += '\n%% concentration vector for cell: %s (at/bn-cm)' % cell
             out += time_csv
@@ -1990,7 +1991,7 @@ def analysis(depletion):
             # power vectors
             out += '\n%% power vector (MW)\npower_%s = [' % cell
             for j in range(1,len(depletion.mpos)):
-                out += '%1.5E ' % power_matrix[cell][j] 
+                out += '%1.5E ' % power_matrix[cell][j]
             out += '];'
 
             # flux vectors
