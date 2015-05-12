@@ -1,0 +1,1609 @@
+Infinite Pebble Bed - Advanced High Temperature Reactor
+
+c ------------------------------------------------------------------------------
+
+c Cells
+
+c ------------------------------------------------------------------------------
+
+c Depletion Zone 1
+10 10 __kernel_molar_density__ -1 u=101 tmp=__kernel_temperature__ imp:n=1 $ Kernel 1
+vol=__kernel_volume__
+11 12 -__matrix_density__  1 u=101 tmp=__matrix_temperature__ imp:n=1 $ Coatings and Matrix 
+12 0 -11 12 -13 14 -15 16  lat=1            imp:n=1 fill=101 u=91 $ TRISO lattice
+c Depletion Zone 2
+20 20 __kernel_molar_density__ -1 u=102 tmp=__kernel_temperature__ imp:n=1 $ Kernel 2
+vol=__kernel_volume__
+21 12 -__matrix_density__  1 u=102 tmp=__matrix_temperature__ imp:n=1 $ Coatings and Matrix 
+22 0 -11 12 -13 14 -15 16  lat=1            imp:n=1 fill=102 u=92 $ TRISO lattice
+c Depletion Zone 3
+30 30 __kernel_molar_density__ -1 u=103 tmp=__kernel_temperature__ imp:n=1 $ Kernel 3
+vol=__kernel_volume__
+31 12 -__matrix_density__  1 u=103 tmp=__matrix_temperature__ imp:n=1 $ Coatings and Matrix 
+32 0 -11 12 -13 14 -15 16  lat=1            imp:n=1 fill=103 u=93 $ TRISO lattice
+c Depletion Zone 4
+40 40 __kernel_molar_density__ -1 u=104 tmp=__kernel_temperature__ imp:n=1 $ Kernel 4
+vol=__kernel_volume__
+41 12 -__matrix_density__  1 u=104 tmp=__matrix_temperature__ imp:n=1 $ Coatings and Matrix 
+42 0 -11 12 -13 14 -15 16  lat=1            imp:n=1 fill=104 u=94 $ TRISO lattice
+c Depletion Zone 5
+50 50 __kernel_molar_density__ -1 u=105 tmp=__kernel_temperature__ imp:n=1 $ Kernel 5
+vol=__kernel_volume__
+51 12 -__matrix_density__  1 u=105 tmp=__matrix_temperature__ imp:n=1 $ Coatings and Matrix 
+52 0 -11 12 -13 14 -15 16  lat=1            imp:n=1 fill=105 u=95 $ TRISO lattice
+c Depletion Zone 6
+60 60 __kernel_molar_density__ -1 u=106 tmp=__kernel_temperature__ imp:n=1 $ Kernel 6
+vol=__kernel_volume__
+61 12 -__matrix_density__  1 u=106 tmp=__matrix_temperature__ imp:n=1 $ Coatings and Matrix 
+62 0 -11 12 -13 14 -15 16  lat=1            imp:n=1 fill=106 u=96 $ TRISO lattice
+c Depletion Zone 7
+70 70 __kernel_molar_density__ -1 u=107 tmp=__kernel_temperature__ imp:n=1 $ Kernel 7
+vol=__kernel_volume__
+71 12 -__matrix_density__  1 u=107 tmp=__matrix_temperature__ imp:n=1 $ Coatings and Matrix 
+72 0 -11 12 -13 14 -15 16  lat=1            imp:n=1 fill=107 u=97 $ TRISO lattice
+c Depletion Zone 8
+80 80 __kernel_molar_density__ -1 u=108 tmp=__kernel_temperature__ imp:n=1 $ Kernel 8
+vol=__kernel_volume__
+81 12 -__matrix_density__  1 u=108 tmp=__matrix_temperature__ imp:n=1 $ Coatings and Matrix 
+82 0 -11 12 -13 14 -15 16  lat=1            imp:n=1 fill=108 u=98 $ TRISO lattice
+c ------------------------------------------------------------------------------
+c Pebbles
+110 21 __pebble_core_molar_density__      -110             u=1 imp:n=1 $ Depletion Region 1
+111 0                     -111 110 fill=91 u=1 imp:n=1
+112 22 __pebble_shell_molar_density__     -112 111         u=1 imp:n=1
+113 21 __pebble_core_molar_density__      -113             u=1 imp:n=1 $ Depletion Region 1
+114 0                     -114 113 fill=91 u=1 imp:n=1
+115 22 __pebble_shell_molar_density__     -115 114         u=1 imp:n=1
+116 21 __pebble_core_molar_density__      -116             u=1 imp:n=1 $ Depletion Region 1
+117 0                     -117 116 fill=91 u=1 imp:n=1
+118 22 __pebble_shell_molar_density__     -118 117         u=1 imp:n=1
+119 21 __pebble_core_molar_density__      -119             u=1 imp:n=1 $ Depletion Region 1
+120 0                     -120 119 fill=91 u=1 imp:n=1
+121 22 __pebble_shell_molar_density__     -121 120         u=1 imp:n=1
+c
+123 21 __pebble_core_molar_density__      -130             u=1 imp:n=1 $ Depletion Region 2
+124 0                     -131 130 fill=92 u=1 imp:n=1
+125 22 __pebble_shell_molar_density__     -132 131         u=1 imp:n=1
+126 21 __pebble_core_molar_density__      -133             u=1 imp:n=1 $ Depletion Region 2
+127 0                     -134 133 fill=92 u=1 imp:n=1
+128 22 __pebble_shell_molar_density__     -135 134         u=1 imp:n=1
+129 21 __pebble_core_molar_density__      -136             u=1 imp:n=1 $ Depletion Region 2
+130 0                     -137 136 fill=92 u=1 imp:n=1
+131 22 __pebble_shell_molar_density__     -138 137         u=1 imp:n=1
+132 21 __pebble_core_molar_density__      -139             u=1 imp:n=1 $ Depletion Region 2
+133 0                     -140 139 fill=92 u=1 imp:n=1
+134 22 __pebble_shell_molar_density__     -141 140         u=1 imp:n=1
+c
+135 21 __pebble_core_molar_density__      -150             u=1 imp:n=1 $ Depletion Region 3
+136 0                     -151 150 fill=93 u=1 imp:n=1
+137 22 __pebble_shell_molar_density__     -152 151         u=1 imp:n=1
+c
+138 21 __pebble_core_molar_density__      -153             u=1 imp:n=1 $ Depletion Region 4
+139 0                     -154 153 fill=94 u=1 imp:n=1
+140 22 __pebble_shell_molar_density__     -155 154         u=1 imp:n=1
+c
+141 21 __pebble_core_molar_density__      -160             u=1 imp:n=1 $ Depletion Region 5
+142 0                     -161 160 fill=95 u=1 imp:n=1
+143 22 __pebble_shell_molar_density__     -162 161         u=1 imp:n=1
+c
+144 21 __pebble_core_molar_density__      -163             u=1 imp:n=1 $ Depletion Region 6
+145 0                     -164 163 fill=96 u=1 imp:n=1
+146 22 __pebble_shell_molar_density__     -165 164         u=1 imp:n=1
+c
+147 21 __pebble_core_molar_density__      -170             u=1 imp:n=1 $ Depletion Region 7
+148 0                     -171 170 fill=97 u=1 imp:n=1
+149 22 __pebble_shell_molar_density__     -172 171         u=1 imp:n=1
+c
+150 21 __pebble_core_molar_density__      -173             u=1 imp:n=1 $ Depletion Region 8
+151 0                     -174 173 fill=98 u=1 imp:n=1
+152 22 __pebble_shell_molar_density__     -175 174         u=1 imp:n=1
+c
+153 24 8.34284E-02 112 115 118 121 
+           132 135 138 141
+           152 155 162 165 172 175 u=1 imp:n=1 $ Coolant
+           154 0              -900 901 -902 903 -904 905 fill=1 imp:n=1 $ FCC Unit Cell
+999 0              900:-901:902:-903:904:-905        imp:n=0 $ Vacuum Boundary Conditions
+
+c ------------------------------------------------------------------------------
+c Surface
+c ------------------------------------------------------------------------------
+c TRISO surfaces
+1   so    __kernel_radius__    $  Kernel
+c   Fuel Particles Lattice
+11  px    __TRISO_hpitch__
+12  px   -__TRISO_hpitch__
+13  py    __TRISO_hpitch__
+14  py   -__TRISO_hpitch__
+15  pz    __TRISO_hpitch__
+16  pz   -__TRISO_hpitch__
+c Pebble Surfaces
+110 s  __Pebble_hpitch__  __Pebble_hpitch__  __Pebble_hpitch__ __Pebble_core_radius__ 
+111 s  __Pebble_hpitch__  __Pebble_hpitch__  __Pebble_hpitch__ __Pebble_active_radius__
+112 s  __Pebble_hpitch__  __Pebble_hpitch__  __Pebble_hpitch__ __Pebble_shell_radius__
+c
+113 s -__Pebble_hpitch__  __Pebble_hpitch__  __Pebble_hpitch__ __Pebble_core_radius__ 
+114 s -__Pebble_hpitch__  __Pebble_hpitch__  __Pebble_hpitch__ __Pebble_active_radius__
+115 s -__Pebble_hpitch__  __Pebble_hpitch__  __Pebble_hpitch__ __Pebble_shell_radius__
+c
+116 s -__Pebble_hpitch__ -__Pebble_hpitch__  __Pebble_hpitch__ __Pebble_core_radius__ 
+117 s -__Pebble_hpitch__ -__Pebble_hpitch__  __Pebble_hpitch__ __Pebble_active_radius__
+118 s -__Pebble_hpitch__ -__Pebble_hpitch__  __Pebble_hpitch__ __Pebble_shell_radius__
+c
+119 s  __Pebble_hpitch__ -__Pebble_hpitch__  __Pebble_hpitch__ __Pebble_core_radius__ 
+120 s  __Pebble_hpitch__ -__Pebble_hpitch__  __Pebble_hpitch__ __Pebble_active_radius__
+121 s  __Pebble_hpitch__ -__Pebble_hpitch__  __Pebble_hpitch__ __Pebble_shell_radius__
+c
+130 s  __Pebble_hpitch__  __Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_core_radius__ 
+131 s  __Pebble_hpitch__  __Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_active_radius__ 
+132 s  __Pebble_hpitch__  __Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_shell_radius__
+c
+133 s -__Pebble_hpitch__  __Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_core_radius__
+134 s -__Pebble_hpitch__  __Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_active_radius__
+135 s -__Pebble_hpitch__  __Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_shell_radius__
+c
+136 s -__Pebble_hpitch__ -__Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_core_radius__
+137 s -__Pebble_hpitch__ -__Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_active_radius__
+138 s -__Pebble_hpitch__ -__Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_shell_radius__
+c
+139 s  __Pebble_hpitch__ -__Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_core_radius__
+140 s  __Pebble_hpitch__ -__Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_active_radius__
+141 s  __Pebble_hpitch__ -__Pebble_hpitch__ -__Pebble_hpitch__ __Pebble_shell_radius__
+c
+150 s  __Pebble_hpitch__  0           0          __Pebble_core_radius__
+151 s  __Pebble_hpitch__  0           0          __Pebble_active_radius__
+152 s  __Pebble_hpitch__  0           0          __Pebble_shell_radius__
+c
+153 s -__Pebble_hpitch__  0           0          __Pebble_core_radius__
+154 s -__Pebble_hpitch__  0           0          __Pebble_active_radius__
+155 s -__Pebble_hpitch__  0           0          __Pebble_shell_radius__
+c
+160 s   0          __Pebble_hpitch__  0          __Pebble_core_radius__
+161 s   0          __Pebble_hpitch__  0          __Pebble_active_radius__
+162 s   0          __Pebble_hpitch__  0          __Pebble_shell_radius__
+c
+163 s   0         -__Pebble_hpitch__  0          __Pebble_core_radius__
+164 s   0         -__Pebble_hpitch__  0          __Pebble_active_radius__
+165 s   0         -__Pebble_hpitch__  0          __Pebble_shell_radius__
+c
+170 s   0           0          __Pebble_hpitch__  __Pebble_core_radius__
+171 s   0           0          __Pebble_hpitch__  __Pebble_active_radius__
+172 s   0           0          __Pebble_hpitch__  __Pebble_shell_radius__
+c
+173 s   0           0         -__Pebble_hpitch__  __Pebble_core_radius__
+174 s   0           0         -__Pebble_hpitch__  __Pebble_active_radius__
+175 s   0           0         -__Pebble_hpitch__  __Pebble_shell_radius__
+c
+c Unit Cell Surfaces
+*900 px  __Pebble_hpitch__
+*901 px -__Pebble_hpitch__
+*902 py  __Pebble_hpitch__
+*903 py -__Pebble_hpitch__
+*904 pz  __Pebble_hpitch__
+*905 pz -__Pebble_hpitch__
+
+c ------------------------------------------------------------------------------
+c Data
+c ------------------------------------------------------------------------------
+c   Fuel Mix (800 C - Scattering Kernel at 727 C)
+m10        6000.__XS_kernel__ 1.182344e-02
+   8016.__XS_kernel__ 3.547031e-02
+  90232.__XS_kernel__ 1.000000E-30
+  90233.__XS_kernel__ 1.000000E-30
+  91233.__XS_kernel__ 1.000000E-30
+  92233.__XS_kernel__ 1.000000E-30
+  92234.__XS_kernel__ 1.000000E-30
+  92235.__XS_kernel__ 4.753724E-03
+  92236.__XS_kernel__ 1.000000E-30
+  92237.__XS_kernel__ 1.000000E-30
+  92238.__XS_kernel__ 1.889315E-02
+  92239.__XS_kernel__ 1.000000E-30
+  93236.__XS_kernel__ 1.000000E-30
+  93237.__XS_kernel__ 1.000000E-30
+  93238.__XS_kernel__ 1.000000E-30
+  93239.__XS_kernel__ 1.000000E-30
+  94236.__XS_kernel__ 1.000000E-30
+  94237.__XS_kernel__ 1.000000E-30
+  94238.__XS_kernel__ 1.000000E-30
+  94239.__XS_kernel__ 1.000000E-30
+  94240.__XS_kernel__ 1.000000E-30
+  94241.__XS_kernel__ 1.000000E-30
+  94242.__XS_kernel__ 1.000000E-30
+  94243.__XS_kernel__ 1.000000E-30
+  94244.__XS_kernel__ 1.000000E-30
+  95241.__XS_kernel__ 1.000000E-30
+  95642.__XS_kernel__ 1.000000E-30
+  95242.__XS_kernel__ 1.000000E-30
+  95243.__XS_kernel__ 1.000000E-30
+  95244.__XS_kernel__ 1.000000E-30
+  96242.__XS_kernel__ 1.000000E-30
+  96243.__XS_kernel__ 1.000000E-30
+  96244.__XS_kernel__ 1.000000E-30
+  96245.__XS_kernel__ 1.000000E-30
+  96246.__XS_kernel__ 1.000000E-30
+  96247.__XS_kernel__ 1.000000E-30
+  96248.__XS_kernel__ 1.000000E-30
+  97249.__XS_kernel__ 1.000000E-30
+  98249.__XS_kernel__ 1.000000E-30
+  98250.__XS_kernel__ 1.000000E-30
+  35081.__XS_kernel__ 1.000000E-30
+  36083.__XS_kernel__ 1.000000E-30
+  36084.__XS_kernel__ 1.000000E-30
+  36086.__XS_kernel__ 1.000000E-30
+  37085.__XS_kernel__ 1.000000E-30
+  37087.__XS_kernel__ 1.000000E-30
+  38088.__XS_kernel__ 1.000000E-30
+  38089.__XS_kernel__ 1.000000E-30
+  38090.__XS_kernel__ 1.000000E-30
+  39089.__XS_kernel__ 1.000000E-30
+  39091.__XS_kernel__ 1.000000E-30
+  40091.__XS_kernel__ 1.000000E-30
+  40092.__XS_kernel__ 1.000000E-30
+  40093.__XS_kernel__ 1.000000E-30
+  40094.__XS_kernel__ 1.000000E-30
+  40095.__XS_kernel__ 1.000000E-30
+  40096.__XS_kernel__ 1.000000E-30
+  42095.__XS_kernel__ 1.000000E-30
+  42097.__XS_kernel__ 1.000000E-30
+  42098.__XS_kernel__ 1.000000E-30
+  42099.__XS_kernel__ 1.000000E-30
+  42100.__XS_kernel__ 1.000000E-30
+  43099.__XS_kernel__ 1.000000E-30
+  44101.__XS_kernel__ 1.000000E-30
+  44102.__XS_kernel__ 1.000000E-30
+  44103.__XS_kernel__ 1.000000E-30
+  44104.__XS_kernel__ 1.000000E-30
+  44105.__XS_kernel__ 1.000000E-30
+  44106.__XS_kernel__ 1.000000E-30
+  45103.__XS_kernel__ 1.000000E-30
+  45105.__XS_kernel__ 1.000000E-30
+  46104.__XS_kernel__ 1.000000E-30
+  46105.__XS_kernel__ 1.000000E-30
+  46106.__XS_kernel__ 1.000000E-30
+  46107.__XS_kernel__ 1.000000E-30
+  46108.__XS_kernel__ 1.000000E-30
+  46110.__XS_kernel__ 1.000000E-30
+  47109.__XS_kernel__ 1.000000E-30
+  48110.__XS_kernel__ 1.000000E-30
+  48111.__XS_kernel__ 1.000000E-30
+  48113.__XS_kernel__ 1.000000E-30
+  48114.__XS_kernel__ 1.000000E-30
+  49115.__XS_kernel__ 1.000000E-30
+  52130.__XS_kernel__ 1.000000E-30
+  53127.__XS_kernel__ 1.000000E-30
+  53129.__XS_kernel__ 1.000000E-30
+  54131.__XS_kernel__ 1.000000E-30
+  54132.__XS_kernel__ 1.000000E-30
+  54134.__XS_kernel__ 1.000000E-30
+  54135.__XS_kernel__ 1.000000E-30
+  54136.__XS_kernel__ 1.000000E-30
+  55133.__XS_kernel__ 1.000000E-30
+  55134.__XS_kernel__ 1.000000E-30
+  55135.__XS_kernel__ 1.000000E-30
+  55137.__XS_kernel__ 1.000000E-30
+  56138.__XS_kernel__ 1.000000E-30
+  56140.__XS_kernel__ 1.000000E-30
+  57139.__XS_kernel__ 1.000000E-30
+  58141.__XS_kernel__ 1.000000E-30
+  58142.__XS_kernel__ 1.000000E-30
+  58143.__XS_kernel__ 1.000000E-30
+  59141.__XS_kernel__ 1.000000E-30
+  59143.__XS_kernel__ 1.000000E-30
+  60143.__XS_kernel__ 1.000000E-30
+  60144.__XS_kernel__ 1.000000E-30
+  60145.__XS_kernel__ 1.000000E-30
+  60146.__XS_kernel__ 1.000000E-30
+  60147.__XS_kernel__ 1.000000E-30
+  60148.__XS_kernel__ 1.000000E-30
+  60150.__XS_kernel__ 1.000000E-30
+  61147.__XS_kernel__ 1.000000E-30
+  61148.__XS_kernel__ 1.000000E-30
+  61548.__XS_kernel__ 1.000000E-30
+  61149.__XS_kernel__ 1.000000E-30
+  62147.__XS_kernel__ 1.000000E-30
+  62149.__XS_kernel__ 1.000000E-30
+  62150.__XS_kernel__ 1.000000E-30
+  62151.__XS_kernel__ 1.000000E-30
+  62152.__XS_kernel__ 1.000000E-30
+  62153.__XS_kernel__ 1.000000E-30
+  62154.__XS_kernel__ 1.000000E-30
+  63153.__XS_kernel__ 1.000000E-30
+  63154.__XS_kernel__ 1.000000E-30
+  63155.__XS_kernel__ 1.000000E-30
+  63156.__XS_kernel__ 1.000000E-30
+  64155.__XS_kernel__ 1.000000E-30
+  64156.__XS_kernel__ 1.000000E-30
+  64157.__XS_kernel__ 1.000000E-30
+  64158.__XS_kernel__ 1.000000E-30
+  c  
+m20        6000.__XS_kernel__ 1.182344e-02
+   8016.__XS_kernel__ 3.547031e-02
+  90232.__XS_kernel__ 1.000000E-30
+  90233.__XS_kernel__ 1.000000E-30
+  91233.__XS_kernel__ 1.000000E-30
+  92233.__XS_kernel__ 1.000000E-30
+  92234.__XS_kernel__ 1.000000E-30
+  92235.__XS_kernel__ 4.753724E-03
+  92236.__XS_kernel__ 1.000000E-30
+  92237.__XS_kernel__ 1.000000E-30
+  92238.__XS_kernel__ 1.889315E-02
+  92239.__XS_kernel__ 1.000000E-30
+  93236.__XS_kernel__ 1.000000E-30
+  93237.__XS_kernel__ 1.000000E-30
+  93238.__XS_kernel__ 1.000000E-30
+  93239.__XS_kernel__ 1.000000E-30
+  94236.__XS_kernel__ 1.000000E-30
+  94237.__XS_kernel__ 1.000000E-30
+  94238.__XS_kernel__ 1.000000E-30
+  94239.__XS_kernel__ 1.000000E-30
+  94240.__XS_kernel__ 1.000000E-30
+  94241.__XS_kernel__ 1.000000E-30
+  94242.__XS_kernel__ 1.000000E-30
+  94243.__XS_kernel__ 1.000000E-30
+  94244.__XS_kernel__ 1.000000E-30
+  95241.__XS_kernel__ 1.000000E-30
+  95642.__XS_kernel__ 1.000000E-30
+  95242.__XS_kernel__ 1.000000E-30
+  95243.__XS_kernel__ 1.000000E-30
+  95244.__XS_kernel__ 1.000000E-30
+  96242.__XS_kernel__ 1.000000E-30
+  96243.__XS_kernel__ 1.000000E-30
+  96244.__XS_kernel__ 1.000000E-30
+  96245.__XS_kernel__ 1.000000E-30
+  96246.__XS_kernel__ 1.000000E-30
+  96247.__XS_kernel__ 1.000000E-30
+  96248.__XS_kernel__ 1.000000E-30
+  97249.__XS_kernel__ 1.000000E-30
+  98249.__XS_kernel__ 1.000000E-30
+  98250.__XS_kernel__ 1.000000E-30
+  35081.__XS_kernel__ 1.000000E-30
+  36083.__XS_kernel__ 1.000000E-30
+  36084.__XS_kernel__ 1.000000E-30
+  36086.__XS_kernel__ 1.000000E-30
+  37085.__XS_kernel__ 1.000000E-30
+  37087.__XS_kernel__ 1.000000E-30
+  38088.__XS_kernel__ 1.000000E-30
+  38089.__XS_kernel__ 1.000000E-30
+  38090.__XS_kernel__ 1.000000E-30
+  39089.__XS_kernel__ 1.000000E-30
+  39091.__XS_kernel__ 1.000000E-30
+  40091.__XS_kernel__ 1.000000E-30
+  40092.__XS_kernel__ 1.000000E-30
+  40093.__XS_kernel__ 1.000000E-30
+  40094.__XS_kernel__ 1.000000E-30
+  40095.__XS_kernel__ 1.000000E-30
+  40096.__XS_kernel__ 1.000000E-30
+  42095.__XS_kernel__ 1.000000E-30
+  42097.__XS_kernel__ 1.000000E-30
+  42098.__XS_kernel__ 1.000000E-30
+  42099.__XS_kernel__ 1.000000E-30
+  42100.__XS_kernel__ 1.000000E-30
+  43099.__XS_kernel__ 1.000000E-30
+  44101.__XS_kernel__ 1.000000E-30
+  44102.__XS_kernel__ 1.000000E-30
+  44103.__XS_kernel__ 1.000000E-30
+  44104.__XS_kernel__ 1.000000E-30
+  44105.__XS_kernel__ 1.000000E-30
+  44106.__XS_kernel__ 1.000000E-30
+  45103.__XS_kernel__ 1.000000E-30
+  45105.__XS_kernel__ 1.000000E-30
+  46104.__XS_kernel__ 1.000000E-30
+  46105.__XS_kernel__ 1.000000E-30
+  46106.__XS_kernel__ 1.000000E-30
+  46107.__XS_kernel__ 1.000000E-30
+  46108.__XS_kernel__ 1.000000E-30
+  46110.__XS_kernel__ 1.000000E-30
+  47109.__XS_kernel__ 1.000000E-30
+  48110.__XS_kernel__ 1.000000E-30
+  48111.__XS_kernel__ 1.000000E-30
+  48113.__XS_kernel__ 1.000000E-30
+  48114.__XS_kernel__ 1.000000E-30
+  49115.__XS_kernel__ 1.000000E-30
+  52130.__XS_kernel__ 1.000000E-30
+  53127.__XS_kernel__ 1.000000E-30
+  53129.__XS_kernel__ 1.000000E-30
+  54131.__XS_kernel__ 1.000000E-30
+  54132.__XS_kernel__ 1.000000E-30
+  54134.__XS_kernel__ 1.000000E-30
+  54135.__XS_kernel__ 1.000000E-30
+  54136.__XS_kernel__ 1.000000E-30
+  55133.__XS_kernel__ 1.000000E-30
+  55134.__XS_kernel__ 1.000000E-30
+  55135.__XS_kernel__ 1.000000E-30
+  55137.__XS_kernel__ 1.000000E-30
+  56138.__XS_kernel__ 1.000000E-30
+  56140.__XS_kernel__ 1.000000E-30
+  57139.__XS_kernel__ 1.000000E-30
+  58141.__XS_kernel__ 1.000000E-30
+  58142.__XS_kernel__ 1.000000E-30
+  58143.__XS_kernel__ 1.000000E-30
+  59141.__XS_kernel__ 1.000000E-30
+  59143.__XS_kernel__ 1.000000E-30
+  60143.__XS_kernel__ 1.000000E-30
+  60144.__XS_kernel__ 1.000000E-30
+  60145.__XS_kernel__ 1.000000E-30
+  60146.__XS_kernel__ 1.000000E-30
+  60147.__XS_kernel__ 1.000000E-30
+  60148.__XS_kernel__ 1.000000E-30
+  60150.__XS_kernel__ 1.000000E-30
+  61147.__XS_kernel__ 1.000000E-30
+  61148.__XS_kernel__ 1.000000E-30
+  61548.__XS_kernel__ 1.000000E-30
+  61149.__XS_kernel__ 1.000000E-30
+  62147.__XS_kernel__ 1.000000E-30
+  62149.__XS_kernel__ 1.000000E-30
+  62150.__XS_kernel__ 1.000000E-30
+  62151.__XS_kernel__ 1.000000E-30
+  62152.__XS_kernel__ 1.000000E-30
+  62153.__XS_kernel__ 1.000000E-30
+  62154.__XS_kernel__ 1.000000E-30
+  63153.__XS_kernel__ 1.000000E-30
+  63154.__XS_kernel__ 1.000000E-30
+  63155.__XS_kernel__ 1.000000E-30
+  63156.__XS_kernel__ 1.000000E-30
+  64155.__XS_kernel__ 1.000000E-30
+  64156.__XS_kernel__ 1.000000E-30
+  64157.__XS_kernel__ 1.000000E-30
+  64158.__XS_kernel__ 1.000000E-30
+  c  
+m30        6000.__XS_kernel__ 1.182344e-02
+   8016.__XS_kernel__ 3.547031e-02
+  90232.__XS_kernel__ 1.000000E-30
+  90233.__XS_kernel__ 1.000000E-30
+  91233.__XS_kernel__ 1.000000E-30
+  92233.__XS_kernel__ 1.000000E-30
+  92234.__XS_kernel__ 1.000000E-30
+  92235.__XS_kernel__ 4.753724E-03
+  92236.__XS_kernel__ 1.000000E-30
+  92237.__XS_kernel__ 1.000000E-30
+  92238.__XS_kernel__ 1.889315E-02
+  92239.__XS_kernel__ 1.000000E-30
+  93236.__XS_kernel__ 1.000000E-30
+  93237.__XS_kernel__ 1.000000E-30
+  93238.__XS_kernel__ 1.000000E-30
+  93239.__XS_kernel__ 1.000000E-30
+  94236.__XS_kernel__ 1.000000E-30
+  94237.__XS_kernel__ 1.000000E-30
+  94238.__XS_kernel__ 1.000000E-30
+  94239.__XS_kernel__ 1.000000E-30
+  94240.__XS_kernel__ 1.000000E-30
+  94241.__XS_kernel__ 1.000000E-30
+  94242.__XS_kernel__ 1.000000E-30
+  94243.__XS_kernel__ 1.000000E-30
+  94244.__XS_kernel__ 1.000000E-30
+  95241.__XS_kernel__ 1.000000E-30
+  95642.__XS_kernel__ 1.000000E-30
+  95242.__XS_kernel__ 1.000000E-30
+  95243.__XS_kernel__ 1.000000E-30
+  95244.__XS_kernel__ 1.000000E-30
+  96242.__XS_kernel__ 1.000000E-30
+  96243.__XS_kernel__ 1.000000E-30
+  96244.__XS_kernel__ 1.000000E-30
+  96245.__XS_kernel__ 1.000000E-30
+  96246.__XS_kernel__ 1.000000E-30
+  96247.__XS_kernel__ 1.000000E-30
+  96248.__XS_kernel__ 1.000000E-30
+  97249.__XS_kernel__ 1.000000E-30
+  98249.__XS_kernel__ 1.000000E-30
+  98250.__XS_kernel__ 1.000000E-30
+  35081.__XS_kernel__ 1.000000E-30
+  36083.__XS_kernel__ 1.000000E-30
+  36084.__XS_kernel__ 1.000000E-30
+  36086.__XS_kernel__ 1.000000E-30
+  37085.__XS_kernel__ 1.000000E-30
+  37087.__XS_kernel__ 1.000000E-30
+  38088.__XS_kernel__ 1.000000E-30
+  38089.__XS_kernel__ 1.000000E-30
+  38090.__XS_kernel__ 1.000000E-30
+  39089.__XS_kernel__ 1.000000E-30
+  39091.__XS_kernel__ 1.000000E-30
+  40091.__XS_kernel__ 1.000000E-30
+  40092.__XS_kernel__ 1.000000E-30
+  40093.__XS_kernel__ 1.000000E-30
+  40094.__XS_kernel__ 1.000000E-30
+  40095.__XS_kernel__ 1.000000E-30
+  40096.__XS_kernel__ 1.000000E-30
+  42095.__XS_kernel__ 1.000000E-30
+  42097.__XS_kernel__ 1.000000E-30
+  42098.__XS_kernel__ 1.000000E-30
+  42099.__XS_kernel__ 1.000000E-30
+  42100.__XS_kernel__ 1.000000E-30
+  43099.__XS_kernel__ 1.000000E-30
+  44101.__XS_kernel__ 1.000000E-30
+  44102.__XS_kernel__ 1.000000E-30
+  44103.__XS_kernel__ 1.000000E-30
+  44104.__XS_kernel__ 1.000000E-30
+  44105.__XS_kernel__ 1.000000E-30
+  44106.__XS_kernel__ 1.000000E-30
+  45103.__XS_kernel__ 1.000000E-30
+  45105.__XS_kernel__ 1.000000E-30
+  46104.__XS_kernel__ 1.000000E-30
+  46105.__XS_kernel__ 1.000000E-30
+  46106.__XS_kernel__ 1.000000E-30
+  46107.__XS_kernel__ 1.000000E-30
+  46108.__XS_kernel__ 1.000000E-30
+  46110.__XS_kernel__ 1.000000E-30
+  47109.__XS_kernel__ 1.000000E-30
+  48110.__XS_kernel__ 1.000000E-30
+  48111.__XS_kernel__ 1.000000E-30
+  48113.__XS_kernel__ 1.000000E-30
+  48114.__XS_kernel__ 1.000000E-30
+  49115.__XS_kernel__ 1.000000E-30
+  52130.__XS_kernel__ 1.000000E-30
+  53127.__XS_kernel__ 1.000000E-30
+  53129.__XS_kernel__ 1.000000E-30
+  54131.__XS_kernel__ 1.000000E-30
+  54132.__XS_kernel__ 1.000000E-30
+  54134.__XS_kernel__ 1.000000E-30
+  54135.__XS_kernel__ 1.000000E-30
+  54136.__XS_kernel__ 1.000000E-30
+  55133.__XS_kernel__ 1.000000E-30
+  55134.__XS_kernel__ 1.000000E-30
+  55135.__XS_kernel__ 1.000000E-30
+  55137.__XS_kernel__ 1.000000E-30
+  56138.__XS_kernel__ 1.000000E-30
+  56140.__XS_kernel__ 1.000000E-30
+  57139.__XS_kernel__ 1.000000E-30
+  58141.__XS_kernel__ 1.000000E-30
+  58142.__XS_kernel__ 1.000000E-30
+  58143.__XS_kernel__ 1.000000E-30
+  59141.__XS_kernel__ 1.000000E-30
+  59143.__XS_kernel__ 1.000000E-30
+  60143.__XS_kernel__ 1.000000E-30
+  60144.__XS_kernel__ 1.000000E-30
+  60145.__XS_kernel__ 1.000000E-30
+  60146.__XS_kernel__ 1.000000E-30
+  60147.__XS_kernel__ 1.000000E-30
+  60148.__XS_kernel__ 1.000000E-30
+  60150.__XS_kernel__ 1.000000E-30
+  61147.__XS_kernel__ 1.000000E-30
+  61148.__XS_kernel__ 1.000000E-30
+  61548.__XS_kernel__ 1.000000E-30
+  61149.__XS_kernel__ 1.000000E-30
+  62147.__XS_kernel__ 1.000000E-30
+  62149.__XS_kernel__ 1.000000E-30
+  62150.__XS_kernel__ 1.000000E-30
+  62151.__XS_kernel__ 1.000000E-30
+  62152.__XS_kernel__ 1.000000E-30
+  62153.__XS_kernel__ 1.000000E-30
+  62154.__XS_kernel__ 1.000000E-30
+  63153.__XS_kernel__ 1.000000E-30
+  63154.__XS_kernel__ 1.000000E-30
+  63155.__XS_kernel__ 1.000000E-30
+  63156.__XS_kernel__ 1.000000E-30
+  64155.__XS_kernel__ 1.000000E-30
+  64156.__XS_kernel__ 1.000000E-30
+  64157.__XS_kernel__ 1.000000E-30
+  64158.__XS_kernel__ 1.000000E-30
+  c  
+m40        6000.__XS_kernel__ 1.182344e-02
+   8016.__XS_kernel__ 3.547031e-02
+  90232.__XS_kernel__ 1.000000E-30
+  90233.__XS_kernel__ 1.000000E-30
+  91233.__XS_kernel__ 1.000000E-30
+  92233.__XS_kernel__ 1.000000E-30
+  92234.__XS_kernel__ 1.000000E-30
+  92235.__XS_kernel__ 4.753724E-03
+  92236.__XS_kernel__ 1.000000E-30
+  92237.__XS_kernel__ 1.000000E-30
+  92238.__XS_kernel__ 1.889315E-02
+  92239.__XS_kernel__ 1.000000E-30
+  93236.__XS_kernel__ 1.000000E-30
+  93237.__XS_kernel__ 1.000000E-30
+  93238.__XS_kernel__ 1.000000E-30
+  93239.__XS_kernel__ 1.000000E-30
+  94236.__XS_kernel__ 1.000000E-30
+  94237.__XS_kernel__ 1.000000E-30
+  94238.__XS_kernel__ 1.000000E-30
+  94239.__XS_kernel__ 1.000000E-30
+  94240.__XS_kernel__ 1.000000E-30
+  94241.__XS_kernel__ 1.000000E-30
+  94242.__XS_kernel__ 1.000000E-30
+  94243.__XS_kernel__ 1.000000E-30
+  94244.__XS_kernel__ 1.000000E-30
+  95241.__XS_kernel__ 1.000000E-30
+  95642.__XS_kernel__ 1.000000E-30
+  95242.__XS_kernel__ 1.000000E-30
+  95243.__XS_kernel__ 1.000000E-30
+  95244.__XS_kernel__ 1.000000E-30
+  96242.__XS_kernel__ 1.000000E-30
+  96243.__XS_kernel__ 1.000000E-30
+  96244.__XS_kernel__ 1.000000E-30
+  96245.__XS_kernel__ 1.000000E-30
+  96246.__XS_kernel__ 1.000000E-30
+  96247.__XS_kernel__ 1.000000E-30
+  96248.__XS_kernel__ 1.000000E-30
+  97249.__XS_kernel__ 1.000000E-30
+  98249.__XS_kernel__ 1.000000E-30
+  98250.__XS_kernel__ 1.000000E-30
+  35081.__XS_kernel__ 1.000000E-30
+  36083.__XS_kernel__ 1.000000E-30
+  36084.__XS_kernel__ 1.000000E-30
+  36086.__XS_kernel__ 1.000000E-30
+  37085.__XS_kernel__ 1.000000E-30
+  37087.__XS_kernel__ 1.000000E-30
+  38088.__XS_kernel__ 1.000000E-30
+  38089.__XS_kernel__ 1.000000E-30
+  38090.__XS_kernel__ 1.000000E-30
+  39089.__XS_kernel__ 1.000000E-30
+  39091.__XS_kernel__ 1.000000E-30
+  40091.__XS_kernel__ 1.000000E-30
+  40092.__XS_kernel__ 1.000000E-30
+  40093.__XS_kernel__ 1.000000E-30
+  40094.__XS_kernel__ 1.000000E-30
+  40095.__XS_kernel__ 1.000000E-30
+  40096.__XS_kernel__ 1.000000E-30
+  42095.__XS_kernel__ 1.000000E-30
+  42097.__XS_kernel__ 1.000000E-30
+  42098.__XS_kernel__ 1.000000E-30
+  42099.__XS_kernel__ 1.000000E-30
+  42100.__XS_kernel__ 1.000000E-30
+  43099.__XS_kernel__ 1.000000E-30
+  44101.__XS_kernel__ 1.000000E-30
+  44102.__XS_kernel__ 1.000000E-30
+  44103.__XS_kernel__ 1.000000E-30
+  44104.__XS_kernel__ 1.000000E-30
+  44105.__XS_kernel__ 1.000000E-30
+  44106.__XS_kernel__ 1.000000E-30
+  45103.__XS_kernel__ 1.000000E-30
+  45105.__XS_kernel__ 1.000000E-30
+  46104.__XS_kernel__ 1.000000E-30
+  46105.__XS_kernel__ 1.000000E-30
+  46106.__XS_kernel__ 1.000000E-30
+  46107.__XS_kernel__ 1.000000E-30
+  46108.__XS_kernel__ 1.000000E-30
+  46110.__XS_kernel__ 1.000000E-30
+  47109.__XS_kernel__ 1.000000E-30
+  48110.__XS_kernel__ 1.000000E-30
+  48111.__XS_kernel__ 1.000000E-30
+  48113.__XS_kernel__ 1.000000E-30
+  48114.__XS_kernel__ 1.000000E-30
+  49115.__XS_kernel__ 1.000000E-30
+  52130.__XS_kernel__ 1.000000E-30
+  53127.__XS_kernel__ 1.000000E-30
+  53129.__XS_kernel__ 1.000000E-30
+  54131.__XS_kernel__ 1.000000E-30
+  54132.__XS_kernel__ 1.000000E-30
+  54134.__XS_kernel__ 1.000000E-30
+  54135.__XS_kernel__ 1.000000E-30
+  54136.__XS_kernel__ 1.000000E-30
+  55133.__XS_kernel__ 1.000000E-30
+  55134.__XS_kernel__ 1.000000E-30
+  55135.__XS_kernel__ 1.000000E-30
+  55137.__XS_kernel__ 1.000000E-30
+  56138.__XS_kernel__ 1.000000E-30
+  56140.__XS_kernel__ 1.000000E-30
+  57139.__XS_kernel__ 1.000000E-30
+  58141.__XS_kernel__ 1.000000E-30
+  58142.__XS_kernel__ 1.000000E-30
+  58143.__XS_kernel__ 1.000000E-30
+  59141.__XS_kernel__ 1.000000E-30
+  59143.__XS_kernel__ 1.000000E-30
+  60143.__XS_kernel__ 1.000000E-30
+  60144.__XS_kernel__ 1.000000E-30
+  60145.__XS_kernel__ 1.000000E-30
+  60146.__XS_kernel__ 1.000000E-30
+  60147.__XS_kernel__ 1.000000E-30
+  60148.__XS_kernel__ 1.000000E-30
+  60150.__XS_kernel__ 1.000000E-30
+  61147.__XS_kernel__ 1.000000E-30
+  61148.__XS_kernel__ 1.000000E-30
+  61548.__XS_kernel__ 1.000000E-30
+  61149.__XS_kernel__ 1.000000E-30
+  62147.__XS_kernel__ 1.000000E-30
+  62149.__XS_kernel__ 1.000000E-30
+  62150.__XS_kernel__ 1.000000E-30
+  62151.__XS_kernel__ 1.000000E-30
+  62152.__XS_kernel__ 1.000000E-30
+  62153.__XS_kernel__ 1.000000E-30
+  62154.__XS_kernel__ 1.000000E-30
+  63153.__XS_kernel__ 1.000000E-30
+  63154.__XS_kernel__ 1.000000E-30
+  63155.__XS_kernel__ 1.000000E-30
+  63156.__XS_kernel__ 1.000000E-30
+  64155.__XS_kernel__ 1.000000E-30
+  64156.__XS_kernel__ 1.000000E-30
+  64157.__XS_kernel__ 1.000000E-30
+  64158.__XS_kernel__ 1.000000E-30
+  c  
+m50        6000.__XS_kernel__ 1.182344e-02
+   8016.__XS_kernel__ 3.547031e-02
+  90232.__XS_kernel__ 1.000000E-30
+  90233.__XS_kernel__ 1.000000E-30
+  91233.__XS_kernel__ 1.000000E-30
+  92233.__XS_kernel__ 1.000000E-30
+  92234.__XS_kernel__ 1.000000E-30
+  92235.__XS_kernel__ 4.753724E-03
+  92236.__XS_kernel__ 1.000000E-30
+  92237.__XS_kernel__ 1.000000E-30
+  92238.__XS_kernel__ 1.889315E-02
+  92239.__XS_kernel__ 1.000000E-30
+  93236.__XS_kernel__ 1.000000E-30
+  93237.__XS_kernel__ 1.000000E-30
+  93238.__XS_kernel__ 1.000000E-30
+  93239.__XS_kernel__ 1.000000E-30
+  94236.__XS_kernel__ 1.000000E-30
+  94237.__XS_kernel__ 1.000000E-30
+  94238.__XS_kernel__ 1.000000E-30
+  94239.__XS_kernel__ 1.000000E-30
+  94240.__XS_kernel__ 1.000000E-30
+  94241.__XS_kernel__ 1.000000E-30
+  94242.__XS_kernel__ 1.000000E-30
+  94243.__XS_kernel__ 1.000000E-30
+  94244.__XS_kernel__ 1.000000E-30
+  95241.__XS_kernel__ 1.000000E-30
+  95642.__XS_kernel__ 1.000000E-30
+  95242.__XS_kernel__ 1.000000E-30
+  95243.__XS_kernel__ 1.000000E-30
+  95244.__XS_kernel__ 1.000000E-30
+  96242.__XS_kernel__ 1.000000E-30
+  96243.__XS_kernel__ 1.000000E-30
+  96244.__XS_kernel__ 1.000000E-30
+  96245.__XS_kernel__ 1.000000E-30
+  96246.__XS_kernel__ 1.000000E-30
+  96247.__XS_kernel__ 1.000000E-30
+  96248.__XS_kernel__ 1.000000E-30
+  97249.__XS_kernel__ 1.000000E-30
+  98249.__XS_kernel__ 1.000000E-30
+  98250.__XS_kernel__ 1.000000E-30
+  35081.__XS_kernel__ 1.000000E-30
+  36083.__XS_kernel__ 1.000000E-30
+  36084.__XS_kernel__ 1.000000E-30
+  36086.__XS_kernel__ 1.000000E-30
+  37085.__XS_kernel__ 1.000000E-30
+  37087.__XS_kernel__ 1.000000E-30
+  38088.__XS_kernel__ 1.000000E-30
+  38089.__XS_kernel__ 1.000000E-30
+  38090.__XS_kernel__ 1.000000E-30
+  39089.__XS_kernel__ 1.000000E-30
+  39091.__XS_kernel__ 1.000000E-30
+  40091.__XS_kernel__ 1.000000E-30
+  40092.__XS_kernel__ 1.000000E-30
+  40093.__XS_kernel__ 1.000000E-30
+  40094.__XS_kernel__ 1.000000E-30
+  40095.__XS_kernel__ 1.000000E-30
+  40096.__XS_kernel__ 1.000000E-30
+  42095.__XS_kernel__ 1.000000E-30
+  42097.__XS_kernel__ 1.000000E-30
+  42098.__XS_kernel__ 1.000000E-30
+  42099.__XS_kernel__ 1.000000E-30
+  42100.__XS_kernel__ 1.000000E-30
+  43099.__XS_kernel__ 1.000000E-30
+  44101.__XS_kernel__ 1.000000E-30
+  44102.__XS_kernel__ 1.000000E-30
+  44103.__XS_kernel__ 1.000000E-30
+  44104.__XS_kernel__ 1.000000E-30
+  44105.__XS_kernel__ 1.000000E-30
+  44106.__XS_kernel__ 1.000000E-30
+  45103.__XS_kernel__ 1.000000E-30
+  45105.__XS_kernel__ 1.000000E-30
+  46104.__XS_kernel__ 1.000000E-30
+  46105.__XS_kernel__ 1.000000E-30
+  46106.__XS_kernel__ 1.000000E-30
+  46107.__XS_kernel__ 1.000000E-30
+  46108.__XS_kernel__ 1.000000E-30
+  46110.__XS_kernel__ 1.000000E-30
+  47109.__XS_kernel__ 1.000000E-30
+  48110.__XS_kernel__ 1.000000E-30
+  48111.__XS_kernel__ 1.000000E-30
+  48113.__XS_kernel__ 1.000000E-30
+  48114.__XS_kernel__ 1.000000E-30
+  49115.__XS_kernel__ 1.000000E-30
+  52130.__XS_kernel__ 1.000000E-30
+  53127.__XS_kernel__ 1.000000E-30
+  53129.__XS_kernel__ 1.000000E-30
+  54131.__XS_kernel__ 1.000000E-30
+  54132.__XS_kernel__ 1.000000E-30
+  54134.__XS_kernel__ 1.000000E-30
+  54135.__XS_kernel__ 1.000000E-30
+  54136.__XS_kernel__ 1.000000E-30
+  55133.__XS_kernel__ 1.000000E-30
+  55134.__XS_kernel__ 1.000000E-30
+  55135.__XS_kernel__ 1.000000E-30
+  55137.__XS_kernel__ 1.000000E-30
+  56138.__XS_kernel__ 1.000000E-30
+  56140.__XS_kernel__ 1.000000E-30
+  57139.__XS_kernel__ 1.000000E-30
+  58141.__XS_kernel__ 1.000000E-30
+  58142.__XS_kernel__ 1.000000E-30
+  58143.__XS_kernel__ 1.000000E-30
+  59141.__XS_kernel__ 1.000000E-30
+  59143.__XS_kernel__ 1.000000E-30
+  60143.__XS_kernel__ 1.000000E-30
+  60144.__XS_kernel__ 1.000000E-30
+  60145.__XS_kernel__ 1.000000E-30
+  60146.__XS_kernel__ 1.000000E-30
+  60147.__XS_kernel__ 1.000000E-30
+  60148.__XS_kernel__ 1.000000E-30
+  60150.__XS_kernel__ 1.000000E-30
+  61147.__XS_kernel__ 1.000000E-30
+  61148.__XS_kernel__ 1.000000E-30
+  61548.__XS_kernel__ 1.000000E-30
+  61149.__XS_kernel__ 1.000000E-30
+  62147.__XS_kernel__ 1.000000E-30
+  62149.__XS_kernel__ 1.000000E-30
+  62150.__XS_kernel__ 1.000000E-30
+  62151.__XS_kernel__ 1.000000E-30
+  62152.__XS_kernel__ 1.000000E-30
+  62153.__XS_kernel__ 1.000000E-30
+  62154.__XS_kernel__ 1.000000E-30
+  63153.__XS_kernel__ 1.000000E-30
+  63154.__XS_kernel__ 1.000000E-30
+  63155.__XS_kernel__ 1.000000E-30
+  63156.__XS_kernel__ 1.000000E-30
+  64155.__XS_kernel__ 1.000000E-30
+  64156.__XS_kernel__ 1.000000E-30
+  64157.__XS_kernel__ 1.000000E-30
+  64158.__XS_kernel__ 1.000000E-30
+  c  
+m60        6000.__XS_kernel__ 1.182344e-02
+   8016.__XS_kernel__ 3.547031e-02
+  90232.__XS_kernel__ 1.000000E-30
+  90233.__XS_kernel__ 1.000000E-30
+  91233.__XS_kernel__ 1.000000E-30
+  92233.__XS_kernel__ 1.000000E-30
+  92234.__XS_kernel__ 1.000000E-30
+  92235.__XS_kernel__ 4.753724E-03
+  92236.__XS_kernel__ 1.000000E-30
+  92237.__XS_kernel__ 1.000000E-30
+  92238.__XS_kernel__ 1.889315E-02
+  92239.__XS_kernel__ 1.000000E-30
+  93236.__XS_kernel__ 1.000000E-30
+  93237.__XS_kernel__ 1.000000E-30
+  93238.__XS_kernel__ 1.000000E-30
+  93239.__XS_kernel__ 1.000000E-30
+  94236.__XS_kernel__ 1.000000E-30
+  94237.__XS_kernel__ 1.000000E-30
+  94238.__XS_kernel__ 1.000000E-30
+  94239.__XS_kernel__ 1.000000E-30
+  94240.__XS_kernel__ 1.000000E-30
+  94241.__XS_kernel__ 1.000000E-30
+  94242.__XS_kernel__ 1.000000E-30
+  94243.__XS_kernel__ 1.000000E-30
+  94244.__XS_kernel__ 1.000000E-30
+  95241.__XS_kernel__ 1.000000E-30
+  95642.__XS_kernel__ 1.000000E-30
+  95242.__XS_kernel__ 1.000000E-30
+  95243.__XS_kernel__ 1.000000E-30
+  95244.__XS_kernel__ 1.000000E-30
+  96242.__XS_kernel__ 1.000000E-30
+  96243.__XS_kernel__ 1.000000E-30
+  96244.__XS_kernel__ 1.000000E-30
+  96245.__XS_kernel__ 1.000000E-30
+  96246.__XS_kernel__ 1.000000E-30
+  96247.__XS_kernel__ 1.000000E-30
+  96248.__XS_kernel__ 1.000000E-30
+  97249.__XS_kernel__ 1.000000E-30
+  98249.__XS_kernel__ 1.000000E-30
+  98250.__XS_kernel__ 1.000000E-30
+  35081.__XS_kernel__ 1.000000E-30
+  36083.__XS_kernel__ 1.000000E-30
+  36084.__XS_kernel__ 1.000000E-30
+  36086.__XS_kernel__ 1.000000E-30
+  37085.__XS_kernel__ 1.000000E-30
+  37087.__XS_kernel__ 1.000000E-30
+  38088.__XS_kernel__ 1.000000E-30
+  38089.__XS_kernel__ 1.000000E-30
+  38090.__XS_kernel__ 1.000000E-30
+  39089.__XS_kernel__ 1.000000E-30
+  39091.__XS_kernel__ 1.000000E-30
+  40091.__XS_kernel__ 1.000000E-30
+  40092.__XS_kernel__ 1.000000E-30
+  40093.__XS_kernel__ 1.000000E-30
+  40094.__XS_kernel__ 1.000000E-30
+  40095.__XS_kernel__ 1.000000E-30
+  40096.__XS_kernel__ 1.000000E-30
+  42095.__XS_kernel__ 1.000000E-30
+  42097.__XS_kernel__ 1.000000E-30
+  42098.__XS_kernel__ 1.000000E-30
+  42099.__XS_kernel__ 1.000000E-30
+  42100.__XS_kernel__ 1.000000E-30
+  43099.__XS_kernel__ 1.000000E-30
+  44101.__XS_kernel__ 1.000000E-30
+  44102.__XS_kernel__ 1.000000E-30
+  44103.__XS_kernel__ 1.000000E-30
+  44104.__XS_kernel__ 1.000000E-30
+  44105.__XS_kernel__ 1.000000E-30
+  44106.__XS_kernel__ 1.000000E-30
+  45103.__XS_kernel__ 1.000000E-30
+  45105.__XS_kernel__ 1.000000E-30
+  46104.__XS_kernel__ 1.000000E-30
+  46105.__XS_kernel__ 1.000000E-30
+  46106.__XS_kernel__ 1.000000E-30
+  46107.__XS_kernel__ 1.000000E-30
+  46108.__XS_kernel__ 1.000000E-30
+  46110.__XS_kernel__ 1.000000E-30
+  47109.__XS_kernel__ 1.000000E-30
+  48110.__XS_kernel__ 1.000000E-30
+  48111.__XS_kernel__ 1.000000E-30
+  48113.__XS_kernel__ 1.000000E-30
+  48114.__XS_kernel__ 1.000000E-30
+  49115.__XS_kernel__ 1.000000E-30
+  52130.__XS_kernel__ 1.000000E-30
+  53127.__XS_kernel__ 1.000000E-30
+  53129.__XS_kernel__ 1.000000E-30
+  54131.__XS_kernel__ 1.000000E-30
+  54132.__XS_kernel__ 1.000000E-30
+  54134.__XS_kernel__ 1.000000E-30
+  54135.__XS_kernel__ 1.000000E-30
+  54136.__XS_kernel__ 1.000000E-30
+  55133.__XS_kernel__ 1.000000E-30
+  55134.__XS_kernel__ 1.000000E-30
+  55135.__XS_kernel__ 1.000000E-30
+  55137.__XS_kernel__ 1.000000E-30
+  56138.__XS_kernel__ 1.000000E-30
+  56140.__XS_kernel__ 1.000000E-30
+  57139.__XS_kernel__ 1.000000E-30
+  58141.__XS_kernel__ 1.000000E-30
+  58142.__XS_kernel__ 1.000000E-30
+  58143.__XS_kernel__ 1.000000E-30
+  59141.__XS_kernel__ 1.000000E-30
+  59143.__XS_kernel__ 1.000000E-30
+  60143.__XS_kernel__ 1.000000E-30
+  60144.__XS_kernel__ 1.000000E-30
+  60145.__XS_kernel__ 1.000000E-30
+  60146.__XS_kernel__ 1.000000E-30
+  60147.__XS_kernel__ 1.000000E-30
+  60148.__XS_kernel__ 1.000000E-30
+  60150.__XS_kernel__ 1.000000E-30
+  61147.__XS_kernel__ 1.000000E-30
+  61148.__XS_kernel__ 1.000000E-30
+  61548.__XS_kernel__ 1.000000E-30
+  61149.__XS_kernel__ 1.000000E-30
+  62147.__XS_kernel__ 1.000000E-30
+  62149.__XS_kernel__ 1.000000E-30
+  62150.__XS_kernel__ 1.000000E-30
+  62151.__XS_kernel__ 1.000000E-30
+  62152.__XS_kernel__ 1.000000E-30
+  62153.__XS_kernel__ 1.000000E-30
+  62154.__XS_kernel__ 1.000000E-30
+  63153.__XS_kernel__ 1.000000E-30
+  63154.__XS_kernel__ 1.000000E-30
+  63155.__XS_kernel__ 1.000000E-30
+  63156.__XS_kernel__ 1.000000E-30
+  64155.__XS_kernel__ 1.000000E-30
+  64156.__XS_kernel__ 1.000000E-30
+  64157.__XS_kernel__ 1.000000E-30
+  64158.__XS_kernel__ 1.000000E-30
+  c  
+m70        6000.__XS_kernel__ 1.182344e-02
+   8016.__XS_kernel__ 3.547031e-02
+  90232.__XS_kernel__ 1.000000E-30
+  90233.__XS_kernel__ 1.000000E-30
+  91233.__XS_kernel__ 1.000000E-30
+  92233.__XS_kernel__ 1.000000E-30
+  92234.__XS_kernel__ 1.000000E-30
+  92235.__XS_kernel__ 4.753724E-03
+  92236.__XS_kernel__ 1.000000E-30
+  92237.__XS_kernel__ 1.000000E-30
+  92238.__XS_kernel__ 1.889315E-02
+  92239.__XS_kernel__ 1.000000E-30
+  93236.__XS_kernel__ 1.000000E-30
+  93237.__XS_kernel__ 1.000000E-30
+  93238.__XS_kernel__ 1.000000E-30
+  93239.__XS_kernel__ 1.000000E-30
+  94236.__XS_kernel__ 1.000000E-30
+  94237.__XS_kernel__ 1.000000E-30
+  94238.__XS_kernel__ 1.000000E-30
+  94239.__XS_kernel__ 1.000000E-30
+  94240.__XS_kernel__ 1.000000E-30
+  94241.__XS_kernel__ 1.000000E-30
+  94242.__XS_kernel__ 1.000000E-30
+  94243.__XS_kernel__ 1.000000E-30
+  94244.__XS_kernel__ 1.000000E-30
+  95241.__XS_kernel__ 1.000000E-30
+  95642.__XS_kernel__ 1.000000E-30
+  95242.__XS_kernel__ 1.000000E-30
+  95243.__XS_kernel__ 1.000000E-30
+  95244.__XS_kernel__ 1.000000E-30
+  96242.__XS_kernel__ 1.000000E-30
+  96243.__XS_kernel__ 1.000000E-30
+  96244.__XS_kernel__ 1.000000E-30
+  96245.__XS_kernel__ 1.000000E-30
+  96246.__XS_kernel__ 1.000000E-30
+  96247.__XS_kernel__ 1.000000E-30
+  96248.__XS_kernel__ 1.000000E-30
+  97249.__XS_kernel__ 1.000000E-30
+  98249.__XS_kernel__ 1.000000E-30
+  98250.__XS_kernel__ 1.000000E-30
+  35081.__XS_kernel__ 1.000000E-30
+  36083.__XS_kernel__ 1.000000E-30
+  36084.__XS_kernel__ 1.000000E-30
+  36086.__XS_kernel__ 1.000000E-30
+  37085.__XS_kernel__ 1.000000E-30
+  37087.__XS_kernel__ 1.000000E-30
+  38088.__XS_kernel__ 1.000000E-30
+  38089.__XS_kernel__ 1.000000E-30
+  38090.__XS_kernel__ 1.000000E-30
+  39089.__XS_kernel__ 1.000000E-30
+  39091.__XS_kernel__ 1.000000E-30
+  40091.__XS_kernel__ 1.000000E-30
+  40092.__XS_kernel__ 1.000000E-30
+  40093.__XS_kernel__ 1.000000E-30
+  40094.__XS_kernel__ 1.000000E-30
+  40095.__XS_kernel__ 1.000000E-30
+  40096.__XS_kernel__ 1.000000E-30
+  42095.__XS_kernel__ 1.000000E-30
+  42097.__XS_kernel__ 1.000000E-30
+  42098.__XS_kernel__ 1.000000E-30
+  42099.__XS_kernel__ 1.000000E-30
+  42100.__XS_kernel__ 1.000000E-30
+  43099.__XS_kernel__ 1.000000E-30
+  44101.__XS_kernel__ 1.000000E-30
+  44102.__XS_kernel__ 1.000000E-30
+  44103.__XS_kernel__ 1.000000E-30
+  44104.__XS_kernel__ 1.000000E-30
+  44105.__XS_kernel__ 1.000000E-30
+  44106.__XS_kernel__ 1.000000E-30
+  45103.__XS_kernel__ 1.000000E-30
+  45105.__XS_kernel__ 1.000000E-30
+  46104.__XS_kernel__ 1.000000E-30
+  46105.__XS_kernel__ 1.000000E-30
+  46106.__XS_kernel__ 1.000000E-30
+  46107.__XS_kernel__ 1.000000E-30
+  46108.__XS_kernel__ 1.000000E-30
+  46110.__XS_kernel__ 1.000000E-30
+  47109.__XS_kernel__ 1.000000E-30
+  48110.__XS_kernel__ 1.000000E-30
+  48111.__XS_kernel__ 1.000000E-30
+  48113.__XS_kernel__ 1.000000E-30
+  48114.__XS_kernel__ 1.000000E-30
+  49115.__XS_kernel__ 1.000000E-30
+  52130.__XS_kernel__ 1.000000E-30
+  53127.__XS_kernel__ 1.000000E-30
+  53129.__XS_kernel__ 1.000000E-30
+  54131.__XS_kernel__ 1.000000E-30
+  54132.__XS_kernel__ 1.000000E-30
+  54134.__XS_kernel__ 1.000000E-30
+  54135.__XS_kernel__ 1.000000E-30
+  54136.__XS_kernel__ 1.000000E-30
+  55133.__XS_kernel__ 1.000000E-30
+  55134.__XS_kernel__ 1.000000E-30
+  55135.__XS_kernel__ 1.000000E-30
+  55137.__XS_kernel__ 1.000000E-30
+  56138.__XS_kernel__ 1.000000E-30
+  56140.__XS_kernel__ 1.000000E-30
+  57139.__XS_kernel__ 1.000000E-30
+  58141.__XS_kernel__ 1.000000E-30
+  58142.__XS_kernel__ 1.000000E-30
+  58143.__XS_kernel__ 1.000000E-30
+  59141.__XS_kernel__ 1.000000E-30
+  59143.__XS_kernel__ 1.000000E-30
+  60143.__XS_kernel__ 1.000000E-30
+  60144.__XS_kernel__ 1.000000E-30
+  60145.__XS_kernel__ 1.000000E-30
+  60146.__XS_kernel__ 1.000000E-30
+  60147.__XS_kernel__ 1.000000E-30
+  60148.__XS_kernel__ 1.000000E-30
+  60150.__XS_kernel__ 1.000000E-30
+  61147.__XS_kernel__ 1.000000E-30
+  61148.__XS_kernel__ 1.000000E-30
+  61548.__XS_kernel__ 1.000000E-30
+  61149.__XS_kernel__ 1.000000E-30
+  62147.__XS_kernel__ 1.000000E-30
+  62149.__XS_kernel__ 1.000000E-30
+  62150.__XS_kernel__ 1.000000E-30
+  62151.__XS_kernel__ 1.000000E-30
+  62152.__XS_kernel__ 1.000000E-30
+  62153.__XS_kernel__ 1.000000E-30
+  62154.__XS_kernel__ 1.000000E-30
+  63153.__XS_kernel__ 1.000000E-30
+  63154.__XS_kernel__ 1.000000E-30
+  63155.__XS_kernel__ 1.000000E-30
+  63156.__XS_kernel__ 1.000000E-30
+  64155.__XS_kernel__ 1.000000E-30
+  64156.__XS_kernel__ 1.000000E-30
+  64157.__XS_kernel__ 1.000000E-30
+  64158.__XS_kernel__ 1.000000E-30
+  c  
+m80        6000.__XS_kernel__ 1.182344e-02
+   8016.__XS_kernel__ 3.547031e-02
+  90232.__XS_kernel__ 1.000000E-30
+  90233.__XS_kernel__ 1.000000E-30
+  91233.__XS_kernel__ 1.000000E-30
+  92233.__XS_kernel__ 1.000000E-30
+  92234.__XS_kernel__ 1.000000E-30
+  92235.__XS_kernel__ 4.753724E-03
+  92236.__XS_kernel__ 1.000000E-30
+  92237.__XS_kernel__ 1.000000E-30
+  92238.__XS_kernel__ 1.889315E-02
+  92239.__XS_kernel__ 1.000000E-30
+  93236.__XS_kernel__ 1.000000E-30
+  93237.__XS_kernel__ 1.000000E-30
+  93238.__XS_kernel__ 1.000000E-30
+  93239.__XS_kernel__ 1.000000E-30
+  94236.__XS_kernel__ 1.000000E-30
+  94237.__XS_kernel__ 1.000000E-30
+  94238.__XS_kernel__ 1.000000E-30
+  94239.__XS_kernel__ 1.000000E-30
+  94240.__XS_kernel__ 1.000000E-30
+  94241.__XS_kernel__ 1.000000E-30
+  94242.__XS_kernel__ 1.000000E-30
+  94243.__XS_kernel__ 1.000000E-30
+  94244.__XS_kernel__ 1.000000E-30
+  95241.__XS_kernel__ 1.000000E-30
+  95642.__XS_kernel__ 1.000000E-30
+  95242.__XS_kernel__ 1.000000E-30
+  95243.__XS_kernel__ 1.000000E-30
+  95244.__XS_kernel__ 1.000000E-30
+  96242.__XS_kernel__ 1.000000E-30
+  96243.__XS_kernel__ 1.000000E-30
+  96244.__XS_kernel__ 1.000000E-30
+  96245.__XS_kernel__ 1.000000E-30
+  96246.__XS_kernel__ 1.000000E-30
+  96247.__XS_kernel__ 1.000000E-30
+  96248.__XS_kernel__ 1.000000E-30
+  97249.__XS_kernel__ 1.000000E-30
+  98249.__XS_kernel__ 1.000000E-30
+  98250.__XS_kernel__ 1.000000E-30
+  35081.__XS_kernel__ 1.000000E-30
+  36083.__XS_kernel__ 1.000000E-30
+  36084.__XS_kernel__ 1.000000E-30
+  36086.__XS_kernel__ 1.000000E-30
+  37085.__XS_kernel__ 1.000000E-30
+  37087.__XS_kernel__ 1.000000E-30
+  38088.__XS_kernel__ 1.000000E-30
+  38089.__XS_kernel__ 1.000000E-30
+  38090.__XS_kernel__ 1.000000E-30
+  39089.__XS_kernel__ 1.000000E-30
+  39091.__XS_kernel__ 1.000000E-30
+  40091.__XS_kernel__ 1.000000E-30
+  40092.__XS_kernel__ 1.000000E-30
+  40093.__XS_kernel__ 1.000000E-30
+  40094.__XS_kernel__ 1.000000E-30
+  40095.__XS_kernel__ 1.000000E-30
+  40096.__XS_kernel__ 1.000000E-30
+  42095.__XS_kernel__ 1.000000E-30
+  42097.__XS_kernel__ 1.000000E-30
+  42098.__XS_kernel__ 1.000000E-30
+  42099.__XS_kernel__ 1.000000E-30
+  42100.__XS_kernel__ 1.000000E-30
+  43099.__XS_kernel__ 1.000000E-30
+  44101.__XS_kernel__ 1.000000E-30
+  44102.__XS_kernel__ 1.000000E-30
+  44103.__XS_kernel__ 1.000000E-30
+  44104.__XS_kernel__ 1.000000E-30
+  44105.__XS_kernel__ 1.000000E-30
+  44106.__XS_kernel__ 1.000000E-30
+  45103.__XS_kernel__ 1.000000E-30
+  45105.__XS_kernel__ 1.000000E-30
+  46104.__XS_kernel__ 1.000000E-30
+  46105.__XS_kernel__ 1.000000E-30
+  46106.__XS_kernel__ 1.000000E-30
+  46107.__XS_kernel__ 1.000000E-30
+  46108.__XS_kernel__ 1.000000E-30
+  46110.__XS_kernel__ 1.000000E-30
+  47109.__XS_kernel__ 1.000000E-30
+  48110.__XS_kernel__ 1.000000E-30
+  48111.__XS_kernel__ 1.000000E-30
+  48113.__XS_kernel__ 1.000000E-30
+  48114.__XS_kernel__ 1.000000E-30
+  49115.__XS_kernel__ 1.000000E-30
+  52130.__XS_kernel__ 1.000000E-30
+  53127.__XS_kernel__ 1.000000E-30
+  53129.__XS_kernel__ 1.000000E-30
+  54131.__XS_kernel__ 1.000000E-30
+  54132.__XS_kernel__ 1.000000E-30
+  54134.__XS_kernel__ 1.000000E-30
+  54135.__XS_kernel__ 1.000000E-30
+  54136.__XS_kernel__ 1.000000E-30
+  55133.__XS_kernel__ 1.000000E-30
+  55134.__XS_kernel__ 1.000000E-30
+  55135.__XS_kernel__ 1.000000E-30
+  55137.__XS_kernel__ 1.000000E-30
+  56138.__XS_kernel__ 1.000000E-30
+  56140.__XS_kernel__ 1.000000E-30
+  57139.__XS_kernel__ 1.000000E-30
+  58141.__XS_kernel__ 1.000000E-30
+  58142.__XS_kernel__ 1.000000E-30
+  58143.__XS_kernel__ 1.000000E-30
+  59141.__XS_kernel__ 1.000000E-30
+  59143.__XS_kernel__ 1.000000E-30
+  60143.__XS_kernel__ 1.000000E-30
+  60144.__XS_kernel__ 1.000000E-30
+  60145.__XS_kernel__ 1.000000E-30
+  60146.__XS_kernel__ 1.000000E-30
+  60147.__XS_kernel__ 1.000000E-30
+  60148.__XS_kernel__ 1.000000E-30
+  60150.__XS_kernel__ 1.000000E-30
+  61147.__XS_kernel__ 1.000000E-30
+  61148.__XS_kernel__ 1.000000E-30
+  61548.__XS_kernel__ 1.000000E-30
+  61149.__XS_kernel__ 1.000000E-30
+  62147.__XS_kernel__ 1.000000E-30
+  62149.__XS_kernel__ 1.000000E-30
+  62150.__XS_kernel__ 1.000000E-30
+  62151.__XS_kernel__ 1.000000E-30
+  62152.__XS_kernel__ 1.000000E-30
+  62153.__XS_kernel__ 1.000000E-30
+  62154.__XS_kernel__ 1.000000E-30
+  63153.__XS_kernel__ 1.000000E-30
+  63154.__XS_kernel__ 1.000000E-30
+  63155.__XS_kernel__ 1.000000E-30
+  63156.__XS_kernel__ 1.000000E-30
+  64155.__XS_kernel__ 1.000000E-30
+  64156.__XS_kernel__ 1.000000E-30
+  64157.__XS_kernel__ 1.000000E-30
+  64158.__XS_kernel__ 1.000000E-30
+  c  
+c    Single isotopes for depletion
+m101 90232.__XS_kernel__ 1.
+m102 90233.__XS_kernel__ 1.
+m103 91233.__XS_kernel__ 1.
+m104 92233.__XS_kernel__ 1.
+m105 92234.__XS_kernel__ 1.
+m106 92235.__XS_kernel__ 1.
+m107 92236.__XS_kernel__ 1.
+m108 92237.__XS_kernel__ 1.
+m109 92238.__XS_kernel__ 1.
+m110 92239.__XS_kernel__ 1.
+m111 93236.__XS_kernel__ 1.
+m112 93237.__XS_kernel__ 1.
+m113 93238.__XS_kernel__ 1.
+m114 93239.__XS_kernel__ 1.
+m115 94236.__XS_kernel__ 1.
+m116 94237.__XS_kernel__ 1.
+m117 94238.__XS_kernel__ 1.
+m118 94239.__XS_kernel__ 1.
+m119 94240.__XS_kernel__ 1.
+m120 94241.__XS_kernel__ 1.
+m121 94242.__XS_kernel__ 1.
+m122 94243.__XS_kernel__ 1.
+m123 94244.__XS_kernel__ 1.
+m124 95241.__XS_kernel__ 1.
+m125 95642.__XS_kernel__ 1.
+m126 95242.__XS_kernel__ 1.
+m127 95243.__XS_kernel__ 1.
+m128 95244.__XS_kernel__ 1.
+m129 96242.__XS_kernel__ 1.
+m130 96243.__XS_kernel__ 1.
+m131 96244.__XS_kernel__ 1.
+m132 96245.__XS_kernel__ 1.
+m133 96246.__XS_kernel__ 1.
+m134 96247.__XS_kernel__ 1.
+m135 96248.__XS_kernel__ 1.
+m136 97249.__XS_kernel__ 1.
+m137 98249.__XS_kernel__ 1.
+m138 98250.__XS_kernel__ 1.
+m139 35081.__XS_kernel__ 1.
+m140 36083.__XS_kernel__ 1.
+m141 36084.__XS_kernel__ 1.
+m142 36086.__XS_kernel__ 1.
+m143 37085.__XS_kernel__ 1.
+m144 37087.__XS_kernel__ 1.
+m145 38088.__XS_kernel__ 1.
+m146 38089.__XS_kernel__ 1.
+m147 38090.__XS_kernel__ 1.
+m148 39089.__XS_kernel__ 1.
+m149 39091.__XS_kernel__ 1.
+m150 40091.__XS_kernel__ 1.
+m151 40092.__XS_kernel__ 1.
+m152 40093.__XS_kernel__ 1.
+m153 40094.__XS_kernel__ 1.
+m154 40095.__XS_kernel__ 1.
+m155 40096.__XS_kernel__ 1.
+m156 42095.__XS_kernel__ 1.
+m157 42097.__XS_kernel__ 1.
+m158 42098.__XS_kernel__ 1.
+m159 42099.__XS_kernel__ 1.
+m160 42100.__XS_kernel__ 1.
+m161 43099.__XS_kernel__ 1.
+m162 44101.__XS_kernel__ 1.
+m163 44102.__XS_kernel__ 1.
+m164 44103.__XS_kernel__ 1.
+m165 44104.__XS_kernel__ 1.
+m166 44105.__XS_kernel__ 1.
+m167 44106.__XS_kernel__ 1.
+m168 45103.__XS_kernel__ 1.
+m169 45105.__XS_kernel__ 1.
+m170 46104.__XS_kernel__ 1.
+m171 46105.__XS_kernel__ 1.
+m172 46106.__XS_kernel__ 1.
+m173 46107.__XS_kernel__ 1.
+m174 46108.__XS_kernel__ 1.
+m175 46110.__XS_kernel__ 1.
+m176 47109.__XS_kernel__ 1.
+m177 48110.__XS_kernel__ 1.
+m178 48111.__XS_kernel__ 1.
+m179 48113.__XS_kernel__ 1.
+m180 48114.__XS_kernel__ 1.
+m181 49115.__XS_kernel__ 1.
+m182 52130.__XS_kernel__ 1.
+m183 53127.__XS_kernel__ 1.
+m184 53129.__XS_kernel__ 1.
+m185 54131.__XS_kernel__ 1.
+m186 54132.__XS_kernel__ 1.
+m187 54134.__XS_kernel__ 1.
+m188 54135.__XS_kernel__ 1.
+m189 54136.__XS_kernel__ 1.
+m190 55133.__XS_kernel__ 1.
+m191 55134.__XS_kernel__ 1.
+m192 55135.__XS_kernel__ 1.
+m193 55137.__XS_kernel__ 1.
+m194 56138.__XS_kernel__ 1.
+m195 56140.__XS_kernel__ 1.
+m196 57139.__XS_kernel__ 1.
+m197 58141.__XS_kernel__ 1.
+m198 58142.__XS_kernel__ 1.
+m199 58143.__XS_kernel__ 1.
+m200 59141.__XS_kernel__ 1.
+m201 59143.__XS_kernel__ 1.
+m202 60143.__XS_kernel__ 1.
+m203 60144.__XS_kernel__ 1.
+m204 60145.__XS_kernel__ 1.
+m205 60146.__XS_kernel__ 1.
+m206 60147.__XS_kernel__ 1.
+m207 60148.__XS_kernel__ 1.
+m208 60150.__XS_kernel__ 1.
+m209 61147.__XS_kernel__ 1.
+m210 61148.__XS_kernel__ 1.
+m211 61548.__XS_kernel__ 1.
+m212 61149.__XS_kernel__ 1.
+m213 62147.__XS_kernel__ 1.
+m214 62149.__XS_kernel__ 1.
+m215 62150.__XS_kernel__ 1.
+m216 62151.__XS_kernel__ 1.
+m217 62152.__XS_kernel__ 1.
+m218 62153.__XS_kernel__ 1.
+m219 62154.__XS_kernel__ 1.
+m220 63153.__XS_kernel__ 1.
+m221 63154.__XS_kernel__ 1.
+m222 63155.__XS_kernel__ 1.
+m223 63156.__XS_kernel__ 1.
+m224 64155.__XS_kernel__ 1.
+m225 64156.__XS_kernel__ 1.
+m226 64157.__XS_kernel__ 1.
+m227 64158.__XS_kernel__ 1.
+c
+c   Carbon
+m2     6000.__XS_kernel__  1.
+mt2    grph.64t
+c
+c   Pyretic Carbon
+m3     6000.__XS_kernel__  1.
+mt3    grph.64t
+c
+c   SiC
+m4     6000.__XS_kernel__  1.
+14000.16c  1.
+c
+c   Graphite in the Matrix
+m6     6000.71c  1.
+mt6    grph.64t
+c
+c   Coatings and matrix mix
+m12    6000.__XS_kernel__  __matrix_carbon_molar_density__
+14028.__XS_kernel__  __matrix_silicon_molar_density__
+mt12    grph.64t
+c
+c   Graphite in the pebble central core (750 C - Scattering Kernel at 727 C)
+m21    6000.__XS_pebble_core__  1.
+mt21   grph.64t
+c
+c   Graphite in the pebble shell (690 C - Scattering Kernel at 727 C)
+m22    6000.__XS_pebble_shell__  1.
+mt22   grph.64t
+c
+c   Salt in the Core - 2LiF-BeF2 - (655 C)
+m24    3006.__XS_coolant__ 2.63E-07
+3007.__XS_coolant__  2.38358E-02
+4009.__XS_coolant__  1.19185E-02
+9019.__XS_coolant__  4.76740E-02
+m536   3006.__XS_coolant__  1
+m549   4009.__XS_coolant__  1
+f64:n 153
+fm64 (1 536 -2)
+sd64 1
+f74:n 153
+fm74 (1 549 107)
+sd74 1
+c    begin_mocup_reaction_rate_tallies
+c    time dependent reaction rates
+fc104  Reaction rates
+f104:n   
+10 20 30 40 50 60 70 80  
+fm104  (1)
+(1 101 (16) (17) (-6) (102) )
+(1 102 (16) (17) (-6) (102) )
+(1 103 (16) (17) (-6) (102) )
+(1 104 (16) (17) (-6) (102) )
+(1 105 (16) (17) (-6) (102) )
+(1 106 (16) (17) (-6) (102) )
+(1 107 (16) (17) (-6) (102) )
+(1 108 (16) (17) (-6) (102) )
+(1 109 (16) (17) (-6) (102) )
+(1 110 (16) (17) (-6) (102) )
+(1 111 (16) (17) (-6) (102) )
+(1 112 (16) (17) (-6) (102) )
+(1 113 (16) (17) (-6) (102) )
+(1 114 (16) (17) (-6) (102) )
+(1 115 (16) (17) (-6) (102) )
+(1 116 (16) (17) (-6) (102) )
+(1 117 (16) (17) (-6) (102) )
+(1 118 (16) (17) (-6) (102) )
+(1 119 (16) (17) (-6) (102) )
+(1 120 (16) (17) (-6) (102) )
+(1 121 (16) (17) (-6) (102) )
+(1 122 (16) (17) (-6) (102) )
+(1 123 (16) (17) (-6) (102) )
+(1 124 (16) (17) (-6) (102) )
+(1 125 (16) (17) (-6) (102) )
+(1 126 (16) (17) (-6) (102) )
+(1 127 (16) (17) (-6) (102) )
+(1 128 (16) (17) (-6) (102) )
+(1 129 (16) (17) (-6) (102) )
+(1 130 (16) (17) (-6) (102) )
+(1 131 (16) (17) (-6) (102) )
+(1 132 (16) (17) (-6) (102) )
+(1 133 (16) (17) (-6) (102) )
+(1 134 (16) (17) (-6) (102) )
+(1 135 (16) (17) (-6) (102) )
+(1 136 (16) (17) (-6) (102) )
+(1 137 (16) (17) (-6) (102) )
+(1 138 (16) (17) (-6) (102) )
+(1 139 (16) (17)      (102) )
+(1 140 (16) (17)      (102) )
+(1 141 (16) (17)      (102) )
+(1 142 (16) (17)      (102) )
+(1 143 (16) (17)      (102) )
+(1 144 (16) (17)      (102) )
+(1 145 (16) (17)      (102) )
+(1 146 (16) (17)      (102) )
+(1 147 (16) (17)      (102) )
+(1 148 (16) (17)      (102) )
+(1 149 (16) (17)      (102) )
+(1 150 (16) (17)      (102) )
+(1 151 (16) (17)      (102) )
+(1 152 (16) (17)      (102) )
+(1 153 (16) (17)      (102) )
+(1 154 (16) (17)      (102) )
+(1 155 (16) (17)      (102) )
+(1 156 (16) (17)      (102) )
+(1 157 (16) (17)      (102) )
+(1 158 (16) (17)      (102) )
+(1 159 (16) (17)      (102) )
+(1 160 (16) (17)      (102) )
+(1 161 (16) (17)      (102) )
+(1 162 (16) (17)      (102) )
+(1 163 (16) (17)      (102) )
+(1 164 (16) (17)      (102) )
+(1 165 (16) (17)      (102) )
+(1 166 (16) (17)      (102) )
+(1 167 (16) (17)      (102) )
+(1 168 (16) (17)      (102) )
+(1 169 (16) (17)      (102) )
+(1 170 (16) (17)      (102) )
+(1 171 (16) (17)      (102) )
+(1 172 (16) (17)      (102) )
+(1 173 (16) (17)      (102) )
+(1 174 (16) (17)      (102) )
+(1 175 (16) (17)      (102) )
+(1 176 (16) (17)      (102) )
+(1 177 (16) (17)      (102) )
+(1 178 (16) (17)      (102) )
+(1 179 (16) (17)      (102) )
+(1 180 (16) (17)      (102) )
+(1 181 (16) (17)      (102) )
+(1 182 (16) (17)      (102) )
+(1 183 (16) (17)      (102) )
+(1 184 (16) (17)      (102) )
+(1 185 (16) (17)      (102) )
+(1 186 (16) (17)      (102) )
+(1 187 (16) (17)      (102) )
+(1 188 (16) (17)      (102) )
+(1 189 (16) (17)      (102) )
+(1 190 (16) (17)      (102) )
+(1 191 (16) (17)      (102) )
+(1 192 (16) (17)      (102) )
+(1 193 (16) (17)      (102) )
+(1 194 (16) (17)      (102) )
+(1 195 (16) (17)      (102) )
+(1 196 (16) (17)      (102) )
+(1 197 (16) (17)      (102) )
+(1 198 (16) (17)      (102) )
+(1 199 (16) (17)      (102) )
+(1 200 (16) (17)      (102) )
+(1 201 (16) (17)      (102) )
+(1 202 (16) (17)      (102) )
+(1 203 (16) (17)      (102) )
+(1 204 (16) (17)      (102) )
+(1 205 (16) (17)      (102) )
+(1 206 (16) (17)      (102) )
+(1 207 (16) (17)      (102) )
+(1 208 (16) (17)      (102) )
+(1 209 (16) (17)      (102) )
+(1 210 (16) (17)      (102) )
+(1 211 (16) (17)      (102) )
+(1 212 (16) (17)      (102) )
+(1 213 (16) (17)      (102) )
+(1 214 (16) (17)      (102) )
+(1 215 (16) (17)      (102) )
+(1 216 (16) (17)      (102) )
+(1 217 (16) (17)      (102) )
+(1 218 (16) (17)      (102) )
+(1 219 (16) (17)      (102) )
+(1 220 (16) (17)      (102) )
+(1 221 (16) (17)      (102) )
+(1 222 (16) (17)      (102) )
+(1 223 (16) (17)      (102) )
+(1 224 (16) (17)      (102) )
+(1 225 (16) (17)      (102) )
+(1 226 (16) (17)      (102) )
+(1 227 (16) (17)      (102) )
+c
+f314:n 10 
+fm314 (-1 10 (-6))
+sd314 1
+f324:n 20
+fm324 (-1 20 (-6))
+sd324 1
+f334:n 30
+fm334 (-1 30 (-6))
+sd334 1
+f344:n 40
+fm344 (-1 40 (-6))
+sd344 1
+f354:n 50
+fm354 (-1 50 (-6))
+sd354 1
+f364:n 60
+fm364 (-1 60 (-6))
+sd364 1
+f374:n 70
+fm374 (-1 70 (-6))
+sd374 1
+f384:n 80
+fm384 (-1 80 (-6))
+sd384 1
+fc404 Neutron Spectrum Tally
+f404:n 10 20 30 40 50 60 70 80 
+e404 1.0000E-11 1.0000E-10 5.0000E-10 7.5000E-10 1.0000E-09 1.2000E-09
+1.5000E-09 2.0000E-09 2.5000E-09 3.0000E-09 4.0000E-09 5.0000E-09
+7.5000E-09 1.0000E-08 2.5300E-08 3.0000E-08 4.0000E-08 5.0000E-08
+6.0000E-08 7.0000E-08 8.0000E-08 9.0000E-08 1.0000E-07 1.2500E-07
+1.5000E-07 1.7500E-07 2.0000E-07 2.2500E-07 2.5000E-07 2.7500E-07
+3.0000E-07 3.2500E-07 3.5000E-07 3.7500E-07 4.0000E-07 4.5000E-07
+5.0000E-07 5.5000E-07 6.0000E-07 6.2500E-07 6.5000E-07 7.0000E-07
+7.5000E-07 8.0000E-07 8.5000E-07 9.0000E-07 9.2500E-07 9.5000E-07
+9.7500E-07 1.0000E-06 1.0100E-06 1.0200E-06 1.0300E-06 1.0400E-06
+1.0500E-06 1.0600E-06 1.0700E-06 1.0800E-06 1.0900E-06 1.1000E-06
+1.1100E-06 1.1200E-06 1.1300E-06 1.1400E-06 1.1500E-06 1.1750E-06
+1.2000E-06 1.2250E-06 1.2500E-06 1.3000E-06 1.3500E-06 1.4000E-06
+1.4500E-06 1.5000E-06 1.5900E-06 1.6800E-06 1.7700E-06 1.8600E-06
+1.9400E-06 2.0000E-06 2.1200E-06 2.2100E-06 2.3000E-06 2.3800E-06
+2.4700E-06 2.5700E-06 2.6700E-06 2.7700E-06 2.8700E-06 2.9700E-06
+3.0000E-06 3.0500E-06 3.1500E-06 3.5000E-06 3.7300E-06 4.0000E-06
+4.7500E-06 5.0000E-06 5.4000E-06 6.0000E-06 6.2500E-06 6.5000E-06
+6.7500E-06 7.0000E-06 7.1500E-06 8.1000E-06 9.1000E-06 1.0000E-05
+1.1500E-05 1.1900E-05 1.2900E-05 1.3750E-05 1.4400E-05 1.5100E-05
+1.6000E-05 1.7000E-05 1.8500E-05 1.9000E-05 2.0000E-05 2.1000E-05
+2.2500E-05 2.5000E-05 2.7500E-05 3.0000E-05 3.1250E-05 3.1750E-05
+3.3250E-05 3.3750E-05 3.4600E-05 3.5500E-05 3.7000E-05 3.8000E-05
+3.9100E-05 3.9600E-05 4.1000E-05 4.2400E-05 4.4000E-05 4.5200E-05
+4.7000E-05 4.8300E-05 4.9200E-05 5.0600E-05 5.2000E-05 5.3400E-05
+5.9000E-05 6.1000E-05 6.5000E-05 6.7500E-05 7.2000E-05 7.6000E-05
+8.0000E-05 8.2000E-05 9.0000E-05 1.0000E-04 1.0800E-04 1.1500E-04
+1.1900E-04 1.2200E-04 1.8600E-04 1.9250E-04 2.0750E-04 2.1000E-04
+2.4000E-04 2.8500E-04 3.0500E-04 5.5000E-04 6.7000E-04 6.8300E-04
+9.5000E-04 1.1500E-03 1.5000E-03 1.5500E-03 1.8000E-03 2.2000E-03
+2.2900E-03 2.5800E-03 3.0000E-03 3.7400E-03 3.9000E-03 6.0000E-03
+8.0300E-03 9.5000E-03 1.3000E-02 1.7000E-02 2.5000E-02 3.0000E-02
+4.5000E-02 5.0000E-02 5.2000E-02 6.0000E-02 7.3000E-02 7.5000E-02
+8.2000E-02 8.5000E-02 1.0000E-01 1.2830E-01 1.5000E-01 2.0000E-01
+2.7000E-01 3.3000E-01 4.0000E-01 4.2000E-01 4.4000E-01 4.7000E-01
+4.9952E-01 5.5000E-01 5.7300E-01 6.0000E-01 6.7000E-01 6.7900E-01
+7.5000E-01 8.2000E-01 8.6110E-01 8.7500E-01 9.0000E-01 9.2000E-01
+1.0100E+00 1.1000E+00 1.2000E+00 1.2500E+00 1.3170E+00 1.3560E+00
+1.4000E+00 1.5000E+00 1.8500E+00 2.3540E+00 2.4790E+00 3.0000E+00
+4.3040E+00 4.8000E+00 6.4340E+00 8.1873E+00 1.0000E+01 1.2840E+01
+1.3840E+01 1.4550E+01 1.5683E+01 1.7333E+01 2.0000E+01
+sd404 1 7r   
+kcode  10000  1.0 10 110
+prdmp  10000 10000 10000
+#print
+mode n
+
+
+
+
+'
+

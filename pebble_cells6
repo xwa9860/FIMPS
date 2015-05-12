@@ -1,0 +1,3028 @@
+c ------------------------------------------------------------------------------
+c TRISO Particles
+c ------------------------------------------------------------------------------
+c
+c Depletion Zones 11
+c
+11100 11100 -_fuel_density_ -1 u=1111 tmp=_fuel_temperature_ imp:n=1 $ Kernel 11 pass:1
+     vol=_fuel_volume11_
+11101 11 -_matrix_density_   1 u=1111 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+11102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1111 u=1110
+c
+11200 11200 -_fuel_density_ -1 u=1121 tmp=_fuel_temperature_ imp:n=1 $ Kernel 11 pass:2
+     vol=_fuel_volume11_
+11201 11 -_matrix_density_   1 u=1121 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+11202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1121 u=1120
+c
+11300 11300 -_fuel_density_ -1 u=1131 tmp=_fuel_temperature_ imp:n=1 $ Kernel 11 pass:3
+     vol=_fuel_volume11_
+11301 11 -_matrix_density_   1 u=1131 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+11302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1131 u=1130
+c
+11400 11400 -_fuel_density_ -1 u=1141 tmp=_fuel_temperature_ imp:n=1 $ Kernel 11 pass:4
+     vol=_fuel_volume11_
+11401 11 -_matrix_density_   1 u=1141 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+11402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1141 u=1140
+c
+11500 11500 -_fuel_density_ -1 u=1151 tmp=_fuel_temperature_ imp:n=1 $ Kernel 11 pass:5
+     vol=_fuel_volume11_
+11501 11 -_matrix_density_   1 u=1151 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+11502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1151 u=1150
+c
+11600 11600 -_fuel_density_ -1 u=1161 tmp=_fuel_temperature_ imp:n=1 $ Kernel 11 pass:6
+     vol=_fuel_volume11_
+11601 11 -_matrix_density_   1 u=1161 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+11602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1161 u=1160
+c
+c Depletion Zones 21
+c
+21100 21100 -_fuel_density_ -1 u=2111 tmp=_fuel_temperature_ imp:n=1 $ Kernel 21 pass:1
+     vol=_fuel_volume21_
+21101 11 -_matrix_density_   1 u=2111 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+21102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2111 u=2110
+c
+21200 21200 -_fuel_density_ -1 u=2121 tmp=_fuel_temperature_ imp:n=1 $ Kernel 21 pass:2
+     vol=_fuel_volume21_
+21201 11 -_matrix_density_   1 u=2121 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+21202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2121 u=2120
+c
+21300 21300 -_fuel_density_ -1 u=2131 tmp=_fuel_temperature_ imp:n=1 $ Kernel 21 pass:3
+     vol=_fuel_volume21_
+21301 11 -_matrix_density_   1 u=2131 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+21302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2131 u=2130
+c
+21400 21400 -_fuel_density_ -1 u=2141 tmp=_fuel_temperature_ imp:n=1 $ Kernel 21 pass:4
+     vol=_fuel_volume21_
+21401 11 -_matrix_density_   1 u=2141 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+21402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2141 u=2140
+c
+21500 21500 -_fuel_density_ -1 u=2151 tmp=_fuel_temperature_ imp:n=1 $ Kernel 21 pass:5
+     vol=_fuel_volume21_
+21501 11 -_matrix_density_   1 u=2151 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+21502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2151 u=2150
+c
+21600 21600 -_fuel_density_ -1 u=2161 tmp=_fuel_temperature_ imp:n=1 $ Kernel 21 pass:6
+     vol=_fuel_volume21_
+21601 11 -_matrix_density_   1 u=2161 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+21602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2161 u=2160
+c
+c Depletion Zones 31
+c
+31100 31100 -_fuel_density_ -1 u=3111 tmp=_fuel_temperature_ imp:n=1 $ Kernel 31 pass:1
+     vol=_fuel_volume31_
+31101 11 -_matrix_density_   1 u=3111 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+31102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3111 u=3110
+c
+31200 31200 -_fuel_density_ -1 u=3121 tmp=_fuel_temperature_ imp:n=1 $ Kernel 31 pass:2
+     vol=_fuel_volume31_
+31201 11 -_matrix_density_   1 u=3121 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+31202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3121 u=3120
+c
+31300 31300 -_fuel_density_ -1 u=3131 tmp=_fuel_temperature_ imp:n=1 $ Kernel 31 pass:3
+     vol=_fuel_volume31_
+31301 11 -_matrix_density_   1 u=3131 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+31302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3131 u=3130
+c
+31400 31400 -_fuel_density_ -1 u=3141 tmp=_fuel_temperature_ imp:n=1 $ Kernel 31 pass:4
+     vol=_fuel_volume31_
+31401 11 -_matrix_density_   1 u=3141 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+31402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3141 u=3140
+c
+31500 31500 -_fuel_density_ -1 u=3151 tmp=_fuel_temperature_ imp:n=1 $ Kernel 31 pass:5
+     vol=_fuel_volume31_
+31501 11 -_matrix_density_   1 u=3151 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+31502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3151 u=3150
+c
+31600 31600 -_fuel_density_ -1 u=3161 tmp=_fuel_temperature_ imp:n=1 $ Kernel 31 pass:6
+     vol=_fuel_volume31_
+31601 11 -_matrix_density_   1 u=3161 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+31602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3161 u=3160
+c
+c
+c Depletion Zones 41
+c
+41100 41100 -_fuel_density_ -1 u=4111 tmp=_fuel_temperature_ imp:n=1 $ Kernel 41 pass:1
+     vol=_fuel_volume41_
+41101 11 -_matrix_density_   1 u=4111 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+41102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4111 u=4110
+c
+41200 41200 -_fuel_density_ -1 u=4121 tmp=_fuel_temperature_ imp:n=1 $ Kernel 41 pass:2
+     vol=_fuel_volume41_
+41201 11 -_matrix_density_   1 u=4121 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+41202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4121 u=4120
+c
+41300 41300 -_fuel_density_ -1 u=4131 tmp=_fuel_temperature_ imp:n=1 $ Kernel 41 pass:3
+     vol=_fuel_volume41_
+41301 11 -_matrix_density_   1 u=4131 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+41302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4131 u=4130
+c
+41400 41400 -_fuel_density_ -1 u=4141 tmp=_fuel_temperature_ imp:n=1 $ Kernel 41 pass:4
+     vol=_fuel_volume41_
+41401 11 -_matrix_density_   1 u=4141 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+41402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4141 u=4140
+c
+41500 41500 -_fuel_density_ -1 u=4151 tmp=_fuel_temperature_ imp:n=1 $ Kernel 41 pass:5
+     vol=_fuel_volume41_
+41501 11 -_matrix_density_   1 u=4151 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+41502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4151 u=4150
+c
+41600 41600 -_fuel_density_ -1 u=4161 tmp=_fuel_temperature_ imp:n=1 $ Kernel 41 pass:6
+     vol=_fuel_volume41_
+41601 11 -_matrix_density_   1 u=4161 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+41602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4161 u=4160
+c
+c Depletion Zones 12
+c
+12100 12100 -_fuel_density_ -1 u=1211 tmp=_fuel_temperature_ imp:n=1 $ Kernel 12 pass:1
+     vol=_fuel_volume12_
+12101 11 -_matrix_density_   1 u=1211 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+12102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1211 u=1210
+c
+12200 12200 -_fuel_density_ -1 u=1221 tmp=_fuel_temperature_ imp:n=1 $ Kernel 12 pass:2
+     vol=_fuel_volume12_
+12201 11 -_matrix_density_   1 u=1221 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+12202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1221 u=1220
+c
+12300 12300 -_fuel_density_ -1 u=1231 tmp=_fuel_temperature_ imp:n=1 $ Kernel 12 pass:3
+     vol=_fuel_volume12_
+12301 11 -_matrix_density_   1 u=1231 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+12302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1231 u=1230
+c
+12400 12400 -_fuel_density_ -1 u=1241 tmp=_fuel_temperature_ imp:n=1 $ Kernel 12 pass:4
+     vol=_fuel_volume12_
+12401 11 -_matrix_density_   1 u=1241 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+12402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1241 u=1240
+c
+12500 12500 -_fuel_density_ -1 u=1251 tmp=_fuel_temperature_ imp:n=1 $ Kernel 12 pass:5
+     vol=_fuel_volume12_
+12501 11 -_matrix_density_   1 u=1251 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+12502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1251 u=1250
+c
+12600 12600 -_fuel_density_ -1 u=1261 tmp=_fuel_temperature_ imp:n=1 $ Kernel 12 pass:6
+     vol=_fuel_volume12_
+12601 11 -_matrix_density_   1 u=1261 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+12602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1261 u=1260
+c
+c Depletion Zones 22
+c
+22100 22100 -_fuel_density_ -1 u=2211 tmp=_fuel_temperature_ imp:n=1 $ Kernel 22 pass:1
+     vol=_fuel_volume22_
+22101 11 -_matrix_density_   1 u=2211 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+22102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2211 u=2210
+c
+22200 22200 -_fuel_density_ -1 u=2221 tmp=_fuel_temperature_ imp:n=1 $ Kernel 22 pass:2
+     vol=_fuel_volume22_
+22201 11 -_matrix_density_   1 u=2221 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+22202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2221 u=2220
+c
+22300 22300 -_fuel_density_ -1 u=2231 tmp=_fuel_temperature_ imp:n=1 $ Kernel 22 pass:3
+     vol=_fuel_volume22_
+22301 11 -_matrix_density_   1 u=2231 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+22302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2231 u=2230
+c
+22400 22400 -_fuel_density_ -1 u=2241 tmp=_fuel_temperature_ imp:n=1 $ Kernel 22 pass:4
+     vol=_fuel_volume22_
+22401 11 -_matrix_density_   1 u=2241 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+22402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2241 u=2240
+c
+22500 22500 -_fuel_density_ -1 u=2251 tmp=_fuel_temperature_ imp:n=1 $ Kernel 22 pass:5
+     vol=_fuel_volume22_
+22501 11 -_matrix_density_   1 u=2251 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+22502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2251 u=2250
+c
+22600 22600 -_fuel_density_ -1 u=2261 tmp=_fuel_temperature_ imp:n=1 $ Kernel 22 pass:6
+     vol=_fuel_volume22_
+22601 11 -_matrix_density_   1 u=2261 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+22602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2261 u=2260
+c
+c Depletion Zones 32
+c
+32100 32100 -_fuel_density_ -1 u=3211 tmp=_fuel_temperature_ imp:n=1 $ Kernel 32 pass:1
+     vol=_fuel_volume32_
+32101 11 -_matrix_density_   1 u=3211 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+32102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3211 u=3210
+c
+32200 32200 -_fuel_density_ -1 u=3221 tmp=_fuel_temperature_ imp:n=1 $ Kernel 32 pass:2
+     vol=_fuel_volume32_
+32201 11 -_matrix_density_   1 u=3221 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+32202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3221 u=3220
+c
+32300 32300 -_fuel_density_ -1 u=3231 tmp=_fuel_temperature_ imp:n=1 $ Kernel 32 pass:3
+     vol=_fuel_volume32_
+32301 11 -_matrix_density_   1 u=3231 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+32302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3231 u=3230
+c
+32400 32400 -_fuel_density_ -1 u=3241 tmp=_fuel_temperature_ imp:n=1 $ Kernel 32 pass:4
+     vol=_fuel_volume32_
+32401 11 -_matrix_density_   1 u=3241 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+32402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3241 u=3240
+c
+32500 32500 -_fuel_density_ -1 u=3251 tmp=_fuel_temperature_ imp:n=1 $ Kernel 32 pass:5
+     vol=_fuel_volume32_
+32501 11 -_matrix_density_   1 u=3251 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+32502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3251 u=3250
+c
+32600 32600 -_fuel_density_ -1 u=3261 tmp=_fuel_temperature_ imp:n=1 $ Kernel 32 pass:6
+     vol=_fuel_volume32_
+32601 11 -_matrix_density_   1 u=3261 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+32602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3261 u=3260
+c
+c Depletion Zones 42
+c
+42100 42100 -_fuel_density_ -1 u=4211 tmp=_fuel_temperature_ imp:n=1 $ Kernel 42 pass:1
+     vol=_fuel_volume42_
+42101 11 -_matrix_density_   1 u=4211 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+42102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4211 u=4210
+c
+42200 42200 -_fuel_density_ -1 u=4221 tmp=_fuel_temperature_ imp:n=1 $ Kernel 42 pass:2
+     vol=_fuel_volume42_
+42201 11 -_matrix_density_   1 u=4221 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+42202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4221 u=4220
+c
+42300 42300 -_fuel_density_ -1 u=4231 tmp=_fuel_temperature_ imp:n=1 $ Kernel 42 pass:3
+     vol=_fuel_volume42_
+42301 11 -_matrix_density_   1 u=4231 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+42302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4231 u=4230
+c
+42400 42400 -_fuel_density_ -1 u=4241 tmp=_fuel_temperature_ imp:n=1 $ Kernel 42 pass:4
+     vol=_fuel_volume42_
+42401 11 -_matrix_density_   1 u=4241 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+42402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4241 u=4240
+c
+42500 42500 -_fuel_density_ -1 u=4251 tmp=_fuel_temperature_ imp:n=1 $ Kernel 42 pass:5
+     vol=_fuel_volume42_
+42501 11 -_matrix_density_   1 u=4251 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+42502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4251 u=4250
+c
+42600 42600 -_fuel_density_ -1 u=4261 tmp=_fuel_temperature_ imp:n=1 $ Kernel 42 pass:6
+     vol=_fuel_volume42_
+42601 11 -_matrix_density_   1 u=4261 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+42602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4261 u=4260
+c
+c Depletion Zones 13
+c
+13100 13100 -_fuel_density_ -1 u=1311 tmp=_fuel_temperature_ imp:n=1 $ Kernel 13 pass:1
+     vol=_fuel_volume13_
+13101 11 -_matrix_density_   1 u=1311 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+13102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1311 u=1310
+c
+13200 13200 -_fuel_density_ -1 u=1321 tmp=_fuel_temperature_ imp:n=1 $ Kernel 13 pass:2
+     vol=_fuel_volume13_
+13201 11 -_matrix_density_   1 u=1321 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+13202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1321 u=1320
+c
+13300 13300 -_fuel_density_ -1 u=1331 tmp=_fuel_temperature_ imp:n=1 $ Kernel 13 pass:3
+     vol=_fuel_volume13_
+13301 11 -_matrix_density_   1 u=1331 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+13302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1331 u=1330
+c
+13400 13400 -_fuel_density_ -1 u=1341 tmp=_fuel_temperature_ imp:n=1 $ Kernel 13 pass:4
+     vol=_fuel_volume13_
+13401 11 -_matrix_density_   1 u=1341 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+13402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1341 u=1340
+c
+13500 13500 -_fuel_density_ -1 u=1351 tmp=_fuel_temperature_ imp:n=1 $ Kernel 13 pass:5
+     vol=_fuel_volume13_
+13501 11 -_matrix_density_   1 u=1351 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+13502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1351 u=1350
+c
+13600 13600 -_fuel_density_ -1 u=1361 tmp=_fuel_temperature_ imp:n=1 $ Kernel 13 pass:6
+     vol=_fuel_volume13_
+13601 11 -_matrix_density_   1 u=1361 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+13602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1361 u=1360
+c
+c Depletion Zones 23
+c
+23100 23100 -_fuel_density_ -1 u=2311 tmp=_fuel_temperature_ imp:n=1 $ Kernel 23 pass:1
+     vol=_fuel_volume23_
+23101 11 -_matrix_density_   1 u=2311 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+23102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2311 u=2310
+c
+23200 23200 -_fuel_density_ -1 u=2321 tmp=_fuel_temperature_ imp:n=1 $ Kernel 23 pass:2
+     vol=_fuel_volume23_
+23201 11 -_matrix_density_   1 u=2321 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+23202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2321 u=2320
+c
+23300 23300 -_fuel_density_ -1 u=2331 tmp=_fuel_temperature_ imp:n=1 $ Kernel 23 pass:3
+     vol=_fuel_volume23_
+23301 11 -_matrix_density_   1 u=2331 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+23302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2331 u=2330
+c
+23400 23400 -_fuel_density_ -1 u=2341 tmp=_fuel_temperature_ imp:n=1 $ Kernel 23 pass:4
+     vol=_fuel_volume23_
+23401 11 -_matrix_density_   1 u=2341 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+23402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2341 u=2340
+c
+23500 23500 -_fuel_density_ -1 u=2351 tmp=_fuel_temperature_ imp:n=1 $ Kernel 23 pass:5
+     vol=_fuel_volume23_
+23501 11 -_matrix_density_   1 u=2351 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+23502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2351 u=2350
+c
+23600 23600 -_fuel_density_ -1 u=2361 tmp=_fuel_temperature_ imp:n=1 $ Kernel 23 pass:6
+     vol=_fuel_volume23_
+23601 11 -_matrix_density_   1 u=2361 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+23602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2361 u=2360
+c
+c Depletion Zones 33
+c
+33100 33100 -_fuel_density_ -1 u=3311 tmp=_fuel_temperature_ imp:n=1 $ Kernel 33 pass:1
+     vol=_fuel_volume33_
+33101 11 -_matrix_density_   1 u=3311 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+33102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3311 u=3310
+c
+33200 33200 -_fuel_density_ -1 u=3321 tmp=_fuel_temperature_ imp:n=1 $ Kernel 33 pass:2
+     vol=_fuel_volume33_
+33201 11 -_matrix_density_   1 u=3321 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+33202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3321 u=3320
+c
+33300 33300 -_fuel_density_ -1 u=3331 tmp=_fuel_temperature_ imp:n=1 $ Kernel 33 pass:3
+     vol=_fuel_volume33_
+33301 11 -_matrix_density_   1 u=3331 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+33302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3331 u=3330
+c
+33400 33400 -_fuel_density_ -1 u=3341 tmp=_fuel_temperature_ imp:n=1 $ Kernel 33 pass:4
+     vol=_fuel_volume33_
+33401 11 -_matrix_density_   1 u=3341 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+33402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3341 u=3340
+c
+33500 33500 -_fuel_density_ -1 u=3351 tmp=_fuel_temperature_ imp:n=1 $ Kernel 33 pass:5
+     vol=_fuel_volume33_
+33501 11 -_matrix_density_   1 u=3351 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+33502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3351 u=3350
+c
+33600 33600 -_fuel_density_ -1 u=3361 tmp=_fuel_temperature_ imp:n=1 $ Kernel 33 pass:6
+     vol=_fuel_volume33_
+33601 11 -_matrix_density_   1 u=3361 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+33602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3361 u=3360
+c
+c Depletion Zones 43
+c
+43100 43100 -_fuel_density_ -1 u=4311 tmp=_fuel_temperature_ imp:n=1 $ Kernel 43 pass:1
+     vol=_fuel_volume43_
+43101 11 -_matrix_density_   1 u=4311 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+43102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4311 u=4310
+c
+43200 43200 -_fuel_density_ -1 u=4321 tmp=_fuel_temperature_ imp:n=1 $ Kernel 43 pass:2
+     vol=_fuel_volume43_
+43201 11 -_matrix_density_   1 u=4321 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+43202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4321 u=4320
+c
+43300 43300 -_fuel_density_ -1 u=4331 tmp=_fuel_temperature_ imp:n=1 $ Kernel 43 pass:3
+     vol=_fuel_volume43_
+43301 11 -_matrix_density_   1 u=4331 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+43302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4331 u=4330
+c
+43400 43400 -_fuel_density_ -1 u=4341 tmp=_fuel_temperature_ imp:n=1 $ Kernel 43 pass:4
+     vol=_fuel_volume43_
+43401 11 -_matrix_density_   1 u=4341 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+43402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4341 u=4340
+c
+43500 43500 -_fuel_density_ -1 u=4351 tmp=_fuel_temperature_ imp:n=1 $ Kernel 43 pass:5
+     vol=_fuel_volume43_
+43501 11 -_matrix_density_   1 u=4351 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+43502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4351 u=4350
+c
+43600 43600 -_fuel_density_ -1 u=4361 tmp=_fuel_temperature_ imp:n=1 $ Kernel 43 pass:6
+     vol=_fuel_volume43_
+43601 11 -_matrix_density_   1 u=4361 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+43602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4361 u=4360
+c
+c Depletion Zones 14
+c
+14100 14100 -_fuel_density_ -1 u=1411 tmp=_fuel_temperature_ imp:n=1 $ Kernel 14 pass:1
+     vol=_fuel_volume14_
+14101 11 -_matrix_density_   1 u=1411 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+14102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1411 u=1410
+c
+14200 14200 -_fuel_density_ -1 u=1421 tmp=_fuel_temperature_ imp:n=1 $ Kernel 14 pass:2
+     vol=_fuel_volume14_
+14201 11 -_matrix_density_   1 u=1421 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+14202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1421 u=1420
+c
+14300 14300 -_fuel_density_ -1 u=1431 tmp=_fuel_temperature_ imp:n=1 $ Kernel 14 pass:3
+     vol=_fuel_volume14_
+14301 11 -_matrix_density_   1 u=1431 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+14302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1431 u=1430
+c
+14400 14400 -_fuel_density_ -1 u=1441 tmp=_fuel_temperature_ imp:n=1 $ Kernel 14 pass:4
+     vol=_fuel_volume14_
+14401 11 -_matrix_density_   1 u=1441 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+14402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1441 u=1440
+c
+14500 14500 -_fuel_density_ -1 u=1451 tmp=_fuel_temperature_ imp:n=1 $ Kernel 14 pass:5
+     vol=_fuel_volume14_
+14501 11 -_matrix_density_   1 u=1451 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+14502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1451 u=1450
+c
+14600 14600 -_fuel_density_ -1 u=1461 tmp=_fuel_temperature_ imp:n=1 $ Kernel 14 pass:6
+     vol=_fuel_volume14_
+14601 11 -_matrix_density_   1 u=1461 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+14602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1461 u=1460
+c
+c Depletion Zones 24
+c
+24100 24100 -_fuel_density_ -1 u=2411 tmp=_fuel_temperature_ imp:n=1 $ Kernel 24 pass:1
+     vol=_fuel_volume24_
+24101 11 -_matrix_density_   1 u=2411 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+24102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2411 u=2410
+c
+24200 24200 -_fuel_density_ -1 u=2421 tmp=_fuel_temperature_ imp:n=1 $ Kernel 24 pass:2
+     vol=_fuel_volume24_
+24201 11 -_matrix_density_   1 u=2421 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+24202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2421 u=2420
+c
+24300 24300 -_fuel_density_ -1 u=2431 tmp=_fuel_temperature_ imp:n=1 $ Kernel 24 pass:3
+     vol=_fuel_volume24_
+24301 11 -_matrix_density_   1 u=2431 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+24302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2431 u=2430
+c
+24400 24400 -_fuel_density_ -1 u=2441 tmp=_fuel_temperature_ imp:n=1 $ Kernel 24 pass:4
+     vol=_fuel_volume24_
+24401 11 -_matrix_density_   1 u=2441 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+24402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2441 u=2440
+c
+24500 24500 -_fuel_density_ -1 u=2451 tmp=_fuel_temperature_ imp:n=1 $ Kernel 24 pass:5
+     vol=_fuel_volume24_
+24501 11 -_matrix_density_   1 u=2451 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+24502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2451 u=2450
+c
+24600 24600 -_fuel_density_ -1 u=2461 tmp=_fuel_temperature_ imp:n=1 $ Kernel 24 pass:6
+     vol=_fuel_volume24_
+24601 11 -_matrix_density_   1 u=2461 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+24602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2461 u=2460
+c
+c Depletion Zones 34
+c
+34100 34100 -_fuel_density_ -1 u=3411 tmp=_fuel_temperature_ imp:n=1 $ Kernel 34 pass:1
+     vol=_fuel_volume34_
+34101 11 -_matrix_density_   1 u=3411 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+34102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3411 u=3410
+c
+34200 34200 -_fuel_density_ -1 u=3421 tmp=_fuel_temperature_ imp:n=1 $ Kernel 34 pass:2
+     vol=_fuel_volume34_
+34201 11 -_matrix_density_   1 u=3421 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+34202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3421 u=3420
+c
+34300 34300 -_fuel_density_ -1 u=3431 tmp=_fuel_temperature_ imp:n=1 $ Kernel 34 pass:3
+     vol=_fuel_volume34_
+34301 11 -_matrix_density_   1 u=3431 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+34302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3431 u=3430
+c
+34400 34400 -_fuel_density_ -1 u=3441 tmp=_fuel_temperature_ imp:n=1 $ Kernel 34 pass:4
+     vol=_fuel_volume34_
+34401 11 -_matrix_density_   1 u=3441 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+34402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3441 u=3440
+c
+34500 34500 -_fuel_density_ -1 u=3451 tmp=_fuel_temperature_ imp:n=1 $ Kernel 34 pass:5
+     vol=_fuel_volume34_
+34501 11 -_matrix_density_   1 u=3451 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+34502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3451 u=3450
+c
+34600 34600 -_fuel_density_ -1 u=3461 tmp=_fuel_temperature_ imp:n=1 $ Kernel 34 pass:6
+     vol=_fuel_volume34_
+34601 11 -_matrix_density_   1 u=3461 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+34602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3461 u=3460
+c
+c Depletion Zones 44
+c
+44100 44100 -_fuel_density_ -1 u=4411 tmp=_fuel_temperature_ imp:n=1 $ Kernel 44 pass:1
+     vol=_fuel_volume44_
+44101 11 -_matrix_density_   1 u=4411 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+44102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4411 u=4410
+c
+44200 44200 -_fuel_density_ -1 u=4421 tmp=_fuel_temperature_ imp:n=1 $ Kernel 44 pass:2
+     vol=_fuel_volume44_
+44201 11 -_matrix_density_   1 u=4421 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+44202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4421 u=4420
+c
+44300 44300 -_fuel_density_ -1 u=4431 tmp=_fuel_temperature_ imp:n=1 $ Kernel 44 pass:3
+     vol=_fuel_volume44_
+44301 11 -_matrix_density_   1 u=4431 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+44302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4431 u=4430
+c
+44400 44400 -_fuel_density_ -1 u=4441 tmp=_fuel_temperature_ imp:n=1 $ Kernel 44 pass:4
+     vol=_fuel_volume44_
+44401 11 -_matrix_density_   1 u=4441 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+44402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4441 u=4440
+c
+44500 44500 -_fuel_density_ -1 u=4451 tmp=_fuel_temperature_ imp:n=1 $ Kernel 44 pass:5
+     vol=_fuel_volume44_
+44501 11 -_matrix_density_   1 u=4451 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+44502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4451 u=4450
+c
+44600 44600 -_fuel_density_ -1 u=4461 tmp=_fuel_temperature_ imp:n=1 $ Kernel 44 pass:6
+     vol=_fuel_volume44_
+44601 11 -_matrix_density_   1 u=4461 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+44602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4461 u=4460
+c
+c Depletion Zones 15
+c
+15100 15100 -_fuel_density_ -1 u=1511 tmp=_fuel_temperature_ imp:n=1 $ Kernel 15 pass:1
+     vol=_fuel_volume15_
+15101 11 -_matrix_density_   1 u=1511 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+15102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1511 u=1510
+c
+15200 15200 -_fuel_density_ -1 u=1521 tmp=_fuel_temperature_ imp:n=1 $ Kernel 15 pass:2
+     vol=_fuel_volume15_
+15201 11 -_matrix_density_   1 u=1521 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+15202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1521 u=1520
+c
+15300 15300 -_fuel_density_ -1 u=1531 tmp=_fuel_temperature_ imp:n=1 $ Kernel 15 pass:3
+     vol=_fuel_volume15_
+15301 11 -_matrix_density_   1 u=1531 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+15302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1531 u=1530
+c
+15400 15400 -_fuel_density_ -1 u=1541 tmp=_fuel_temperature_ imp:n=1 $ Kernel 15 pass:4
+     vol=_fuel_volume15_
+15401 11 -_matrix_density_   1 u=1541 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+15402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1541 u=1540
+c
+15500 15500 -_fuel_density_ -1 u=1551 tmp=_fuel_temperature_ imp:n=1 $ Kernel 15 pass:5
+     vol=_fuel_volume15_
+15501 11 -_matrix_density_   1 u=1551 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+15502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1551 u=1550
+c
+15600 15600 -_fuel_density_ -1 u=1561 tmp=_fuel_temperature_ imp:n=1 $ Kernel 15 pass:6
+     vol=_fuel_volume15_
+15601 11 -_matrix_density_   1 u=1561 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+15602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1561 u=1560
+c
+c Depletion Zones 25
+c
+25100 25100 -_fuel_density_ -1 u=2511 tmp=_fuel_temperature_ imp:n=1 $ Kernel 25 pass:1
+     vol=_fuel_volume25_
+25101 11 -_matrix_density_   1 u=2511 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+25102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2511 u=2510
+c
+25200 25200 -_fuel_density_ -1 u=2521 tmp=_fuel_temperature_ imp:n=1 $ Kernel 25 pass:2
+     vol=_fuel_volume25_
+25201 11 -_matrix_density_   1 u=2521 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+25202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2521 u=2520
+c
+25300 25300 -_fuel_density_ -1 u=2531 tmp=_fuel_temperature_ imp:n=1 $ Kernel 25 pass:3
+     vol=_fuel_volume25_
+25301 11 -_matrix_density_   1 u=2531 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+25302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2531 u=2530
+c
+25400 25400 -_fuel_density_ -1 u=2541 tmp=_fuel_temperature_ imp:n=1 $ Kernel 25 pass:4
+     vol=_fuel_volume25_
+25401 11 -_matrix_density_   1 u=2541 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+25402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2541 u=2540
+c
+25500 25500 -_fuel_density_ -1 u=2551 tmp=_fuel_temperature_ imp:n=1 $ Kernel 25 pass:5
+     vol=_fuel_volume25_
+25501 11 -_matrix_density_   1 u=2551 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+25502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2551 u=2550
+c
+25600 25600 -_fuel_density_ -1 u=2561 tmp=_fuel_temperature_ imp:n=1 $ Kernel 25 pass:6
+     vol=_fuel_volume25_
+25601 11 -_matrix_density_   1 u=2561 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+25602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2561 u=2560
+c
+c Depletion Zones 35
+c
+35100 35100 -_fuel_density_ -1 u=3511 tmp=_fuel_temperature_ imp:n=1 $ Kernel 35 pass:1
+     vol=_fuel_volume35_
+35101 11 -_matrix_density_   1 u=3511 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+35102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3511 u=3510
+c
+35200 35200 -_fuel_density_ -1 u=3521 tmp=_fuel_temperature_ imp:n=1 $ Kernel 35 pass:2
+     vol=_fuel_volume35_
+35201 11 -_matrix_density_   1 u=3521 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+35202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3521 u=3520
+c
+35300 35300 -_fuel_density_ -1 u=3531 tmp=_fuel_temperature_ imp:n=1 $ Kernel 35 pass:3
+     vol=_fuel_volume35_
+35301 11 -_matrix_density_   1 u=3531 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+35302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3531 u=3530
+c
+35400 35400 -_fuel_density_ -1 u=3541 tmp=_fuel_temperature_ imp:n=1 $ Kernel 35 pass:4
+     vol=_fuel_volume35_
+35401 11 -_matrix_density_   1 u=3541 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+35402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3541 u=3540
+c
+35500 35500 -_fuel_density_ -1 u=3551 tmp=_fuel_temperature_ imp:n=1 $ Kernel 35 pass:5
+     vol=_fuel_volume35_
+35501 11 -_matrix_density_   1 u=3551 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+35502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3551 u=3550
+c
+35600 35600 -_fuel_density_ -1 u=3561 tmp=_fuel_temperature_ imp:n=1 $ Kernel 35 pass:6
+     vol=_fuel_volume35_
+35601 11 -_matrix_density_   1 u=3561 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+35602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3561 u=3560
+c
+c Depletion Zones 45
+c
+45100 45100 -_fuel_density_ -1 u=4511 tmp=_fuel_temperature_ imp:n=1 $ Kernel 45 pass:1
+     vol=_fuel_volume45_
+45101 11 -_matrix_density_   1 u=4511 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+45102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4511 u=4510
+c
+45200 45200 -_fuel_density_ -1 u=4521 tmp=_fuel_temperature_ imp:n=1 $ Kernel 45 pass:2
+     vol=_fuel_volume45_
+45201 11 -_matrix_density_   1 u=4521 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+45202 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4521 u=4520
+c
+45300 45300 -_fuel_density_ -1 u=4531 tmp=_fuel_temperature_ imp:n=1 $ Kernel 45 pass:3
+     vol=_fuel_volume45_
+45301 11 -_matrix_density_   1 u=4531 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+45302 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4531 u=4530
+c
+45400 45400 -_fuel_density_ -1 u=4541 tmp=_fuel_temperature_ imp:n=1 $ Kernel 45 pass:4
+     vol=_fuel_volume45_
+45401 11 -_matrix_density_   1 u=4541 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+45402 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4541 u=4540
+c
+45500 45500 -_fuel_density_ -1 u=4551 tmp=_fuel_temperature_ imp:n=1 $ Kernel 45 pass:5
+     vol=_fuel_volume45_
+45501 11 -_matrix_density_   1 u=4551 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+45502 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4551 u=4550
+c
+45600 45600 -_fuel_density_ -1 u=4561 tmp=_fuel_temperature_ imp:n=1 $ Kernel 45 pass:6
+     vol=_fuel_volume45_
+45601 11 -_matrix_density_   1 u=4561 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+45602 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4561 u=4560
+c
+c ------------------------------------------------------------------------------
+c Pebbles
+c ------------------------------------------------------------------------------
+c
+c Pebble: 11
+c
+1110 3 -_core_density_ -1010                u=110 imp:n=1
+          tmp=_core_temperature_
+1111 0              -1011 1010 fill=1110 u=110 imp:n=1
+1112 4 -_shell_density -1012 1011           u=110 imp:n=1
+          tmp=_shell_temperature_
+1113 3 -_core_density_ -1013                u=110 imp:n=1
+          tmp=_core_temperature_
+1114 0              -1014 1013 fill=1110 u=110 imp:n=1
+1115 4 -_shell_density -1015 1014           u=110 imp:n=1
+          tmp=_shell_temperature_
+c
+1120 3 -_core_density_ -1020                u=110 imp:n=1
+          tmp=_core_temperature_
+1121 0              -1021 1020 fill=1120 u=110 imp:n=1
+1122 4 -_shell_density -1022 1021           u=110 imp:n=1
+          tmp=_shell_temperature_
+1123 3 -_core_density_ -1023                u=110 imp:n=1
+          tmp=_core_temperature_
+1124 0              -1024 1023 fill=1120 u=110 imp:n=1
+1125 4 -_shell_density -1025 1024           u=110 imp:n=1
+          tmp=_shell_temperature_
+c
+1130 3 -_core_density_ -1030                u=110 imp:n=1
+          tmp=_core_temperature_
+1131 0              -1031 1030 fill=1130 u=110 imp:n=1
+1132 4 -_shell_density -1032 1031           u=110 imp:n=1
+          tmp=_shell_temperature_
+1133 3 -_core_density_ -1033                u=110 imp:n=1
+          tmp=_core_temperature_
+1134 0              -1034 1033 fill=1130 u=110 imp:n=1
+1135 4 -_shell_density -1035 1034           u=110 imp:n=1
+          tmp=_shell_temperature_
+c
+1140 3 -_core_density_ -1040                u=110 imp:n=1
+          tmp=_core_temperature_
+1141 0              -1041 1040 fill=1140 u=110 imp:n=1
+1142 4 -_shell_density -1042 1041           u=110 imp:n=1
+          tmp=_shell_temperature_
+1143 3 -_core_density_ -1043                u=110 imp:n=1
+          tmp=_core_temperature_
+1144 0              -1044 1043 fill=1140 u=110 imp:n=1
+1145 4 -_shell_density -1045 1044           u=110 imp:n=1
+          tmp=_shell_temperature_
+c
+1150 3 -_core_density_ -1050                u=110 imp:n=1
+          tmp=_core_temperature_
+1151 0              -1051 1050 fill=1150 u=110 imp:n=1
+1152 4 -_shell_density -1052 1051           u=110 imp:n=1
+          tmp=_shell_temperature_
+1153 3 -_core_density_ -1053                u=110 imp:n=1
+          tmp=_core_temperature_
+1154 0              -1054 1053 fill=1150 u=110 imp:n=1
+1155 4 -_shell_density -1055 1054           u=110 imp:n=1
+          tmp=_shell_temperature_
+1156 3 -_core_density_ -1056                u=110 imp:n=1
+          tmp=_core_temperature_
+1157 0              -1057 1056 fill=1150 u=110 imp:n=1
+1158 4 -_shell_density -1058 1057           u=110 imp:n=1
+          tmp=_shell_temperature_
+1159 3 -_core_density_ -1059                u=110 imp:n=1
+          tmp=_core_temperature_
+1160 0              -1060 1059 fill=1150 u=110 imp:n=1
+1161 4 -_shell_density -1061 1060           u=110 imp:n=1
+          tmp=_shell_temperature_
+1162 3 -_core_density_ -1062                u=110 imp:n=1
+          tmp=_core_temperature_
+1163 0              -1063 1062 fill=1150 u=110 imp:n=1
+1164 4 -_shell_density -1064 1053           u=110 imp:n=1
+          tmp=_shell_temperature_
+1165 3 -_core_density_ -1065                u=110 imp:n=1
+          tmp=_core_temperature_
+1166 0              -1066 1065 fill=1150 u=110 imp:n=1
+1167 4 -_shell_density -1067 1066           u=110 imp:n=1
+          tmp=_shell_temperature_
+c
+1170 3 -_core_density_ -1070                u=110 imp:n=1
+          tmp=_core_temperature_
+1171 0              -1071 1070 fill=1160 u=110 imp:n=1
+1172 4 -_shell_density -1072 1071           u=110 imp:n=1
+          tmp=_shell_temperature_
+1173 3 -_core_density_ -1073                u=110 imp:n=1
+          tmp=_core_temperature_
+1174 0              -1074 1073 fill=1160 u=110 imp:n=1
+1175 4 -_shell_density -1075 1074           u=110 imp:n=1
+          tmp=_shell_temperature_
+1176 3 -_core_density_ -1076                u=110 imp:n=1
+          tmp=_core_temperature_
+1177 0              -1077 1076 fill=1160 u=110 imp:n=1
+1178 4 -_shell_density -1078 1077           u=110 imp:n=1
+          tmp=_shell_temperature_
+1179 3 -_core_density_ -1079                u=110 imp:n=1
+          tmp=_core_temperature_
+1180 0              -1080 1079 fill=1160 u=110 imp:n=1
+1181 4 -_shell_density -1081 1080           u=110 imp:n=1
+          tmp=_shell_temperature_
+1182 3 -_core_density_ -1082                u=110 imp:n=1
+          tmp=_core_temperature_
+1183 0              -1083 1082 fill=1160 u=110 imp:n=1
+1184 4 -_shell_density -1084 1083           u=110 imp:n=1
+          tmp=_shell_temperature_
+1185 3 -_core_density_ -1085                u=110 imp:n=1
+          tmp=_core_temperature_
+1186 0              -1086 1085 fill=1160 u=110 imp:n=1
+1187 4 -_shell_density -1087 1086           u=110 imp:n=1
+          tmp=_shell_temperature_
+c
+1190 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=110 imp:n=1
+          tmp=_coolant_temperature_
+1191 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=110 u=11 imp:n=1
+c
+c Pebble: 21
+c
+2110 3 -_core_density_ -1010                u=210 imp:n=1
+          tmp=_core_temperature_
+2111 0              -1011 1010 fill=2110 u=210 imp:n=1
+2112 4 -_shell_density -1012 1011           u=210 imp:n=1
+          tmp=_shell_temperature_
+2113 3 -_core_density_ -1013                u=210 imp:n=1
+          tmp=_core_temperature_
+2114 0              -1014 1013 fill=2110 u=210 imp:n=1
+2115 4 -_shell_density -1015 1014           u=210 imp:n=1
+          tmp=_shell_temperature_
+c
+2120 3 -_core_density_ -1020                u=210 imp:n=1
+          tmp=_core_temperature_
+2121 0              -1021 1020 fill=2120 u=210 imp:n=1
+2122 4 -_shell_density -1022 1021           u=210 imp:n=1
+          tmp=_shell_temperature_
+2123 3 -_core_density_ -1023                u=210 imp:n=1
+          tmp=_core_temperature_
+2124 0              -1024 1023 fill=2120 u=210 imp:n=1
+2125 4 -_shell_density -1025 1024           u=210 imp:n=1
+          tmp=_shell_temperature_
+c
+2130 3 -_core_density_ -1030                u=210 imp:n=1
+          tmp=_core_temperature_
+2131 0              -1031 1030 fill=2130 u=210 imp:n=1
+2132 4 -_shell_density -1032 1031           u=210 imp:n=1
+          tmp=_shell_temperature_
+2133 3 -_core_density_ -1033                u=210 imp:n=1
+          tmp=_core_temperature_
+2134 0              -1034 1033 fill=2130 u=210 imp:n=1
+2135 4 -_shell_density -1035 1034           u=210 imp:n=1
+          tmp=_shell_temperature_
+c
+2140 3 -_core_density_ -1040                u=210 imp:n=1
+          tmp=_core_temperature_
+2141 0              -1041 1040 fill=2140 u=210 imp:n=1
+2142 4 -_shell_density -1042 1041           u=210 imp:n=1
+          tmp=_shell_temperature_
+2143 3 -_core_density_ -1043                u=210 imp:n=1
+          tmp=_core_temperature_
+2144 0              -1044 1043 fill=2140 u=210 imp:n=1
+2145 4 -_shell_density -1045 1044           u=210 imp:n=1
+          tmp=_shell_temperature_
+c
+2150 3 -_core_density_ -1050                u=210 imp:n=1
+          tmp=_core_temperature_
+2151 0              -1051 1050 fill=2150 u=210 imp:n=1
+2152 4 -_shell_density -1052 1051           u=210 imp:n=1
+          tmp=_shell_temperature_
+2153 3 -_core_density_ -1053                u=210 imp:n=1
+          tmp=_core_temperature_
+2154 0              -1054 1053 fill=2150 u=210 imp:n=1
+2155 4 -_shell_density -1055 1054           u=210 imp:n=1
+          tmp=_shell_temperature_
+2156 3 -_core_density_ -1056                u=210 imp:n=1
+          tmp=_core_temperature_
+2157 0              -1057 1056 fill=2150 u=210 imp:n=1
+2158 4 -_shell_density -1058 1057           u=210 imp:n=1
+          tmp=_shell_temperature_
+2159 3 -_core_density_ -1059                u=210 imp:n=1
+          tmp=_core_temperature_
+2160 0              -1060 1059 fill=2150 u=210 imp:n=1
+2161 4 -_shell_density -1061 1060           u=210 imp:n=1
+          tmp=_shell_temperature_
+2162 3 -_core_density_ -1062                u=210 imp:n=1
+          tmp=_core_temperature_
+2163 0              -1063 1062 fill=2150 u=210 imp:n=1
+2164 4 -_shell_density -1064 1053           u=210 imp:n=1
+          tmp=_shell_temperature_
+2165 3 -_core_density_ -1065                u=210 imp:n=1
+          tmp=_core_temperature_
+2166 0              -1066 1065 fill=2150 u=210 imp:n=1
+2167 4 -_shell_density -1067 1066           u=210 imp:n=1
+          tmp=_shell_temperature_
+c
+2170 3 -_core_density_ -1070                u=210 imp:n=1
+          tmp=_core_temperature_
+2171 0              -1071 1070 fill=2160 u=210 imp:n=1
+2172 4 -_shell_density -1072 1071           u=210 imp:n=1
+          tmp=_shell_temperature_
+2173 3 -_core_density_ -1073                u=210 imp:n=1
+          tmp=_core_temperature_
+2174 0              -1074 1073 fill=2160 u=210 imp:n=1
+2175 4 -_shell_density -1075 1074           u=210 imp:n=1
+          tmp=_shell_temperature_
+2176 3 -_core_density_ -1076                u=210 imp:n=1
+          tmp=_core_temperature_
+2177 0              -1077 1076 fill=2160 u=210 imp:n=1
+2178 4 -_shell_density -1078 1077           u=210 imp:n=1
+          tmp=_shell_temperature_
+2179 3 -_core_density_ -1079                u=210 imp:n=1
+          tmp=_core_temperature_
+2180 0              -1080 1079 fill=2160 u=210 imp:n=1
+2181 4 -_shell_density -1081 1080           u=210 imp:n=1
+          tmp=_shell_temperature_
+2182 3 -_core_density_ -1082                u=210 imp:n=1
+          tmp=_core_temperature_
+2183 0              -1083 1082 fill=2160 u=210 imp:n=1
+2184 4 -_shell_density -1084 1083           u=210 imp:n=1
+          tmp=_shell_temperature_
+2185 3 -_core_density_ -1085                u=210 imp:n=1
+          tmp=_core_temperature_
+2186 0              -1086 1085 fill=2160 u=210 imp:n=1
+2187 4 -_shell_density -1087 1086           u=210 imp:n=1
+          tmp=_shell_temperature_
+c
+2190 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=210 imp:n=1
+          tmp=_coolant_temperature_
+2191 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=210 u=21 imp:n=1
+c
+c Pebble: 31
+c
+3110 3 -_core_density_ -1010                u=310 imp:n=1
+          tmp=_core_temperature_
+3111 0              -1011 1010 fill=3110 u=310 imp:n=1
+3112 4 -_shell_density -1012 1011           u=310 imp:n=1
+          tmp=_shell_temperature_
+3113 3 -_core_density_ -1013                u=310 imp:n=1
+          tmp=_core_temperature_
+3114 0              -1014 1013 fill=3110 u=310 imp:n=1
+3115 4 -_shell_density -1015 1014           u=310 imp:n=1
+          tmp=_shell_temperature_
+c
+3120 3 -_core_density_ -1020                u=310 imp:n=1
+          tmp=_core_temperature_
+3121 0              -1021 1020 fill=3120 u=310 imp:n=1
+3122 4 -_shell_density -1022 1021           u=310 imp:n=1
+          tmp=_shell_temperature_
+3123 3 -_core_density_ -1023                u=310 imp:n=1
+          tmp=_core_temperature_
+3124 0              -1024 1023 fill=3120 u=310 imp:n=1
+3125 4 -_shell_density -1025 1024           u=310 imp:n=1
+          tmp=_shell_temperature_
+c
+3130 3 -_core_density_ -1030                u=310 imp:n=1
+          tmp=_core_temperature_
+3131 0              -1031 1030 fill=3130 u=310 imp:n=1
+3132 4 -_shell_density -1032 1031           u=310 imp:n=1
+          tmp=_shell_temperature_
+3133 3 -_core_density_ -1033                u=310 imp:n=1
+          tmp=_core_temperature_
+3134 0              -1034 1033 fill=3130 u=310 imp:n=1
+3135 4 -_shell_density -1035 1034           u=310 imp:n=1
+          tmp=_shell_temperature_
+c
+3140 3 -_core_density_ -1040                u=310 imp:n=1
+          tmp=_core_temperature_
+3141 0              -1041 1040 fill=3140 u=310 imp:n=1
+3142 4 -_shell_density -1042 1041           u=310 imp:n=1
+          tmp=_shell_temperature_
+3143 3 -_core_density_ -1043                u=310 imp:n=1
+          tmp=_core_temperature_
+3144 0              -1044 1043 fill=3140 u=310 imp:n=1
+3145 4 -_shell_density -1045 1044           u=310 imp:n=1
+          tmp=_shell_temperature_
+c
+3150 3 -_core_density_ -1050                u=310 imp:n=1
+          tmp=_core_temperature_
+3151 0              -1051 1050 fill=3150 u=310 imp:n=1
+3152 4 -_shell_density -1052 1051           u=310 imp:n=1
+          tmp=_shell_temperature_
+3153 3 -_core_density_ -1053                u=310 imp:n=1
+          tmp=_core_temperature_
+3154 0              -1054 1053 fill=3150 u=310 imp:n=1
+3155 4 -_shell_density -1055 1054           u=310 imp:n=1
+          tmp=_shell_temperature_
+3156 3 -_core_density_ -1056                u=310 imp:n=1
+          tmp=_core_temperature_
+3157 0              -1057 1056 fill=3150 u=310 imp:n=1
+3158 4 -_shell_density -1058 1057           u=310 imp:n=1
+          tmp=_shell_temperature_
+3159 3 -_core_density_ -1059                u=310 imp:n=1
+          tmp=_core_temperature_
+3160 0              -1060 1059 fill=3150 u=310 imp:n=1
+3161 4 -_shell_density -1061 1060           u=310 imp:n=1
+          tmp=_shell_temperature_
+3162 3 -_core_density_ -1062                u=310 imp:n=1
+          tmp=_core_temperature_
+3163 0              -1063 1062 fill=3150 u=310 imp:n=1
+3164 4 -_shell_density -1064 1053           u=310 imp:n=1
+          tmp=_shell_temperature_
+3165 3 -_core_density_ -1065                u=310 imp:n=1
+          tmp=_core_temperature_
+3166 0              -1066 1065 fill=3150 u=310 imp:n=1
+3167 4 -_shell_density -1067 1066           u=310 imp:n=1
+          tmp=_shell_temperature_
+c
+3170 3 -_core_density_ -1070                u=310 imp:n=1
+          tmp=_core_temperature_
+3171 0              -1071 1070 fill=3160 u=310 imp:n=1
+3172 4 -_shell_density -1072 1071           u=310 imp:n=1
+          tmp=_shell_temperature_
+3173 3 -_core_density_ -1073                u=310 imp:n=1
+          tmp=_core_temperature_
+3174 0              -1074 1073 fill=3160 u=310 imp:n=1
+3175 4 -_shell_density -1075 1074           u=310 imp:n=1
+          tmp=_shell_temperature_
+3176 3 -_core_density_ -1076                u=310 imp:n=1
+          tmp=_core_temperature_
+3177 0              -1077 1076 fill=3160 u=310 imp:n=1
+3178 4 -_shell_density -1078 1077           u=310 imp:n=1
+          tmp=_shell_temperature_
+3179 3 -_core_density_ -1079                u=310 imp:n=1
+          tmp=_core_temperature_
+3180 0              -1080 1079 fill=3160 u=310 imp:n=1
+3181 4 -_shell_density -1081 1080           u=310 imp:n=1
+          tmp=_shell_temperature_
+3182 3 -_core_density_ -1082                u=310 imp:n=1
+          tmp=_core_temperature_
+3183 0              -1083 1082 fill=3160 u=310 imp:n=1
+3184 4 -_shell_density -1084 1083           u=310 imp:n=1
+          tmp=_shell_temperature_
+3185 3 -_core_density_ -1085                u=310 imp:n=1
+          tmp=_core_temperature_
+3186 0              -1086 1085 fill=3160 u=310 imp:n=1
+3187 4 -_shell_density -1087 1086           u=310 imp:n=1
+          tmp=_shell_temperature_
+c
+3190 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=310 imp:n=1
+          tmp=_coolant_temperature_
+3191 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=310 u=31 imp:n=1
+c
+c Pebble: 41
+c
+4110 3 -_core_density_ -1010                u=410 imp:n=1
+          tmp=_core_temperature_
+4111 0              -1011 1010 fill=4110 u=410 imp:n=1
+4112 4 -_shell_density -1012 1011           u=410 imp:n=1
+          tmp=_shell_temperature_
+4113 3 -_core_density_ -1013                u=410 imp:n=1
+          tmp=_core_temperature_
+4114 0              -1014 1013 fill=4110 u=410 imp:n=1
+4115 4 -_shell_density -1015 1014           u=410 imp:n=1
+          tmp=_shell_temperature_
+c
+4120 3 -_core_density_ -1020                u=410 imp:n=1
+          tmp=_core_temperature_
+4121 0              -1021 1020 fill=4120 u=410 imp:n=1
+4122 4 -_shell_density -1022 1021           u=410 imp:n=1
+          tmp=_shell_temperature_
+4123 3 -_core_density_ -1023                u=410 imp:n=1
+          tmp=_core_temperature_
+4124 0              -1024 1023 fill=4120 u=410 imp:n=1
+4125 4 -_shell_density -1025 1024           u=410 imp:n=1
+          tmp=_shell_temperature_
+c
+4130 3 -_core_density_ -1030                u=410 imp:n=1
+          tmp=_core_temperature_
+4131 0              -1031 1030 fill=4130 u=410 imp:n=1
+4132 4 -_shell_density -1032 1031           u=410 imp:n=1
+          tmp=_shell_temperature_
+4133 3 -_core_density_ -1033                u=410 imp:n=1
+          tmp=_core_temperature_
+4134 0              -1034 1033 fill=4130 u=410 imp:n=1
+4135 4 -_shell_density -1035 1034           u=410 imp:n=1
+          tmp=_shell_temperature_
+c
+4140 3 -_core_density_ -1040                u=410 imp:n=1
+          tmp=_core_temperature_
+4141 0              -1041 1040 fill=4140 u=410 imp:n=1
+4142 4 -_shell_density -1042 1041           u=410 imp:n=1
+          tmp=_shell_temperature_
+4143 3 -_core_density_ -1043                u=410 imp:n=1
+          tmp=_core_temperature_
+4144 0              -1044 1043 fill=4140 u=410 imp:n=1
+4145 4 -_shell_density -1045 1044           u=410 imp:n=1
+          tmp=_shell_temperature_
+c
+4150 3 -_core_density_ -1050                u=410 imp:n=1
+          tmp=_core_temperature_
+4151 0              -1051 1050 fill=4150 u=410 imp:n=1
+4152 4 -_shell_density -1052 1051           u=410 imp:n=1
+          tmp=_shell_temperature_
+4153 3 -_core_density_ -1053                u=410 imp:n=1
+          tmp=_core_temperature_
+4154 0              -1054 1053 fill=4150 u=410 imp:n=1
+4155 4 -_shell_density -1055 1054           u=410 imp:n=1
+          tmp=_shell_temperature_
+4156 3 -_core_density_ -1056                u=410 imp:n=1
+          tmp=_core_temperature_
+4157 0              -1057 1056 fill=4150 u=410 imp:n=1
+4158 4 -_shell_density -1058 1057           u=410 imp:n=1
+          tmp=_shell_temperature_
+4159 3 -_core_density_ -1059                u=410 imp:n=1
+          tmp=_core_temperature_
+4160 0              -1060 1059 fill=4150 u=410 imp:n=1
+4161 4 -_shell_density -1061 1060           u=410 imp:n=1
+          tmp=_shell_temperature_
+4162 3 -_core_density_ -1062                u=410 imp:n=1
+          tmp=_core_temperature_
+4163 0              -1063 1062 fill=4150 u=410 imp:n=1
+4164 4 -_shell_density -1064 1053           u=410 imp:n=1
+          tmp=_shell_temperature_
+4165 3 -_core_density_ -1065                u=410 imp:n=1
+          tmp=_core_temperature_
+4166 0              -1066 1065 fill=4150 u=410 imp:n=1
+4167 4 -_shell_density -1067 1066           u=410 imp:n=1
+          tmp=_shell_temperature_
+c
+4170 3 -_core_density_ -1070                u=410 imp:n=1
+          tmp=_core_temperature_
+4171 0              -1071 1070 fill=4160 u=410 imp:n=1
+4172 4 -_shell_density -1072 1071           u=410 imp:n=1
+          tmp=_shell_temperature_
+4173 3 -_core_density_ -1073                u=410 imp:n=1
+          tmp=_core_temperature_
+4174 0              -1074 1073 fill=4160 u=410 imp:n=1
+4175 4 -_shell_density -1075 1074           u=410 imp:n=1
+          tmp=_shell_temperature_
+4176 3 -_core_density_ -1076                u=410 imp:n=1
+          tmp=_core_temperature_
+4177 0              -1077 1076 fill=4160 u=410 imp:n=1
+4178 4 -_shell_density -1078 1077           u=410 imp:n=1
+          tmp=_shell_temperature_
+4179 3 -_core_density_ -1079                u=410 imp:n=1
+          tmp=_core_temperature_
+4180 0              -1080 1079 fill=4160 u=410 imp:n=1
+4181 4 -_shell_density -1081 1080           u=410 imp:n=1
+          tmp=_shell_temperature_
+4182 3 -_core_density_ -1082                u=410 imp:n=1
+          tmp=_core_temperature_
+4183 0              -1083 1082 fill=4160 u=410 imp:n=1
+4184 4 -_shell_density -1084 1083           u=410 imp:n=1
+          tmp=_shell_temperature_
+4185 3 -_core_density_ -1085                u=410 imp:n=1
+          tmp=_core_temperature_
+4186 0              -1086 1085 fill=4160 u=410 imp:n=1
+4187 4 -_shell_density -1087 1086           u=410 imp:n=1
+          tmp=_shell_temperature_
+c
+4190 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=410 imp:n=1
+          tmp=_coolant_temperature_
+4191 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=410 u=41 imp:n=1
+c
+c Pebble: 12
+c
+1210 3 -_core_density_ -1010                u=120 imp:n=1
+          tmp=_core_temperature_
+1211 0              -1011 1010 fill=1210 u=120 imp:n=1
+1212 4 -_shell_density -1012 1011           u=120 imp:n=1
+          tmp=_shell_temperature_
+1213 3 -_core_density_ -1013                u=120 imp:n=1
+          tmp=_core_temperature_
+1214 0              -1014 1013 fill=1210 u=120 imp:n=1
+1215 4 -_shell_density -1015 1014           u=120 imp:n=1
+          tmp=_shell_temperature_
+c
+1220 3 -_core_density_ -1020                u=120 imp:n=1
+          tmp=_core_temperature_
+1221 0              -1021 1020 fill=1220 u=120 imp:n=1
+1222 4 -_shell_density -1022 1021           u=120 imp:n=1
+          tmp=_shell_temperature_
+1223 3 -_core_density_ -1023                u=120 imp:n=1
+          tmp=_core_temperature_
+1224 0              -1024 1023 fill=1220 u=120 imp:n=1
+1225 4 -_shell_density -1025 1024           u=120 imp:n=1
+          tmp=_shell_temperature_
+c
+1230 3 -_core_density_ -1030                u=120 imp:n=1
+          tmp=_core_temperature_
+1231 0              -1031 1030 fill=1230 u=120 imp:n=1
+1232 4 -_shell_density -1032 1031           u=120 imp:n=1
+          tmp=_shell_temperature_
+1233 3 -_core_density_ -1033                u=120 imp:n=1
+          tmp=_core_temperature_
+1234 0              -1034 1033 fill=1230 u=120 imp:n=1
+1235 4 -_shell_density -1035 1034           u=120 imp:n=1
+          tmp=_shell_temperature_
+c
+1240 3 -_core_density_ -1040                u=120 imp:n=1
+          tmp=_core_temperature_
+1241 0              -1041 1040 fill=1240 u=120 imp:n=1
+1242 4 -_shell_density -1042 1041           u=120 imp:n=1
+          tmp=_shell_temperature_
+1243 3 -_core_density_ -1043                u=120 imp:n=1
+          tmp=_core_temperature_
+1244 0              -1044 1043 fill=1240 u=120 imp:n=1
+1245 4 -_shell_density -1045 1044           u=120 imp:n=1
+          tmp=_shell_temperature_
+c
+1250 3 -_core_density_ -1050                u=120 imp:n=1
+          tmp=_core_temperature_
+1251 0              -1051 1050 fill=1250 u=120 imp:n=1
+1252 4 -_shell_density -1052 1051           u=120 imp:n=1
+          tmp=_shell_temperature_
+1253 3 -_core_density_ -1053                u=120 imp:n=1
+          tmp=_core_temperature_
+1254 0              -1054 1053 fill=1250 u=120 imp:n=1
+1255 4 -_shell_density -1055 1054           u=120 imp:n=1
+          tmp=_shell_temperature_
+1256 3 -_core_density_ -1056                u=120 imp:n=1
+          tmp=_core_temperature_
+1257 0              -1057 1056 fill=1250 u=120 imp:n=1
+1258 4 -_shell_density -1058 1057           u=120 imp:n=1
+          tmp=_shell_temperature_
+1259 3 -_core_density_ -1059                u=120 imp:n=1
+          tmp=_core_temperature_
+1260 0              -1060 1059 fill=1250 u=120 imp:n=1
+1261 4 -_shell_density -1061 1060           u=120 imp:n=1
+          tmp=_shell_temperature_
+1262 3 -_core_density_ -1062                u=120 imp:n=1
+          tmp=_core_temperature_
+1263 0              -1063 1062 fill=1250 u=120 imp:n=1
+1264 4 -_shell_density -1064 1053           u=120 imp:n=1
+          tmp=_shell_temperature_
+1265 3 -_core_density_ -1065                u=120 imp:n=1
+          tmp=_core_temperature_
+1266 0              -1066 1065 fill=1250 u=120 imp:n=1
+1267 4 -_shell_density -1067 1066           u=120 imp:n=1
+          tmp=_shell_temperature_
+c
+1270 3 -_core_density_ -1070                u=120 imp:n=1
+          tmp=_core_temperature_
+1271 0              -1071 1070 fill=1260 u=120 imp:n=1
+1272 4 -_shell_density -1072 1071           u=120 imp:n=1
+          tmp=_shell_temperature_
+1273 3 -_core_density_ -1073                u=120 imp:n=1
+          tmp=_core_temperature_
+1274 0              -1074 1073 fill=1260 u=120 imp:n=1
+1275 4 -_shell_density -1075 1074           u=120 imp:n=1
+          tmp=_shell_temperature_
+1276 3 -_core_density_ -1076                u=120 imp:n=1
+          tmp=_core_temperature_
+1277 0              -1077 1076 fill=1260 u=120 imp:n=1
+1278 4 -_shell_density -1078 1077           u=120 imp:n=1
+          tmp=_shell_temperature_
+1279 3 -_core_density_ -1079                u=120 imp:n=1
+          tmp=_core_temperature_
+1280 0              -1080 1079 fill=1260 u=120 imp:n=1
+1281 4 -_shell_density -1081 1080           u=120 imp:n=1
+          tmp=_shell_temperature_
+1282 3 -_core_density_ -1082                u=120 imp:n=1
+          tmp=_core_temperature_
+1283 0              -1083 1082 fill=1260 u=120 imp:n=1
+1284 4 -_shell_density -1084 1083           u=120 imp:n=1
+          tmp=_shell_temperature_
+1285 3 -_core_density_ -1085                u=120 imp:n=1
+          tmp=_core_temperature_
+1286 0              -1086 1085 fill=1260 u=120 imp:n=1
+1287 4 -_shell_density -1087 1086           u=120 imp:n=1
+          tmp=_shell_temperature_
+c
+1290 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=120 imp:n=1
+          tmp=_coolant_temperature_
+1291 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=120 u=12 imp:n=1
+c
+c Pebble: 22
+c
+2210 3 -_core_density_ -1010                u=220 imp:n=1
+          tmp=_core_temperature_
+2211 0              -1011 1010 fill=2210 u=220 imp:n=1
+2212 4 -_shell_density -1012 1011           u=220 imp:n=1
+          tmp=_shell_temperature_
+2213 3 -_core_density_ -1013                u=220 imp:n=1
+          tmp=_core_temperature_
+2214 0              -1014 1013 fill=2210 u=220 imp:n=1
+2215 4 -_shell_density -1015 1014           u=220 imp:n=1
+          tmp=_shell_temperature_
+c
+2220 3 -_core_density_ -1020                u=220 imp:n=1
+          tmp=_core_temperature_
+2221 0              -1021 1020 fill=2220 u=220 imp:n=1
+2222 4 -_shell_density -1022 1021           u=220 imp:n=1
+          tmp=_shell_temperature_
+2223 3 -_core_density_ -1023                u=220 imp:n=1
+          tmp=_core_temperature_
+2224 0              -1024 1023 fill=2220 u=220 imp:n=1
+2225 4 -_shell_density -1025 1024           u=220 imp:n=1
+          tmp=_shell_temperature_
+c
+2230 3 -_core_density_ -1030                u=220 imp:n=1
+          tmp=_core_temperature_
+2231 0              -1031 1030 fill=2230 u=220 imp:n=1
+2232 4 -_shell_density -1032 1031           u=220 imp:n=1
+          tmp=_shell_temperature_
+2233 3 -_core_density_ -1033                u=220 imp:n=1
+          tmp=_core_temperature_
+2234 0              -1034 1033 fill=2230 u=220 imp:n=1
+2235 4 -_shell_density -1035 1034           u=220 imp:n=1
+          tmp=_shell_temperature_
+c
+2240 3 -_core_density_ -1040                u=220 imp:n=1
+          tmp=_core_temperature_
+2241 0              -1041 1040 fill=2240 u=220 imp:n=1
+2242 4 -_shell_density -1042 1041           u=220 imp:n=1
+          tmp=_shell_temperature_
+2243 3 -_core_density_ -1043                u=220 imp:n=1
+          tmp=_core_temperature_
+2244 0              -1044 1043 fill=2240 u=220 imp:n=1
+2245 4 -_shell_density -1045 1044           u=220 imp:n=1
+          tmp=_shell_temperature_
+c
+2250 3 -_core_density_ -1050                u=220 imp:n=1
+          tmp=_core_temperature_
+2251 0              -1051 1050 fill=2250 u=220 imp:n=1
+2252 4 -_shell_density -1052 1051           u=220 imp:n=1
+          tmp=_shell_temperature_
+2253 3 -_core_density_ -1053                u=220 imp:n=1
+          tmp=_core_temperature_
+2254 0              -1054 1053 fill=2250 u=220 imp:n=1
+2255 4 -_shell_density -1055 1054           u=220 imp:n=1
+          tmp=_shell_temperature_
+2256 3 -_core_density_ -1056                u=220 imp:n=1
+          tmp=_core_temperature_
+2257 0              -1057 1056 fill=2250 u=220 imp:n=1
+2258 4 -_shell_density -1058 1057           u=220 imp:n=1
+          tmp=_shell_temperature_
+2259 3 -_core_density_ -1059                u=220 imp:n=1
+          tmp=_core_temperature_
+2260 0              -1060 1059 fill=2250 u=220 imp:n=1
+2261 4 -_shell_density -1061 1060           u=220 imp:n=1
+          tmp=_shell_temperature_
+2262 3 -_core_density_ -1062                u=220 imp:n=1
+          tmp=_core_temperature_
+2263 0              -1063 1062 fill=2250 u=220 imp:n=1
+2264 4 -_shell_density -1064 1053           u=220 imp:n=1
+          tmp=_shell_temperature_
+2265 3 -_core_density_ -1065                u=220 imp:n=1
+          tmp=_core_temperature_
+2266 0              -1066 1065 fill=2250 u=220 imp:n=1
+2267 4 -_shell_density -1067 1066           u=220 imp:n=1
+          tmp=_shell_temperature_
+c
+2270 3 -_core_density_ -1070                u=220 imp:n=1
+          tmp=_core_temperature_
+2271 0              -1071 1070 fill=2260 u=220 imp:n=1
+2272 4 -_shell_density -1072 1071           u=220 imp:n=1
+          tmp=_shell_temperature_
+2273 3 -_core_density_ -1073                u=220 imp:n=1
+          tmp=_core_temperature_
+2274 0              -1074 1073 fill=2260 u=220 imp:n=1
+2275 4 -_shell_density -1075 1074           u=220 imp:n=1
+          tmp=_shell_temperature_
+2276 3 -_core_density_ -1076                u=220 imp:n=1
+          tmp=_core_temperature_
+2277 0              -1077 1076 fill=2260 u=220 imp:n=1
+2278 4 -_shell_density -1078 1077           u=220 imp:n=1
+          tmp=_shell_temperature_
+2279 3 -_core_density_ -1079                u=220 imp:n=1
+          tmp=_core_temperature_
+2280 0              -1080 1079 fill=2260 u=220 imp:n=1
+2281 4 -_shell_density -1081 1080           u=220 imp:n=1
+          tmp=_shell_temperature_
+2282 3 -_core_density_ -1082                u=220 imp:n=1
+          tmp=_core_temperature_
+2283 0              -1083 1082 fill=2260 u=220 imp:n=1
+2284 4 -_shell_density -1084 1083           u=220 imp:n=1
+          tmp=_shell_temperature_
+2285 3 -_core_density_ -1085                u=220 imp:n=1
+          tmp=_core_temperature_
+2286 0              -1086 1085 fill=2260 u=220 imp:n=1
+2287 4 -_shell_density -1087 1086           u=220 imp:n=1
+          tmp=_shell_temperature_
+c
+2290 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=220 imp:n=1
+          tmp=_coolant_temperature_
+2291 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=220 u=22 imp:n=1
+c
+c Pebble: 32
+c
+3210 3 -_core_density_ -1010                u=320 imp:n=1
+          tmp=_core_temperature_
+3211 0              -1011 1010 fill=3210 u=320 imp:n=1
+3212 4 -_shell_density -1012 1011           u=320 imp:n=1
+          tmp=_shell_temperature_
+3213 3 -_core_density_ -1013                u=320 imp:n=1
+          tmp=_core_temperature_
+3214 0              -1014 1013 fill=3210 u=320 imp:n=1
+3215 4 -_shell_density -1015 1014           u=320 imp:n=1
+          tmp=_shell_temperature_
+c
+3220 3 -_core_density_ -1020                u=320 imp:n=1
+          tmp=_core_temperature_
+3221 0              -1021 1020 fill=3220 u=320 imp:n=1
+3222 4 -_shell_density -1022 1021           u=320 imp:n=1
+          tmp=_shell_temperature_
+3223 3 -_core_density_ -1023                u=320 imp:n=1
+          tmp=_core_temperature_
+3224 0              -1024 1023 fill=3220 u=320 imp:n=1
+3225 4 -_shell_density -1025 1024           u=320 imp:n=1
+          tmp=_shell_temperature_
+c
+3230 3 -_core_density_ -1030                u=320 imp:n=1
+          tmp=_core_temperature_
+3231 0              -1031 1030 fill=3230 u=320 imp:n=1
+3232 4 -_shell_density -1032 1031           u=320 imp:n=1
+          tmp=_shell_temperature_
+3233 3 -_core_density_ -1033                u=320 imp:n=1
+          tmp=_core_temperature_
+3234 0              -1034 1033 fill=3230 u=320 imp:n=1
+3235 4 -_shell_density -1035 1034           u=320 imp:n=1
+          tmp=_shell_temperature_
+c
+3240 3 -_core_density_ -1040                u=320 imp:n=1
+          tmp=_core_temperature_
+3241 0              -1041 1040 fill=3240 u=320 imp:n=1
+3242 4 -_shell_density -1042 1041           u=320 imp:n=1
+          tmp=_shell_temperature_
+3243 3 -_core_density_ -1043                u=320 imp:n=1
+          tmp=_core_temperature_
+3244 0              -1044 1043 fill=3240 u=320 imp:n=1
+3245 4 -_shell_density -1045 1044           u=320 imp:n=1
+          tmp=_shell_temperature_
+c
+3250 3 -_core_density_ -1050                u=320 imp:n=1
+          tmp=_core_temperature_
+3251 0              -1051 1050 fill=3250 u=320 imp:n=1
+3252 4 -_shell_density -1052 1051           u=320 imp:n=1
+          tmp=_shell_temperature_
+3253 3 -_core_density_ -1053                u=320 imp:n=1
+          tmp=_core_temperature_
+3254 0              -1054 1053 fill=3250 u=320 imp:n=1
+3255 4 -_shell_density -1055 1054           u=320 imp:n=1
+          tmp=_shell_temperature_
+3256 3 -_core_density_ -1056                u=320 imp:n=1
+          tmp=_core_temperature_
+3257 0              -1057 1056 fill=3250 u=320 imp:n=1
+3258 4 -_shell_density -1058 1057           u=320 imp:n=1
+          tmp=_shell_temperature_
+3259 3 -_core_density_ -1059                u=320 imp:n=1
+          tmp=_core_temperature_
+3260 0              -1060 1059 fill=3250 u=320 imp:n=1
+3261 4 -_shell_density -1061 1060           u=320 imp:n=1
+          tmp=_shell_temperature_
+3262 3 -_core_density_ -1062                u=320 imp:n=1
+          tmp=_core_temperature_
+3263 0              -1063 1062 fill=3250 u=320 imp:n=1
+3264 4 -_shell_density -1064 1053           u=320 imp:n=1
+          tmp=_shell_temperature_
+3265 3 -_core_density_ -1065                u=320 imp:n=1
+          tmp=_core_temperature_
+3266 0              -1066 1065 fill=3250 u=320 imp:n=1
+3267 4 -_shell_density -1067 1066           u=320 imp:n=1
+          tmp=_shell_temperature_
+c
+3270 3 -_core_density_ -1070                u=320 imp:n=1
+          tmp=_core_temperature_
+3271 0              -1071 1070 fill=3260 u=320 imp:n=1
+3272 4 -_shell_density -1072 1071           u=320 imp:n=1
+          tmp=_shell_temperature_
+3273 3 -_core_density_ -1073                u=320 imp:n=1
+          tmp=_core_temperature_
+3274 0              -1074 1073 fill=3260 u=320 imp:n=1
+3275 4 -_shell_density -1075 1074           u=320 imp:n=1
+          tmp=_shell_temperature_
+3276 3 -_core_density_ -1076                u=320 imp:n=1
+          tmp=_core_temperature_
+3277 0              -1077 1076 fill=3260 u=320 imp:n=1
+3278 4 -_shell_density -1078 1077           u=320 imp:n=1
+          tmp=_shell_temperature_
+3279 3 -_core_density_ -1079                u=320 imp:n=1
+          tmp=_core_temperature_
+3280 0              -1080 1079 fill=3260 u=320 imp:n=1
+3281 4 -_shell_density -1081 1080           u=320 imp:n=1
+          tmp=_shell_temperature_
+3282 3 -_core_density_ -1082                u=320 imp:n=1
+          tmp=_core_temperature_
+3283 0              -1083 1082 fill=3260 u=320 imp:n=1
+3284 4 -_shell_density -1084 1083           u=320 imp:n=1
+          tmp=_shell_temperature_
+3285 3 -_core_density_ -1085                u=320 imp:n=1
+          tmp=_core_temperature_
+3286 0              -1086 1085 fill=3260 u=320 imp:n=1
+3287 4 -_shell_density -1087 1086           u=320 imp:n=1
+          tmp=_shell_temperature_
+c
+3290 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=320 imp:n=1
+          tmp=_coolant_temperature_
+3291 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=320 u=32 imp:n=1
+c
+c Pebble: 42
+c
+4210 3 -_core_density_ -1010                u=420 imp:n=1
+          tmp=_core_temperature_
+4211 0              -1011 1010 fill=4210 u=420 imp:n=1
+4212 4 -_shell_density -1012 1011           u=420 imp:n=1
+          tmp=_shell_temperature_
+4213 3 -_core_density_ -1013                u=420 imp:n=1
+          tmp=_core_temperature_
+4214 0              -1014 1013 fill=4210 u=420 imp:n=1
+4215 4 -_shell_density -1015 1014           u=420 imp:n=1
+          tmp=_shell_temperature_
+c
+4220 3 -_core_density_ -1020                u=420 imp:n=1
+          tmp=_core_temperature_
+4221 0              -1021 1020 fill=4220 u=420 imp:n=1
+4222 4 -_shell_density -1022 1021           u=420 imp:n=1
+          tmp=_shell_temperature_
+4223 3 -_core_density_ -1023                u=420 imp:n=1
+          tmp=_core_temperature_
+4224 0              -1024 1023 fill=4220 u=420 imp:n=1
+4225 4 -_shell_density -1025 1024           u=420 imp:n=1
+          tmp=_shell_temperature_
+c
+4230 3 -_core_density_ -1030                u=420 imp:n=1
+          tmp=_core_temperature_
+4231 0              -1031 1030 fill=4230 u=420 imp:n=1
+4232 4 -_shell_density -1032 1031           u=420 imp:n=1
+          tmp=_shell_temperature_
+4233 3 -_core_density_ -1033                u=420 imp:n=1
+          tmp=_core_temperature_
+4234 0              -1034 1033 fill=4230 u=420 imp:n=1
+4235 4 -_shell_density -1035 1034           u=420 imp:n=1
+          tmp=_shell_temperature_
+c
+4240 3 -_core_density_ -1040                u=420 imp:n=1
+          tmp=_core_temperature_
+4241 0              -1041 1040 fill=4240 u=420 imp:n=1
+4242 4 -_shell_density -1042 1041           u=420 imp:n=1
+          tmp=_shell_temperature_
+4243 3 -_core_density_ -1043                u=420 imp:n=1
+          tmp=_core_temperature_
+4244 0              -1044 1043 fill=4240 u=420 imp:n=1
+4245 4 -_shell_density -1045 1044           u=420 imp:n=1
+          tmp=_shell_temperature_
+c
+4250 3 -_core_density_ -1050                u=420 imp:n=1
+          tmp=_core_temperature_
+4251 0              -1051 1050 fill=4250 u=420 imp:n=1
+4252 4 -_shell_density -1052 1051           u=420 imp:n=1
+          tmp=_shell_temperature_
+4253 3 -_core_density_ -1053                u=420 imp:n=1
+          tmp=_core_temperature_
+4254 0              -1054 1053 fill=4250 u=420 imp:n=1
+4255 4 -_shell_density -1055 1054           u=420 imp:n=1
+          tmp=_shell_temperature_
+4256 3 -_core_density_ -1056                u=420 imp:n=1
+          tmp=_core_temperature_
+4257 0              -1057 1056 fill=4250 u=420 imp:n=1
+4258 4 -_shell_density -1058 1057           u=420 imp:n=1
+          tmp=_shell_temperature_
+4259 3 -_core_density_ -1059                u=420 imp:n=1
+          tmp=_core_temperature_
+4260 0              -1060 1059 fill=4250 u=420 imp:n=1
+4261 4 -_shell_density -1061 1060           u=420 imp:n=1
+          tmp=_shell_temperature_
+4262 3 -_core_density_ -1062                u=420 imp:n=1
+          tmp=_core_temperature_
+4263 0              -1063 1062 fill=4250 u=420 imp:n=1
+4264 4 -_shell_density -1064 1053           u=420 imp:n=1
+          tmp=_shell_temperature_
+4265 3 -_core_density_ -1065                u=420 imp:n=1
+          tmp=_core_temperature_
+4266 0              -1066 1065 fill=4250 u=420 imp:n=1
+4267 4 -_shell_density -1067 1066           u=420 imp:n=1
+          tmp=_shell_temperature_
+c
+4270 3 -_core_density_ -1070                u=420 imp:n=1
+          tmp=_core_temperature_
+4271 0              -1071 1070 fill=4260 u=420 imp:n=1
+4272 4 -_shell_density -1072 1071           u=420 imp:n=1
+          tmp=_shell_temperature_
+4273 3 -_core_density_ -1073                u=420 imp:n=1
+          tmp=_core_temperature_
+4274 0              -1074 1073 fill=4260 u=420 imp:n=1
+4275 4 -_shell_density -1075 1074           u=420 imp:n=1
+          tmp=_shell_temperature_
+4276 3 -_core_density_ -1076                u=420 imp:n=1
+          tmp=_core_temperature_
+4277 0              -1077 1076 fill=4260 u=420 imp:n=1
+4278 4 -_shell_density -1078 1077           u=420 imp:n=1
+          tmp=_shell_temperature_
+4279 3 -_core_density_ -1079                u=420 imp:n=1
+          tmp=_core_temperature_
+4280 0              -1080 1079 fill=4260 u=420 imp:n=1
+4281 4 -_shell_density -1081 1080           u=420 imp:n=1
+          tmp=_shell_temperature_
+4282 3 -_core_density_ -1082                u=420 imp:n=1
+          tmp=_core_temperature_
+4283 0              -1083 1082 fill=4260 u=420 imp:n=1
+4284 4 -_shell_density -1084 1083           u=420 imp:n=1
+          tmp=_shell_temperature_
+4285 3 -_core_density_ -1085                u=420 imp:n=1
+          tmp=_core_temperature_
+4286 0              -1086 1085 fill=4260 u=420 imp:n=1
+4287 4 -_shell_density -1087 1086           u=420 imp:n=1
+          tmp=_shell_temperature_
+c
+4290 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=420 imp:n=1
+          tmp=_coolant_temperature_
+4291 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=420 u=42 imp:n=1
+c
+c Pebble: 13
+c
+1310 3 -_core_density_ -1010                u=130 imp:n=1
+          tmp=_core_temperature_
+1311 0              -1011 1010 fill=1310 u=130 imp:n=1
+1312 4 -_shell_density -1012 1011           u=130 imp:n=1
+          tmp=_shell_temperature_
+1313 3 -_core_density_ -1013                u=130 imp:n=1
+          tmp=_core_temperature_
+1314 0              -1014 1013 fill=1310 u=130 imp:n=1
+1315 4 -_shell_density -1015 1014           u=130 imp:n=1
+          tmp=_shell_temperature_
+c
+1320 3 -_core_density_ -1020                u=130 imp:n=1
+          tmp=_core_temperature_
+1321 0              -1021 1020 fill=1320 u=130 imp:n=1
+1322 4 -_shell_density -1022 1021           u=130 imp:n=1
+          tmp=_shell_temperature_
+1323 3 -_core_density_ -1023                u=130 imp:n=1
+          tmp=_core_temperature_
+1324 0              -1024 1023 fill=1320 u=130 imp:n=1
+1325 4 -_shell_density -1025 1024           u=130 imp:n=1
+          tmp=_shell_temperature_
+c
+1330 3 -_core_density_ -1030                u=130 imp:n=1
+          tmp=_core_temperature_
+1331 0              -1031 1030 fill=1330 u=130 imp:n=1
+1332 4 -_shell_density -1032 1031           u=130 imp:n=1
+          tmp=_shell_temperature_
+1333 3 -_core_density_ -1033                u=130 imp:n=1
+          tmp=_core_temperature_
+1334 0              -1034 1033 fill=1330 u=130 imp:n=1
+1335 4 -_shell_density -1035 1034           u=130 imp:n=1
+          tmp=_shell_temperature_
+c
+1340 3 -_core_density_ -1040                u=130 imp:n=1
+          tmp=_core_temperature_
+1341 0              -1041 1040 fill=1340 u=130 imp:n=1
+1342 4 -_shell_density -1042 1041           u=130 imp:n=1
+          tmp=_shell_temperature_
+1343 3 -_core_density_ -1043                u=130 imp:n=1
+          tmp=_core_temperature_
+1344 0              -1044 1043 fill=1340 u=130 imp:n=1
+1345 4 -_shell_density -1045 1044           u=130 imp:n=1
+          tmp=_shell_temperature_
+c
+1350 3 -_core_density_ -1050                u=130 imp:n=1
+          tmp=_core_temperature_
+1351 0              -1051 1050 fill=1350 u=130 imp:n=1
+1352 4 -_shell_density -1052 1051           u=130 imp:n=1
+          tmp=_shell_temperature_
+1353 3 -_core_density_ -1053                u=130 imp:n=1
+          tmp=_core_temperature_
+1354 0              -1054 1053 fill=1350 u=130 imp:n=1
+1355 4 -_shell_density -1055 1054           u=130 imp:n=1
+          tmp=_shell_temperature_
+1356 3 -_core_density_ -1056                u=130 imp:n=1
+          tmp=_core_temperature_
+1357 0              -1057 1056 fill=1350 u=130 imp:n=1
+1358 4 -_shell_density -1058 1057           u=130 imp:n=1
+          tmp=_shell_temperature_
+1359 3 -_core_density_ -1059                u=130 imp:n=1
+          tmp=_core_temperature_
+1360 0              -1060 1059 fill=1350 u=130 imp:n=1
+1361 4 -_shell_density -1061 1060           u=130 imp:n=1
+          tmp=_shell_temperature_
+1362 3 -_core_density_ -1062                u=130 imp:n=1
+          tmp=_core_temperature_
+1363 0              -1063 1062 fill=1350 u=130 imp:n=1
+1364 4 -_shell_density -1064 1053           u=130 imp:n=1
+          tmp=_shell_temperature_
+1365 3 -_core_density_ -1065                u=130 imp:n=1
+          tmp=_core_temperature_
+1366 0              -1066 1065 fill=1350 u=130 imp:n=1
+1367 4 -_shell_density -1067 1066           u=130 imp:n=1
+          tmp=_shell_temperature_
+c
+1370 3 -_core_density_ -1070                u=130 imp:n=1
+          tmp=_core_temperature_
+1371 0              -1071 1070 fill=1360 u=130 imp:n=1
+1372 4 -_shell_density -1072 1071           u=130 imp:n=1
+          tmp=_shell_temperature_
+1373 3 -_core_density_ -1073                u=130 imp:n=1
+          tmp=_core_temperature_
+1374 0              -1074 1073 fill=1360 u=130 imp:n=1
+1375 4 -_shell_density -1075 1074           u=130 imp:n=1
+          tmp=_shell_temperature_
+1376 3 -_core_density_ -1076                u=130 imp:n=1
+          tmp=_core_temperature_
+1377 0              -1077 1076 fill=1360 u=130 imp:n=1
+1378 4 -_shell_density -1078 1077           u=130 imp:n=1
+          tmp=_shell_temperature_
+1379 3 -_core_density_ -1079                u=130 imp:n=1
+          tmp=_core_temperature_
+1380 0              -1080 1079 fill=1360 u=130 imp:n=1
+1381 4 -_shell_density -1081 1080           u=130 imp:n=1
+          tmp=_shell_temperature_
+1382 3 -_core_density_ -1082                u=130 imp:n=1
+          tmp=_core_temperature_
+1383 0              -1083 1082 fill=1360 u=130 imp:n=1
+1384 4 -_shell_density -1084 1083           u=130 imp:n=1
+          tmp=_shell_temperature_
+1385 3 -_core_density_ -1085                u=130 imp:n=1
+          tmp=_core_temperature_
+1386 0              -1086 1085 fill=1360 u=130 imp:n=1
+1387 4 -_shell_density -1087 1086           u=130 imp:n=1
+          tmp=_shell_temperature_
+c
+1390 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=130 imp:n=1
+          tmp=_coolant_temperature_
+1391 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=130 u=13 imp:n=1
+c
+c Pebble: 23
+c
+2310 3 -_core_density_ -1110                u=230 imp:n=1
+          tmp=_core_temperature_
+2311 0              -1111 1110 fill=2310 u=230 imp:n=1
+2312 4 -_shell_density -1112 1111           u=230 imp:n=1
+          tmp=_shell_temperature_
+2313 3 -_core_density_ -1113                u=230 imp:n=1
+          tmp=_core_temperature_
+2314 0              -1114 1113 fill=2310 u=230 imp:n=1
+2315 4 -_shell_density -1115 1114           u=230 imp:n=1
+          tmp=_shell_temperature_
+c
+2320 3 -_core_density_ -1120                u=230 imp:n=1
+          tmp=_core_temperature_
+2321 0              -1121 1120 fill=2320 u=230 imp:n=1
+2322 4 -_shell_density -1122 1121           u=230 imp:n=1
+          tmp=_shell_temperature_
+2323 3 -_core_density_ -1123                u=230 imp:n=1
+          tmp=_core_temperature_
+2324 0              -1124 1123 fill=2320 u=230 imp:n=1
+2325 4 -_shell_density -1125 1124           u=230 imp:n=1
+          tmp=_shell_temperature_
+c
+2330 3 -_core_density_ -1130                u=230 imp:n=1
+          tmp=_core_temperature_
+2331 0              -1131 1130 fill=2330 u=230 imp:n=1
+2332 4 -_shell_density -1132 1131           u=230 imp:n=1
+          tmp=_shell_temperature_
+2333 3 -_core_density_ -1133                u=230 imp:n=1
+          tmp=_core_temperature_
+2334 0              -1134 1133 fill=2330 u=230 imp:n=1
+2335 4 -_shell_density -1135 1134           u=230 imp:n=1
+          tmp=_shell_temperature_
+c
+2340 3 -_core_density_ -1140                u=230 imp:n=1
+          tmp=_core_temperature_
+2341 0              -1141 1140 fill=2340 u=230 imp:n=1
+2342 4 -_shell_density -1142 1141           u=230 imp:n=1
+          tmp=_shell_temperature_
+2343 3 -_core_density_ -1143                u=230 imp:n=1
+          tmp=_core_temperature_
+2344 0              -1144 1143 fill=2340 u=230 imp:n=1
+2345 4 -_shell_density -1145 1144           u=230 imp:n=1
+          tmp=_shell_temperature_
+c
+2350 3 -_core_density_ -1150                u=230 imp:n=1
+          tmp=_core_temperature_
+2351 0              -1151 1150 fill=2350 u=230 imp:n=1
+2352 4 -_shell_density -1152 1151           u=230 imp:n=1
+          tmp=_shell_temperature_
+2353 3 -_core_density_ -1153                u=230 imp:n=1
+          tmp=_core_temperature_
+2354 0              -1154 1153 fill=2350 u=230 imp:n=1
+2355 4 -_shell_density -1155 1154           u=230 imp:n=1
+          tmp=_shell_temperature_
+2356 3 -_core_density_ -1156                u=230 imp:n=1
+          tmp=_core_temperature_
+2357 0              -1157 1156 fill=2350 u=230 imp:n=1
+2358 4 -_shell_density -1158 1157           u=230 imp:n=1
+          tmp=_shell_temperature_
+2359 3 -_core_density_ -1159                u=230 imp:n=1
+          tmp=_core_temperature_
+2360 0              -1160 1159 fill=2350 u=230 imp:n=1
+2361 4 -_shell_density -1161 1160           u=230 imp:n=1
+          tmp=_shell_temperature_
+2362 3 -_core_density_ -1162                u=230 imp:n=1
+          tmp=_core_temperature_
+2363 0              -1163 1162 fill=2350 u=230 imp:n=1
+2364 4 -_shell_density -1164 1153           u=230 imp:n=1
+          tmp=_shell_temperature_
+2365 3 -_core_density_ -1165                u=230 imp:n=1
+          tmp=_core_temperature_
+2366 0              -1166 1165 fill=2350 u=230 imp:n=1
+2367 4 -_shell_density -1167 1166           u=230 imp:n=1
+          tmp=_shell_temperature_
+c
+2370 3 -_core_density_ -1170                u=230 imp:n=1
+          tmp=_core_temperature_
+2371 0              -1171 1170 fill=2360 u=230 imp:n=1
+2372 4 -_shell_density -1172 1171           u=230 imp:n=1
+          tmp=_shell_temperature_
+2373 3 -_core_density_ -1173                u=230 imp:n=1
+          tmp=_core_temperature_
+2374 0              -1174 1173 fill=2360 u=230 imp:n=1
+2375 4 -_shell_density -1175 1174           u=230 imp:n=1
+          tmp=_shell_temperature_
+2376 3 -_core_density_ -1176                u=230 imp:n=1
+          tmp=_core_temperature_
+2377 0              -1177 1176 fill=2360 u=230 imp:n=1
+2378 4 -_shell_density -1178 1177           u=230 imp:n=1
+          tmp=_shell_temperature_
+2379 3 -_core_density_ -1179                u=230 imp:n=1
+          tmp=_core_temperature_
+2380 0              -1180 1179 fill=2360 u=230 imp:n=1
+2381 4 -_shell_density -1181 1180           u=230 imp:n=1
+          tmp=_shell_temperature_
+2382 3 -_core_density_ -1182                u=230 imp:n=1
+          tmp=_core_temperature_
+2383 0              -1183 1182 fill=2360 u=230 imp:n=1
+2384 4 -_shell_density -1184 1183           u=230 imp:n=1
+          tmp=_shell_temperature_
+2385 3 -_core_density_ -1185                u=230 imp:n=1
+          tmp=_core_temperature_
+2386 0              -1186 1185 fill=2360 u=230 imp:n=1
+2387 4 -_shell_density -1187 1186           u=230 imp:n=1
+          tmp=_shell_temperature_
+c
+2390 24 -_coolant_density_ 1111 1113 
+                     1121 1123 
+                     1131 1133 
+                     1141 1143
+                     1151 1153 1155 1157 1159 1161
+                     1171 1173 1175 1177 1179 1181
+                     u=230 imp:n=1
+          tmp=_coolant_temperature_
+2391 0    -1190 1191 -1192 1193 -1194 1195 -1196 1197 lat=2 
+          fill=230 u=23 imp:n=1
+c
+c Pebble: 33
+c
+3310 3 -_core_density_ -1110                u=330 imp:n=1
+          tmp=_core_temperature_
+3311 0              -1111 1110 fill=3310 u=330 imp:n=1
+3312 4 -_shell_density -1112 1111           u=330 imp:n=1
+          tmp=_shell_temperature_
+3313 3 -_core_density_ -1113                u=330 imp:n=1
+          tmp=_core_temperature_
+3314 0              -1114 1113 fill=3310 u=330 imp:n=1
+3315 4 -_shell_density -1115 1114           u=330 imp:n=1
+          tmp=_shell_temperature_
+c
+3320 3 -_core_density_ -1120                u=330 imp:n=1
+          tmp=_core_temperature_
+3321 0              -1121 1120 fill=3320 u=330 imp:n=1
+3322 4 -_shell_density -1122 1121           u=330 imp:n=1
+          tmp=_shell_temperature_
+3323 3 -_core_density_ -1123                u=330 imp:n=1
+          tmp=_core_temperature_
+3324 0              -1124 1123 fill=3320 u=330 imp:n=1
+3325 4 -_shell_density -1125 1124           u=330 imp:n=1
+          tmp=_shell_temperature_
+c
+3330 3 -_core_density_ -1130                u=330 imp:n=1
+          tmp=_core_temperature_
+3331 0              -1131 1130 fill=3330 u=330 imp:n=1
+3332 4 -_shell_density -1132 1131           u=330 imp:n=1
+          tmp=_shell_temperature_
+3333 3 -_core_density_ -1133                u=330 imp:n=1
+          tmp=_core_temperature_
+3334 0              -1134 1133 fill=3330 u=330 imp:n=1
+3335 4 -_shell_density -1135 1134           u=330 imp:n=1
+          tmp=_shell_temperature_
+c
+3340 3 -_core_density_ -1140                u=330 imp:n=1
+          tmp=_core_temperature_
+3341 0              -1141 1140 fill=3340 u=330 imp:n=1
+3342 4 -_shell_density -1142 1141           u=330 imp:n=1
+          tmp=_shell_temperature_
+3343 3 -_core_density_ -1143                u=330 imp:n=1
+          tmp=_core_temperature_
+3344 0              -1144 1143 fill=3340 u=330 imp:n=1
+3345 4 -_shell_density -1145 1144           u=330 imp:n=1
+          tmp=_shell_temperature_
+c
+3350 3 -_core_density_ -1150                u=330 imp:n=1
+          tmp=_core_temperature_
+3351 0              -1151 1150 fill=3350 u=330 imp:n=1
+3352 4 -_shell_density -1152 1151           u=330 imp:n=1
+          tmp=_shell_temperature_
+3353 3 -_core_density_ -1153                u=330 imp:n=1
+          tmp=_core_temperature_
+3354 0              -1154 1153 fill=3350 u=330 imp:n=1
+3355 4 -_shell_density -1155 1154           u=330 imp:n=1
+          tmp=_shell_temperature_
+3356 3 -_core_density_ -1156                u=330 imp:n=1
+          tmp=_core_temperature_
+3357 0              -1157 1156 fill=3350 u=330 imp:n=1
+3358 4 -_shell_density -1158 1157           u=330 imp:n=1
+          tmp=_shell_temperature_
+3359 3 -_core_density_ -1159                u=330 imp:n=1
+          tmp=_core_temperature_
+3360 0              -1160 1159 fill=3350 u=330 imp:n=1
+3361 4 -_shell_density -1161 1160           u=330 imp:n=1
+          tmp=_shell_temperature_
+3362 3 -_core_density_ -1162                u=330 imp:n=1
+          tmp=_core_temperature_
+3363 0              -1163 1162 fill=3350 u=330 imp:n=1
+3364 4 -_shell_density -1164 1153           u=330 imp:n=1
+          tmp=_shell_temperature_
+3365 3 -_core_density_ -1165                u=330 imp:n=1
+          tmp=_core_temperature_
+3366 0              -1166 1165 fill=3350 u=330 imp:n=1
+3367 4 -_shell_density -1167 1166           u=330 imp:n=1
+          tmp=_shell_temperature_
+c
+3370 3 -_core_density_ -1170                u=330 imp:n=1
+          tmp=_core_temperature_
+3371 0              -1171 1170 fill=3360 u=330 imp:n=1
+3372 4 -_shell_density -1172 1171           u=330 imp:n=1
+          tmp=_shell_temperature_
+3373 3 -_core_density_ -1173                u=330 imp:n=1
+          tmp=_core_temperature_
+3374 0              -1174 1173 fill=3360 u=330 imp:n=1
+3375 4 -_shell_density -1175 1174           u=330 imp:n=1
+          tmp=_shell_temperature_
+3376 3 -_core_density_ -1176                u=330 imp:n=1
+          tmp=_core_temperature_
+3377 0              -1177 1176 fill=3360 u=330 imp:n=1
+3378 4 -_shell_density -1178 1177           u=330 imp:n=1
+          tmp=_shell_temperature_
+3379 3 -_core_density_ -1179                u=330 imp:n=1
+          tmp=_core_temperature_
+3380 0              -1180 1179 fill=3360 u=330 imp:n=1
+3381 4 -_shell_density -1181 1180           u=330 imp:n=1
+          tmp=_shell_temperature_
+3382 3 -_core_density_ -1182                u=330 imp:n=1
+          tmp=_core_temperature_
+3383 0              -1183 1182 fill=3360 u=330 imp:n=1
+3384 4 -_shell_density -1184 1183           u=330 imp:n=1
+          tmp=_shell_temperature_
+3385 3 -_core_density_ -1185                u=330 imp:n=1
+          tmp=_core_temperature_
+3386 0              -1186 1185 fill=3360 u=330 imp:n=1
+3387 4 -_shell_density -1187 1186           u=330 imp:n=1
+          tmp=_shell_temperature_
+c
+3390 24 -_coolant_density_ 1111 1113 
+                     1121 1123 
+                     1131 1133 
+                     1141 1143
+                     1151 1153 1155 1157 1159 1161
+                     1171 1173 1175 1177 1179 1181
+                     u=330 imp:n=1
+          tmp=_coolant_temperature_
+3391 0    -1190 1191 -1192 1193 -1194 1195 -1196 1197 lat=2 
+          fill=330 u=33 imp:n=1
+c
+c Pebble: 43
+c
+4310 3 -_core_density_ -1110                u=430 imp:n=1
+          tmp=_core_temperature_
+4311 0              -1111 1110 fill=4310 u=430 imp:n=1
+4312 4 -_shell_density -1112 1111           u=430 imp:n=1
+          tmp=_shell_temperature_
+4313 3 -_core_density_ -1113                u=430 imp:n=1
+          tmp=_core_temperature_
+4314 0              -1114 1113 fill=4310 u=430 imp:n=1
+4315 4 -_shell_density -1115 1114           u=430 imp:n=1
+          tmp=_shell_temperature_
+c
+4320 3 -_core_density_ -1120                u=430 imp:n=1
+          tmp=_core_temperature_
+4321 0              -1121 1120 fill=4320 u=430 imp:n=1
+4322 4 -_shell_density -1122 1121           u=430 imp:n=1
+          tmp=_shell_temperature_
+4323 3 -_core_density_ -1123                u=430 imp:n=1
+          tmp=_core_temperature_
+4324 0              -1124 1123 fill=4320 u=430 imp:n=1
+4325 4 -_shell_density -1125 1124           u=430 imp:n=1
+          tmp=_shell_temperature_
+c
+4330 3 -_core_density_ -1130                u=430 imp:n=1
+          tmp=_core_temperature_
+4331 0              -1131 1130 fill=4330 u=430 imp:n=1
+4332 4 -_shell_density -1132 1131           u=430 imp:n=1
+          tmp=_shell_temperature_
+4333 3 -_core_density_ -1133                u=430 imp:n=1
+          tmp=_core_temperature_
+4334 0              -1134 1133 fill=4330 u=430 imp:n=1
+4335 4 -_shell_density -1135 1134           u=430 imp:n=1
+          tmp=_shell_temperature_
+c
+4340 3 -_core_density_ -1140                u=430 imp:n=1
+          tmp=_core_temperature_
+4341 0              -1141 1140 fill=4340 u=430 imp:n=1
+4342 4 -_shell_density -1142 1141           u=430 imp:n=1
+          tmp=_shell_temperature_
+4343 3 -_core_density_ -1143                u=430 imp:n=1
+          tmp=_core_temperature_
+4344 0              -1144 1143 fill=4340 u=430 imp:n=1
+4345 4 -_shell_density -1145 1144           u=430 imp:n=1
+          tmp=_shell_temperature_
+c
+4350 3 -_core_density_ -1150                u=430 imp:n=1
+          tmp=_core_temperature_
+4351 0              -1151 1150 fill=4350 u=430 imp:n=1
+4352 4 -_shell_density -1152 1151           u=430 imp:n=1
+          tmp=_shell_temperature_
+4353 3 -_core_density_ -1153                u=430 imp:n=1
+          tmp=_core_temperature_
+4354 0              -1154 1153 fill=4350 u=430 imp:n=1
+4355 4 -_shell_density -1155 1154           u=430 imp:n=1
+          tmp=_shell_temperature_
+4356 3 -_core_density_ -1156                u=430 imp:n=1
+          tmp=_core_temperature_
+4357 0              -1157 1156 fill=4350 u=430 imp:n=1
+4358 4 -_shell_density -1158 1157           u=430 imp:n=1
+          tmp=_shell_temperature_
+4359 3 -_core_density_ -1159                u=430 imp:n=1
+          tmp=_core_temperature_
+4360 0              -1160 1159 fill=4350 u=430 imp:n=1
+4361 4 -_shell_density -1161 1160           u=430 imp:n=1
+          tmp=_shell_temperature_
+4362 3 -_core_density_ -1162                u=430 imp:n=1
+          tmp=_core_temperature_
+4363 0              -1163 1162 fill=4350 u=430 imp:n=1
+4364 4 -_shell_density -1164 1153           u=430 imp:n=1
+          tmp=_shell_temperature_
+4365 3 -_core_density_ -1165                u=430 imp:n=1
+          tmp=_core_temperature_
+4366 0              -1166 1165 fill=4350 u=430 imp:n=1
+4367 4 -_shell_density -1167 1166           u=430 imp:n=1
+          tmp=_shell_temperature_
+c
+4370 3 -_core_density_ -1170                u=430 imp:n=1
+          tmp=_core_temperature_
+4371 0              -1171 1170 fill=4360 u=430 imp:n=1
+4372 4 -_shell_density -1172 1171           u=430 imp:n=1
+          tmp=_shell_temperature_
+4373 3 -_core_density_ -1173                u=430 imp:n=1
+          tmp=_core_temperature_
+4374 0              -1174 1173 fill=4360 u=430 imp:n=1
+4375 4 -_shell_density -1175 1174           u=430 imp:n=1
+          tmp=_shell_temperature_
+4376 3 -_core_density_ -1176                u=430 imp:n=1
+          tmp=_core_temperature_
+4377 0              -1177 1176 fill=4360 u=430 imp:n=1
+4378 4 -_shell_density -1178 1177           u=430 imp:n=1
+          tmp=_shell_temperature_
+4379 3 -_core_density_ -1179                u=430 imp:n=1
+          tmp=_core_temperature_
+4380 0              -1180 1179 fill=4360 u=430 imp:n=1
+4381 4 -_shell_density -1181 1180           u=430 imp:n=1
+          tmp=_shell_temperature_
+4382 3 -_core_density_ -1182                u=430 imp:n=1
+          tmp=_core_temperature_
+4383 0              -1183 1182 fill=4360 u=430 imp:n=1
+4384 4 -_shell_density -1184 1183           u=430 imp:n=1
+          tmp=_shell_temperature_
+4385 3 -_core_density_ -1185                u=430 imp:n=1
+          tmp=_core_temperature_
+4386 0              -1186 1185 fill=4360 u=430 imp:n=1
+4387 4 -_shell_density -1187 1186           u=430 imp:n=1
+          tmp=_shell_temperature_
+c
+4390 24 -_coolant_density_ 1111 1113 
+                     1121 1123 
+                     1131 1133 
+                     1141 1143
+                     1151 1153 1155 1157 1159 1161
+                     1171 1173 1175 1177 1179 1181
+                     u=430 imp:n=1
+          tmp=_coolant_temperature_
+4391 0    -1190 1191 -1192 1193 -1194 1195 -1196 1197 lat=2 
+          fill=430 u=43 imp:n=1
+c
+c Pebble: 14
+c
+1410 3 -_core_density_ -1010                u=140 imp:n=1
+          tmp=_core_temperature_
+1411 0              -1011 1010 fill=1410 u=140 imp:n=1
+1412 4 -_shell_density -1012 1011           u=140 imp:n=1
+          tmp=_shell_temperature_
+1413 3 -_core_density_ -1013                u=140 imp:n=1
+          tmp=_core_temperature_
+1414 0              -1014 1013 fill=1410 u=140 imp:n=1
+1415 4 -_shell_density -1015 1014           u=140 imp:n=1
+          tmp=_shell_temperature_
+c
+1420 3 -_core_density_ -1020                u=140 imp:n=1
+          tmp=_core_temperature_
+1421 0              -1021 1020 fill=1420 u=140 imp:n=1
+1422 4 -_shell_density -1022 1021           u=140 imp:n=1
+          tmp=_shell_temperature_
+1423 3 -_core_density_ -1023                u=140 imp:n=1
+          tmp=_core_temperature_
+1424 0              -1024 1023 fill=1420 u=140 imp:n=1
+1425 4 -_shell_density -1025 1024           u=140 imp:n=1
+          tmp=_shell_temperature_
+c
+1430 3 -_core_density_ -1030                u=140 imp:n=1
+          tmp=_core_temperature_
+1431 0              -1031 1030 fill=1430 u=140 imp:n=1
+1432 4 -_shell_density -1032 1031           u=140 imp:n=1
+          tmp=_shell_temperature_
+1433 3 -_core_density_ -1033                u=140 imp:n=1
+          tmp=_core_temperature_
+1434 0              -1034 1033 fill=1430 u=140 imp:n=1
+1435 4 -_shell_density -1035 1034           u=140 imp:n=1
+          tmp=_shell_temperature_
+c
+1440 3 -_core_density_ -1040                u=140 imp:n=1
+          tmp=_core_temperature_
+1441 0              -1041 1040 fill=1440 u=140 imp:n=1
+1442 4 -_shell_density -1042 1041           u=140 imp:n=1
+          tmp=_shell_temperature_
+1443 3 -_core_density_ -1043                u=140 imp:n=1
+          tmp=_core_temperature_
+1444 0              -1044 1043 fill=1440 u=140 imp:n=1
+1445 4 -_shell_density -1045 1044           u=140 imp:n=1
+          tmp=_shell_temperature_
+c
+1450 3 -_core_density_ -1050                u=140 imp:n=1
+          tmp=_core_temperature_
+1451 0              -1051 1050 fill=1450 u=140 imp:n=1
+1452 4 -_shell_density -1052 1051           u=140 imp:n=1
+          tmp=_shell_temperature_
+1453 3 -_core_density_ -1053                u=140 imp:n=1
+          tmp=_core_temperature_
+1454 0              -1054 1053 fill=1450 u=140 imp:n=1
+1455 4 -_shell_density -1055 1054           u=140 imp:n=1
+          tmp=_shell_temperature_
+1456 3 -_core_density_ -1056                u=140 imp:n=1
+          tmp=_core_temperature_
+1457 0              -1057 1056 fill=1450 u=140 imp:n=1
+1458 4 -_shell_density -1058 1057           u=140 imp:n=1
+          tmp=_shell_temperature_
+1459 3 -_core_density_ -1059                u=140 imp:n=1
+          tmp=_core_temperature_
+1460 0              -1060 1059 fill=1450 u=140 imp:n=1
+1461 4 -_shell_density -1061 1060           u=140 imp:n=1
+          tmp=_shell_temperature_
+1462 3 -_core_density_ -1062                u=140 imp:n=1
+          tmp=_core_temperature_
+1463 0              -1063 1062 fill=1450 u=140 imp:n=1
+1464 4 -_shell_density -1064 1053           u=140 imp:n=1
+          tmp=_shell_temperature_
+1465 3 -_core_density_ -1065                u=140 imp:n=1
+          tmp=_core_temperature_
+1466 0              -1066 1065 fill=1450 u=140 imp:n=1
+1467 4 -_shell_density -1067 1066           u=140 imp:n=1
+          tmp=_shell_temperature_
+c
+1470 3 -_core_density_ -1070                u=140 imp:n=1
+          tmp=_core_temperature_
+1471 0              -1071 1070 fill=1460 u=140 imp:n=1
+1472 4 -_shell_density -1072 1071           u=140 imp:n=1
+          tmp=_shell_temperature_
+1473 3 -_core_density_ -1073                u=140 imp:n=1
+          tmp=_core_temperature_
+1474 0              -1074 1073 fill=1460 u=140 imp:n=1
+1475 4 -_shell_density -1075 1074           u=140 imp:n=1
+          tmp=_shell_temperature_
+1476 3 -_core_density_ -1076                u=140 imp:n=1
+          tmp=_core_temperature_
+1477 0              -1077 1076 fill=1460 u=140 imp:n=1
+1478 4 -_shell_density -1078 1077           u=140 imp:n=1
+          tmp=_shell_temperature_
+1479 3 -_core_density_ -1079                u=140 imp:n=1
+          tmp=_core_temperature_
+1480 0              -1080 1079 fill=1460 u=140 imp:n=1
+1481 4 -_shell_density -1081 1080           u=140 imp:n=1
+          tmp=_shell_temperature_
+1482 3 -_core_density_ -1082                u=140 imp:n=1
+          tmp=_core_temperature_
+1483 0              -1083 1082 fill=1460 u=140 imp:n=1
+1484 4 -_shell_density -1084 1083           u=140 imp:n=1
+          tmp=_shell_temperature_
+1485 3 -_core_density_ -1085                u=140 imp:n=1
+          tmp=_core_temperature_
+1486 0              -1086 1085 fill=1460 u=140 imp:n=1
+1487 4 -_shell_density -1087 1086           u=140 imp:n=1
+          tmp=_shell_temperature_
+c
+1490 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=140 imp:n=1
+          tmp=_coolant_temperature_
+1491 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=140 u=14 imp:n=1
+c
+c Pebble: 24
+c
+2410 3 -_core_density_ -1010                u=240 imp:n=1
+          tmp=_core_temperature_
+2411 0              -1011 1010 fill=2410 u=240 imp:n=1
+2412 4 -_shell_density -1012 1011           u=240 imp:n=1
+          tmp=_shell_temperature_
+2413 3 -_core_density_ -1013                u=240 imp:n=1
+          tmp=_core_temperature_
+2414 0              -1014 1013 fill=2410 u=240 imp:n=1
+2415 4 -_shell_density -1015 1014           u=240 imp:n=1
+          tmp=_shell_temperature_
+c
+2420 3 -_core_density_ -1020                u=240 imp:n=1
+          tmp=_core_temperature_
+2421 0              -1021 1020 fill=2420 u=240 imp:n=1
+2422 4 -_shell_density -1022 1021           u=240 imp:n=1
+          tmp=_shell_temperature_
+2423 3 -_core_density_ -1023                u=240 imp:n=1
+          tmp=_core_temperature_
+2424 0              -1024 1023 fill=2420 u=240 imp:n=1
+2425 4 -_shell_density -1025 1024           u=240 imp:n=1
+          tmp=_shell_temperature_
+c
+2430 3 -_core_density_ -1030                u=240 imp:n=1
+          tmp=_core_temperature_
+2431 0              -1031 1030 fill=2430 u=240 imp:n=1
+2432 4 -_shell_density -1032 1031           u=240 imp:n=1
+          tmp=_shell_temperature_
+2433 3 -_core_density_ -1033                u=240 imp:n=1
+          tmp=_core_temperature_
+2434 0              -1034 1033 fill=2430 u=240 imp:n=1
+2435 4 -_shell_density -1035 1034           u=240 imp:n=1
+          tmp=_shell_temperature_
+c
+2440 3 -_core_density_ -1040                u=240 imp:n=1
+          tmp=_core_temperature_
+2441 0              -1041 1040 fill=2440 u=240 imp:n=1
+2442 4 -_shell_density -1042 1041           u=240 imp:n=1
+          tmp=_shell_temperature_
+2443 3 -_core_density_ -1043                u=240 imp:n=1
+          tmp=_core_temperature_
+2444 0              -1044 1043 fill=2440 u=240 imp:n=1
+2445 4 -_shell_density -1045 1044           u=240 imp:n=1
+          tmp=_shell_temperature_
+c
+2450 3 -_core_density_ -1050                u=240 imp:n=1
+          tmp=_core_temperature_
+2451 0              -1051 1050 fill=2450 u=240 imp:n=1
+2452 4 -_shell_density -1052 1051           u=240 imp:n=1
+          tmp=_shell_temperature_
+2453 3 -_core_density_ -1053                u=240 imp:n=1
+          tmp=_core_temperature_
+2454 0              -1054 1053 fill=2450 u=240 imp:n=1
+2455 4 -_shell_density -1055 1054           u=240 imp:n=1
+          tmp=_shell_temperature_
+2456 3 -_core_density_ -1056                u=240 imp:n=1
+          tmp=_core_temperature_
+2457 0              -1057 1056 fill=2450 u=240 imp:n=1
+2458 4 -_shell_density -1058 1057           u=240 imp:n=1
+          tmp=_shell_temperature_
+2459 3 -_core_density_ -1059                u=240 imp:n=1
+          tmp=_core_temperature_
+2460 0              -1060 1059 fill=2450 u=240 imp:n=1
+2461 4 -_shell_density -1061 1060           u=240 imp:n=1
+          tmp=_shell_temperature_
+2462 3 -_core_density_ -1062                u=240 imp:n=1
+          tmp=_core_temperature_
+2463 0              -1063 1062 fill=2450 u=240 imp:n=1
+2464 4 -_shell_density -1064 1053           u=240 imp:n=1
+          tmp=_shell_temperature_
+2465 3 -_core_density_ -1065                u=240 imp:n=1
+          tmp=_core_temperature_
+2466 0              -1066 1065 fill=2450 u=240 imp:n=1
+2467 4 -_shell_density -1067 1066           u=240 imp:n=1
+          tmp=_shell_temperature_
+c
+2470 3 -_core_density_ -1070                u=240 imp:n=1
+          tmp=_core_temperature_
+2471 0              -1071 1070 fill=2460 u=240 imp:n=1
+2472 4 -_shell_density -1072 1071           u=240 imp:n=1
+          tmp=_shell_temperature_
+2473 3 -_core_density_ -1073                u=240 imp:n=1
+          tmp=_core_temperature_
+2474 0              -1074 1073 fill=2460 u=240 imp:n=1
+2475 4 -_shell_density -1075 1074           u=240 imp:n=1
+          tmp=_shell_temperature_
+2476 3 -_core_density_ -1076                u=240 imp:n=1
+          tmp=_core_temperature_
+2477 0              -1077 1076 fill=2460 u=240 imp:n=1
+2478 4 -_shell_density -1078 1077           u=240 imp:n=1
+          tmp=_shell_temperature_
+2479 3 -_core_density_ -1079                u=240 imp:n=1
+          tmp=_core_temperature_
+2480 0              -1080 1079 fill=2460 u=240 imp:n=1
+2481 4 -_shell_density -1081 1080           u=240 imp:n=1
+          tmp=_shell_temperature_
+2482 3 -_core_density_ -1082                u=240 imp:n=1
+          tmp=_core_temperature_
+2483 0              -1083 1082 fill=2460 u=240 imp:n=1
+2484 4 -_shell_density -1084 1083           u=240 imp:n=1
+          tmp=_shell_temperature_
+2485 3 -_core_density_ -1085                u=240 imp:n=1
+          tmp=_core_temperature_
+2486 0              -1086 1085 fill=2460 u=240 imp:n=1
+2487 4 -_shell_density -1087 1086           u=240 imp:n=1
+          tmp=_shell_temperature_
+c
+2490 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=240 imp:n=1
+          tmp=_coolant_temperature_
+2491 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=240 u=24 imp:n=1
+c
+c Pebble: 34
+c
+3410 3 -_core_density_ -1010                u=340 imp:n=1
+          tmp=_core_temperature_
+3411 0              -1011 1010 fill=3410 u=340 imp:n=1
+3412 4 -_shell_density -1012 1011           u=340 imp:n=1
+          tmp=_shell_temperature_
+3413 3 -_core_density_ -1013                u=340 imp:n=1
+          tmp=_core_temperature_
+3414 0              -1014 1013 fill=3410 u=340 imp:n=1
+3415 4 -_shell_density -1015 1014           u=340 imp:n=1
+          tmp=_shell_temperature_
+c
+3420 3 -_core_density_ -1020                u=340 imp:n=1
+          tmp=_core_temperature_
+3421 0              -1021 1020 fill=3420 u=340 imp:n=1
+3422 4 -_shell_density -1022 1021           u=340 imp:n=1
+          tmp=_shell_temperature_
+3423 3 -_core_density_ -1023                u=340 imp:n=1
+          tmp=_core_temperature_
+3424 0              -1024 1023 fill=3420 u=340 imp:n=1
+3425 4 -_shell_density -1025 1024           u=340 imp:n=1
+          tmp=_shell_temperature_
+c
+3430 3 -_core_density_ -1030                u=340 imp:n=1
+          tmp=_core_temperature_
+3431 0              -1031 1030 fill=3430 u=340 imp:n=1
+3432 4 -_shell_density -1032 1031           u=340 imp:n=1
+          tmp=_shell_temperature_
+3433 3 -_core_density_ -1033                u=340 imp:n=1
+          tmp=_core_temperature_
+3434 0              -1034 1033 fill=3430 u=340 imp:n=1
+3435 4 -_shell_density -1035 1034           u=340 imp:n=1
+          tmp=_shell_temperature_
+c
+3440 3 -_core_density_ -1040                u=340 imp:n=1
+          tmp=_core_temperature_
+3441 0              -1041 1040 fill=3440 u=340 imp:n=1
+3442 4 -_shell_density -1042 1041           u=340 imp:n=1
+          tmp=_shell_temperature_
+3443 3 -_core_density_ -1043                u=340 imp:n=1
+          tmp=_core_temperature_
+3444 0              -1044 1043 fill=3440 u=340 imp:n=1
+3445 4 -_shell_density -1045 1044           u=340 imp:n=1
+          tmp=_shell_temperature_
+c
+3450 3 -_core_density_ -1050                u=340 imp:n=1
+          tmp=_core_temperature_
+3451 0              -1051 1050 fill=3450 u=340 imp:n=1
+3452 4 -_shell_density -1052 1051           u=340 imp:n=1
+          tmp=_shell_temperature_
+3453 3 -_core_density_ -1053                u=340 imp:n=1
+          tmp=_core_temperature_
+3454 0              -1054 1053 fill=3450 u=340 imp:n=1
+3455 4 -_shell_density -1055 1054           u=340 imp:n=1
+          tmp=_shell_temperature_
+3456 3 -_core_density_ -1056                u=340 imp:n=1
+          tmp=_core_temperature_
+3457 0              -1057 1056 fill=3450 u=340 imp:n=1
+3458 4 -_shell_density -1058 1057           u=340 imp:n=1
+          tmp=_shell_temperature_
+3459 3 -_core_density_ -1059                u=340 imp:n=1
+          tmp=_core_temperature_
+3460 0              -1060 1059 fill=3450 u=340 imp:n=1
+3461 4 -_shell_density -1061 1060           u=340 imp:n=1
+          tmp=_shell_temperature_
+3462 3 -_core_density_ -1062                u=340 imp:n=1
+          tmp=_core_temperature_
+3463 0              -1063 1062 fill=3450 u=340 imp:n=1
+3464 4 -_shell_density -1064 1053           u=340 imp:n=1
+          tmp=_shell_temperature_
+3465 3 -_core_density_ -1065                u=340 imp:n=1
+          tmp=_core_temperature_
+3466 0              -1066 1065 fill=3450 u=340 imp:n=1
+3467 4 -_shell_density -1067 1066           u=340 imp:n=1
+          tmp=_shell_temperature_
+c
+3470 3 -_core_density_ -1070                u=340 imp:n=1
+          tmp=_core_temperature_
+3471 0              -1071 1070 fill=3460 u=340 imp:n=1
+3472 4 -_shell_density -1072 1071           u=340 imp:n=1
+          tmp=_shell_temperature_
+3473 3 -_core_density_ -1073                u=340 imp:n=1
+          tmp=_core_temperature_
+3474 0              -1074 1073 fill=3460 u=340 imp:n=1
+3475 4 -_shell_density -1075 1074           u=340 imp:n=1
+          tmp=_shell_temperature_
+3476 3 -_core_density_ -1076                u=340 imp:n=1
+          tmp=_core_temperature_
+3477 0              -1077 1076 fill=3460 u=340 imp:n=1
+3478 4 -_shell_density -1078 1077           u=340 imp:n=1
+          tmp=_shell_temperature_
+3479 3 -_core_density_ -1079                u=340 imp:n=1
+          tmp=_core_temperature_
+3480 0              -1080 1079 fill=3460 u=340 imp:n=1
+3481 4 -_shell_density -1081 1080           u=340 imp:n=1
+          tmp=_shell_temperature_
+3482 3 -_core_density_ -1082                u=340 imp:n=1
+          tmp=_core_temperature_
+3483 0              -1083 1082 fill=3460 u=340 imp:n=1
+3484 4 -_shell_density -1084 1083           u=340 imp:n=1
+          tmp=_shell_temperature_
+3485 3 -_core_density_ -1085                u=340 imp:n=1
+          tmp=_core_temperature_
+3486 0              -1086 1085 fill=3460 u=340 imp:n=1
+3487 4 -_shell_density -1087 1086           u=340 imp:n=1
+          tmp=_shell_temperature_
+c
+3490 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=340 imp:n=1
+          tmp=_coolant_temperature_
+3491 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=340 u=34 imp:n=1
+c
+c Pebble: 44
+c
+4410 3 -_core_density_ -1010                u=440 imp:n=1
+          tmp=_core_temperature_
+4411 0              -1011 1010 fill=4410 u=440 imp:n=1
+4412 4 -_shell_density -1012 1011           u=440 imp:n=1
+          tmp=_shell_temperature_
+4413 3 -_core_density_ -1013                u=440 imp:n=1
+          tmp=_core_temperature_
+4414 0              -1014 1013 fill=4410 u=440 imp:n=1
+4415 4 -_shell_density -1015 1014           u=440 imp:n=1
+          tmp=_shell_temperature_
+c
+4420 3 -_core_density_ -1020                u=440 imp:n=1
+          tmp=_core_temperature_
+4421 0              -1021 1020 fill=4420 u=440 imp:n=1
+4422 4 -_shell_density -1022 1021           u=440 imp:n=1
+          tmp=_shell_temperature_
+4423 3 -_core_density_ -1023                u=440 imp:n=1
+          tmp=_core_temperature_
+4424 0              -1024 1023 fill=4420 u=440 imp:n=1
+4425 4 -_shell_density -1025 1024           u=440 imp:n=1
+          tmp=_shell_temperature_
+c
+4430 3 -_core_density_ -1030                u=440 imp:n=1
+          tmp=_core_temperature_
+4431 0              -1031 1030 fill=4430 u=440 imp:n=1
+4432 4 -_shell_density -1032 1031           u=440 imp:n=1
+          tmp=_shell_temperature_
+4433 3 -_core_density_ -1033                u=440 imp:n=1
+          tmp=_core_temperature_
+4434 0              -1034 1033 fill=4430 u=440 imp:n=1
+4435 4 -_shell_density -1035 1034           u=440 imp:n=1
+          tmp=_shell_temperature_
+c
+4440 3 -_core_density_ -1040                u=440 imp:n=1
+          tmp=_core_temperature_
+4441 0              -1041 1040 fill=4440 u=440 imp:n=1
+4442 4 -_shell_density -1042 1041           u=440 imp:n=1
+          tmp=_shell_temperature_
+4443 3 -_core_density_ -1043                u=440 imp:n=1
+          tmp=_core_temperature_
+4444 0              -1044 1043 fill=4440 u=440 imp:n=1
+4445 4 -_shell_density -1045 1044           u=440 imp:n=1
+          tmp=_shell_temperature_
+c
+4450 3 -_core_density_ -1050                u=440 imp:n=1
+          tmp=_core_temperature_
+4451 0              -1051 1050 fill=4450 u=440 imp:n=1
+4452 4 -_shell_density -1052 1051           u=440 imp:n=1
+          tmp=_shell_temperature_
+4453 3 -_core_density_ -1053                u=440 imp:n=1
+          tmp=_core_temperature_
+4454 0              -1054 1053 fill=4450 u=440 imp:n=1
+4455 4 -_shell_density -1055 1054           u=440 imp:n=1
+          tmp=_shell_temperature_
+4456 3 -_core_density_ -1056                u=440 imp:n=1
+          tmp=_core_temperature_
+4457 0              -1057 1056 fill=4450 u=440 imp:n=1
+4458 4 -_shell_density -1058 1057           u=440 imp:n=1
+          tmp=_shell_temperature_
+4459 3 -_core_density_ -1059                u=440 imp:n=1
+          tmp=_core_temperature_
+4460 0              -1060 1059 fill=4450 u=440 imp:n=1
+4461 4 -_shell_density -1061 1060           u=440 imp:n=1
+          tmp=_shell_temperature_
+4462 3 -_core_density_ -1062                u=440 imp:n=1
+          tmp=_core_temperature_
+4463 0              -1063 1062 fill=4450 u=440 imp:n=1
+4464 4 -_shell_density -1064 1053           u=440 imp:n=1
+          tmp=_shell_temperature_
+4465 3 -_core_density_ -1065                u=440 imp:n=1
+          tmp=_core_temperature_
+4466 0              -1066 1065 fill=4450 u=440 imp:n=1
+4467 4 -_shell_density -1067 1066           u=440 imp:n=1
+          tmp=_shell_temperature_
+c
+4470 3 -_core_density_ -1070                u=440 imp:n=1
+          tmp=_core_temperature_
+4471 0              -1071 1070 fill=4460 u=440 imp:n=1
+4472 4 -_shell_density -1072 1071           u=440 imp:n=1
+          tmp=_shell_temperature_
+4473 3 -_core_density_ -1073                u=440 imp:n=1
+          tmp=_core_temperature_
+4474 0              -1074 1073 fill=4460 u=440 imp:n=1
+4475 4 -_shell_density -1075 1074           u=440 imp:n=1
+          tmp=_shell_temperature_
+4476 3 -_core_density_ -1076                u=440 imp:n=1
+          tmp=_core_temperature_
+4477 0              -1077 1076 fill=4460 u=440 imp:n=1
+4478 4 -_shell_density -1078 1077           u=440 imp:n=1
+          tmp=_shell_temperature_
+4479 3 -_core_density_ -1079                u=440 imp:n=1
+          tmp=_core_temperature_
+4480 0              -1080 1079 fill=4460 u=440 imp:n=1
+4481 4 -_shell_density -1081 1080           u=440 imp:n=1
+          tmp=_shell_temperature_
+4482 3 -_core_density_ -1082                u=440 imp:n=1
+          tmp=_core_temperature_
+4483 0              -1083 1082 fill=4460 u=440 imp:n=1
+4484 4 -_shell_density -1084 1083           u=440 imp:n=1
+          tmp=_shell_temperature_
+4485 3 -_core_density_ -1085                u=440 imp:n=1
+          tmp=_core_temperature_
+4486 0              -1086 1085 fill=4460 u=440 imp:n=1
+4487 4 -_shell_density -1087 1086           u=440 imp:n=1
+          tmp=_shell_temperature_
+c
+4490 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=440 imp:n=1
+          tmp=_coolant_temperature_
+4491 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=440 u=44 imp:n=1
+c
+c Pebble: 15
+c
+1510 3 -_core_density_ -1010                u=150 imp:n=1
+          tmp=_core_temperature_
+1511 0              -1011 1010 fill=1510 u=150 imp:n=1
+1512 4 -_shell_density -1012 1011           u=150 imp:n=1
+          tmp=_shell_temperature_
+1513 3 -_core_density_ -1013                u=150 imp:n=1
+          tmp=_core_temperature_
+1514 0              -1014 1013 fill=1510 u=150 imp:n=1
+1515 4 -_shell_density -1015 1014           u=150 imp:n=1
+          tmp=_shell_temperature_
+c
+1520 3 -_core_density_ -1020                u=150 imp:n=1
+          tmp=_core_temperature_
+1521 0              -1021 1020 fill=1520 u=150 imp:n=1
+1522 4 -_shell_density -1022 1021           u=150 imp:n=1
+          tmp=_shell_temperature_
+1523 3 -_core_density_ -1023                u=150 imp:n=1
+          tmp=_core_temperature_
+1524 0              -1024 1023 fill=1520 u=150 imp:n=1
+1525 4 -_shell_density -1025 1024           u=150 imp:n=1
+          tmp=_shell_temperature_
+c
+1530 3 -_core_density_ -1030                u=150 imp:n=1
+          tmp=_core_temperature_
+1531 0              -1031 1030 fill=1530 u=150 imp:n=1
+1532 4 -_shell_density -1032 1031           u=150 imp:n=1
+          tmp=_shell_temperature_
+1533 3 -_core_density_ -1033                u=150 imp:n=1
+          tmp=_core_temperature_
+1534 0              -1034 1033 fill=1530 u=150 imp:n=1
+1535 4 -_shell_density -1035 1034           u=150 imp:n=1
+          tmp=_shell_temperature_
+c
+1540 3 -_core_density_ -1040                u=150 imp:n=1
+          tmp=_core_temperature_
+1541 0              -1041 1040 fill=1540 u=150 imp:n=1
+1542 4 -_shell_density -1042 1041           u=150 imp:n=1
+          tmp=_shell_temperature_
+1543 3 -_core_density_ -1043                u=150 imp:n=1
+          tmp=_core_temperature_
+1544 0              -1044 1043 fill=1540 u=150 imp:n=1
+1545 4 -_shell_density -1045 1044           u=150 imp:n=1
+          tmp=_shell_temperature_
+c
+1550 3 -_core_density_ -1050                u=150 imp:n=1
+          tmp=_core_temperature_
+1551 0              -1051 1050 fill=1550 u=150 imp:n=1
+1552 4 -_shell_density -1052 1051           u=150 imp:n=1
+          tmp=_shell_temperature_
+1553 3 -_core_density_ -1053                u=150 imp:n=1
+          tmp=_core_temperature_
+1554 0              -1054 1053 fill=1550 u=150 imp:n=1
+1555 4 -_shell_density -1055 1054           u=150 imp:n=1
+          tmp=_shell_temperature_
+1556 3 -_core_density_ -1056                u=150 imp:n=1
+          tmp=_core_temperature_
+1557 0              -1057 1056 fill=1550 u=150 imp:n=1
+1558 4 -_shell_density -1058 1057           u=150 imp:n=1
+          tmp=_shell_temperature_
+1559 3 -_core_density_ -1059                u=150 imp:n=1
+          tmp=_core_temperature_
+1560 0              -1060 1059 fill=1550 u=150 imp:n=1
+1561 4 -_shell_density -1061 1060           u=150 imp:n=1
+          tmp=_shell_temperature_
+1562 3 -_core_density_ -1062                u=150 imp:n=1
+          tmp=_core_temperature_
+1563 0              -1063 1062 fill=1550 u=150 imp:n=1
+1564 4 -_shell_density -1064 1053           u=150 imp:n=1
+          tmp=_shell_temperature_
+1565 3 -_core_density_ -1065                u=150 imp:n=1
+          tmp=_core_temperature_
+1566 0              -1066 1065 fill=1550 u=150 imp:n=1
+1567 4 -_shell_density -1067 1066           u=150 imp:n=1
+          tmp=_shell_temperature_
+c
+1570 3 -_core_density_ -1070                u=150 imp:n=1
+          tmp=_core_temperature_
+1571 0              -1071 1070 fill=1560 u=150 imp:n=1
+1572 4 -_shell_density -1072 1071           u=150 imp:n=1
+          tmp=_shell_temperature_
+1573 3 -_core_density_ -1073                u=150 imp:n=1
+          tmp=_core_temperature_
+1574 0              -1074 1073 fill=1560 u=150 imp:n=1
+1575 4 -_shell_density -1075 1074           u=150 imp:n=1
+          tmp=_shell_temperature_
+1576 3 -_core_density_ -1076                u=150 imp:n=1
+          tmp=_core_temperature_
+1577 0              -1077 1076 fill=1560 u=150 imp:n=1
+1578 4 -_shell_density -1078 1077           u=150 imp:n=1
+          tmp=_shell_temperature_
+1579 3 -_core_density_ -1079                u=150 imp:n=1
+          tmp=_core_temperature_
+1580 0              -1080 1079 fill=1560 u=150 imp:n=1
+1581 4 -_shell_density -1081 1080           u=150 imp:n=1
+          tmp=_shell_temperature_
+1582 3 -_core_density_ -1082                u=150 imp:n=1
+          tmp=_core_temperature_
+1583 0              -1083 1082 fill=1560 u=150 imp:n=1
+1584 4 -_shell_density -1084 1083           u=150 imp:n=1
+          tmp=_shell_temperature_
+1585 3 -_core_density_ -1085                u=150 imp:n=1
+          tmp=_core_temperature_
+1586 0              -1086 1085 fill=1560 u=150 imp:n=1
+1587 4 -_shell_density -1087 1086           u=150 imp:n=1
+          tmp=_shell_temperature_
+c
+1590 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=150 imp:n=1
+          tmp=_coolant_temperature_
+1591 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=150 u=15 imp:n=1
+c
+c Pebble: 25
+c
+2510 3 -_core_density_ -1010                u=250 imp:n=1
+          tmp=_core_temperature_
+2511 0              -1011 1010 fill=2510 u=250 imp:n=1
+2512 4 -_shell_density -1012 1011           u=250 imp:n=1
+          tmp=_shell_temperature_
+2513 3 -_core_density_ -1013                u=250 imp:n=1
+          tmp=_core_temperature_
+2514 0              -1014 1013 fill=2510 u=250 imp:n=1
+2515 4 -_shell_density -1015 1014           u=250 imp:n=1
+          tmp=_shell_temperature_
+c
+2520 3 -_core_density_ -1020                u=250 imp:n=1
+          tmp=_core_temperature_
+2521 0              -1021 1020 fill=2520 u=250 imp:n=1
+2522 4 -_shell_density -1022 1021           u=250 imp:n=1
+          tmp=_shell_temperature_
+2523 3 -_core_density_ -1023                u=250 imp:n=1
+          tmp=_core_temperature_
+2524 0              -1024 1023 fill=2520 u=250 imp:n=1
+2525 4 -_shell_density -1025 1024           u=250 imp:n=1
+          tmp=_shell_temperature_
+c
+2530 3 -_core_density_ -1030                u=250 imp:n=1
+          tmp=_core_temperature_
+2531 0              -1031 1030 fill=2530 u=250 imp:n=1
+2532 4 -_shell_density -1032 1031           u=250 imp:n=1
+          tmp=_shell_temperature_
+2533 3 -_core_density_ -1033                u=250 imp:n=1
+          tmp=_core_temperature_
+2534 0              -1034 1033 fill=2530 u=250 imp:n=1
+2535 4 -_shell_density -1035 1034           u=250 imp:n=1
+          tmp=_shell_temperature_
+c
+2540 3 -_core_density_ -1040                u=250 imp:n=1
+          tmp=_core_temperature_
+2541 0              -1041 1040 fill=2540 u=250 imp:n=1
+2542 4 -_shell_density -1042 1041           u=250 imp:n=1
+          tmp=_shell_temperature_
+2543 3 -_core_density_ -1043                u=250 imp:n=1
+          tmp=_core_temperature_
+2544 0              -1044 1043 fill=2540 u=250 imp:n=1
+2545 4 -_shell_density -1045 1044           u=250 imp:n=1
+          tmp=_shell_temperature_
+c
+2550 3 -_core_density_ -1050                u=250 imp:n=1
+          tmp=_core_temperature_
+2551 0              -1051 1050 fill=2550 u=250 imp:n=1
+2552 4 -_shell_density -1052 1051           u=250 imp:n=1
+          tmp=_shell_temperature_
+2553 3 -_core_density_ -1053                u=250 imp:n=1
+          tmp=_core_temperature_
+2554 0              -1054 1053 fill=2550 u=250 imp:n=1
+2555 4 -_shell_density -1055 1054           u=250 imp:n=1
+          tmp=_shell_temperature_
+2556 3 -_core_density_ -1056                u=250 imp:n=1
+          tmp=_core_temperature_
+2557 0              -1057 1056 fill=2550 u=250 imp:n=1
+2558 4 -_shell_density -1058 1057           u=250 imp:n=1
+          tmp=_shell_temperature_
+2559 3 -_core_density_ -1059                u=250 imp:n=1
+          tmp=_core_temperature_
+2560 0              -1060 1059 fill=2550 u=250 imp:n=1
+2561 4 -_shell_density -1061 1060           u=250 imp:n=1
+          tmp=_shell_temperature_
+2562 3 -_core_density_ -1062                u=250 imp:n=1
+          tmp=_core_temperature_
+2563 0              -1063 1062 fill=2550 u=250 imp:n=1
+2564 4 -_shell_density -1064 1053           u=250 imp:n=1
+          tmp=_shell_temperature_
+2565 3 -_core_density_ -1065                u=250 imp:n=1
+          tmp=_core_temperature_
+2566 0              -1066 1065 fill=2550 u=250 imp:n=1
+2567 4 -_shell_density -1067 1066           u=250 imp:n=1
+          tmp=_shell_temperature_
+c
+2570 3 -_core_density_ -1070                u=250 imp:n=1
+          tmp=_core_temperature_
+2571 0              -1071 1070 fill=2560 u=250 imp:n=1
+2572 4 -_shell_density -1072 1071           u=250 imp:n=1
+          tmp=_shell_temperature_
+2573 3 -_core_density_ -1073                u=250 imp:n=1
+          tmp=_core_temperature_
+2574 0              -1074 1073 fill=2560 u=250 imp:n=1
+2575 4 -_shell_density -1075 1074           u=250 imp:n=1
+          tmp=_shell_temperature_
+2576 3 -_core_density_ -1076                u=250 imp:n=1
+          tmp=_core_temperature_
+2577 0              -1077 1076 fill=2560 u=250 imp:n=1
+2578 4 -_shell_density -1078 1077           u=250 imp:n=1
+          tmp=_shell_temperature_
+2579 3 -_core_density_ -1079                u=250 imp:n=1
+          tmp=_core_temperature_
+2580 0              -1080 1079 fill=2560 u=250 imp:n=1
+2581 4 -_shell_density -1081 1080           u=250 imp:n=1
+          tmp=_shell_temperature_
+2582 3 -_core_density_ -1082                u=250 imp:n=1
+          tmp=_core_temperature_
+2583 0              -1083 1082 fill=2560 u=250 imp:n=1
+2584 4 -_shell_density -1084 1083           u=250 imp:n=1
+          tmp=_shell_temperature_
+2585 3 -_core_density_ -1085                u=250 imp:n=1
+          tmp=_core_temperature_
+2586 0              -1086 1085 fill=2560 u=250 imp:n=1
+2587 4 -_shell_density -1087 1086           u=250 imp:n=1
+          tmp=_shell_temperature_
+c
+2590 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=250 imp:n=1
+          tmp=_coolant_temperature_
+2591 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=250 u=25 imp:n=1
+c
+c Pebble: 35
+c
+3510 3 -_core_density_ -1010                u=350 imp:n=1
+          tmp=_core_temperature_
+3511 0              -1011 1010 fill=3510 u=350 imp:n=1
+3512 4 -_shell_density -1012 1011           u=350 imp:n=1
+          tmp=_shell_temperature_
+3513 3 -_core_density_ -1013                u=350 imp:n=1
+          tmp=_core_temperature_
+3514 0              -1014 1013 fill=3510 u=350 imp:n=1
+3515 4 -_shell_density -1015 1014           u=350 imp:n=1
+          tmp=_shell_temperature_
+c
+3520 3 -_core_density_ -1020                u=350 imp:n=1
+          tmp=_core_temperature_
+3521 0              -1021 1020 fill=3520 u=350 imp:n=1
+3522 4 -_shell_density -1022 1021           u=350 imp:n=1
+          tmp=_shell_temperature_
+3523 3 -_core_density_ -1023                u=350 imp:n=1
+          tmp=_core_temperature_
+3524 0              -1024 1023 fill=3520 u=350 imp:n=1
+3525 4 -_shell_density -1025 1024           u=350 imp:n=1
+          tmp=_shell_temperature_
+c
+3530 3 -_core_density_ -1030                u=350 imp:n=1
+          tmp=_core_temperature_
+3531 0              -1031 1030 fill=3530 u=350 imp:n=1
+3532 4 -_shell_density -1032 1031           u=350 imp:n=1
+          tmp=_shell_temperature_
+3533 3 -_core_density_ -1033                u=350 imp:n=1
+          tmp=_core_temperature_
+3534 0              -1034 1033 fill=3530 u=350 imp:n=1
+3535 4 -_shell_density -1035 1034           u=350 imp:n=1
+          tmp=_shell_temperature_
+c
+3540 3 -_core_density_ -1040                u=350 imp:n=1
+          tmp=_core_temperature_
+3541 0              -1041 1040 fill=3540 u=350 imp:n=1
+3542 4 -_shell_density -1042 1041           u=350 imp:n=1
+          tmp=_shell_temperature_
+3543 3 -_core_density_ -1043                u=350 imp:n=1
+          tmp=_core_temperature_
+3544 0              -1044 1043 fill=3540 u=350 imp:n=1
+3545 4 -_shell_density -1045 1044           u=350 imp:n=1
+          tmp=_shell_temperature_
+c
+3550 3 -_core_density_ -1050                u=350 imp:n=1
+          tmp=_core_temperature_
+3551 0              -1051 1050 fill=3550 u=350 imp:n=1
+3552 4 -_shell_density -1052 1051           u=350 imp:n=1
+          tmp=_shell_temperature_
+3553 3 -_core_density_ -1053                u=350 imp:n=1
+          tmp=_core_temperature_
+3554 0              -1054 1053 fill=3550 u=350 imp:n=1
+3555 4 -_shell_density -1055 1054           u=350 imp:n=1
+          tmp=_shell_temperature_
+3556 3 -_core_density_ -1056                u=350 imp:n=1
+          tmp=_core_temperature_
+3557 0              -1057 1056 fill=3550 u=350 imp:n=1
+3558 4 -_shell_density -1058 1057           u=350 imp:n=1
+          tmp=_shell_temperature_
+3559 3 -_core_density_ -1059                u=350 imp:n=1
+          tmp=_core_temperature_
+3560 0              -1060 1059 fill=3550 u=350 imp:n=1
+3561 4 -_shell_density -1061 1060           u=350 imp:n=1
+          tmp=_shell_temperature_
+3562 3 -_core_density_ -1062                u=350 imp:n=1
+          tmp=_core_temperature_
+3563 0              -1063 1062 fill=3550 u=350 imp:n=1
+3564 4 -_shell_density -1064 1053           u=350 imp:n=1
+          tmp=_shell_temperature_
+3565 3 -_core_density_ -1065                u=350 imp:n=1
+          tmp=_core_temperature_
+3566 0              -1066 1065 fill=3550 u=350 imp:n=1
+3567 4 -_shell_density -1067 1066           u=350 imp:n=1
+          tmp=_shell_temperature_
+c
+3570 3 -_core_density_ -1070                u=350 imp:n=1
+          tmp=_core_temperature_
+3571 0              -1071 1070 fill=3560 u=350 imp:n=1
+3572 4 -_shell_density -1072 1071           u=350 imp:n=1
+          tmp=_shell_temperature_
+3573 3 -_core_density_ -1073                u=350 imp:n=1
+          tmp=_core_temperature_
+3574 0              -1074 1073 fill=3560 u=350 imp:n=1
+3575 4 -_shell_density -1075 1074           u=350 imp:n=1
+          tmp=_shell_temperature_
+3576 3 -_core_density_ -1076                u=350 imp:n=1
+          tmp=_core_temperature_
+3577 0              -1077 1076 fill=3560 u=350 imp:n=1
+3578 4 -_shell_density -1078 1077           u=350 imp:n=1
+          tmp=_shell_temperature_
+3579 3 -_core_density_ -1079                u=350 imp:n=1
+          tmp=_core_temperature_
+3580 0              -1080 1079 fill=3560 u=350 imp:n=1
+3581 4 -_shell_density -1081 1080           u=350 imp:n=1
+          tmp=_shell_temperature_
+3582 3 -_core_density_ -1082                u=350 imp:n=1
+          tmp=_core_temperature_
+3583 0              -1083 1082 fill=3560 u=350 imp:n=1
+3584 4 -_shell_density -1084 1083           u=350 imp:n=1
+          tmp=_shell_temperature_
+3585 3 -_core_density_ -1085                u=350 imp:n=1
+          tmp=_core_temperature_
+3586 0              -1086 1085 fill=3560 u=350 imp:n=1
+3587 4 -_shell_density -1087 1086           u=350 imp:n=1
+          tmp=_shell_temperature_
+c
+3590 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=350 imp:n=1
+          tmp=_coolant_temperature_
+3591 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=350 u=35 imp:n=1
+c
+c Pebble: 45
+c
+4510 3 -_core_density_ -1010                u=450 imp:n=1
+          tmp=_core_temperature_
+4511 0              -1011 1010 fill=4510 u=450 imp:n=1
+4512 4 -_shell_density -1012 1011           u=450 imp:n=1
+          tmp=_shell_temperature_
+4513 3 -_core_density_ -1013                u=450 imp:n=1
+          tmp=_core_temperature_
+4514 0              -1014 1013 fill=4510 u=450 imp:n=1
+4515 4 -_shell_density -1015 1014           u=450 imp:n=1
+          tmp=_shell_temperature_
+c
+4520 3 -_core_density_ -1020                u=450 imp:n=1
+          tmp=_core_temperature_
+4521 0              -1021 1020 fill=4520 u=450 imp:n=1
+4522 4 -_shell_density -1022 1021           u=450 imp:n=1
+          tmp=_shell_temperature_
+4523 3 -_core_density_ -1023                u=450 imp:n=1
+          tmp=_core_temperature_
+4524 0              -1024 1023 fill=4520 u=450 imp:n=1
+4525 4 -_shell_density -1025 1024           u=450 imp:n=1
+          tmp=_shell_temperature_
+c
+4530 3 -_core_density_ -1030                u=450 imp:n=1
+          tmp=_core_temperature_
+4531 0              -1031 1030 fill=4530 u=450 imp:n=1
+4532 4 -_shell_density -1032 1031           u=450 imp:n=1
+          tmp=_shell_temperature_
+4533 3 -_core_density_ -1033                u=450 imp:n=1
+          tmp=_core_temperature_
+4534 0              -1034 1033 fill=4530 u=450 imp:n=1
+4535 4 -_shell_density -1035 1034           u=450 imp:n=1
+          tmp=_shell_temperature_
+c
+4540 3 -_core_density_ -1040                u=450 imp:n=1
+          tmp=_core_temperature_
+4541 0              -1041 1040 fill=4540 u=450 imp:n=1
+4542 4 -_shell_density -1042 1041           u=450 imp:n=1
+          tmp=_shell_temperature_
+4543 3 -_core_density_ -1043                u=450 imp:n=1
+          tmp=_core_temperature_
+4544 0              -1044 1043 fill=4540 u=450 imp:n=1
+4545 4 -_shell_density -1045 1044           u=450 imp:n=1
+          tmp=_shell_temperature_
+c
+4550 3 -_core_density_ -1050                u=450 imp:n=1
+          tmp=_core_temperature_
+4551 0              -1051 1050 fill=4550 u=450 imp:n=1
+4552 4 -_shell_density -1052 1051           u=450 imp:n=1
+          tmp=_shell_temperature_
+4553 3 -_core_density_ -1053                u=450 imp:n=1
+          tmp=_core_temperature_
+4554 0              -1054 1053 fill=4550 u=450 imp:n=1
+4555 4 -_shell_density -1055 1054           u=450 imp:n=1
+          tmp=_shell_temperature_
+4556 3 -_core_density_ -1056                u=450 imp:n=1
+          tmp=_core_temperature_
+4557 0              -1057 1056 fill=4550 u=450 imp:n=1
+4558 4 -_shell_density -1058 1057           u=450 imp:n=1
+          tmp=_shell_temperature_
+4559 3 -_core_density_ -1059                u=450 imp:n=1
+          tmp=_core_temperature_
+4560 0              -1060 1059 fill=4550 u=450 imp:n=1
+4561 4 -_shell_density -1061 1060           u=450 imp:n=1
+          tmp=_shell_temperature_
+4562 3 -_core_density_ -1062                u=450 imp:n=1
+          tmp=_core_temperature_
+4563 0              -1063 1062 fill=4550 u=450 imp:n=1
+4564 4 -_shell_density -1064 1053           u=450 imp:n=1
+          tmp=_shell_temperature_
+4565 3 -_core_density_ -1065                u=450 imp:n=1
+          tmp=_core_temperature_
+4566 0              -1066 1065 fill=4550 u=450 imp:n=1
+4567 4 -_shell_density -1067 1066           u=450 imp:n=1
+          tmp=_shell_temperature_
+c
+4570 3 -_core_density_ -1070                u=450 imp:n=1
+          tmp=_core_temperature_
+4571 0              -1071 1070 fill=4560 u=450 imp:n=1
+4572 4 -_shell_density -1072 1071           u=450 imp:n=1
+          tmp=_shell_temperature_
+4573 3 -_core_density_ -1073                u=450 imp:n=1
+          tmp=_core_temperature_
+4574 0              -1074 1073 fill=4560 u=450 imp:n=1
+4575 4 -_shell_density -1075 1074           u=450 imp:n=1
+          tmp=_shell_temperature_
+4576 3 -_core_density_ -1076                u=450 imp:n=1
+          tmp=_core_temperature_
+4577 0              -1077 1076 fill=4560 u=450 imp:n=1
+4578 4 -_shell_density -1078 1077           u=450 imp:n=1
+          tmp=_shell_temperature_
+4579 3 -_core_density_ -1079                u=450 imp:n=1
+          tmp=_core_temperature_
+4580 0              -1080 1079 fill=4560 u=450 imp:n=1
+4581 4 -_shell_density -1081 1080           u=450 imp:n=1
+          tmp=_shell_temperature_
+4582 3 -_core_density_ -1082                u=450 imp:n=1
+          tmp=_core_temperature_
+4583 0              -1083 1082 fill=4560 u=450 imp:n=1
+4584 4 -_shell_density -1084 1083           u=450 imp:n=1
+          tmp=_shell_temperature_
+4585 3 -_core_density_ -1085                u=450 imp:n=1
+          tmp=_core_temperature_
+4586 0              -1086 1085 fill=4560 u=450 imp:n=1
+4587 4 -_shell_density -1087 1086           u=450 imp:n=1
+          tmp=_shell_temperature_
+c
+4590 24 -_coolant_density_ 1011 1013 
+                     1021 1023 
+                     1031 1033 
+                     1041 1043
+                     1051 1053 1055 1057 1059 1061
+                     1071 1073 1075 1077 1079 1081
+                     u=450 imp:n=1
+          tmp=_coolant_temperature_
+4591 0    -1090 1091 -1092 1093 -1094 1095 -1096 1097 lat=2 
+          fill=450 u=45 imp:n=1

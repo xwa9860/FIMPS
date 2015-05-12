@@ -1,0 +1,1845 @@
+c ------------------------------------------------------------------------------
+c TRISO Particles
+c ------------------------------------------------------------------------------
+c
+c Depletion Zones 11
+c
+11100 11100 -_fuel_density_ -1 u=1111 tmp=_fuel_temperature_ imp:n=1 $ Kernel 11 pass:1
+     vol=_fuel_volume11_
+11101 11 -_matrix_density_   1 u=1111 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+11102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1111 u=1110
+c
+c Depletion Zones 21
+c
+21100 21100 -_fuel_density_ -1 u=2111 tmp=_fuel_temperature_ imp:n=1 $ Kernel 21 pass:1
+     vol=_fuel_volume21_
+21101 11 -_matrix_density_   1 u=2111 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+21102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2111 u=2110
+c
+c Depletion Zones 31
+c
+31100 31100 -_fuel_density_ -1 u=3111 tmp=_fuel_temperature_ imp:n=1 $ Kernel 31 pass:1
+     vol=_fuel_volume31_
+31101 11 -_matrix_density_   1 u=3111 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+31102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3111 u=3110
+c
+c Depletion Zones 41
+c
+41100 41100 -_fuel_density_ -1 u=4111 tmp=_fuel_temperature_ imp:n=1 $ Kernel 41 pass:1
+     vol=_fuel_volume41_
+41101 11 -_matrix_density_   1 u=4111 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+41102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4111 u=4110
+c
+c Depletion Zones 12
+c
+12100 12100 -_fuel_density_ -1 u=1211 tmp=_fuel_temperature_ imp:n=1 $ Kernel 12 pass:1
+     vol=_fuel_volume12_
+12101 11 -_matrix_density_   1 u=1211 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+12102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1211 u=1210
+c
+c Depletion Zones 22
+c
+22100 22100 -_fuel_density_ -1 u=2211 tmp=_fuel_temperature_ imp:n=1 $ Kernel 22 pass:1
+     vol=_fuel_volume22_
+22101 11 -_matrix_density_   1 u=2211 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+22102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2211 u=2210
+c
+c Depletion Zones 32
+c
+32100 32100 -_fuel_density_ -1 u=3211 tmp=_fuel_temperature_ imp:n=1 $ Kernel 32 pass:1
+     vol=_fuel_volume32_
+32101 11 -_matrix_density_   1 u=3211 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+32102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3211 u=3210
+c
+c Depletion Zones 42
+c
+42100 42100 -_fuel_density_ -1 u=4211 tmp=_fuel_temperature_ imp:n=1 $ Kernel 42 pass:1
+     vol=_fuel_volume42_
+42101 11 -_matrix_density_   1 u=4211 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+42102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4211 u=4210
+c
+c Depletion Zones 13
+c
+13100 13100 -_fuel_density_ -1 u=1311 tmp=_fuel_temperature_ imp:n=1 $ Kernel 13 pass:1
+     vol=_fuel_volume13_
+13101 11 -_matrix_density_   1 u=1311 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+13102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1311 u=1310
+c
+c Depletion Zones 23
+c
+23100 23100 -_fuel_density_ -1 u=2311 tmp=_fuel_temperature_ imp:n=1 $ Kernel 23 pass:1
+     vol=_fuel_volume23_
+23101 11 -_matrix_density_   1 u=2311 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+23102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2311 u=2310
+c
+c Depletion Zones 33
+c
+33100 33100 -_fuel_density_ -1 u=3311 tmp=_fuel_temperature_ imp:n=1 $ Kernel 33 pass:1
+     vol=_fuel_volume33_
+33101 11 -_matrix_density_   1 u=3311 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+33102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3311 u=3310
+c
+c Depletion Zones 43
+c
+43100 43100 -_fuel_density_ -1 u=4311 tmp=_fuel_temperature_ imp:n=1 $ Kernel 43 pass:1
+     vol=_fuel_volume43_
+43101 11 -_matrix_density_   1 u=4311 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+43102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4311 u=4310
+c
+c Depletion Zones 14
+c
+14100 14100 -_fuel_density_ -1 u=1411 tmp=_fuel_temperature_ imp:n=1 $ Kernel 14 pass:1
+     vol=_fuel_volume14_
+14101 11 -_matrix_density_   1 u=1411 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+14102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1411 u=1410
+c
+c Depletion Zones 24
+c
+24100 24100 -_fuel_density_ -1 u=2411 tmp=_fuel_temperature_ imp:n=1 $ Kernel 24 pass:1
+     vol=_fuel_volume24_
+24101 11 -_matrix_density_   1 u=2411 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+24102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2411 u=2410
+c
+c Depletion Zones 34
+c
+34100 34100 -_fuel_density_ -1 u=3411 tmp=_fuel_temperature_ imp:n=1 $ Kernel 34 pass:1
+     vol=_fuel_volume34_
+34101 11 -_matrix_density_   1 u=3411 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+34102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3411 u=3410
+c
+c Depletion Zones 44
+c
+44100 44100 -_fuel_density_ -1 u=4411 tmp=_fuel_temperature_ imp:n=1 $ Kernel 44 pass:1
+     vol=_fuel_volume44_
+44101 11 -_matrix_density_   1 u=4411 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix
+44102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4411 u=4410
+c
+c Depletion Zones 15
+c
+15100 15100 -_fuel_density_ -1 u=1511 tmp=_fuel_temperature_ imp:n=1 $ Kernel 15 pass:1
+     vol=_fuel_volume15_
+15101 11 -_matrix_density_   1 u=1511 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+15102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=1511 u=1510
+c
+c Depletion Zones 25
+c
+25100 25100 -_fuel_density_ -1 u=2511 tmp=_fuel_temperature_ imp:n=1 $ Kernel 25 pass:1
+     vol=_fuel_volume25_
+25101 11 -_matrix_density_   1 u=2511 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+25102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=2511 u=2510
+c
+c Depletion Zones 35
+c
+35100 35100 -_fuel_density_ -1 u=3511 tmp=_fuel_temperature_ imp:n=1 $ Kernel 35 pass:1
+     vol=_fuel_volume35_
+35101 11 -_matrix_density_   1 u=3511 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+35102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=3511 u=3510
+c
+c Depletion Zones 45
+c
+45100 45100 -_fuel_density_ -1 u=4511 tmp=_fuel_temperature_ imp:n=1 $ Kernel 45 pass:1
+     vol=_fuel_volume45_
+45101 11 -_matrix_density_   1 u=4511 tmp=_matrix_temperature_ imp:n=1 $ Coatings and Matrix 
+45102 0 -11 12 -13 14 -15 16 lat=1 imp:n=1 fill=4511 u=4510
+c
+c ------------------------------------------------------------------------------
+c Pebbles
+c ------------------------------------------------------------------------------
+c
+c Pebble: 11
+c
+1100 3 -_core_density_ -1000                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1101 0              -1001 1000 fill=1110 u=110 imp:n=1
+1102 4 -_shell_density_ -1002 1001           u=110 imp:n=1
+          tmp=_shell_temperature_
+1103 3 -_core_density_ -1003                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1104 0              -1004 1003 fill=1110 u=110 imp:n=1
+1105 4 -_shell_density_ -1005 1004           u=110 imp:n=1
+          tmp=_shell_temperature_
+1106 3 -_core_density_ -1006                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1107 0              -1007 1006 fill=1110 u=110 imp:n=1
+1108 4 -_shell_density_ -1008 1007           u=110 imp:n=1
+          tmp=_shell_temperature_
+1109 3 -_core_density_ -1009                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1110 0              -1010 1009 fill=1110 u=110 imp:n=1
+1111 4 -_shell_density_ -1011 1010           u=110 imp:n=1
+          tmp=_shell_temperature_
+1120 3 -_core_density_ -1020                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1121 0              -1021 1020 fill=1110 u=110 imp:n=1
+1122 4 -_shell_density_ -1022 1021           u=110 imp:n=1
+          tmp=_shell_temperature_
+1123 3 -_core_density_ -1023                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1124 0              -1024 1023 fill=1110 u=110 imp:n=1
+1125 4 -_shell_density_ -1025 1024           u=110 imp:n=1
+          tmp=_shell_temperature_
+1126 3 -_core_density_ -1026                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1127 0              -1027 1026 fill=1110 u=110 imp:n=1
+1128 4 -_shell_density_ -1028 1027           u=110 imp:n=1
+          tmp=_shell_temperature_
+1129 3 -_core_density_ -1029                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1130 0              -1030 1029 fill=1110 u=110 imp:n=1
+1131 4 -_shell_density_ -1031 1030           u=110 imp:n=1
+          tmp=_shell_temperature_
+c
+1140 3 -_core_density_ -1040                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1141 0              -1041 1040 fill=1110 u=110 imp:n=1
+1142 4 -_shell_density_ -1042 1041           u=110 imp:n=1
+          tmp=_shell_temperature_
+1143 3 -_core_density_ -1043                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1144 0              -1044 1043 fill=1110 u=110 imp:n=1
+1145 4 -_shell_density_ -1045 1044           u=110 imp:n=1
+          tmp=_shell_temperature_
+c
+1150 3 -_core_density_ -1050                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1151 0              -1051 1050 fill=1110 u=110 imp:n=1
+1152 4 -_shell_density_ -1052 1051           u=110 imp:n=1
+          tmp=_shell_temperature_
+1153 3 -_core_density_ -1053                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1154 0              -1054 1053 fill=1110 u=110 imp:n=1
+1155 4 -_shell_density_ -1055 1054           u=110 imp:n=1
+          tmp=_shell_temperature_
+c
+1160 3 -_core_density_ -1060                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1161 0              -1061 1060 fill=1110 u=110 imp:n=1
+1162 4 -_shell_density_ -1062 1061           u=110 imp:n=1
+          tmp=_shell_temperature_
+1163 3 -_core_density_ -1063                 u=110 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1164 0              -1064 1063 fill=1110 u=110 imp:n=1
+1165 4 -_shell_density_ -1065 1064           u=110 imp:n=1
+          tmp=_shell_temperature_
+1180 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=110 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+1181 0              -1080 1081 -1082 1083 -1084 1085 fill=110 imp:n=1 u=11 lat=1 $ FCC Unit Cell
+c
+c Pebble: 21
+c
+2100 3 -_core_density_ -1000                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2101 0              -1001 1000 fill=2110 u=210 imp:n=1
+2102 4 -_shell_density_ -1002 1001           u=210 imp:n=1
+          tmp=_shell_temperature_
+2103 3 -_core_density_ -1003                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2104 0              -1004 1003 fill=2110 u=210 imp:n=1
+2105 4 -_shell_density_ -1005 1004           u=210 imp:n=1
+          tmp=_shell_temperature_
+2106 3 -_core_density_ -1006                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2107 0              -1007 1006 fill=2110 u=210 imp:n=1
+2108 4 -_shell_density_ -1008 1007           u=210 imp:n=1
+          tmp=_shell_temperature_
+2109 3 -_core_density_ -1009                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2110 0              -1010 1009 fill=2110 u=210 imp:n=1
+2111 4 -_shell_density_ -1011 1010           u=210 imp:n=1
+          tmp=_shell_temperature_
+2120 3 -_core_density_ -1020                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2121 0              -1021 1020 fill=2110 u=210 imp:n=1
+2122 4 -_shell_density_ -1022 1021           u=210 imp:n=1
+          tmp=_shell_temperature_
+2123 3 -_core_density_ -1023                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2124 0              -1024 1023 fill=2110 u=210 imp:n=1
+2125 4 -_shell_density_ -1025 1024           u=210 imp:n=1
+          tmp=_shell_temperature_
+2126 3 -_core_density_ -1026                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2127 0              -1027 1026 fill=2110 u=210 imp:n=1
+2128 4 -_shell_density_ -1028 1027           u=210 imp:n=1
+          tmp=_shell_temperature_
+2129 3 -_core_density_ -1029                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2130 0              -1030 1029 fill=2110 u=210 imp:n=1
+2131 4 -_shell_density_ -1031 1030           u=210 imp:n=1
+          tmp=_shell_temperature_
+c
+2140 3 -_core_density_ -1040                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2141 0              -1041 1040 fill=2110 u=210 imp:n=1
+2142 4 -_shell_density_ -1042 1041           u=210 imp:n=1
+          tmp=_shell_temperature_
+2143 3 -_core_density_ -1043                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2144 0              -1044 1043 fill=2110 u=210 imp:n=1
+2145 4 -_shell_density_ -1045 1044           u=210 imp:n=1
+          tmp=_shell_temperature_
+c
+2150 3 -_core_density_ -1050                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2151 0              -1051 1050 fill=2110 u=210 imp:n=1
+2152 4 -_shell_density_ -1052 1051           u=210 imp:n=1
+          tmp=_shell_temperature_
+2153 3 -_core_density_ -1053                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2154 0              -1054 1053 fill=2110 u=210 imp:n=1
+2155 4 -_shell_density_ -1055 1054           u=210 imp:n=1
+          tmp=_shell_temperature_
+c
+2160 3 -_core_density_ -1060                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2161 0              -1061 1060 fill=2110 u=210 imp:n=1
+2162 4 -_shell_density_ -1062 1061           u=210 imp:n=1
+          tmp=_shell_temperature_
+2163 3 -_core_density_ -1063                 u=210 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2164 0              -1064 1063 fill=2110 u=210 imp:n=1
+2165 4 -_shell_density_ -1065 1064           u=210 imp:n=1
+          tmp=_shell_temperature_
+2180 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=210 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+2181 0              -1080 1081 -1082 1083 -1084 1085 fill=210 imp:n=1 u=21 lat=1 $ FCC Unit Cell
+c
+c Pebble: 31
+c
+3100 3 -_core_density_ -1000                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3101 0              -1001 1000 fill=3110 u=310 imp:n=1
+3102 4 -_shell_density_ -1002 1001           u=310 imp:n=1
+          tmp=_shell_temperature_
+3103 3 -_core_density_ -1003                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3104 0              -1004 1003 fill=3110 u=310 imp:n=1
+3105 4 -_shell_density_ -1005 1004           u=310 imp:n=1
+          tmp=_shell_temperature_
+3106 3 -_core_density_ -1006                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3107 0              -1007 1006 fill=3110 u=310 imp:n=1
+3108 4 -_shell_density_ -1008 1007           u=310 imp:n=1
+          tmp=_shell_temperature_
+3109 3 -_core_density_ -1009                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3110 0              -1010 1009 fill=3110 u=310 imp:n=1
+3111 4 -_shell_density_ -1011 1010           u=310 imp:n=1
+          tmp=_shell_temperature_
+3120 3 -_core_density_ -1020                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3121 0              -1021 1020 fill=3110 u=310 imp:n=1
+3122 4 -_shell_density_ -1022 1021           u=310 imp:n=1
+          tmp=_shell_temperature_
+3123 3 -_core_density_ -1023                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3124 0              -1024 1023 fill=3110 u=310 imp:n=1
+3125 4 -_shell_density_ -1025 1024           u=310 imp:n=1
+          tmp=_shell_temperature_
+3126 3 -_core_density_ -1026                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3127 0              -1027 1026 fill=3110 u=310 imp:n=1
+3128 4 -_shell_density_ -1028 1027           u=310 imp:n=1
+          tmp=_shell_temperature_
+3129 3 -_core_density_ -1029                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3130 0              -1030 1029 fill=3110 u=310 imp:n=1
+3131 4 -_shell_density_ -1031 1030           u=310 imp:n=1
+          tmp=_shell_temperature_
+c
+3140 3 -_core_density_ -1040                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3141 0              -1041 1040 fill=3110 u=310 imp:n=1
+3142 4 -_shell_density_ -1042 1041           u=310 imp:n=1
+          tmp=_shell_temperature_
+3143 3 -_core_density_ -1043                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3144 0              -1044 1043 fill=3110 u=310 imp:n=1
+3145 4 -_shell_density_ -1045 1044           u=310 imp:n=1
+          tmp=_shell_temperature_
+c
+3150 3 -_core_density_ -1050                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3151 0              -1051 1050 fill=3110 u=310 imp:n=1
+3152 4 -_shell_density_ -1052 1051           u=310 imp:n=1
+          tmp=_shell_temperature_
+3153 3 -_core_density_ -1053                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3154 0              -1054 1053 fill=3110 u=310 imp:n=1
+3155 4 -_shell_density_ -1055 1054           u=310 imp:n=1
+          tmp=_shell_temperature_
+c
+3160 3 -_core_density_ -1060                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3161 0              -1061 1060 fill=3110 u=310 imp:n=1
+3162 4 -_shell_density_ -1062 1061           u=310 imp:n=1
+          tmp=_shell_temperature_
+3163 3 -_core_density_ -1063                 u=310 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3164 0              -1064 1063 fill=3110 u=310 imp:n=1
+3165 4 -_shell_density_ -1065 1064           u=310 imp:n=1
+          tmp=_shell_temperature_
+3180 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=310 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+3181 0              -1080 1081 -1082 1083 -1084 1085 fill=310 imp:n=1 u=31 lat=1 $ FCC Unit Cell
+c
+c Pebble: 41
+c
+4100 3 -_core_density_ -1000                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4101 0              -1001 1000 fill=4110 u=410 imp:n=1
+4102 4 -_shell_density_ -1002 1001           u=410 imp:n=1
+          tmp=_shell_temperature_
+4103 3 -_core_density_ -1003                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4104 0              -1004 1003 fill=4110 u=410 imp:n=1
+4105 4 -_shell_density_ -1005 1004           u=410 imp:n=1
+          tmp=_shell_temperature_
+4106 3 -_core_density_ -1006                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4107 0              -1007 1006 fill=4110 u=410 imp:n=1
+4108 4 -_shell_density_ -1008 1007           u=410 imp:n=1
+          tmp=_shell_temperature_
+4109 3 -_core_density_ -1009                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4110 0              -1010 1009 fill=4110 u=410 imp:n=1
+4111 4 -_shell_density_ -1011 1010           u=410 imp:n=1
+          tmp=_shell_temperature_
+4120 3 -_core_density_ -1020                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4121 0              -1021 1020 fill=4110 u=410 imp:n=1
+4122 4 -_shell_density_ -1022 1021           u=410 imp:n=1
+          tmp=_shell_temperature_
+4123 3 -_core_density_ -1023                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4124 0              -1024 1023 fill=4110 u=410 imp:n=1
+4125 4 -_shell_density_ -1025 1024           u=410 imp:n=1
+          tmp=_shell_temperature_
+4126 3 -_core_density_ -1026                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4127 0              -1027 1026 fill=4110 u=410 imp:n=1
+4128 4 -_shell_density_ -1028 1027           u=410 imp:n=1
+          tmp=_shell_temperature_
+4129 3 -_core_density_ -1029                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4130 0              -1030 1029 fill=4110 u=410 imp:n=1
+4131 4 -_shell_density_ -1031 1030           u=410 imp:n=1
+          tmp=_shell_temperature_
+c
+4140 3 -_core_density_ -1040                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4141 0              -1041 1040 fill=4110 u=410 imp:n=1
+4142 4 -_shell_density_ -1042 1041           u=410 imp:n=1
+          tmp=_shell_temperature_
+4143 3 -_core_density_ -1043                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4144 0              -1044 1043 fill=4110 u=410 imp:n=1
+4145 4 -_shell_density_ -1045 1044           u=410 imp:n=1
+          tmp=_shell_temperature_
+c
+4150 3 -_core_density_ -1050                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4151 0              -1051 1050 fill=4110 u=410 imp:n=1
+4152 4 -_shell_density_ -1052 1051           u=410 imp:n=1
+          tmp=_shell_temperature_
+4153 3 -_core_density_ -1053                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4154 0              -1054 1053 fill=4110 u=410 imp:n=1
+4155 4 -_shell_density_ -1055 1054           u=410 imp:n=1
+          tmp=_shell_temperature_
+c
+4160 3 -_core_density_ -1060                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4161 0              -1061 1060 fill=4110 u=410 imp:n=1
+4162 4 -_shell_density_ -1062 1061           u=410 imp:n=1
+          tmp=_shell_temperature_
+4163 3 -_core_density_ -1063                 u=410 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4164 0              -1064 1063 fill=4110 u=410 imp:n=1
+4165 4 -_shell_density_ -1065 1064           u=410 imp:n=1
+          tmp=_shell_temperature_
+4180 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=410 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+4181 0              -1080 1081 -1082 1083 -1084 1085 fill=410 imp:n=1 u=41 lat=1 $ FCC Unit Cell
+c
+c Pebble: 12
+c
+1200 3 -_core_density_ -1000                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1201 0              -1001 1000 fill=1210 u=120 imp:n=1
+1202 4 -_shell_density_ -1002 1001           u=120 imp:n=1
+          tmp=_shell_temperature_
+1203 3 -_core_density_ -1003                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1204 0              -1004 1003 fill=1210 u=120 imp:n=1
+1205 4 -_shell_density_ -1005 1004           u=120 imp:n=1
+          tmp=_shell_temperature_
+1206 3 -_core_density_ -1006                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1207 0              -1007 1006 fill=1210 u=120 imp:n=1
+1208 4 -_shell_density_ -1008 1007           u=120 imp:n=1
+          tmp=_shell_temperature_
+1209 3 -_core_density_ -1009                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1210 0              -1010 1009 fill=1210 u=120 imp:n=1
+1211 4 -_shell_density_ -1011 1010           u=120 imp:n=1
+          tmp=_shell_temperature_
+1220 3 -_core_density_ -1020                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1221 0              -1021 1020 fill=1210 u=120 imp:n=1
+1222 4 -_shell_density_ -1022 1021           u=120 imp:n=1
+          tmp=_shell_temperature_
+1223 3 -_core_density_ -1023                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1224 0              -1024 1023 fill=1210 u=120 imp:n=1
+1225 4 -_shell_density_ -1025 1024           u=120 imp:n=1
+          tmp=_shell_temperature_
+1226 3 -_core_density_ -1026                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1227 0              -1027 1026 fill=1210 u=120 imp:n=1
+1228 4 -_shell_density_ -1028 1027           u=120 imp:n=1
+          tmp=_shell_temperature_
+1229 3 -_core_density_ -1029                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1230 0              -1030 1029 fill=1210 u=120 imp:n=1
+1231 4 -_shell_density_ -1031 1030           u=120 imp:n=1
+          tmp=_shell_temperature_
+c
+1240 3 -_core_density_ -1040                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1241 0              -1041 1040 fill=1210 u=120 imp:n=1
+1242 4 -_shell_density_ -1042 1041           u=120 imp:n=1
+          tmp=_shell_temperature_
+1243 3 -_core_density_ -1043                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1244 0              -1044 1043 fill=1210 u=120 imp:n=1
+1245 4 -_shell_density_ -1045 1044           u=120 imp:n=1
+          tmp=_shell_temperature_
+c
+1250 3 -_core_density_ -1050                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1251 0              -1051 1050 fill=1210 u=120 imp:n=1
+1252 4 -_shell_density_ -1052 1051           u=120 imp:n=1
+          tmp=_shell_temperature_
+1253 3 -_core_density_ -1053                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1254 0              -1054 1053 fill=1210 u=120 imp:n=1
+1255 4 -_shell_density_ -1055 1054           u=120 imp:n=1
+          tmp=_shell_temperature_
+c
+1260 3 -_core_density_ -1060                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1261 0              -1061 1060 fill=1210 u=120 imp:n=1
+1262 4 -_shell_density_ -1062 1061           u=120 imp:n=1
+          tmp=_shell_temperature_
+1263 3 -_core_density_ -1063                 u=120 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1264 0              -1064 1063 fill=1210 u=120 imp:n=1
+1265 4 -_shell_density_ -1065 1064           u=120 imp:n=1
+          tmp=_shell_temperature_
+1280 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=120 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+1281 0              -1080 1081 -1082 1083 -1084 1085 fill=120 imp:n=1 u=12 lat=1 $ FCC Unit Cell
+c
+c Pebble: 22
+c
+2200 3 -_core_density_ -1000                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2201 0              -1001 1000 fill=2210 u=220 imp:n=1
+2202 4 -_shell_density_ -1002 1001           u=220 imp:n=1
+          tmp=_shell_temperature_
+2203 3 -_core_density_ -1003                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2204 0              -1004 1003 fill=2210 u=220 imp:n=1
+2205 4 -_shell_density_ -1005 1004           u=220 imp:n=1
+          tmp=_shell_temperature_
+2206 3 -_core_density_ -1006                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2207 0              -1007 1006 fill=2210 u=220 imp:n=1
+2208 4 -_shell_density_ -1008 1007           u=220 imp:n=1
+          tmp=_shell_temperature_
+2209 3 -_core_density_ -1009                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2210 0              -1010 1009 fill=2210 u=220 imp:n=1
+2211 4 -_shell_density_ -1011 1010           u=220 imp:n=1
+          tmp=_shell_temperature_
+2220 3 -_core_density_ -1020                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2221 0              -1021 1020 fill=2210 u=220 imp:n=1
+2222 4 -_shell_density_ -1022 1021           u=220 imp:n=1
+          tmp=_shell_temperature_
+2223 3 -_core_density_ -1023                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2224 0              -1024 1023 fill=2210 u=220 imp:n=1
+2225 4 -_shell_density_ -1025 1024           u=220 imp:n=1
+          tmp=_shell_temperature_
+2226 3 -_core_density_ -1026                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2227 0              -1027 1026 fill=2210 u=220 imp:n=1
+2228 4 -_shell_density_ -1028 1027           u=220 imp:n=1
+          tmp=_shell_temperature_
+2229 3 -_core_density_ -1029                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2230 0              -1030 1029 fill=2210 u=220 imp:n=1
+2231 4 -_shell_density_ -1031 1030           u=220 imp:n=1
+          tmp=_shell_temperature_
+c
+2240 3 -_core_density_ -1040                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2241 0              -1041 1040 fill=2210 u=220 imp:n=1
+2242 4 -_shell_density_ -1042 1041           u=220 imp:n=1
+          tmp=_shell_temperature_
+2243 3 -_core_density_ -1043                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2244 0              -1044 1043 fill=2210 u=220 imp:n=1
+2245 4 -_shell_density_ -1045 1044           u=220 imp:n=1
+          tmp=_shell_temperature_
+c
+2250 3 -_core_density_ -1050                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2251 0              -1051 1050 fill=2210 u=220 imp:n=1
+2252 4 -_shell_density_ -1052 1051           u=220 imp:n=1
+          tmp=_shell_temperature_
+2253 3 -_core_density_ -1053                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2254 0              -1054 1053 fill=2210 u=220 imp:n=1
+2255 4 -_shell_density_ -1055 1054           u=220 imp:n=1
+          tmp=_shell_temperature_
+c
+2260 3 -_core_density_ -1060                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2261 0              -1061 1060 fill=2210 u=220 imp:n=1
+2262 4 -_shell_density_ -1062 1061           u=220 imp:n=1
+          tmp=_shell_temperature_
+2263 3 -_core_density_ -1063                 u=220 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2264 0              -1064 1063 fill=2210 u=220 imp:n=1
+2265 4 -_shell_density_ -1065 1064           u=220 imp:n=1
+          tmp=_shell_temperature_
+2280 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=220 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+2281 0              -1080 1081 -1082 1083 -1084 1085 fill=220 imp:n=1 u=22 lat=1 $ FCC Unit Cell
+c
+c Pebble: 32
+c
+3200 3 -_core_density_ -1000                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3201 0              -1001 1000 fill=3210 u=320 imp:n=1
+3202 4 -_shell_density_ -1002 1001           u=320 imp:n=1
+          tmp=_shell_temperature_
+3203 3 -_core_density_ -1003                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3204 0              -1004 1003 fill=3210 u=320 imp:n=1
+3205 4 -_shell_density_ -1005 1004           u=320 imp:n=1
+          tmp=_shell_temperature_
+3206 3 -_core_density_ -1006                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3207 0              -1007 1006 fill=3210 u=320 imp:n=1
+3208 4 -_shell_density_ -1008 1007           u=320 imp:n=1
+          tmp=_shell_temperature_
+3209 3 -_core_density_ -1009                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3210 0              -1010 1009 fill=3210 u=320 imp:n=1
+3211 4 -_shell_density_ -1011 1010           u=320 imp:n=1
+          tmp=_shell_temperature_
+3220 3 -_core_density_ -1020                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3221 0              -1021 1020 fill=3210 u=320 imp:n=1
+3222 4 -_shell_density_ -1022 1021           u=320 imp:n=1
+          tmp=_shell_temperature_
+3223 3 -_core_density_ -1023                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3224 0              -1024 1023 fill=3210 u=320 imp:n=1
+3225 4 -_shell_density_ -1025 1024           u=320 imp:n=1
+          tmp=_shell_temperature_
+3226 3 -_core_density_ -1026                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3227 0              -1027 1026 fill=3210 u=320 imp:n=1
+3228 4 -_shell_density_ -1028 1027           u=320 imp:n=1
+          tmp=_shell_temperature_
+3229 3 -_core_density_ -1029                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3230 0              -1030 1029 fill=3210 u=320 imp:n=1
+3231 4 -_shell_density_ -1031 1030           u=320 imp:n=1
+          tmp=_shell_temperature_
+c
+3240 3 -_core_density_ -1040                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3241 0              -1041 1040 fill=3210 u=320 imp:n=1
+3242 4 -_shell_density_ -1042 1041           u=320 imp:n=1
+          tmp=_shell_temperature_
+3243 3 -_core_density_ -1043                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3244 0              -1044 1043 fill=3210 u=320 imp:n=1
+3245 4 -_shell_density_ -1045 1044           u=320 imp:n=1
+          tmp=_shell_temperature_
+c
+3250 3 -_core_density_ -1050                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3251 0              -1051 1050 fill=3210 u=320 imp:n=1
+3252 4 -_shell_density_ -1052 1051           u=320 imp:n=1
+          tmp=_shell_temperature_
+3253 3 -_core_density_ -1053                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3254 0              -1054 1053 fill=3210 u=320 imp:n=1
+3255 4 -_shell_density_ -1055 1054           u=320 imp:n=1
+          tmp=_shell_temperature_
+c
+3260 3 -_core_density_ -1060                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3261 0              -1061 1060 fill=3210 u=320 imp:n=1
+3262 4 -_shell_density_ -1062 1061           u=320 imp:n=1
+          tmp=_shell_temperature_
+3263 3 -_core_density_ -1063                 u=320 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3264 0              -1064 1063 fill=3210 u=320 imp:n=1
+3265 4 -_shell_density_ -1065 1064           u=320 imp:n=1
+          tmp=_shell_temperature_
+3280 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=320 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+3281 0              -1080 1081 -1082 1083 -1084 1085 fill=320 imp:n=1 u=32 lat=1 $ FCC Unit Cell
+c
+c Pebble: 42
+c
+4200 3 -_core_density_ -1000                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4201 0              -1001 1000 fill=4210 u=420 imp:n=1
+4202 4 -_shell_density_ -1002 1001           u=420 imp:n=1
+          tmp=_shell_temperature_
+4203 3 -_core_density_ -1003                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4204 0              -1004 1003 fill=4210 u=420 imp:n=1
+4205 4 -_shell_density_ -1005 1004           u=420 imp:n=1
+          tmp=_shell_temperature_
+4206 3 -_core_density_ -1006                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4207 0              -1007 1006 fill=4210 u=420 imp:n=1
+4208 4 -_shell_density_ -1008 1007           u=420 imp:n=1
+          tmp=_shell_temperature_
+4209 3 -_core_density_ -1009                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4210 0              -1010 1009 fill=4210 u=420 imp:n=1
+4211 4 -_shell_density_ -1011 1010           u=420 imp:n=1
+          tmp=_shell_temperature_
+4220 3 -_core_density_ -1020                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4221 0              -1021 1020 fill=4210 u=420 imp:n=1
+4222 4 -_shell_density_ -1022 1021           u=420 imp:n=1
+          tmp=_shell_temperature_
+4223 3 -_core_density_ -1023                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4224 0              -1024 1023 fill=4210 u=420 imp:n=1
+4225 4 -_shell_density_ -1025 1024           u=420 imp:n=1
+          tmp=_shell_temperature_
+4226 3 -_core_density_ -1026                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4227 0              -1027 1026 fill=4210 u=420 imp:n=1
+4228 4 -_shell_density_ -1028 1027           u=420 imp:n=1
+          tmp=_shell_temperature_
+4229 3 -_core_density_ -1029                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4230 0              -1030 1029 fill=4210 u=420 imp:n=1
+4231 4 -_shell_density_ -1031 1030           u=420 imp:n=1
+          tmp=_shell_temperature_
+c
+4240 3 -_core_density_ -1040                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4241 0              -1041 1040 fill=4210 u=420 imp:n=1
+4242 4 -_shell_density_ -1042 1041           u=420 imp:n=1
+          tmp=_shell_temperature_
+4243 3 -_core_density_ -1043                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4244 0              -1044 1043 fill=4210 u=420 imp:n=1
+4245 4 -_shell_density_ -1045 1044           u=420 imp:n=1
+          tmp=_shell_temperature_
+c
+4250 3 -_core_density_ -1050                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4251 0              -1051 1050 fill=4210 u=420 imp:n=1
+4252 4 -_shell_density_ -1052 1051           u=420 imp:n=1
+          tmp=_shell_temperature_
+4253 3 -_core_density_ -1053                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4254 0              -1054 1053 fill=4210 u=420 imp:n=1
+4255 4 -_shell_density_ -1055 1054           u=420 imp:n=1
+          tmp=_shell_temperature_
+c
+4260 3 -_core_density_ -1060                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4261 0              -1061 1060 fill=4210 u=420 imp:n=1
+4262 4 -_shell_density_ -1062 1061           u=420 imp:n=1
+          tmp=_shell_temperature_
+4263 3 -_core_density_ -1063                 u=420 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4264 0              -1064 1063 fill=4210 u=420 imp:n=1
+4265 4 -_shell_density_ -1065 1064           u=420 imp:n=1
+          tmp=_shell_temperature_
+4280 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=420 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+4281 0              -1080 1081 -1082 1083 -1084 1085 fill=420 imp:n=1 u=42 lat=1 $ FCC Unit Cell
+c
+c Pebble: 13
+c
+1300 3 -_core_density_ -1000                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1301 0              -1001 1000 fill=1310 u=130 imp:n=1
+1302 4 -_shell_density_ -1002 1001           u=130 imp:n=1
+          tmp=_shell_temperature_
+1303 3 -_core_density_ -1003                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1304 0              -1004 1003 fill=1310 u=130 imp:n=1
+1305 4 -_shell_density_ -1005 1004           u=130 imp:n=1
+          tmp=_shell_temperature_
+1306 3 -_core_density_ -1006                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1307 0              -1007 1006 fill=1310 u=130 imp:n=1
+1308 4 -_shell_density_ -1008 1007           u=130 imp:n=1
+          tmp=_shell_temperature_
+1309 3 -_core_density_ -1009                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1310 0              -1010 1009 fill=1310 u=130 imp:n=1
+1311 4 -_shell_density_ -1011 1010           u=130 imp:n=1
+          tmp=_shell_temperature_
+1320 3 -_core_density_ -1020                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1321 0              -1021 1020 fill=1310 u=130 imp:n=1
+1322 4 -_shell_density_ -1022 1021           u=130 imp:n=1
+          tmp=_shell_temperature_
+1323 3 -_core_density_ -1023                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1324 0              -1024 1023 fill=1310 u=130 imp:n=1
+1325 4 -_shell_density_ -1025 1024           u=130 imp:n=1
+          tmp=_shell_temperature_
+1326 3 -_core_density_ -1026                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1327 0              -1027 1026 fill=1310 u=130 imp:n=1
+1328 4 -_shell_density_ -1028 1027           u=130 imp:n=1
+          tmp=_shell_temperature_
+1329 3 -_core_density_ -1029                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1330 0              -1030 1029 fill=1310 u=130 imp:n=1
+1331 4 -_shell_density_ -1031 1030           u=130 imp:n=1
+          tmp=_shell_temperature_
+c
+1340 3 -_core_density_ -1040                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1341 0              -1041 1040 fill=1310 u=130 imp:n=1
+1342 4 -_shell_density_ -1042 1041           u=130 imp:n=1
+          tmp=_shell_temperature_
+1343 3 -_core_density_ -1043                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1344 0              -1044 1043 fill=1310 u=130 imp:n=1
+1345 4 -_shell_density_ -1045 1044           u=130 imp:n=1
+          tmp=_shell_temperature_
+c
+1350 3 -_core_density_ -1050                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1351 0              -1051 1050 fill=1310 u=130 imp:n=1
+1352 4 -_shell_density_ -1052 1051           u=130 imp:n=1
+          tmp=_shell_temperature_
+1353 3 -_core_density_ -1053                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1354 0              -1054 1053 fill=1310 u=130 imp:n=1
+1355 4 -_shell_density_ -1055 1054           u=130 imp:n=1
+          tmp=_shell_temperature_
+c
+1360 3 -_core_density_ -1060                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1361 0              -1061 1060 fill=1310 u=130 imp:n=1
+1362 4 -_shell_density_ -1062 1061           u=130 imp:n=1
+          tmp=_shell_temperature_
+1363 3 -_core_density_ -1063                 u=130 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1364 0              -1064 1063 fill=1310 u=130 imp:n=1
+1365 4 -_shell_density_ -1065 1064           u=130 imp:n=1
+          tmp=_shell_temperature_
+1380 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=130 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+1381 0              -1080 1081 -1082 1083 -1084 1085 fill=130 imp:n=1 u=13 lat=1 $ FCC Unit Cell
+c
+c Pebble: 23
+c
+2300 3 -_core_density_ -1100                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2301 0              -1101 1100 fill=2310 u=230 imp:n=1
+2302 4 -_shell_density_ -1102 1101           u=230 imp:n=1
+          tmp=_shell_temperature_
+2303 3 -_core_density_ -1103                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2304 0              -1104 1103 fill=2310 u=230 imp:n=1
+2305 4 -_shell_density_ -1105 1104           u=230 imp:n=1
+          tmp=_shell_temperature_
+2306 3 -_core_density_ -1106                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2307 0              -1107 1106 fill=2310 u=230 imp:n=1
+2308 4 -_shell_density_ -1108 1107           u=230 imp:n=1
+          tmp=_shell_temperature_
+2309 3 -_core_density_ -1109                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2310 0              -1110 1109 fill=2310 u=230 imp:n=1
+2311 4 -_shell_density_ -1111 1110           u=230 imp:n=1
+          tmp=_shell_temperature_
+2320 3 -_core_density_ -1120                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2321 0              -1121 1120 fill=2310 u=230 imp:n=1
+2322 4 -_shell_density_ -1122 1121           u=230 imp:n=1
+          tmp=_shell_temperature_
+2323 3 -_core_density_ -1123                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2324 0              -1124 1123 fill=2310 u=230 imp:n=1
+2325 4 -_shell_density_ -1125 1124           u=230 imp:n=1
+          tmp=_shell_temperature_
+2326 3 -_core_density_ -1126                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2327 0              -1127 1126 fill=2310 u=230 imp:n=1
+2328 4 -_shell_density_ -1128 1127           u=230 imp:n=1
+          tmp=_shell_temperature_
+2329 3 -_core_density_ -1129                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2330 0              -1130 1129 fill=2310 u=230 imp:n=1
+2331 4 -_shell_density_ -1131 1130           u=230 imp:n=1
+          tmp=_shell_temperature_
+c
+2340 3 -_core_density_ -1140                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2341 0              -1141 1140 fill=2310 u=230 imp:n=1
+2342 4 -_shell_density_ -1142 1141           u=230 imp:n=1
+          tmp=_shell_temperature_
+2343 3 -_core_density_ -1143                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2344 0              -1144 1143 fill=2310 u=230 imp:n=1
+2345 4 -_shell_density_ -1145 1144           u=230 imp:n=1
+          tmp=_shell_temperature_
+c
+2350 3 -_core_density_ -1150                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2351 0              -1151 1150 fill=2310 u=230 imp:n=1
+2352 4 -_shell_density_ -1152 1151           u=230 imp:n=1
+          tmp=_shell_temperature_
+2353 3 -_core_density_ -1153                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2354 0              -1154 1153 fill=2310 u=230 imp:n=1
+2355 4 -_shell_density_ -1155 1154           u=230 imp:n=1
+          tmp=_shell_temperature_
+c
+2360 3 -_core_density_ -1160                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2361 0              -1161 1160 fill=2310 u=230 imp:n=1
+2362 4 -_shell_density_ -1162 1161           u=230 imp:n=1
+          tmp=_shell_temperature_
+2363 3 -_core_density_ -1163                 u=230 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2364 0              -1164 1163 fill=2310 u=230 imp:n=1
+2365 4 -_shell_density_ -1165 1164           u=230 imp:n=1
+          tmp=_shell_temperature_
+2380 24 -_coolant_density_ 1102 1105 1108 1111 
+                   1122 1125 1128 1131
+                   1142 1145 1152 1155 1162 1165 u=230 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+2381 0              -1180 1181 -1182 1183 -1184 1185 fill=230 imp:n=1 u=23 lat=1 $ FCC Unit Cell
+c
+c Pebble: 33
+c
+3300 3 -_core_density_ -1100                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3301 0              -1101 1100 fill=3310 u=330 imp:n=1
+3302 4 -_shell_density_ -1102 1101           u=330 imp:n=1
+          tmp=_shell_temperature_
+3303 3 -_core_density_ -1103                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3304 0              -1104 1103 fill=3310 u=330 imp:n=1
+3305 4 -_shell_density_ -1105 1104           u=330 imp:n=1
+          tmp=_shell_temperature_
+3306 3 -_core_density_ -1106                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3307 0              -1107 1106 fill=3310 u=330 imp:n=1
+3308 4 -_shell_density_ -1108 1107           u=330 imp:n=1
+          tmp=_shell_temperature_
+3309 3 -_core_density_ -1109                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3310 0              -1110 1109 fill=3310 u=330 imp:n=1
+3311 4 -_shell_density_ -1111 1110           u=330 imp:n=1
+          tmp=_shell_temperature_
+3320 3 -_core_density_ -1120                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3321 0              -1121 1120 fill=3310 u=330 imp:n=1
+3322 4 -_shell_density_ -1122 1121           u=330 imp:n=1
+          tmp=_shell_temperature_
+3323 3 -_core_density_ -1123                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3324 0              -1124 1123 fill=3310 u=330 imp:n=1
+3325 4 -_shell_density_ -1125 1124           u=330 imp:n=1
+          tmp=_shell_temperature_
+3326 3 -_core_density_ -1126                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3327 0              -1127 1126 fill=3310 u=330 imp:n=1
+3328 4 -_shell_density_ -1128 1127           u=330 imp:n=1
+          tmp=_shell_temperature_
+3329 3 -_core_density_ -1129                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3330 0              -1130 1129 fill=3310 u=330 imp:n=1
+3331 4 -_shell_density_ -1131 1130           u=330 imp:n=1
+          tmp=_shell_temperature_
+c
+3340 3 -_core_density_ -1140                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3341 0              -1141 1140 fill=3310 u=330 imp:n=1
+3342 4 -_shell_density_ -1142 1141           u=330 imp:n=1
+          tmp=_shell_temperature_
+3343 3 -_core_density_ -1143                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3344 0              -1144 1143 fill=3310 u=330 imp:n=1
+3345 4 -_shell_density_ -1145 1144           u=330 imp:n=1
+          tmp=_shell_temperature_
+c
+3350 3 -_core_density_ -1150                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3351 0              -1151 1150 fill=3310 u=330 imp:n=1
+3352 4 -_shell_density_ -1152 1151           u=330 imp:n=1
+          tmp=_shell_temperature_
+3353 3 -_core_density_ -1153                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3354 0              -1154 1153 fill=3310 u=330 imp:n=1
+3355 4 -_shell_density_ -1155 1154           u=330 imp:n=1
+          tmp=_shell_temperature_
+c
+3360 3 -_core_density_ -1160                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3361 0              -1161 1160 fill=3310 u=330 imp:n=1
+3362 4 -_shell_density_ -1162 1161           u=330 imp:n=1
+          tmp=_shell_temperature_
+3363 3 -_core_density_ -1163                 u=330 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3364 0              -1164 1163 fill=3310 u=330 imp:n=1
+3365 4 -_shell_density_ -1165 1164           u=330 imp:n=1
+          tmp=_shell_temperature_
+3380 24 -_coolant_density_ 1102 1105 1108 1111 
+                   1122 1125 1128 1131
+                   1142 1145 1152 1155 1162 1165 u=330 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+3381 0              -1180 1181 -1182 1183 -1184 1185 fill=330 imp:n=1 u=33 lat=1 $ FCC Unit Cell
+c
+c Pebble: 43
+c
+4300 3 -_core_density_ -1100                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4301 0              -1101 1100 fill=4310 u=430 imp:n=1
+4302 4 -_shell_density_ -1102 1101           u=430 imp:n=1
+          tmp=_shell_temperature_
+4303 3 -_core_density_ -1103                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4304 0              -1104 1103 fill=4310 u=430 imp:n=1
+4305 4 -_shell_density_ -1105 1104           u=430 imp:n=1
+          tmp=_shell_temperature_
+4306 3 -_core_density_ -1106                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4307 0              -1107 1106 fill=4310 u=430 imp:n=1
+4308 4 -_shell_density_ -1108 1107           u=430 imp:n=1
+          tmp=_shell_temperature_
+4309 3 -_core_density_ -1109                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4310 0              -1110 1109 fill=4310 u=430 imp:n=1
+4311 4 -_shell_density_ -1111 1110           u=430 imp:n=1
+          tmp=_shell_temperature_
+4320 3 -_core_density_ -1120                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4321 0              -1121 1120 fill=4310 u=430 imp:n=1
+4322 4 -_shell_density_ -1122 1121           u=430 imp:n=1
+          tmp=_shell_temperature_
+4323 3 -_core_density_ -1123                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4324 0              -1124 1123 fill=4310 u=430 imp:n=1
+4325 4 -_shell_density_ -1125 1124           u=430 imp:n=1
+          tmp=_shell_temperature_
+4326 3 -_core_density_ -1126                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4327 0              -1127 1126 fill=4310 u=430 imp:n=1
+4328 4 -_shell_density_ -1128 1127           u=430 imp:n=1
+          tmp=_shell_temperature_
+4329 3 -_core_density_ -1129                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4330 0              -1130 1129 fill=4310 u=430 imp:n=1
+4331 4 -_shell_density_ -1131 1130           u=430 imp:n=1
+          tmp=_shell_temperature_
+c
+4340 3 -_core_density_ -1140                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4341 0              -1141 1140 fill=4310 u=430 imp:n=1
+4342 4 -_shell_density_ -1142 1141           u=430 imp:n=1
+          tmp=_shell_temperature_
+4343 3 -_core_density_ -1143                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4344 0              -1144 1143 fill=4310 u=430 imp:n=1
+4345 4 -_shell_density_ -1145 1144           u=430 imp:n=1
+          tmp=_shell_temperature_
+c
+4350 3 -_core_density_ -1150                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4351 0              -1151 1150 fill=4310 u=430 imp:n=1
+4352 4 -_shell_density_ -1152 1151           u=430 imp:n=1
+          tmp=_shell_temperature_
+4353 3 -_core_density_ -1153                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4354 0              -1154 1153 fill=4310 u=430 imp:n=1
+4355 4 -_shell_density_ -1155 1154           u=430 imp:n=1
+          tmp=_shell_temperature_
+c
+4360 3 -_core_density_ -1160                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4361 0              -1161 1160 fill=4310 u=430 imp:n=1
+4362 4 -_shell_density_ -1162 1161           u=430 imp:n=1
+          tmp=_shell_temperature_
+4363 3 -_core_density_ -1163                 u=430 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4364 0              -1164 1163 fill=4310 u=430 imp:n=1
+4365 4 -_shell_density_ -1165 1164           u=430 imp:n=1
+          tmp=_shell_temperature_
+4380 24 -_coolant_density_ 1102 1105 1108 1111 
+                   1122 1125 1128 1131
+                   1142 1145 1152 1155 1162 1165 u=430 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+4381 0              -1180 1181 -1182 1183 -1184 1185 fill=430 imp:n=1 u=43 lat=1 $ FCC Unit Cell
+c
+c Pebble: 14
+c
+1400 3 -_core_density_ -1000                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1401 0              -1001 1000 fill=1410 u=140 imp:n=1
+1402 4 -_shell_density_ -1002 1001           u=140 imp:n=1
+          tmp=_shell_temperature_
+1403 3 -_core_density_ -1003                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1404 0              -1004 1003 fill=1410 u=140 imp:n=1
+1405 4 -_shell_density_ -1005 1004           u=140 imp:n=1
+          tmp=_shell_temperature_
+1406 3 -_core_density_ -1006                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1407 0              -1007 1006 fill=1410 u=140 imp:n=1
+1408 4 -_shell_density_ -1008 1007           u=140 imp:n=1
+          tmp=_shell_temperature_
+1409 3 -_core_density_ -1009                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1410 0              -1010 1009 fill=1410 u=140 imp:n=1
+1411 4 -_shell_density_ -1011 1010           u=140 imp:n=1
+          tmp=_shell_temperature_
+1420 3 -_core_density_ -1020                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1421 0              -1021 1020 fill=1410 u=140 imp:n=1
+1422 4 -_shell_density_ -1022 1021           u=140 imp:n=1
+          tmp=_shell_temperature_
+1423 3 -_core_density_ -1023                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1424 0              -1024 1023 fill=1410 u=140 imp:n=1
+1425 4 -_shell_density_ -1025 1024           u=140 imp:n=1
+          tmp=_shell_temperature_
+1426 3 -_core_density_ -1026                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1427 0              -1027 1026 fill=1410 u=140 imp:n=1
+1428 4 -_shell_density_ -1028 1027           u=140 imp:n=1
+          tmp=_shell_temperature_
+1429 3 -_core_density_ -1029                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1430 0              -1030 1029 fill=1410 u=140 imp:n=1
+1431 4 -_shell_density_ -1031 1030           u=140 imp:n=1
+          tmp=_shell_temperature_
+c
+1440 3 -_core_density_ -1040                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1441 0              -1041 1040 fill=1410 u=140 imp:n=1
+1442 4 -_shell_density_ -1042 1041           u=140 imp:n=1
+          tmp=_shell_temperature_
+1443 3 -_core_density_ -1043                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1444 0              -1044 1043 fill=1410 u=140 imp:n=1
+1445 4 -_shell_density_ -1045 1044           u=140 imp:n=1
+          tmp=_shell_temperature_
+c
+1450 3 -_core_density_ -1050                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1451 0              -1051 1050 fill=1410 u=140 imp:n=1
+1452 4 -_shell_density_ -1052 1051           u=140 imp:n=1
+          tmp=_shell_temperature_
+1453 3 -_core_density_ -1053                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1454 0              -1054 1053 fill=1410 u=140 imp:n=1
+1455 4 -_shell_density_ -1055 1054           u=140 imp:n=1
+          tmp=_shell_temperature_
+c
+1460 3 -_core_density_ -1060                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1461 0              -1061 1060 fill=1410 u=140 imp:n=1
+1462 4 -_shell_density_ -1062 1061           u=140 imp:n=1
+          tmp=_shell_temperature_
+1463 3 -_core_density_ -1063                 u=140 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1464 0              -1064 1063 fill=1410 u=140 imp:n=1
+1465 4 -_shell_density_ -1065 1064           u=140 imp:n=1
+          tmp=_shell_temperature_
+1480 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=140 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+1481 0              -1080 1081 -1082 1083 -1084 1085 fill=140 imp:n=1 u=14 lat=1 $ FCC Unit Cell
+c
+c Pebble: 24
+c
+2400 3 -_core_density_ -1000                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2401 0              -1001 1000 fill=2410 u=240 imp:n=1
+2402 4 -_shell_density_ -1002 1001           u=240 imp:n=1
+          tmp=_shell_temperature_
+2403 3 -_core_density_ -1003                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2404 0              -1004 1003 fill=2410 u=240 imp:n=1
+2405 4 -_shell_density_ -1005 1004           u=240 imp:n=1
+          tmp=_shell_temperature_
+2406 3 -_core_density_ -1006                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2407 0              -1007 1006 fill=2410 u=240 imp:n=1
+2408 4 -_shell_density_ -1008 1007           u=240 imp:n=1
+          tmp=_shell_temperature_
+2409 3 -_core_density_ -1009                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2410 0              -1010 1009 fill=2410 u=240 imp:n=1
+2411 4 -_shell_density_ -1011 1010           u=240 imp:n=1
+          tmp=_shell_temperature_
+2420 3 -_core_density_ -1020                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2421 0              -1021 1020 fill=2410 u=240 imp:n=1
+2422 4 -_shell_density_ -1022 1021           u=240 imp:n=1
+          tmp=_shell_temperature_
+2423 3 -_core_density_ -1023                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2424 0              -1024 1023 fill=2410 u=240 imp:n=1
+2425 4 -_shell_density_ -1025 1024           u=240 imp:n=1
+          tmp=_shell_temperature_
+2426 3 -_core_density_ -1026                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2427 0              -1027 1026 fill=2410 u=240 imp:n=1
+2428 4 -_shell_density_ -1028 1027           u=240 imp:n=1
+          tmp=_shell_temperature_
+2429 3 -_core_density_ -1029                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2430 0              -1030 1029 fill=2410 u=240 imp:n=1
+2431 4 -_shell_density_ -1031 1030           u=240 imp:n=1
+          tmp=_shell_temperature_
+c
+2440 3 -_core_density_ -1040                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2441 0              -1041 1040 fill=2410 u=240 imp:n=1
+2442 4 -_shell_density_ -1042 1041           u=240 imp:n=1
+          tmp=_shell_temperature_
+2443 3 -_core_density_ -1043                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2444 0              -1044 1043 fill=2410 u=240 imp:n=1
+2445 4 -_shell_density_ -1045 1044           u=240 imp:n=1
+          tmp=_shell_temperature_
+c
+2450 3 -_core_density_ -1050                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2451 0              -1051 1050 fill=2410 u=240 imp:n=1
+2452 4 -_shell_density_ -1052 1051           u=240 imp:n=1
+          tmp=_shell_temperature_
+2453 3 -_core_density_ -1053                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2454 0              -1054 1053 fill=2410 u=240 imp:n=1
+2455 4 -_shell_density_ -1055 1054           u=240 imp:n=1
+          tmp=_shell_temperature_
+c
+2460 3 -_core_density_ -1060                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2461 0              -1061 1060 fill=2410 u=240 imp:n=1
+2462 4 -_shell_density_ -1062 1061           u=240 imp:n=1
+          tmp=_shell_temperature_
+2463 3 -_core_density_ -1063                 u=240 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2464 0              -1064 1063 fill=2410 u=240 imp:n=1
+2465 4 -_shell_density_ -1065 1064           u=240 imp:n=1
+          tmp=_shell_temperature_
+2480 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=240 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+2481 0              -1080 1081 -1082 1083 -1084 1085 fill=240 imp:n=1 u=24 lat=1 $ FCC Unit Cell
+c
+c Pebble: 34
+c
+3400 3 -_core_density_ -1000                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3401 0              -1001 1000 fill=3410 u=340 imp:n=1
+3402 4 -_shell_density_ -1002 1001           u=340 imp:n=1
+          tmp=_shell_temperature_
+3403 3 -_core_density_ -1003                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3404 0              -1004 1003 fill=3410 u=340 imp:n=1
+3405 4 -_shell_density_ -1005 1004           u=340 imp:n=1
+          tmp=_shell_temperature_
+3406 3 -_core_density_ -1006                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3407 0              -1007 1006 fill=3410 u=340 imp:n=1
+3408 4 -_shell_density_ -1008 1007           u=340 imp:n=1
+          tmp=_shell_temperature_
+3409 3 -_core_density_ -1009                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3410 0              -1010 1009 fill=3410 u=340 imp:n=1
+3411 4 -_shell_density_ -1011 1010           u=340 imp:n=1
+          tmp=_shell_temperature_
+3420 3 -_core_density_ -1020                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3421 0              -1021 1020 fill=3410 u=340 imp:n=1
+3422 4 -_shell_density_ -1022 1021           u=340 imp:n=1
+          tmp=_shell_temperature_
+3423 3 -_core_density_ -1023                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3424 0              -1024 1023 fill=3410 u=340 imp:n=1
+3425 4 -_shell_density_ -1025 1024           u=340 imp:n=1
+          tmp=_shell_temperature_
+3426 3 -_core_density_ -1026                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3427 0              -1027 1026 fill=3410 u=340 imp:n=1
+3428 4 -_shell_density_ -1028 1027           u=340 imp:n=1
+          tmp=_shell_temperature_
+3429 3 -_core_density_ -1029                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3430 0              -1030 1029 fill=3410 u=340 imp:n=1
+3431 4 -_shell_density_ -1031 1030           u=340 imp:n=1
+          tmp=_shell_temperature_
+c
+3440 3 -_core_density_ -1040                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3441 0              -1041 1040 fill=3410 u=340 imp:n=1
+3442 4 -_shell_density_ -1042 1041           u=340 imp:n=1
+          tmp=_shell_temperature_
+3443 3 -_core_density_ -1043                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3444 0              -1044 1043 fill=3410 u=340 imp:n=1
+3445 4 -_shell_density_ -1045 1044           u=340 imp:n=1
+          tmp=_shell_temperature_
+c
+3450 3 -_core_density_ -1050                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3451 0              -1051 1050 fill=3410 u=340 imp:n=1
+3452 4 -_shell_density_ -1052 1051           u=340 imp:n=1
+          tmp=_shell_temperature_
+3453 3 -_core_density_ -1053                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3454 0              -1054 1053 fill=3410 u=340 imp:n=1
+3455 4 -_shell_density_ -1055 1054           u=340 imp:n=1
+          tmp=_shell_temperature_
+c
+3460 3 -_core_density_ -1060                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3461 0              -1061 1060 fill=3410 u=340 imp:n=1
+3462 4 -_shell_density_ -1062 1061           u=340 imp:n=1
+          tmp=_shell_temperature_
+3463 3 -_core_density_ -1063                 u=340 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3464 0              -1064 1063 fill=3410 u=340 imp:n=1
+3465 4 -_shell_density_ -1065 1064           u=340 imp:n=1
+          tmp=_shell_temperature_
+3480 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=340 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+3481 0              -1080 1081 -1082 1083 -1084 1085 fill=340 imp:n=1 u=34 lat=1 $ FCC Unit Cell
+c
+c Pebble: 44
+c
+4400 3 -_core_density_ -1000                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4401 0              -1001 1000 fill=4410 u=440 imp:n=1
+4402 4 -_shell_density_ -1002 1001           u=440 imp:n=1
+          tmp=_shell_temperature_
+4403 3 -_core_density_ -1003                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4404 0              -1004 1003 fill=4410 u=440 imp:n=1
+4405 4 -_shell_density_ -1005 1004           u=440 imp:n=1
+          tmp=_shell_temperature_
+4406 3 -_core_density_ -1006                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4407 0              -1007 1006 fill=4410 u=440 imp:n=1
+4408 4 -_shell_density_ -1008 1007           u=440 imp:n=1
+          tmp=_shell_temperature_
+4409 3 -_core_density_ -1009                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4410 0              -1010 1009 fill=4410 u=440 imp:n=1
+4411 4 -_shell_density_ -1011 1010           u=440 imp:n=1
+          tmp=_shell_temperature_
+4420 3 -_core_density_ -1020                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4421 0              -1021 1020 fill=4410 u=440 imp:n=1
+4422 4 -_shell_density_ -1022 1021           u=440 imp:n=1
+          tmp=_shell_temperature_
+4423 3 -_core_density_ -1023                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4424 0              -1024 1023 fill=4410 u=440 imp:n=1
+4425 4 -_shell_density_ -1025 1024           u=440 imp:n=1
+          tmp=_shell_temperature_
+4426 3 -_core_density_ -1026                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4427 0              -1027 1026 fill=4410 u=440 imp:n=1
+4428 4 -_shell_density_ -1028 1027           u=440 imp:n=1
+          tmp=_shell_temperature_
+4429 3 -_core_density_ -1029                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4430 0              -1030 1029 fill=4410 u=440 imp:n=1
+4431 4 -_shell_density_ -1031 1030           u=440 imp:n=1
+          tmp=_shell_temperature_
+c
+4440 3 -_core_density_ -1040                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4441 0              -1041 1040 fill=4410 u=440 imp:n=1
+4442 4 -_shell_density_ -1042 1041           u=440 imp:n=1
+          tmp=_shell_temperature_
+4443 3 -_core_density_ -1043                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4444 0              -1044 1043 fill=4410 u=440 imp:n=1
+4445 4 -_shell_density_ -1045 1044           u=440 imp:n=1
+          tmp=_shell_temperature_
+c
+4450 3 -_core_density_ -1050                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4451 0              -1051 1050 fill=4410 u=440 imp:n=1
+4452 4 -_shell_density_ -1052 1051           u=440 imp:n=1
+          tmp=_shell_temperature_
+4453 3 -_core_density_ -1053                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4454 0              -1054 1053 fill=4410 u=440 imp:n=1
+4455 4 -_shell_density_ -1055 1054           u=440 imp:n=1
+          tmp=_shell_temperature_
+c
+4460 3 -_core_density_ -1060                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4461 0              -1061 1060 fill=4410 u=440 imp:n=1
+4462 4 -_shell_density_ -1062 1061           u=440 imp:n=1
+          tmp=_shell_temperature_
+4463 3 -_core_density_ -1063                 u=440 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4464 0              -1064 1063 fill=4410 u=440 imp:n=1
+4465 4 -_shell_density_ -1065 1064           u=440 imp:n=1
+          tmp=_shell_temperature_
+4480 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=440 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+4481 0              -1080 1081 -1082 1083 -1084 1085 fill=440 imp:n=1 u=44 lat=1 $ FCC Unit Cell
+c
+c Pebble: 15
+c
+1500 3 -_core_density_ -1000                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1501 0              -1001 1000 fill=1510 u=150 imp:n=1
+1502 4 -_shell_density_ -1002 1001           u=150 imp:n=1
+          tmp=_shell_temperature_
+1503 3 -_core_density_ -1003                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1504 0              -1004 1003 fill=1510 u=150 imp:n=1
+1505 4 -_shell_density_ -1005 1004           u=150 imp:n=1
+          tmp=_shell_temperature_
+1506 3 -_core_density_ -1006                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1507 0              -1007 1006 fill=1510 u=150 imp:n=1
+1508 4 -_shell_density_ -1008 1007           u=150 imp:n=1
+          tmp=_shell_temperature_
+1509 3 -_core_density_ -1009                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1510 0              -1010 1009 fill=1510 u=150 imp:n=1
+1511 4 -_shell_density_ -1011 1010           u=150 imp:n=1
+          tmp=_shell_temperature_
+1520 3 -_core_density_ -1020                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1521 0              -1021 1020 fill=1510 u=150 imp:n=1
+1522 4 -_shell_density_ -1022 1021           u=150 imp:n=1
+          tmp=_shell_temperature_
+1523 3 -_core_density_ -1023                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1524 0              -1024 1023 fill=1510 u=150 imp:n=1
+1525 4 -_shell_density_ -1025 1024           u=150 imp:n=1
+          tmp=_shell_temperature_
+1526 3 -_core_density_ -1026                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1527 0              -1027 1026 fill=1510 u=150 imp:n=1
+1528 4 -_shell_density_ -1028 1027           u=150 imp:n=1
+          tmp=_shell_temperature_
+1529 3 -_core_density_ -1029                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1530 0              -1030 1029 fill=1510 u=150 imp:n=1
+1531 4 -_shell_density_ -1031 1030           u=150 imp:n=1
+          tmp=_shell_temperature_
+c
+1540 3 -_core_density_ -1040                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1541 0              -1041 1040 fill=1510 u=150 imp:n=1
+1542 4 -_shell_density_ -1042 1041           u=150 imp:n=1
+          tmp=_shell_temperature_
+1543 3 -_core_density_ -1043                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1544 0              -1044 1043 fill=1510 u=150 imp:n=1
+1545 4 -_shell_density_ -1045 1044           u=150 imp:n=1
+          tmp=_shell_temperature_
+c
+1550 3 -_core_density_ -1050                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1551 0              -1051 1050 fill=1510 u=150 imp:n=1
+1552 4 -_shell_density_ -1052 1051           u=150 imp:n=1
+          tmp=_shell_temperature_
+1553 3 -_core_density_ -1053                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1554 0              -1054 1053 fill=1510 u=150 imp:n=1
+1555 4 -_shell_density_ -1055 1054           u=150 imp:n=1
+          tmp=_shell_temperature_
+c
+1560 3 -_core_density_ -1060                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1561 0              -1061 1060 fill=1510 u=150 imp:n=1
+1562 4 -_shell_density_ -1062 1061           u=150 imp:n=1
+          tmp=_shell_temperature_
+1563 3 -_core_density_ -1063                 u=150 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+1564 0              -1064 1063 fill=1510 u=150 imp:n=1
+1565 4 -_shell_density_ -1065 1064           u=150 imp:n=1
+          tmp=_shell_temperature_
+1580 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=150 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+1581 0              -1080 1081 -1082 1083 -1084 1085 fill=150 imp:n=1 u=15 lat=1 $ FCC Unit Cell
+c
+c Pebble: 25
+c
+2500 3 -_core_density_ -1000                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2501 0              -1001 1000 fill=2510 u=250 imp:n=1
+2502 4 -_shell_density_ -1002 1001           u=250 imp:n=1
+          tmp=_shell_temperature_
+2503 3 -_core_density_ -1003                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2504 0              -1004 1003 fill=2510 u=250 imp:n=1
+2505 4 -_shell_density_ -1005 1004           u=250 imp:n=1
+          tmp=_shell_temperature_
+2506 3 -_core_density_ -1006                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2507 0              -1007 1006 fill=2510 u=250 imp:n=1
+2508 4 -_shell_density_ -1008 1007           u=250 imp:n=1
+          tmp=_shell_temperature_
+2509 3 -_core_density_ -1009                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2510 0              -1010 1009 fill=2510 u=250 imp:n=1
+2511 4 -_shell_density_ -1011 1010           u=250 imp:n=1
+          tmp=_shell_temperature_
+2520 3 -_core_density_ -1020                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2521 0              -1021 1020 fill=2510 u=250 imp:n=1
+2522 4 -_shell_density_ -1022 1021           u=250 imp:n=1
+          tmp=_shell_temperature_
+2523 3 -_core_density_ -1023                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2524 0              -1024 1023 fill=2510 u=250 imp:n=1
+2525 4 -_shell_density_ -1025 1024           u=250 imp:n=1
+          tmp=_shell_temperature_
+2526 3 -_core_density_ -1026                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2527 0              -1027 1026 fill=2510 u=250 imp:n=1
+2528 4 -_shell_density_ -1028 1027           u=250 imp:n=1
+          tmp=_shell_temperature_
+2529 3 -_core_density_ -1029                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2530 0              -1030 1029 fill=2510 u=250 imp:n=1
+2531 4 -_shell_density_ -1031 1030           u=250 imp:n=1
+          tmp=_shell_temperature_
+c
+2540 3 -_core_density_ -1040                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2541 0              -1041 1040 fill=2510 u=250 imp:n=1
+2542 4 -_shell_density_ -1042 1041           u=250 imp:n=1
+          tmp=_shell_temperature_
+2543 3 -_core_density_ -1043                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2544 0              -1044 1043 fill=2510 u=250 imp:n=1
+2545 4 -_shell_density_ -1045 1044           u=250 imp:n=1
+          tmp=_shell_temperature_
+c
+2550 3 -_core_density_ -1050                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2551 0              -1051 1050 fill=2510 u=250 imp:n=1
+2552 4 -_shell_density_ -1052 1051           u=250 imp:n=1
+          tmp=_shell_temperature_
+2553 3 -_core_density_ -1053                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2554 0              -1054 1053 fill=2510 u=250 imp:n=1
+2555 4 -_shell_density_ -1055 1054           u=250 imp:n=1
+          tmp=_shell_temperature_
+c
+2560 3 -_core_density_ -1060                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2561 0              -1061 1060 fill=2510 u=250 imp:n=1
+2562 4 -_shell_density_ -1062 1061           u=250 imp:n=1
+          tmp=_shell_temperature_
+2563 3 -_core_density_ -1063                 u=250 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+2564 0              -1064 1063 fill=2510 u=250 imp:n=1
+2565 4 -_shell_density_ -1065 1064           u=250 imp:n=1
+          tmp=_shell_temperature_
+2580 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=250 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+2581 0              -1080 1081 -1082 1083 -1084 1085 fill=250 imp:n=1 u=25 lat=1 $ FCC Unit Cell
+c
+c Pebble: 35
+c
+3500 3 -_core_density_ -1000                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3501 0              -1001 1000 fill=3510 u=350 imp:n=1
+3502 4 -_shell_density_ -1002 1001           u=350 imp:n=1
+          tmp=_shell_temperature_
+3503 3 -_core_density_ -1003                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3504 0              -1004 1003 fill=3510 u=350 imp:n=1
+3505 4 -_shell_density_ -1005 1004           u=350 imp:n=1
+          tmp=_shell_temperature_
+3506 3 -_core_density_ -1006                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3507 0              -1007 1006 fill=3510 u=350 imp:n=1
+3508 4 -_shell_density_ -1008 1007           u=350 imp:n=1
+          tmp=_shell_temperature_
+3509 3 -_core_density_ -1009                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3510 0              -1010 1009 fill=3510 u=350 imp:n=1
+3511 4 -_shell_density_ -1011 1010           u=350 imp:n=1
+          tmp=_shell_temperature_
+3520 3 -_core_density_ -1020                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3521 0              -1021 1020 fill=3510 u=350 imp:n=1
+3522 4 -_shell_density_ -1022 1021           u=350 imp:n=1
+          tmp=_shell_temperature_
+3523 3 -_core_density_ -1023                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3524 0              -1024 1023 fill=3510 u=350 imp:n=1
+3525 4 -_shell_density_ -1025 1024           u=350 imp:n=1
+          tmp=_shell_temperature_
+3526 3 -_core_density_ -1026                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3527 0              -1027 1026 fill=3510 u=350 imp:n=1
+3528 4 -_shell_density_ -1028 1027           u=350 imp:n=1
+          tmp=_shell_temperature_
+3529 3 -_core_density_ -1029                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3530 0              -1030 1029 fill=3510 u=350 imp:n=1
+3531 4 -_shell_density_ -1031 1030           u=350 imp:n=1
+          tmp=_shell_temperature_
+c
+3540 3 -_core_density_ -1040                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3541 0              -1041 1040 fill=3510 u=350 imp:n=1
+3542 4 -_shell_density_ -1042 1041           u=350 imp:n=1
+          tmp=_shell_temperature_
+3543 3 -_core_density_ -1043                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3544 0              -1044 1043 fill=3510 u=350 imp:n=1
+3545 4 -_shell_density_ -1045 1044           u=350 imp:n=1
+          tmp=_shell_temperature_
+c
+3550 3 -_core_density_ -1050                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3551 0              -1051 1050 fill=3510 u=350 imp:n=1
+3552 4 -_shell_density_ -1052 1051           u=350 imp:n=1
+          tmp=_shell_temperature_
+3553 3 -_core_density_ -1053                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3554 0              -1054 1053 fill=3510 u=350 imp:n=1
+3555 4 -_shell_density_ -1055 1054           u=350 imp:n=1
+          tmp=_shell_temperature_
+c
+3560 3 -_core_density_ -1060                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3561 0              -1061 1060 fill=3510 u=350 imp:n=1
+3562 4 -_shell_density_ -1062 1061           u=350 imp:n=1
+          tmp=_shell_temperature_
+3563 3 -_core_density_ -1063                 u=350 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+3564 0              -1064 1063 fill=3510 u=350 imp:n=1
+3565 4 -_shell_density_ -1065 1064           u=350 imp:n=1
+          tmp=_shell_temperature_
+3580 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=350 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+3581 0              -1080 1081 -1082 1083 -1084 1085 fill=350 imp:n=1 u=35 lat=1 $ FCC Unit Cell
+c
+c Pebble: 45
+c
+4500 3 -_core_density_ -1000                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4501 0              -1001 1000 fill=4510 u=450 imp:n=1
+4502 4 -_shell_density_ -1002 1001           u=450 imp:n=1
+          tmp=_shell_temperature_
+4503 3 -_core_density_ -1003                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4504 0              -1004 1003 fill=4510 u=450 imp:n=1
+4505 4 -_shell_density_ -1005 1004           u=450 imp:n=1
+          tmp=_shell_temperature_
+4506 3 -_core_density_ -1006                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4507 0              -1007 1006 fill=4510 u=450 imp:n=1
+4508 4 -_shell_density_ -1008 1007           u=450 imp:n=1
+          tmp=_shell_temperature_
+4509 3 -_core_density_ -1009                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4510 0              -1010 1009 fill=4510 u=450 imp:n=1
+4511 4 -_shell_density_ -1011 1010           u=450 imp:n=1
+          tmp=_shell_temperature_
+4520 3 -_core_density_ -1020                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4521 0              -1021 1020 fill=4510 u=450 imp:n=1
+4522 4 -_shell_density_ -1022 1021           u=450 imp:n=1
+          tmp=_shell_temperature_
+4523 3 -_core_density_ -1023                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4524 0              -1024 1023 fill=4510 u=450 imp:n=1
+4525 4 -_shell_density_ -1025 1024           u=450 imp:n=1
+          tmp=_shell_temperature_
+4526 3 -_core_density_ -1026                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4527 0              -1027 1026 fill=4510 u=450 imp:n=1
+4528 4 -_shell_density_ -1028 1027           u=450 imp:n=1
+          tmp=_shell_temperature_
+4529 3 -_core_density_ -1029                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4530 0              -1030 1029 fill=4510 u=450 imp:n=1
+4531 4 -_shell_density_ -1031 1030           u=450 imp:n=1
+          tmp=_shell_temperature_
+c
+4540 3 -_core_density_ -1040                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4541 0              -1041 1040 fill=4510 u=450 imp:n=1
+4542 4 -_shell_density_ -1042 1041           u=450 imp:n=1
+          tmp=_shell_temperature_
+4543 3 -_core_density_ -1043                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4544 0              -1044 1043 fill=4510 u=450 imp:n=1
+4545 4 -_shell_density_ -1045 1044           u=450 imp:n=1
+          tmp=_shell_temperature_
+c
+4550 3 -_core_density_ -1050                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4551 0              -1051 1050 fill=4510 u=450 imp:n=1
+4552 4 -_shell_density_ -1052 1051           u=450 imp:n=1
+          tmp=_shell_temperature_
+4553 3 -_core_density_ -1053                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4554 0              -1054 1053 fill=4510 u=450 imp:n=1
+4555 4 -_shell_density_ -1055 1054           u=450 imp:n=1
+          tmp=_shell_temperature_
+c
+4560 3 -_core_density_ -1060                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4561 0              -1061 1060 fill=4510 u=450 imp:n=1
+4562 4 -_shell_density_ -1062 1061           u=450 imp:n=1
+          tmp=_shell_temperature_
+4563 3 -_core_density_ -1063                 u=450 imp:n=1 $ Depletion Region 1
+          tmp=_core_temperature_
+4564 0              -1064 1063 fill=4510 u=450 imp:n=1
+4565 4 -_shell_density_ -1065 1064           u=450 imp:n=1
+          tmp=_shell_temperature_
+4580 24 -_coolant_density_ 1002 1005 1008 1011 
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=450 imp:n=1 $ Coolant
+          tmp=_coolant_temperature_
+4581 0              -1080 1081 -1082 1083 -1084 1085 fill=450 imp:n=1 u=45 lat=1 $ FCC Unit Cell
+c
+c Pebble: 50
+c
+5002 2 -_shell_density_ -1002                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5005 2 -_shell_density_ -1005                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5008 2 -_shell_density_ -1008                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5011 2 -_shell_density_ -1011                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5022 2 -_shell_density_ -1022                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5025 2 -_shell_density_ -1025                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5028 2 -_shell_density_ -1028                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5031 2 -_shell_density_ -1031                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+c
+5042 2 -_shell_density_ -1042                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5045 2 -_shell_density_ -1045                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+c
+5052 2 -_shell_density_ -1052                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5055 2 -_shell_density_ -1055                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+c
+5062 2 -_shell_density_ -1062                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5065 2 -_shell_density_ -1065                u=500 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5080 25 -_coolant_outlet_density_ 1002 1005 1008 1011
+                   1022 1025 1028 1031
+                   1042 1045 1052 1055 1062 1065 u=500 imp:n=1 $ Coolant
+          tmp=_coolant_outlet_temperature_
+5081 0              -1080 1081 -1082 1083 -1084 1085 fill=500 imp:n=1 u=50 lat=1 $ FCC Unit Cell
+c
+c Pebble: 51
+c
+5102 2 -_shell_density_ -1102                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5105 2 -_shell_density_ -1105                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5108 2 -_shell_density_ -1108                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5111 2 -_shell_density_ -1111                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5122 2 -_shell_density_ -1122                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5125 2 -_shell_density_ -1125                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5128 2 -_shell_density_ -1128                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5131 2 -_shell_density_ -1131                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+c
+5142 2 -_shell_density_ -1142                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5145 2 -_shell_density_ -1145                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+c
+5152 2 -_shell_density_ -1152                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5155 2 -_shell_density_ -1155                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+c
+5162 2 -_shell_density_ -1162                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5165 2 -_shell_density_ -1165                u=510 imp:n=1
+          tmp=_coolant_outlet_temperature_
+5180 25 -_coolant_outlet_density_ 1102 1105 1108 1111
+                   1122 1125 1128 1131
+                   1142 1145 1152 1155 1162 1165 u=510 imp:n=1 $ Coolant
+          tmp=_coolant_outlet_temperature_
+5181 0              -1180 1181 -1182 1183 -1184 1185 fill=510 imp:n=1 u=51 lat=1 $ FCC Unit Cell

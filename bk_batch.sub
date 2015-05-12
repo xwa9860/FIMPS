@@ -1,0 +1,13 @@
+#!/bin/sh
+#SBATCH --mem_bind=verbose,local
+#SBATCH --cpu_bind=verbose,rank_ldom
+#SBATCH --job-name=mcnp_fimps
+#SBATCH --output=mcnp_fimps.sout  
+#SBATCH --error=mcnp_fimps.err    
+#SBATCH --partition=x         
+#SBATCH --time=100:00:00 
+#SBATCH --cpus-per-task=6
+#SBATCH --ntasks=8
+
+
+srun  /usr/local/LANL/MCNP5-1.60/bin/mcnp5.mpi i=inp_beau o=outp mc=mctal runtpe=runtpe

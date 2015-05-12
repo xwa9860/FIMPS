@@ -1,0 +1,439 @@
+Fullcore PB-FHR 
+c
+c Power (MW):                        _power_
+c Power Density (MWt/m3):            _fuel_power_density_
+c Fuel Fraction (%):                 _fuel_fraction_
+c Graphite Reflector Thickness (cm): _outer_graphite_reflector_thickness_ 
+c Fuel Design
+c      CHM:                          _CHM_
+c      Kernel Diameter (um):         _kernel_diameter_ 
+c      Ave Density (g/cc):           _pebble_density_
+c
+c ------------------------------------------------------------------------------
+c Cells
+c ------------------------------------------------------------------------------
+_pebble_cells_c
+c Shield Unit Cell
+c
+6000 60 -_absorber_density_ -6000     imp:n=1 u=61 tmp=_coolant_inlet_temperature_ $ shield absorber
+6001 61 -_shield_clad_density_ -6001 6000 imp:n=1 u=61 tmp=_coolant_inlet_temperature_ $ shield clad
+6002  1 -_shield_block_density_      6001 imp:n=1 u=61 tmp=_coolant_inlet_temperature_ $ shield block
+c
+6003  0        -6010 6011 -6012 6013 -6014 6015 imp:n=1 lat=2 fill=61 u=60 $ infinite array of shield absorber pins
+c
+c Full Core
+c
+_inner_reflector_cell_
+_control_rod_cells_
+_control_blade_cell__control_blade_cell2_
+903 6 -_density_outer_porous_reflector_ -905 411 -700 404 imp:n=1 $ outer porous reflector
+          tmp=_coolant_outlet_temperature_
+904 2 -_inner_solid_reflector_density_ (-905 411 -404 206) imp:n=1 $ outer solid reflector
+          tmp=_coolant_outlet_temperature_
+905 1 -_inner_solid_reflector_density_ (-907 905 -700 206) imp:n=1 $ outer solid reflector
+          tmp=_coolant_inlet_temperature_
+906  0       -700 206 907 -909 fill=60 imp:n=1 $ shield
+907  1 -1.9  -700 206 909 -911         imp:n=1 $ core barrel
+          tmp=_coolant_inlet_temperature_
+908 23 -_coolant_inlet_density_ -700 206 911 -913         imp:n=1 $ down comer
+          tmp=_coolant_inlet_temperature_
+909 31 -8    -602 206 913 -915         imp:n=1 $ reactor vessel
+          tmp=_coolant_inlet_temperature_
+c ------------------------------------------------------------------------------
+c lower region
+c
+100 31 -8    -206 -100 102 imp:n=1 $ plenum reactor vessel
+          tmp=_coolant_inlet_temperature_
+101 23 -_coolant_inlet_density_ (-206 -102 200):(-202 -200) imp:n=1 $ down comer in plenum 
+          tmp=_coolant_inlet_temperature_
+c ------------------------------------------------------------------------------
+c pebble entrance
+c
+200 23 -_coolant_inlet_density_ -204 202 -209 903 imp:n=1 $ plenum below pebbles
+          tmp=_coolant_inlet_temperature_
+c
+201 11100 -10.5 -300 204 -201 903 imp:n=1 fill=11 $ depletion zone 11 
+202 21100 -10.5 -300 204 -203 201 imp:n=1 fill=21 $ depletion zone 21
+203 31100 -10.5 -300 204 -205 203 imp:n=1 fill=31 $ depletion zone 31
+204 41100 -10.5 -300 204 -207 205 imp:n=1 fill=41 $ depletion zone 41
+205     5 -1.74 -300 204 -209 207 imp:n=1 fill=50 $ pebble reflector
+206     1 -1.74000E+00 (-300 206 -411 209):(-206 209 -200 202) imp:n=1 $ solid reflector
+          tmp=_coolant_inlet_temperature_
+c ------------------------------------------------------------------------------
+c expansion region
+c
+300 12100 -10.5 -400 300 -301 903 imp:n=1 fill=12 $ depletion zone 12  
+301 22100 -10.5 -400 300 -303 301 imp:n=1 fill=22 $ depletion zone 22
+302 32100 -10.5 -400 300 -305 303 imp:n=1 fill=32 $ depletion zone 32
+303 42100 -10.5 -400 300 -307 305 imp:n=1 fill=42 $ depletion zone 42
+304     5 -1.74 -400 300 -309 307 imp:n=1 fill=50 $ pebble reflector
+305     1 -1.74000E+00 -400 300 -411 309 imp:n=1 $ solid graphite reflector
+          tmp=_coolant_inlet_temperature_
+c ------------------------------------------------------------------------------
+c active region
+c
+400 13100 -10.5 -500 400 -401 903 _CB_cells_
+                                  imp:n=1 fill=13 $ depletion zone 13
+401 23100 -10.5 -500 400 -403 401 _CB_cells_
+                                  imp:n=1 fill=23 $ depletion zone 13
+402 33100 -10.5 -500 400 -405 403 _CB_cells_
+                                  imp:n=1 fill=33 $ depletion zone 13
+403 43100 -10.5 -500 400 -407 405 _CB_cells_
+                                  imp:n=1 fill=43 $ depletion zone 13
+404     6 -1.74 -500 400 -409 407 _CB_cells_ 
+                                  imp:n=1 fill=51 $ pebble reflector (bulk)
+405     5 -1.74 -500 400 -411 409 _CB_cells_ 
+                                  imp:n=1 fill=50 $ pebble reflector (wall)
+c ------------------------------------------------------------------------------
+c converging region
+c 
+500 14100 -10.5 -600 500 -501 903 _CB_cells_ 
+                                  imp:n=1 fill=14 $ depletion zone 14
+501 24100 -10.5 -600 500 -503 501 _CB_cells_ 
+                                  imp:n=1 fill=24 $ depletion zone 24
+502 34100 -10.5 -600 500 -505 503 _CB_cells_ 
+                                  imp:n=1 fill=34 $ depletion zone 34
+503 44100 -10.5 -600 500 -507 505 _CB_cells_ 
+                                  imp:n=1 fill=44 $ depletion zone 44
+504     5 -1.74 -600 500 -509 507 _CB_cells_ 
+                                  imp:n=1 fill=50 $ pebble reflector
+_converging_reflector_cell_
+c ------------------------------------------------------------------------------
+c defueling chute
+c
+600 15100 -10.5 -602 600 -601 903 imp:n=1 fill=15 $ depletion zone 15
+601 25100 -10.5 -602 600 -603 601 imp:n=1 fill=25 $ depletion zone 25
+602 35100 -10.5 -602 600 -605 603 imp:n=1 fill=35 $ depletion zone 35
+603 45100 -10.5 -602 600 -607 605 imp:n=1 fill=45 $ depletion zone 45
+604     5 -1.74 -602 600 -609 607 imp:n=1 fill=50 $ pebble reflector
+_defueling_reflector_cell_
+c ------------------------------------------------------------------------------
+c heat exchanger 
+c
+_heat_exchanger_reflector_cell_ 
+701 700 -3 -602 700 -913 701 imp:n=1
+          tmp=_coolant_temperature_
+c  
+9999 0 (206 915:602):(-206 100) imp:n=0
+
+c ------------------------------------------------------------------------------
+c Surfaces
+c ------------------------------------------------------------------------------
+c
+c TRISO surfaces
+c 
+1   so    _kernel_radius_    $  Kernel
+c
+c   Seed Fuel Particles Lattice (PF: 40.0)
+c
+11  px    _triso_hpitch_
+12  px   -_triso_hpitch_
+13  py    _triso_hpitch_
+14  py   -_triso_hpitch_
+15  pz    _triso_hpitch_
+16  pz   -_triso_hpitch_
+c
+c Pebble surfaces (PF: _wall_pf_)
+c
+1000 s  _pebble_hpitch1_  _pebble_hpitch1_  _pebble_hpitch1_ _pebble_core_radius_
+1001 s  _pebble_hpitch1_  _pebble_hpitch1_  _pebble_hpitch1_ _pebble_active_radius_
+1002 s  _pebble_hpitch1_  _pebble_hpitch1_  _pebble_hpitch1_ _pebble_shell_radius_
+c
+1003 s -_pebble_hpitch1_  _pebble_hpitch1_  _pebble_hpitch1_ _pebble_core_radius_
+1004 s -_pebble_hpitch1_  _pebble_hpitch1_  _pebble_hpitch1_ _pebble_active_radius_
+1005 s -_pebble_hpitch1_  _pebble_hpitch1_  _pebble_hpitch1_ _pebble_shell_radius_
+c
+1006 s -_pebble_hpitch1_ -_pebble_hpitch1_  _pebble_hpitch1_ _pebble_core_radius_
+1007 s -_pebble_hpitch1_ -_pebble_hpitch1_  _pebble_hpitch1_ _pebble_active_radius_
+1008 s -_pebble_hpitch1_ -_pebble_hpitch1_  _pebble_hpitch1_ _pebble_shell_radius_
+c
+1009 s  _pebble_hpitch1_ -_pebble_hpitch1_  _pebble_hpitch1_ _pebble_core_radius_
+1010 s  _pebble_hpitch1_ -_pebble_hpitch1_  _pebble_hpitch1_ _pebble_active_radius_
+1011 s  _pebble_hpitch1_ -_pebble_hpitch1_  _pebble_hpitch1_ _pebble_shell_radius_
+c
+1020 s  _pebble_hpitch1_  _pebble_hpitch1_ -_pebble_hpitch1_ _pebble_core_radius_
+1021 s  _pebble_hpitch1_  _pebble_hpitch1_ -_pebble_hpitch1_ _pebble_active_radius_
+1022 s  _pebble_hpitch1_  _pebble_hpitch1_ -_pebble_hpitch1_ _pebble_shell_radius_
+c
+1023 s -_pebble_hpitch1_  _pebble_hpitch1_ -_pebble_hpitch1_ _pebble_core_radius_
+1024 s -_pebble_hpitch1_  _pebble_hpitch1_ -_pebble_hpitch1_ _pebble_active_radius_
+1025 s -_pebble_hpitch1_  _pebble_hpitch1_ -_pebble_hpitch1_ _pebble_shell_radius_
+c
+1026 s -_pebble_hpitch1_ -_pebble_hpitch1_ -_pebble_hpitch1_ _pebble_core_radius_
+1027 s -_pebble_hpitch1_ -_pebble_hpitch1_ -_pebble_hpitch1_ _pebble_active_radius_
+1028 s -_pebble_hpitch1_ -_pebble_hpitch1_ -_pebble_hpitch1_ _pebble_shell_radius_
+c
+1029 s  _pebble_hpitch1_ -_pebble_hpitch1_ -_pebble_hpitch1_ _pebble_core_radius_
+1030 s  _pebble_hpitch1_ -_pebble_hpitch1_ -_pebble_hpitch1_ _pebble_active_radius_
+1031 s  _pebble_hpitch1_ -_pebble_hpitch1_ -_pebble_hpitch1_ _pebble_shell_radius_
+c
+1040 s  _pebble_hpitch1_  0           0          _pebble_core_radius_
+1041 s  _pebble_hpitch1_  0           0          _pebble_active_radius_
+1042 s  _pebble_hpitch1_  0           0          _pebble_shell_radius_
+c
+1043 s -_pebble_hpitch1_  0           0          _pebble_core_radius_
+1044 s -_pebble_hpitch1_  0           0          _pebble_active_radius_
+1045 s -_pebble_hpitch1_  0           0          _pebble_shell_radius_
+c
+1050 s   0          _pebble_hpitch1_  0          _pebble_core_radius_
+1051 s   0          _pebble_hpitch1_  0          _pebble_active_radius_
+1052 s   0          _pebble_hpitch1_  0          _pebble_shell_radius_
+c
+1053 s   0         -_pebble_hpitch1_  0          _pebble_core_radius_
+1054 s   0         -_pebble_hpitch1_  0          _pebble_active_radius_
+1055 s   0         -_pebble_hpitch1_  0          _pebble_shell_radius_
+c
+1060 s   0           0          _pebble_hpitch1_  _pebble_core_radius_
+1061 s   0           0          _pebble_hpitch1_  _pebble_active_radius_
+1062 s   0           0          _pebble_hpitch1_  _pebble_shell_radius_
+c
+1063 s   0           0         -_pebble_hpitch1_  _pebble_core_radius_
+1064 s   0           0         -_pebble_hpitch1_  _pebble_active_radius_
+1065 s   0           0         -_pebble_hpitch1_  _pebble_shell_radius_
+c
+c Pebble Unit Cell Surfaces (PF: _wall_pf_)
+c
+1080 px  _pebble_hpitch1_
+1081 px -_pebble_hpitch1_
+1082 py  _pebble_hpitch1_
+1083 py -_pebble_hpitch1_
+1084 pz  _pebble_hpitch1_
+1085 pz -_pebble_hpitch1_
+c
+c Pebble surfaces (PF: _bulk_pf_)
+c
+1100 s  _pebble_hpitch2_  _pebble_hpitch2_  _pebble_hpitch2_ _pebble_core_radius_
+1101 s  _pebble_hpitch2_  _pebble_hpitch2_  _pebble_hpitch2_ _pebble_active_radius_
+1102 s  _pebble_hpitch2_  _pebble_hpitch2_  _pebble_hpitch2_ _pebble_shell_radius_
+c
+1103 s -_pebble_hpitch2_  _pebble_hpitch2_  _pebble_hpitch2_ _pebble_core_radius_
+1104 s -_pebble_hpitch2_  _pebble_hpitch2_  _pebble_hpitch2_ _pebble_active_radius_
+1105 s -_pebble_hpitch2_  _pebble_hpitch2_  _pebble_hpitch2_ _pebble_shell_radius_
+c
+1106 s -_pebble_hpitch2_ -_pebble_hpitch2_  _pebble_hpitch2_ _pebble_core_radius_
+1107 s -_pebble_hpitch2_ -_pebble_hpitch2_  _pebble_hpitch2_ _pebble_active_radius_
+1108 s -_pebble_hpitch2_ -_pebble_hpitch2_  _pebble_hpitch2_ _pebble_shell_radius_
+c
+1109 s  _pebble_hpitch2_ -_pebble_hpitch2_  _pebble_hpitch2_ _pebble_core_radius_
+1110 s  _pebble_hpitch2_ -_pebble_hpitch2_  _pebble_hpitch2_ _pebble_active_radius_
+1111 s  _pebble_hpitch2_ -_pebble_hpitch2_  _pebble_hpitch2_ _pebble_shell_radius_
+c
+1120 s  _pebble_hpitch2_  _pebble_hpitch2_ -_pebble_hpitch2_ _pebble_core_radius_
+1121 s  _pebble_hpitch2_  _pebble_hpitch2_ -_pebble_hpitch2_ _pebble_active_radius_
+1122 s  _pebble_hpitch2_  _pebble_hpitch2_ -_pebble_hpitch2_ _pebble_shell_radius_
+c
+1123 s -_pebble_hpitch2_  _pebble_hpitch2_ -_pebble_hpitch2_ _pebble_core_radius_
+1124 s -_pebble_hpitch2_  _pebble_hpitch2_ -_pebble_hpitch2_ _pebble_active_radius_
+1125 s -_pebble_hpitch2_  _pebble_hpitch2_ -_pebble_hpitch2_ _pebble_shell_radius_
+c
+1126 s -_pebble_hpitch2_ -_pebble_hpitch2_ -_pebble_hpitch2_ _pebble_core_radius_
+1127 s -_pebble_hpitch2_ -_pebble_hpitch2_ -_pebble_hpitch2_ _pebble_active_radius_
+1128 s -_pebble_hpitch2_ -_pebble_hpitch2_ -_pebble_hpitch2_ _pebble_shell_radius_
+c
+1129 s  _pebble_hpitch2_ -_pebble_hpitch2_ -_pebble_hpitch2_ _pebble_core_radius_
+1130 s  _pebble_hpitch2_ -_pebble_hpitch2_ -_pebble_hpitch2_ _pebble_active_radius_
+1131 s  _pebble_hpitch2_ -_pebble_hpitch2_ -_pebble_hpitch2_ _pebble_shell_radius_
+c
+1140 s  _pebble_hpitch2_  0           0          _pebble_core_radius_
+1141 s  _pebble_hpitch2_  0           0          _pebble_active_radius_
+1142 s  _pebble_hpitch2_  0           0          _pebble_shell_radius_
+c
+1143 s -_pebble_hpitch2_  0           0          _pebble_core_radius_
+1144 s -_pebble_hpitch2_  0           0          _pebble_active_radius_
+1145 s -_pebble_hpitch2_  0           0          _pebble_shell_radius_
+c
+1150 s   0          _pebble_hpitch2_  0          _pebble_core_radius_
+1151 s   0          _pebble_hpitch2_  0          _pebble_active_radius_
+1152 s   0          _pebble_hpitch2_  0          _pebble_shell_radius_
+c
+1153 s   0         -_pebble_hpitch2_  0          _pebble_core_radius_
+1154 s   0         -_pebble_hpitch2_  0          _pebble_active_radius_
+1155 s   0         -_pebble_hpitch2_  0          _pebble_shell_radius_
+c
+1160 s   0           0          _pebble_hpitch2_  _pebble_core_radius_
+1161 s   0           0          _pebble_hpitch2_  _pebble_active_radius_
+1162 s   0           0          _pebble_hpitch2_  _pebble_shell_radius_
+c
+1163 s   0           0         -_pebble_hpitch2_  _pebble_core_radius_
+1164 s   0           0         -_pebble_hpitch2_  _pebble_active_radius_
+1165 s   0           0         -_pebble_hpitch2_  _pebble_shell_radius_
+c
+c Pebble Unit Cell Surfaces (PF: _bulk_pf_)
+c
+1180 px  _pebble_hpitch2_
+1181 px -_pebble_hpitch2_
+1182 py  _pebble_hpitch2_
+1183 py -_pebble_hpitch2_
+1184 pz  _pebble_hpitch2_
+1185 pz -_pebble_hpitch2_
+c 
+c Shield Unit Cell Surfaces
+c
+6000 cz _absorber_radius_ 
+6001 cz _absorber_clad_radius_
+c
+6010 px                    _absorber_hpitch_
+6011 px                   -_absorber_hpitch_
+6012 p  1.  1.732050808 0  _absorber_pitch_
+6013 p  1.  1.732050808 0 -_absorber_pitch_
+6014 p -1.  1.732050808 0  _absorber_pitch_
+6015 p -1.  1.732050808 0 -_absorber_pitch_
+c
+c ------------------------------------------------------------------------------
+c
+c Full Core Surfaces
+c
+901 cz _inner_solid_reflector_interface_ $ between porosity region and solid region  
+903 cz _inner_solid_reflector_radius_
+905 cz _outer_solid_refelctor_interface_ $ between porosity region and solid region
+907 cz _shield_radius_
+909 cz _outer_solid_refelctor_radius_
+911 cz _core_barrel_radius_
+913 cz _down_comer_radius_
+915 cz _reactor_vessel_radius_
+c
+c plenum region
+c
+100  sq _plenum_reactor_vessel_ $ Lower Surface of Reactor Pressure Vessel
+102  sq _plenum_coolant_surface_ $ Lower Surface of Coolant Plenum
+c
+c entrance region
+c
+c axial surfaces
+c
+200  sq _entrance_bottom_
+202  pz 0 
+204  pz _repose_height_
+206  pz _entrance2_axial_height_
+c
+c radial surfaces
+c
+201 cz _entrance_fuel_radius1_ $ outer radial zone 1
+203 cz _entrance_fuel_radius2_ $ outer radial zone 2
+205 cz _entrance_fuel_radius3_ $ outer radial zone 3
+207 cz _entrance_fuel_radius4_ $ outer radial zone 4
+209 cz _entrance_pebble_reflector_radius_ 
+c
+c expansion region
+c
+c axial surfaces
+c
+300  pz _entrance_axial_height_
+c
+c radial surfaces
+c
+301 kz _expansion_fuel_cone1_ $ outer radial zone 1
+303 kz _expansion_fuel_cone2_ $ outer radial zone 2
+305 kz _expansion_fuel_cone3_ $ outer radial zone 3
+307 kz _expansion_fuel_cone4_ $ outer radial zone 4
+309 kz _expansion_pebble_reflector_core_
+c
+c active region
+c
+400  pz _expansion_axial_height_
+402  pz _top_porous_inner_reflector_
+404  pz _bottom_porous_outer_reflector_
+406  pz _bottom_control_rod_
+408  pz _top_control_rod_
+c
+c radial surfaces
+c
+401 cz _active_fuel_radius1_ $ outer radial zone 1
+403 cz _active_fuel_radius2_ $ outer radial zone 2
+405 cz _active_fuel_radius3_ $ outer radial zone 3
+407 cz _active_fuel_radius4_ $ outer radial zone 4
+409 cz _active_pebble_reflector_radius1_
+411 cz _active_pebble_reflector_radius2_
+c
+c converging region
+c
+500  pz _active_axial_height_
+c
+c radial surfaces
+c
+501 kz _converging_fuel_cone1_ $ outer radial zone 1
+503 kz _converging_fuel_cone2_ $ outer radial zone 2
+505 kz _converging_fuel_cone3_ $ outer radial zone 3
+507 kz _converging_fuel_cone4_ $ outer radial zone 4
+509 kz _converging_pebble_reflector_cone_
+c
+c defueling chute 
+c
+600   pz _converging_axial_height_
+602   pz _defueling_axial_height_
+c
+c radial surfaces
+c
+601 cz _defueling_fuel_radius1_ $ outer radial zone 1
+603 cz _defueling_fuel_radius2_ $ outer radial zone 2
+605 cz _defueling_fuel_radius3_ $ outer radial zone 3
+607 cz _defueling_fuel_radius4_ $ outer radial zone 4
+609 cz _defueling_pebble_reflector_radius_
+c
+c heat exchanger
+c
+700  pz _heat_exchanger_axial_height_
+c
+c radial surfaces
+c
+701  cz _heat_exchanger_radius_
+c
+_control_rod_surfaces_
+_control_blade_surface_
+
+c ------------------------------------------------------------------------------
+c Data
+c ------------------------------------------------------------------------------
+c
+_fuel_materials_
+_graphite_inlet_
+_graphite_outlet_
+_graphite_pebble_core_
+_graphite_pebble_shell_
+_porous_graphite_inlet_
+_porous_graphite_outlet_
+_triso_matrix_
+_inlet_coolant_material_
+_coolant_material_
+_outlet_coolant_material_
+c
+_Heat_Exchangers_
+c
+_control_rod_material_
+c
+_control_blade_material_
+c            
+_shield_absorber_material_
+c
+_shield_clad_material_
+c
+m536   3006.72c  1
+m549   4009.72c  1
+c Steel for Reactor Pressure Vessel and Core Barrel
+m31       28058.72c 0.0438374141756552
+          28060.72c 0.0163231374502
+          28061.72c 0.00069798731409836
+          28062.72c 0.00218910073380645
+          28064.72c 0.000540385299125
+          24050.72c 0.00032455797836
+          24052.72c 0.00601805533522308
+          24053.72c 0.000669523710271698
+          24054.72c 0.000163572351962963
+          42092.72c 0.00154914850330435
+          42094.72c 0.000945063210638298
+          42095.72c 0.00160940903949474
+          42096.72c 0.001668675123
+          42097.72c 0.000945537190515464
+          42098.72c 0.00236471183191837
+          42100.72c 0.00092485418328
+          26054.72c 0.000286535681481481
+          26056.72c 0.00436938684142857
+          26057.72c 0.000102965635087719
+          26058.72c 1.28787737931034E-05
+_tally_
+kcode  10000  1.0 10 110
+prdmp  10000 10000 10000
+print 30 40 60 72
+mode n
+
+

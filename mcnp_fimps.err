@@ -1,0 +1,9 @@
+slurmd[x8]: error: execve(): /usr/local/LANL/MCNP5-1.60/bin/mcnp5.mpi: Permission denied
+slurmd[x8]: error: execve(): /usr/local/LANL/MCNP5-1.60/bin/mcnp5.mpi: Permission denied
+slurmd[x8]: error: execve(): /usr/local/LANL/MCNP5-1.60/bin/mcnp5.mpi: Permission denied
+slurmd[x8]: error: execve(): /usr/local/LANL/MCNP5-1.60/bin/mcnp5.mpi: Permission denied
+slurmd[x8]: error: execve(): /usr/local/LANL/MCNP5-1.60/bin/mcnp5.mpi: Permission denied
+slurmd[x8]: error: execve(): /usr/local/LANL/MCNP5-1.60/bin/mcnp5.mpi: Permission denied
+slurmd[x8]: error: execve(): /usr/local/LANL/MCNP5-1.60/bin/mcnp5.mpi: Permission denied
+slurmd[x8]: error: execve(): /usr/local/LANL/MCNP5-1.60/bin/mcnp5.mpi: Permission denied
+srun: error: x8: tasks 0-7: Exited with exit code 13
